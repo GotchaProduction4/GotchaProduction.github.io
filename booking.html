@@ -8,7 +8,7 @@
 <body>
 
 <header>
-    <h1> Book a Photowalk</h1>
+    <h1>Book a Photowalk</h1>
     <p>Reserve your spot for photography sessions</p>
 </header>
 
@@ -39,6 +39,9 @@
 
 </section>
 
+<!-- AUDIO -->
+<audio id="clickSound" src="sounds/click1.mp3" preload="auto"></audio>
+
 <script>
 function submitBooking(event) {
     event.preventDefault();
@@ -49,6 +52,15 @@ function submitBooking(event) {
     document.getElementById("msg").innerHTML =
         "✅ Thank you " + name + "! Your booking for " + date + " is saved (demo only).";
 }
+
+// CLICK SOUND SYSTEM
+document.addEventListener("click", function(e) {
+    if (e.target.tagName === "BUTTON" || e.target.tagName === "A") {
+        const sound = new Audio("sounds/click1.mp3");
+        sound.volume = 0.7;
+        sound.play();
+    }
+});
 </script>
 
 </body>
