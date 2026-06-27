@@ -16,12 +16,12 @@
 <!-- CONTENT -->
 <section class="content">
 
-    <h2> What is a Photowalk?</h2>
+    <h2>📍 What is a Photowalk?</h2>
     <p>
         A photowalk is when photographers walk around a location and take photos while learning composition, lighting, and storytelling.
     </p>
 
-    <h2> Watch Tutorial</h2>
+    <h2>🎥 Watch Tutorial</h2>
 
     <iframe width="560" height="315"
         src="https://www.youtube.com/embed/FazgJVnrVuI"
@@ -32,25 +32,32 @@
 
     <br><br>
 
-    <!-- BACK BUTTON (WITH SOUND) -->
-    <a href="index.html">
-        <button onclick="playClickSound()">⬅ Back to Home</button>
-    </a>
+    <!-- BACK BUTTON -->
+    <button onclick="goHome()">⬅ Back to Home</button>
 
 </section>
 
-<!-- AUDIO FILE -->
+<!-- AUDIO -->
 <audio id="clickSound" src="sounds/click1.mp3" preload="auto"></audio>
 
 <!-- SCRIPT -->
 <script>
-function playClickSound() {
+
+// 🔊 CLICK SOUND + NAVIGATION FIX
+function goHome() {
     const sound = document.getElementById("clickSound");
+
     if (sound) {
         sound.currentTime = 0;
         sound.play();
     }
+
+    // wait for sound before redirect
+    setTimeout(function() {
+        window.location.href = "index.html";
+    }, 300);
 }
+
 </script>
 
 </body>
