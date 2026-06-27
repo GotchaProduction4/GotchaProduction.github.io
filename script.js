@@ -1,7 +1,6 @@
 document.addEventListener("click", function(e) {
     if (e.target.tagName === "BUTTON") {
-        let sound = document.getElementById("clickSound");
-        sound.currentTime = 0;
+        const sound = new Audio("sounds/click1.mp3");
         sound.play();
     }
 });
