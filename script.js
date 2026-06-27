@@ -11,3 +11,11 @@ document.addEventListener("click", function(e) {
         sound.play();
     }
 });
+
+document.addEventListener("click", function(e) {
+    if (e.target.tagName === "BUTTON" || e.target.tagName === "A") {
+        const sound = new Audio("sounds/click1.mp3");
+        sound.volume = 1;
+        sound.play();
+    }
+});
