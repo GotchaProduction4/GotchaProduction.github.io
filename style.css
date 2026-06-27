@@ -60,8 +60,8 @@ button:hover {
 }
 
 .gallery img {
-    margin: 10px;
-    border-radius: 10px;
+    margin: 5px;
+    border-radius: 5px;
     transition: 0.3s ease;
 }
 
