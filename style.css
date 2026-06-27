@@ -73,3 +73,8 @@ button:hover {
 html {
     scroll-behavior: smooth;
 }
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+}
