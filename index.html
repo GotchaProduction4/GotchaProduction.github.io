@@ -4,30 +4,46 @@
     <title>Photowalk Learning</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1> Gotcha Production</h1>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="logo">📸 Gotcha Production</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header id="home">
+        <h1>Gotcha Production</h1>
         <p>Learn photography through real photowalk experiences</p>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
         <h2>Start Your Photography Journey</h2>
         <button onclick="start()">Get Started</button>
     </section>
 
-  <section class="gallery">
-    <h2>Sample Photos</h2>
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <h2>Sample Photos</h2>
 
-    <div class="gallery-row">
-        <img src="images/ron1.jpeg" alt="Photo 1">
-        <img src="images/ron2.jpeg" alt="Photo 2">
-        <img src="images/ron3.jpeg" alt="Photo 3">
-    </div>
-      
-</section>
-        
-    <footer>
+        <div class="gallery-row">
+            <img src="images/ron1.jpeg" alt="Photo 1">
+            <img src="images/ron2.jpeg" alt="Photo 2">
+            <img src="images/ron3.jpeg" alt="Photo 3">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
         <p>© 2026 Photowalk Learning</p>
     </footer>
 
