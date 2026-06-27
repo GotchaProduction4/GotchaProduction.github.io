@@ -43,3 +43,33 @@ footer {
     color: white;
     padding: 10px;
 }
+
+button {
+    padding: 10px 20px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.15);
+    background: #0b7dda;
+}
+
+.gallery img {
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
