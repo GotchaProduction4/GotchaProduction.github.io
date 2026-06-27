@@ -2,12 +2,18 @@
 <html>
 <head>
     <title>Photowalk Learning</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- NAVBAR (BOOTSTRAP ONLY) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
   <a class="navbar-brand" href="#">Gotcha Production</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -35,47 +41,41 @@
 
     </ul>
   </div>
+
 </nav>
 
-    <!-- HEADER -->
-    <header id="home">
-        <h1>Gotcha Production</h1>
-        <p>Learn photography through real photowalk experiences</p>
-    </header>
-    
-      <!-- NAVIGATION BAR -->
-    <nav class="navbar">
+<!-- HEADER -->
+<header id="home">
+    <h1>Gotcha Production</h1>
+    <p>Learn photography through real photowalk experiences</p>
+</header>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- HERO -->
+<section class="hero">
+    <h2>Start Your Photography Journey</h2>
+    <button onclick="start()">Get Started</button>
+</section>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h2>Start Your Photography Journey</h2>
-        <button onclick="start()">Get Started</button>
-    </section>
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+    <h2>Sample Photos</h2>
 
-    <!-- GALLERY -->
-    <section class="gallery" id="gallery">
-        <h2>Sample Photos</h2>
+    <div class="gallery-row">
+        <img src="images/ron1.jpeg" alt="Photo 1">
+        <img src="images/ron2.jpeg" alt="Photo 2">
+        <img src="images/ron3.jpeg" alt="Photo 3">
+    </div>
+</section>
 
-        <div class="gallery-row">
-            <img src="images/ron1.jpeg" alt="Photo 1">
-            <img src="images/ron2.jpeg" alt="Photo 2">
-            <img src="images/ron3.jpeg" alt="Photo 3">
-        </div>
-    </section>
+<!-- FOOTER -->
+<footer id="contact">
+    <p>© 2026 Photowalk Learning</p>
+</footer>
 
-    <!-- FOOTER -->
-    <footer id="contact">
-        <p>© 2026 Photowalk Learning</p>
-    </footer>
+<!-- Bootstrap JS (IMPORTANT) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
