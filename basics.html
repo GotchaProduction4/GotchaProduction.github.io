@@ -1,33 +1,37 @@
-<a href="index.html">Home</a>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Photowalk Basics</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HEADER (same style as index) -->
 <header>
-    <h1>📸 Photowalk Basics</h1>
-    <p>Learn how to conduct a proper photowalk</p>
+    <h1>Gotcha Production</h1>
+    <p>Learn photography through real photowalk experiences</p>
 </header>
 
+<!-- HERO STYLE SECTION -->
+<section class="hero">
+
+    <h2>📸 Photowalk Basics</h2>
+
+    <p>
+        Learn how to conduct a proper photowalk and improve your photography skills.
+    </p>
+
+</section>
+
+<!-- CONTENT -->
 <section class="content">
 
     <h2>📍 What is a Photowalk?</h2>
     <p>
         A photowalk is when photographers walk around a location and take photos while learning composition, lighting, and storytelling.
     </p>
-
-    <h2>🎯 How to Conduct a Photowalk</h2>
-    <ul>
-        <li>Choose a location (parks, streets, city areas)</li>
-        <li>Bring your camera or phone</li>
-        <li>Focus on lighting (morning or sunset is best)</li>
-        <li>Try different angles</li>
-        <li>Take group or solo shots</li>
-    </ul>
 
     <h2>🎥 Watch Tutorial</h2>
 
@@ -40,9 +44,26 @@
 
     <br><br>
 
-    <a href="index.html">⬅ Back to Home</a>
+    <!-- HOME BUTTON ONLY (WITH SOUND) -->
+    <button onclick="playClickSound(); window.location.href='index.html'">
+        ⬅ Home
+    </button>
 
 </section>
+
+<!-- AUDIO -->
+<audio id="clickSound" src="sounds/click1.mp3" preload="auto"></audio>
+
+<!-- SCRIPT -->
+<script>
+function playClickSound() {
+    const sound = document.getElementById("clickSound");
+    if (sound) {
+        sound.currentTime = 0;
+        sound.play();
+    }
+}
+</script>
 
 </body>
 </html>
