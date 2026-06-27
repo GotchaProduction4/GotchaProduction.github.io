@@ -2,38 +2,26 @@
 <html>
 <head>
     <title>Photowalk Basics</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER (same style as index) -->
+<!-- HEADER -->
 <header>
-    <h1>Gotcha Production</h1>
-    <p>Learn photography through real photowalk experiences</p>
+    <h1>📸 Photowalk Basics</h1>
+    <p>Learn how to conduct a proper photowalk</p>
 </header>
-
-<!-- HERO STYLE SECTION -->
-<section class="hero">
-
-    <h2>📸 Photowalk Basics</h2>
-
-    <p>
-        Learn how to conduct a proper photowalk and improve your photography skills.
-    </p>
-
-</section>
 
 <!-- CONTENT -->
 <section class="content">
 
-    <h2>📍 What is a Photowalk?</h2>
+    <h2> What is a Photowalk?</h2>
     <p>
         A photowalk is when photographers walk around a location and take photos while learning composition, lighting, and storytelling.
     </p>
 
-    <h2>🎥 Watch Tutorial</h2>
+    <h2> Watch Tutorial</h2>
 
     <iframe width="560" height="315"
         src="https://www.youtube.com/embed/FazgJVnrVuI"
@@ -44,14 +32,14 @@
 
     <br><br>
 
-    <!-- HOME BUTTON ONLY (WITH SOUND) -->
-    <button onclick="playClickSound(); window.location.href='index.html'">
-        ⬅ Home
-    </button>
+    <!-- BACK BUTTON (WITH SOUND) -->
+    <a href="index.html">
+        <button onclick="playClickSound()">⬅ Back to Home</button>
+    </a>
 
 </section>
 
-<!-- AUDIO -->
+<!-- AUDIO FILE -->
 <audio id="clickSound" src="sounds/click1.mp3" preload="auto"></audio>
 
 <!-- SCRIPT -->
