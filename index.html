@@ -1,94 +1,309 @@
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light">
+<!DOCTYPE html>
+<html lang="en">
 
-    <a class="navbar-brand" href="index.html">
-        Lakbay Pa-Tala
-    </a>
+<head>
 
-    <button class="navbar-toggler" type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <span class="navbar-toggler-icon"></span>
+<title>Lakbay Pa-Tala</title>
 
-    </button>
+<!-- Bootstrap -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600&display=swap"
+rel="stylesheet">
 
-        <ul class="navbar-nav ml-auto">
+<link rel="stylesheet" href="style.css">
 
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    Home
-                </a>
-            </li>
+</head>
 
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">
-                    About
-                </a>
-            </li>
+<body>
 
-            <li class="nav-item">
-                <a class="nav-link" href="resources.html">
-                    Resources
-                </a>
-            </li>
+<!-- ================= NAVBAR ================= -->
 
-            <li class="nav-item">
-                <a class="nav-link" href="gallery.html">
-                    Gallery
-                </a>
-            </li>
+<nav class="navbar navbar-expand-lg">
 
-            <li class="nav-item">
-                <a class="nav-link"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#contactModal">
+<a class="navbar-brand" href="index.html">
+☰
+</a>
 
-                    Contact
+<button class="navbar-toggler"
+type="button"
+data-toggle="collapse"
+data-target="#navbarNav">
 
-                </a>
-            </li>
+<span class="navbar-toggler-icon"></span>
 
-        </ul>
+</button>
 
-    </div>
+<div class="collapse navbar-collapse"
+id="navbarNav">
+
+<ul class="navbar-nav ml-auto">
+
+<li class="nav-item active">
+<a class="nav-link" href="index.html">
+Home
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">
+About
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="resources.html">
+Resources
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="booking.html">
+Booking
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link"
+href="#"
+data-toggle="modal"
+data-target="#contactModal">
+
+Contact
+
+</a>
+</li>
+
+</ul>
+
+</div>
 
 </nav>
 
-<header class="hero">
+<!-- Retro Checker Border -->
 
-    <div class="hero-text">
+<div class="checker"></div>
 
-        <h1>
-            LAKBAY<br>PA-TALA
-        </h1>
+<!-- ================= HERO ================= -->
 
-        <p>
-            Learn photography through a structured photowalk experience.
-        </p>
+<section class="hero">
 
-        <div class="hero-buttons">
+<div class="content">
 
-            <a href="resources.html" class="btn-retro">
-                Get Started
-            </a>
+<h1>
 
-            <a href="about.html" class="btn-retro">
-                Learn More
-            </a>
+LAKBAY<br>
+PA-TALA
 
-        </div>
+</h1>
 
-    </div>
+<p>
 
-    <div class="hero-image">
+A Cinematic Instructional Video and Structured
+Photowalk Program for aspiring photographers.
 
-        <img src="images/camera.png"
-             alt="Vintage Camera">
+</p>
 
-    </div>
+<div class="buttons">
 
-</header>
+<a href="resources.html"
+class="btn-retro">
+
+Get Started
+
+</a>
+
+<a href="booking.html"
+class="btn-retro">
+
+Book Photowalk
+
+</a>
+
+</div>
+
+</div>
+
+<div class="camera">
+
+<img src="images/camera.png"
+alt="Vintage Camera">
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="container py-5">
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<h3>📷 Learn</h3>
+
+<p>
+
+Watch photography lessons and
+our Cinematic Instructional Video.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<h3>🚶 Photowalk</h3>
+
+<p>
+
+Book a structured photowalk
+and practice photography.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<h3>🖼 Gallery</h3>
+
+<p>
+
+View participant outputs,
+events and behind-the-scenes.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="checker"></div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Lakbay Pa-Tala | Gotcha! Productions
+
+</p>
+
+</footer>
+
+<!-- ================= CONTACT MODAL ================= -->
+
+<div class="modal fade"
+id="contactModal"
+tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title">
+
+Contact Us
+
+</h5>
+
+<button
+type="button"
+class="close"
+data-dismiss="modal">
+
+<span>&times;</span>
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<p><strong>Gotcha! Productions</strong></p>
+
+<p>
+📧 gotchaproductions@gmail.com
+</p>
+
+<p>
+📱 +63 XXX XXX XXXX
+</p>
+
+<p>
+📍 Lyceum of the Philippines University – Cavite
+</p>
+
+<p>
+Facebook: Gotcha! Productions
+</p>
+
+</div>
+
+<div class="modal-footer">
+
+<button
+type="button"
+class="btn btn-secondary"
+data-dismiss="modal">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Click Sound -->
+
+<audio id="clickSound"
+src="sounds/click1.mp3"
+preload="auto">
+</audio>
+
+<!-- Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
