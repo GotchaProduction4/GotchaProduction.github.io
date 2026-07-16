@@ -1,11 +1,15 @@
+html,
+body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
 * ===========================
    RESET
 =========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
 }
 
 
@@ -214,23 +218,19 @@ background-position:
 
 
 .hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
 
-min-height:85vh;
+    padding-top:60px;
+    padding-left:8%;
+    padding-right:8%;
+    padding-bottom:0;
 
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:50px;
-
-padding:60px 8%;
-
-position:relative;
-
-overflow:hidden;
-
+    position:relative;
+    overflow:hidden;
 }
 
 
