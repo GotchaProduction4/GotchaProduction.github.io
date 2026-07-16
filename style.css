@@ -437,12 +437,18 @@ width:90%;
    BOOKING PAGE
 =========================== */
 
+/* ===========================
+   BOOKING PAGE
+=========================== */
+
 .booking-container{
 
     min-height:70vh;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     padding:60px 20px;
@@ -452,7 +458,7 @@ width:90%;
 .booking-card{
 
     width:100%;
-    max-width:500px;
+    max-width:600px;
 
     background:#fff5d9;
 
@@ -477,6 +483,8 @@ width:90%;
     margin-top:18px;
     margin-bottom:8px;
 
+    color:#603600;
+
 }
 
 .booking-card input{
@@ -489,36 +497,44 @@ width:90%;
 
     border-radius:8px;
 
+    background:white;
+
     font-size:16px;
 
-}
-
-.booking-card button{
-
-    width:100%;
-
-    margin-top:25px;
+    transition:.3s;
 
 }
 
-#msg{
+.booking-card input:focus{
 
-    margin-top:20px;
+    outline:none;
 
-    text-align:center;
+    border-color:#d95d39;
 
-    font-weight:bold;
-
-    color:green;
+    box-shadow:0 0 8px rgba(239,113,88,.4);
 
 }
 
 .booking-card .btn-retro{
 
-    display:block;
+    width:100%;
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+#msg{
 
     margin-top:25px;
 
     text-align:center;
+
+    font-weight:bold;
+
+    color:#2e7d32;
+
+    line-height:1.6;
 
 }
