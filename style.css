@@ -46,6 +46,10 @@ body{
 
     font-weight:bold;
 
+    display:flex;
+
+    align-items:center;
+
 }
 
 
@@ -60,11 +64,41 @@ body{
 
     margin-right:10px;
 
-    vertical-align:middle;
+}
+
+
+
+/* MOBILE MENU BUTTON */
+
+.navbar-toggler{
+
+    border:3px solid #2d241d;
+
+    padding:5px 10px;
+
+    border-radius:8px;
 
 }
 
 
+
+.menu-icon{
+
+    font-size:28px;
+
+    color:#2d241d;
+
+    font-weight:bold;
+
+    line-height:1;
+
+}
+
+
+
+
+
+/* NAV LINKS */
 
 .navbar-nav .nav-link{
 
@@ -88,6 +122,66 @@ body{
 
 
 
+
+
+/* ===========================
+   MOBILE NAVBAR
+=========================== */
+
+@media(max-width:767px){
+
+
+.logo{
+
+    width:32px;
+
+}
+
+
+.navbar-nav{
+
+    text-align:center;
+
+    margin-top:15px;
+
+}
+
+
+.navbar-nav .nav-link{
+
+    margin-left:0;
+
+    padding:12px;
+
+}
+
+
+}
+
+
+
+
+
+/* SMALL PHONES */
+
+@media(max-width:400px){
+
+
+.logo{
+
+    width:28px;
+
+}
+
+
+.navbar-brand{
+
+    font-size:22px;
+
+}
+
+
+}
 /* ===========================
    TWO LINE CHECKER BORDER
 =========================== */
