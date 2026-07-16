@@ -28,7 +28,6 @@ body{
    NAVBAR
 =========================== */
 
-
 .navbar{
 
     background:#ef7158;
@@ -46,6 +45,22 @@ body{
     font-size:clamp(22px,3vw,28px);
 
     font-weight:bold;
+
+}
+
+
+
+/* LOGO */
+
+.logo{
+
+    width:40px;
+
+    height:auto;
+
+    margin-right:10px;
+
+    vertical-align:middle;
 
 }
 
@@ -70,7 +85,6 @@ body{
     color:white !important;
 
 }
-
 
 
 
@@ -816,7 +830,6 @@ text-decoration:none;
    LARGE LAPTOP / SMALL DESKTOP
 ================================================= */
 
-
 @media (max-width:1200px){
 
 
@@ -862,11 +875,11 @@ left:70%;
 
 
 
+
 /* =================================================
    IPAD AIR GEN 5 LANDSCAPE
    Around 1024px - 1180px
 ================================================= */
-
 
 @media
 (min-width:901px)
@@ -915,15 +928,11 @@ width:320px;
 
 .hero::before{
 
-
 width:170vw;
-
 
 height:170vw;
 
-
 left:75%;
-
 
 }
 
@@ -940,7 +949,6 @@ left:75%;
    768px - 900px
 ================================================= */
 
-
 @media
 (min-width:768px)
 and (max-width:900px)
@@ -950,21 +958,15 @@ and (orientation:portrait){
 
 .hero{
 
-
 flex-direction:column;
-
 
 text-align:center;
 
-
 justify-content:center;
-
 
 padding:50px 30px;
 
-
 gap:35px;
-
 
 }
 
@@ -972,9 +974,7 @@ gap:35px;
 
 .content{
 
-
 max-width:700px;
-
 
 }
 
@@ -982,9 +982,7 @@ max-width:700px;
 
 .content h1{
 
-
 font-size:4rem;
-
 
 }
 
@@ -992,9 +990,7 @@ font-size:4rem;
 
 .buttons{
 
-
 justify-content:center;
-
 
 }
 
@@ -1002,9 +998,7 @@ justify-content:center;
 
 .camera img{
 
-
 width:300px;
-
 
 }
 
@@ -1012,23 +1006,20 @@ width:300px;
 
 .hero::before{
 
-
 width:230vw;
-
 
 height:230vw;
 
-
 left:50%;
-
 
 top:40%;
 
-
 }
 
 
+
 }
+
 
 
 
@@ -1036,7 +1027,6 @@ top:40%;
 /* =================================================
    TABLETS PORTRAIT / LANDSCAPE
 ================================================= */
-
 
 @media
 (min-width:600px)
@@ -1046,9 +1036,7 @@ and (max-width:1024px){
 
 .feature-card{
 
-
 padding:25px;
-
 
 }
 
@@ -1056,9 +1044,7 @@ padding:25px;
 
 .gallery-row img{
 
-
 width:280px;
-
 
 }
 
@@ -1073,7 +1059,6 @@ width:280px;
    PHONE LANDSCAPE
 ================================================= */
 
-
 @media
 (max-width:900px)
 and (orientation:landscape){
@@ -1082,18 +1067,13 @@ and (orientation:landscape){
 
 .hero{
 
-
 flex-direction:row;
-
 
 min-height:100vh;
 
-
 padding:25px;
 
-
 gap:20px;
-
 
 }
 
@@ -1101,9 +1081,7 @@ gap:20px;
 
 .content{
 
-
 max-width:450px;
-
 
 }
 
@@ -1111,9 +1089,7 @@ max-width:450px;
 
 .content h1{
 
-
 font-size:3rem;
-
 
 }
 
@@ -1121,9 +1097,7 @@ font-size:3rem;
 
 .content p{
 
-
 font-size:14px;
-
 
 }
 
@@ -1131,9 +1105,7 @@ font-size:14px;
 
 .camera img{
 
-
 width:220px;
-
 
 }
 
@@ -1141,9 +1113,7 @@ width:220px;
 
 .buttons{
 
-
 justify-content:flex-start;
-
 
 }
 
@@ -1151,18 +1121,13 @@ justify-content:flex-start;
 
 .hero::before{
 
-
 width:220vw;
-
 
 height:220vw;
 
-
 left:65%;
 
-
 top:50%;
-
 
 }
 
@@ -1178,7 +1143,6 @@ top:50%;
    PHONE PORTRAIT
 ================================================= */
 
-
 @media
 (max-width:767px)
 and (orientation:portrait){
@@ -1187,18 +1151,13 @@ and (orientation:portrait){
 
 .hero{
 
-
 flex-direction:column;
-
 
 text-align:center;
 
-
 padding:40px 20px;
 
-
 gap:35px;
-
 
 }
 
@@ -1206,9 +1165,7 @@ gap:35px;
 
 .content h1{
 
-
 font-size:3.2rem;
-
 
 }
 
@@ -1216,9 +1173,7 @@ font-size:3.2rem;
 
 .content p{
 
-
 font-size:15px;
-
 
 }
 
@@ -1226,9 +1181,7 @@ font-size:15px;
 
 .buttons{
 
-
 justify-content:center;
-
 
 }
 
@@ -1236,9 +1189,7 @@ justify-content:center;
 
 .camera img{
 
-
 width:260px;
-
 
 }
 
@@ -1246,18 +1197,13 @@ width:260px;
 
 .hero::before{
 
-
 width:250vw;
-
 
 height:250vw;
 
-
 top:35%;
 
-
 left:50%;
-
 
 }
 
@@ -1265,9 +1211,17 @@ left:50%;
 
 .navbar-brand{
 
-
 font-size:22px;
 
+}
+
+
+
+/* LOGO */
+
+.logo{
+
+width:32px;
 
 }
 
@@ -1275,12 +1229,9 @@ font-size:22px;
 
 .navbar-nav .nav-link{
 
-
 margin-left:0;
 
-
 text-align:center;
-
 
 }
 
@@ -1288,9 +1239,7 @@ text-align:center;
 
 .booking-card{
 
-
 padding:25px;
-
 
 }
 
@@ -1306,16 +1255,13 @@ padding:25px;
    SMALL PHONES
 ================================================= */
 
-
 @media(max-width:400px){
 
 
 
 .content h1{
 
-
 font-size:2.8rem;
-
 
 }
 
@@ -1323,9 +1269,15 @@ font-size:2.8rem;
 
 .camera img{
 
-
 width:220px;
 
+}
+
+
+
+.logo{
+
+width:28px;
 
 }
 
@@ -1333,9 +1285,7 @@ width:220px;
 
 .btn-retro{
 
-
 padding:12px 18px;
-
 
 }
 
@@ -1343,9 +1293,7 @@ padding:12px 18px;
 
 .feature-card{
 
-
 padding:20px;
-
 
 }
 
