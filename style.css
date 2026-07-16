@@ -8,6 +8,7 @@
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
@@ -34,7 +35,7 @@ body{
 .navbar{
 
     background:#ef7158;
-    padding:15px 5%;
+    padding:15px clamp(20px,5vw,60px);
 
 }
 
@@ -42,7 +43,7 @@ body{
 .navbar-brand{
 
     color:white !important;
-    font-size:28px;
+    font-size:clamp(22px,3vw,28px);
     font-weight:bold;
 
 }
@@ -91,6 +92,7 @@ background-size:24px 24px;
 
 
 
+
 /* ===========================
    HERO
 =========================== */
@@ -106,9 +108,12 @@ align-items:center;
 
 justify-content:center;
 
-gap:80px;
+gap:clamp(30px,6vw,100px);
 
-padding:60px 8%;
+padding:
+clamp(40px,6vw,80px)
+clamp(20px,8vw,120px);
+
 
 position:relative;
 
@@ -117,7 +122,11 @@ overflow:hidden;
 }
 
 
-/* Retro Sunburst */
+
+/* ===========================
+   RETRO SUNBURST
+=========================== */
+
 
 .hero::before{
 
@@ -125,31 +134,41 @@ content:"";
 
 position:absolute;
 
+
 width:180vw;
 
 height:180vw;
 
+
 background:
 
 repeating-conic-gradient(
+
 #f8d667 0deg 15deg,
+
 #f2b861 15deg 30deg
+
 );
 
+
 border-radius:50%;
+
 
 top:45%;
 
 left:65%;
 
+
 transform:translate(-50%,-50%);
+
 
 opacity:.6;
 
+
 z-index:-1;
 
-}
 
+}
 
 
 
@@ -160,7 +179,7 @@ z-index:-1;
 
 .content{
 
-max-width:550px;
+max-width:600px;
 
 }
 
@@ -169,11 +188,15 @@ max-width:550px;
 
 font-family:'Luckiest Guy',cursive;
 
-font-size:6rem;
+
+font-size:clamp(3rem,6vw,6rem);
+
 
 line-height:.9;
 
+
 color:#2b211b;
+
 
 
 text-shadow:
@@ -182,14 +205,21 @@ text-shadow:
 
 6px 6px 0 rgba(0,0,0,.2);
 
+
 }
+
 
 
 .content p{
 
 margin-top:25px;
 
-font-size:18px;
+
+font-size:clamp(15px,2vw,18px);
+
+
+line-height:1.6;
+
 
 }
 
@@ -208,46 +238,65 @@ display:flex;
 
 gap:20px;
 
+flex-wrap:wrap;
+
 }
+
 
 
 .btn-retro{
 
 display:inline-block;
 
-padding:14px 28px;
+
+padding:
+
+clamp(10px,2vw,14px)
+
+clamp(20px,3vw,28px);
+
+
 
 background:#f4b64d;
 
+
 color:#603600;
+
 
 font-weight:bold;
 
+
 text-decoration:none;
+
 
 border-radius:8px;
 
+
 box-shadow:0 6px 0 #946621;
+
 
 transition:.2s;
 
+
 }
+
 
 
 .btn-retro:hover{
 
 text-decoration:none;
 
+
 transform:translateY(4px);
+
 
 box-shadow:0 2px 0 #946621;
 
+
 color:#603600;
 
+
 }
-
-
-
 /* ===========================
    CAMERA
 =========================== */
@@ -256,6 +305,8 @@ color:#603600;
 .camera img{
 
 width:min(420px,40vw);
+
+max-width:100%;
 
 filter:drop-shadow(12px 12px 0 white);
 
@@ -289,6 +340,7 @@ height:100%;
 }
 
 
+
 .feature-card:hover{
 
 transform:translateY(-8px);
@@ -309,9 +361,10 @@ padding:60px 20px;
 }
 
 
+
 .gallery h2{
 
-font-size:36px;
+font-size:clamp(28px,4vw,36px);
 
 margin-bottom:35px;
 
@@ -320,11 +373,14 @@ font-family:'Luckiest Guy',cursive;
 }
 
 
+
 .gallery-row{
 
 display:flex;
 
 justify-content:center;
+
+align-items:center;
 
 gap:25px;
 
@@ -333,9 +389,10 @@ flex-wrap:wrap;
 }
 
 
+
 .gallery-row img{
 
-width:320px;
+width:min(320px,90vw);
 
 border-radius:15px;
 
@@ -344,6 +401,7 @@ transition:.3s;
 box-shadow:0 8px 18px rgba(0,0,0,.2);
 
 }
+
 
 
 .gallery-row img:hover{
@@ -381,17 +439,24 @@ width:100%;
 
 max-width:450px;
 
+
 background:#fff5d9;
+
 
 padding:35px;
 
+
 border:5px solid #ef7158;
+
 
 border-radius:18px;
 
+
 box-shadow:8px 8px 0 #d95d39;
 
+
 text-align:left;
+
 
 }
 
@@ -405,9 +470,12 @@ margin-top:12px;
 
 margin-bottom:6px;
 
+
 font-weight:600;
 
+
 color:#603600;
+
 
 }
 
@@ -417,13 +485,18 @@ color:#603600;
 
 width:100%;
 
+
 padding:10px;
+
 
 border:2px solid #ef7158;
 
+
 border-radius:8px;
 
+
 font-size:15px;
+
 
 }
 
@@ -433,9 +506,12 @@ font-size:15px;
 
 outline:none;
 
+
 border-color:#d95d39;
 
+
 box-shadow:0 0 6px rgba(239,113,88,.3);
+
 
 }
 
@@ -445,11 +521,15 @@ box-shadow:0 0 6px rgba(239,113,88,.3);
 
 width:100%;
 
+
 margin-top:20px;
+
 
 text-align:center;
 
+
 padding:12px;
+
 
 }
 
@@ -459,13 +539,18 @@ padding:12px;
 
 margin-top:18px;
 
+
 text-align:center;
+
 
 font-weight:bold;
 
+
 color:#2e7d32;
 
+
 }
+
 
 
 
@@ -479,76 +564,103 @@ color:#2e7d32;
 
 background:#fff5d9;
 
+
 border:6px solid #ef7158;
+
 
 border-radius:18px;
 
+
 box-shadow:8px 8px 0 #d95d39;
 
+
 }
+
 
 
 .modal-header{
 
 border-bottom:3px dashed #ef7158;
 
+
 background:#f8d667;
 
+
 }
+
 
 
 .modal-title{
 
 font-family:'Luckiest Guy',cursive;
 
+
 color:#603600;
 
+
 }
+
 
 
 .modal-body{
 
 font-size:17px;
 
+
 line-height:1.8;
 
+
 }
+
 
 
 .modal-footer{
 
 border-top:3px dashed #ef7158;
 
+
 }
+
 
 
 .modal .btn-secondary{
 
 background:#ef7158;
 
+
 border:none;
+
 
 font-weight:bold;
 
+
 }
+
 
 
 .modal .btn-secondary:hover{
 
 background:#d95d39;
 
+
 }
+
 
 
 .close{
 
 font-size:30px;
 
+
 opacity:1;
+
 
 color:#603600;
 
+
 }
+
+
 
 
 
@@ -561,49 +673,94 @@ footer{
 
 margin-top:60px;
 
+
 background:#ef7158;
+
 
 color:white;
 
+
 padding:20px;
+
 
 text-align:center;
 
+
 }
+/* =================================================
+   LARGE LAPTOP / SMALL DESKTOP
+================================================= */
 
 
-
-
-/* ===========================
-   MOBILE
-=========================== */
-
-
-@media(max-width:768px){
+@media (max-width:1200px){
 
 
 .hero{
 
-flex-direction:column;
+gap:50px;
 
-text-align:center;
+padding:50px;
 
-padding:50px 20px;
+}
 
-gap:30px;
+
+.camera img{
+
+width:350px;
+
+}
+
+
+.content h1{
+
+font-size:5rem;
 
 }
 
 
 .hero::before{
 
-width:220vw;
+width:170vw;
 
-height:220vw;
+height:170vw;
 
-top:35%;
+left:60%;
 
-left:50%;
+}
+
+
+}
+
+
+
+
+
+/* =================================================
+   IPAD AIR LANDSCAPE
+   1024px - 1200px
+================================================= */
+
+
+@media 
+(min-width:900px)
+and (max-width:1200px)
+and (orientation:landscape){
+
+
+
+.hero{
+
+flex-direction:row;
+
+text-align:left;
+
+}
+
+
+
+.content{
+
+max-width:500px;
 
 }
 
@@ -611,15 +768,7 @@ left:50%;
 
 .content h1{
 
-font-size:3.5rem;
-
-}
-
-
-
-.content p{
-
-font-size:16px;
+font-size:4.5rem;
 
 }
 
@@ -627,7 +776,77 @@ font-size:16px;
 
 .camera img{
 
-width:280px;
+width:320px;
+
+}
+
+
+
+.hero::before{
+
+width:180vw;
+
+height:180vw;
+
+top:45%;
+
+left:65%;
+
+}
+
+
+
+}
+
+
+
+
+/* =================================================
+   IPAD PORTRAIT
+   768px - 900px
+================================================= */
+
+
+@media
+(min-width:768px)
+and (max-width:900px)
+and (orientation:portrait){
+
+
+.hero{
+
+
+flex-direction:column;
+
+
+text-align:center;
+
+
+padding:50px 30px;
+
+
+gap:40px;
+
+
+}
+
+
+
+.content h1{
+
+
+font-size:4rem;
+
+
+}
+
+
+
+.camera img{
+
+
+width:300px;
+
 
 }
 
@@ -635,17 +854,28 @@ width:280px;
 
 .buttons{
 
+
 justify-content:center;
 
-flex-wrap:wrap;
 
 }
 
 
 
-.navbar-brand{
+.hero::before{
 
-font-size:24px;
+
+width:230vw;
+
+
+height:230vw;
+
+
+top:35%;
+
+
+left:50%;
+
 
 }
 
@@ -653,17 +883,212 @@ font-size:24px;
 
 .navbar-nav .nav-link{
 
+
 margin-left:0;
 
+
 text-align:center;
+
 
 }
 
 
 
-.gallery-row img{
+}
 
-width:90%;
+
+
+
+
+/* =================================================
+   MOBILE LANDSCAPE
+================================================= */
+
+
+@media
+(max-width:900px)
+and (orientation:landscape){
+
+
+.hero{
+
+
+flex-direction:row;
+
+
+min-height:100vh;
+
+
+padding:30px;
+
+
+gap:30px;
+
+
+}
+
+
+
+.content h1{
+
+
+font-size:3rem;
+
+
+}
+
+
+
+.content p{
+
+
+font-size:14px;
+
+
+}
+
+
+
+.camera img{
+
+
+width:230px;
+
+
+}
+
+
+
+.hero::before{
+
+
+width:220vw;
+
+
+height:220vw;
+
+
+left:60%;
+
+
+top:50%;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* =================================================
+   MOBILE PORTRAIT
+================================================= */
+
+
+@media(max-width:767px)
+and (orientation:portrait){
+
+
+.hero{
+
+
+flex-direction:column;
+
+
+text-align:center;
+
+
+padding:40px 20px;
+
+
+gap:35px;
+
+
+}
+
+
+
+.content h1{
+
+
+font-size:3.2rem;
+
+
+}
+
+
+
+.content p{
+
+
+font-size:15px;
+
+
+}
+
+
+
+.camera img{
+
+
+width:260px;
+
+
+}
+
+
+
+.buttons{
+
+
+justify-content:center;
+
+
+}
+
+
+
+.hero::before{
+
+
+width:250vw;
+
+
+height:250vw;
+
+
+top:35%;
+
+
+left:50%;
+
+
+}
+
+
+
+.navbar-brand{
+
+
+font-size:23px;
+
+
+}
+
+
+
+.navbar-nav .nav-link{
+
+
+margin-left:0;
+
+
+text-align:center;
+
 
 }
 
@@ -671,19 +1096,22 @@ width:90%;
 
 .booking-card{
 
+
 padding:25px;
 
-}
-
 
 }
 
 
 
+}
 
-/* ===========================
+
+
+
+/* =================================================
    SMALL PHONES
-=========================== */
+================================================= */
 
 
 @media(max-width:400px){
@@ -691,21 +1119,37 @@ padding:25px;
 
 .content h1{
 
-font-size:3rem;
+
+font-size:2.8rem;
+
 
 }
+
 
 
 .camera img{
 
-width:240px;
+
+width:220px;
+
 
 }
 
 
+
 .btn-retro{
 
-padding:12px 20px;
+
+padding:12px 18px;
+
+
+}
+
+
+
+.gallery{
+
+padding:40px 15px;
 
 }
 
