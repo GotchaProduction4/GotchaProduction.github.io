@@ -218,16 +218,13 @@ body{
 
 
 .hero{
-    min-height:85vh;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:50px;
 
-    padding-top:60px;
-    padding-left:8%;
-    padding-right:8%;
-    padding-bottom:0;
+    padding:60px 8% 0;
+    margin:0;
 
     position:relative;
     overflow:hidden;
