@@ -878,26 +878,20 @@ color:#603600;
    FOOTER
 =========================== */
 
-
 footer{
 
+    margin-top:0;
 
-margin-top:60px;
+    background:#ef7158;
 
+    color:white;
 
-background:#ef7158;
+    padding:20px;
 
-
-color:white;
-
-
-padding:20px;
-
-
-text-align:center;
-
+    text-align:center;
 
 }
+
 
 
 footer a{
