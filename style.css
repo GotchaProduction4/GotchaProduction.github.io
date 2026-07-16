@@ -433,4 +433,92 @@ width:90%;
 
 }
 
+}/* ===========================
+   BOOKING PAGE
+=========================== */
+
+.booking-container{
+
+    min-height:70vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+.booking-card{
+
+    width:100%;
+    max-width:500px;
+
+    background:#fff5d9;
+
+    padding:40px;
+
+    border:5px solid #ef7158;
+
+    border-radius:18px;
+
+    box-shadow:8px 8px 0 #d95d39;
+
+    text-align:left;
+
+}
+
+.booking-card label{
+
+    font-weight:600;
+
+    display:block;
+
+    margin-top:18px;
+    margin-bottom:8px;
+
+}
+
+.booking-card input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid #ef7158;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.booking-card button{
+
+    width:100%;
+
+    margin-top:25px;
+
+}
+
+#msg{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    color:green;
+
+}
+
+.booking-card .btn-retro{
+
+    display:block;
+
+    margin-top:25px;
+
+    text-align:center;
+
 }
