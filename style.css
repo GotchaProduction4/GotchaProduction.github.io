@@ -433,36 +433,30 @@ width:90%;
 
 }
 
-}/* ===========================
-   BOOKING PAGE
-=========================== */
-
 /* ===========================
    BOOKING PAGE
 =========================== */
 
 .booking-container{
 
-    min-height:70vh;
+    min-height:60vh;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    padding:60px 20px;
+    padding:30px 20px;
 
 }
 
 .booking-card{
 
     width:100%;
-    max-width:600px;
+    max-width:450px;   /* Reduced from 600px */
 
     background:#fff5d9;
 
-    padding:40px;
+    padding:28px;      /* Reduced from 40px */
 
     border:5px solid #ef7158;
 
@@ -476,12 +470,12 @@ width:90%;
 
 .booking-card label{
 
-    font-weight:600;
-
     display:block;
 
-    margin-top:18px;
-    margin-bottom:8px;
+    margin-top:12px;
+    margin-bottom:6px;
+
+    font-weight:600;
 
     color:#603600;
 
@@ -491,17 +485,13 @@ width:90%;
 
     width:100%;
 
-    padding:12px;
+    padding:10px;
 
     border:2px solid #ef7158;
 
     border-radius:8px;
 
-    background:white;
-
-    font-size:16px;
-
-    transition:.3s;
+    font-size:15px;
 
 }
 
@@ -511,7 +501,7 @@ width:90%;
 
     border-color:#d95d39;
 
-    box-shadow:0 0 8px rgba(239,113,88,.4);
+    box-shadow:0 0 6px rgba(239,113,88,.3);
 
 }
 
@@ -519,22 +509,22 @@ width:90%;
 
     width:100%;
 
-    margin-top:30px;
+    margin-top:20px;
 
     text-align:center;
+
+    padding:12px;
 
 }
 
 #msg{
 
-    margin-top:25px;
+    margin-top:18px;
 
     text-align:center;
 
     font-weight:bold;
 
     color:#2e7d32;
-
-    line-height:1.6;
 
 }
