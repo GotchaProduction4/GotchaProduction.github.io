@@ -78,28 +78,24 @@ body{
    CHECKER BORDER
 =========================== */
 
-
 .checker{
 
 height:12px;
 
 background:
-
 linear-gradient(
-90deg,
-white 25%,
+45deg,
 #ef7158 25%,
-#ef7158 50%,
+white 25%,
 white 50%,
-white 75%,
-#ef7158 75%
+#ef7158 50%,
+#ef7158 75%,
+white 75%
 );
 
 background-size:24px 24px;
 
 }
-
-
 
 
 
