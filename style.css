@@ -1,6 +1,7 @@
 /* ===========================
    RESET
 =========================== */
+
 *{
     margin:0;
     padding:0;
@@ -11,9 +12,11 @@ html{
     scroll-behavior:smooth;
 }
 
+
 /* ===========================
    BODY
 =========================== */
+
 body{
 
     font-family:'Poppins',sans-serif;
@@ -23,6 +26,7 @@ body{
 
 }
 
+
 /* ===========================
    NAVBAR
 =========================== */
@@ -30,9 +34,10 @@ body{
 .navbar{
 
     background:#ef7158;
-    padding:15px 40px;
+    padding:15px 5%;
 
 }
+
 
 .navbar-brand{
 
@@ -41,6 +46,7 @@ body{
     font-weight:bold;
 
 }
+
 
 .navbar-nav .nav-link{
 
@@ -51,11 +57,14 @@ body{
 
 }
 
+
 .navbar-nav .nav-link:hover{
 
     color:white !important;
 
 }
+
+
 
 /* ===========================
    CHECKER BORDER
@@ -80,35 +89,48 @@ background-size:24px 24px;
 
 }
 
+
+
 /* ===========================
    HERO
 =========================== */
+
 
 .hero{
 
 min-height:85vh;
 
 display:flex;
-align-items:center;
-justify-content:space-around;
 
-padding:60px;
+align-items:center;
+
+justify-content:center;
+
+gap:80px;
+
+padding:60px 8%;
 
 position:relative;
+
 overflow:hidden;
 
 }
+
+
 /* Retro Sunburst */
+
 .hero::before{
 
 content:"";
 
 position:absolute;
 
-width:150vw;
-height:150vw;
+width:180vw;
+
+height:180vw;
 
 background:
+
 repeating-conic-gradient(
 #f8d667 0deg 15deg,
 #f2b861 15deg 30deg
@@ -116,8 +138,9 @@ repeating-conic-gradient(
 
 border-radius:50%;
 
-top:50%;
-left:55%;
+top:45%;
+
+left:65%;
 
 transform:translate(-50%,-50%);
 
@@ -126,17 +149,67 @@ opacity:.6;
 z-index:-1;
 
 }
+
+
+
+
+/* ===========================
+   CONTENT
+=========================== */
+
+
+.content{
+
+max-width:550px;
+
+}
+
+
+.content h1{
+
+font-family:'Luckiest Guy',cursive;
+
+font-size:6rem;
+
+line-height:.9;
+
+color:#2b211b;
+
+
+text-shadow:
+
+3px 3px 0 #79582d,
+
+6px 6px 0 rgba(0,0,0,.2);
+
+}
+
+
+.content p{
+
+margin-top:25px;
+
+font-size:18px;
+
+}
+
+
+
 /* ===========================
    BUTTONS
 =========================== */
 
+
 .buttons{
 
 margin-top:35px;
+
 display:flex;
+
 gap:20px;
 
 }
+
 
 .btn-retro{
 
@@ -160,6 +233,7 @@ transition:.2s;
 
 }
 
+
 .btn-retro:hover{
 
 text-decoration:none;
@@ -172,21 +246,27 @@ color:#603600;
 
 }
 
+
+
 /* ===========================
    CAMERA
 =========================== */
 
+
 .camera img{
 
-width:420px;
+width:min(420px,40vw);
 
 filter:drop-shadow(12px 12px 0 white);
 
 }
 
+
+
 /* ===========================
    FEATURES
 =========================== */
+
 
 .feature-card{
 
@@ -208,21 +288,26 @@ height:100%;
 
 }
 
+
 .feature-card:hover{
 
 transform:translateY(-8px);
 
 }
 
+
+
 /* ===========================
    GALLERY
 =========================== */
+
 
 .gallery{
 
 padding:60px 20px;
 
 }
+
 
 .gallery h2{
 
@@ -233,6 +318,7 @@ margin-bottom:35px;
 font-family:'Luckiest Guy',cursive;
 
 }
+
 
 .gallery-row{
 
@@ -246,6 +332,7 @@ flex-wrap:wrap;
 
 }
 
+
 .gallery-row img{
 
 width:320px;
@@ -258,15 +345,217 @@ box-shadow:0 8px 18px rgba(0,0,0,.2);
 
 }
 
+
 .gallery-row img:hover{
 
 transform:scale(1.05);
 
 }
 
+
+
+/* ===========================
+   BOOKING PAGE
+=========================== */
+
+
+.booking-container{
+
+min-height:60vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px 20px;
+
+}
+
+
+
+.booking-card{
+
+width:100%;
+
+max-width:450px;
+
+background:#fff5d9;
+
+padding:35px;
+
+border:5px solid #ef7158;
+
+border-radius:18px;
+
+box-shadow:8px 8px 0 #d95d39;
+
+text-align:left;
+
+}
+
+
+
+.booking-card label{
+
+display:block;
+
+margin-top:12px;
+
+margin-bottom:6px;
+
+font-weight:600;
+
+color:#603600;
+
+}
+
+
+
+.booking-card input{
+
+width:100%;
+
+padding:10px;
+
+border:2px solid #ef7158;
+
+border-radius:8px;
+
+font-size:15px;
+
+}
+
+
+
+.booking-card input:focus{
+
+outline:none;
+
+border-color:#d95d39;
+
+box-shadow:0 0 6px rgba(239,113,88,.3);
+
+}
+
+
+
+.booking-card .btn-retro{
+
+width:100%;
+
+margin-top:20px;
+
+text-align:center;
+
+padding:12px;
+
+}
+
+
+
+#msg{
+
+margin-top:18px;
+
+text-align:center;
+
+font-weight:bold;
+
+color:#2e7d32;
+
+}
+
+
+
+
+/* ===========================
+   MODAL
+=========================== */
+
+
+.modal-content{
+
+background:#fff5d9;
+
+border:6px solid #ef7158;
+
+border-radius:18px;
+
+box-shadow:8px 8px 0 #d95d39;
+
+}
+
+
+.modal-header{
+
+border-bottom:3px dashed #ef7158;
+
+background:#f8d667;
+
+}
+
+
+.modal-title{
+
+font-family:'Luckiest Guy',cursive;
+
+color:#603600;
+
+}
+
+
+.modal-body{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+
+.modal-footer{
+
+border-top:3px dashed #ef7158;
+
+}
+
+
+.modal .btn-secondary{
+
+background:#ef7158;
+
+border:none;
+
+font-weight:bold;
+
+}
+
+
+.modal .btn-secondary:hover{
+
+background:#d95d39;
+
+}
+
+
+.close{
+
+font-size:30px;
+
+opacity:1;
+
+color:#603600;
+
+}
+
+
+
 /* ===========================
    FOOTER
 =========================== */
+
 
 footer{
 
@@ -282,83 +571,16 @@ text-align:center;
 
 }
 
-/* ===========================
-   RETRO BOOTSTRAP MODAL
-=========================== */
 
-.modal-content{
 
-background:#fff5d9;
-
-border:6px solid #ef7158;
-
-border-radius:18px;
-
-box-shadow:8px 8px 0 #d95d39;
-
-}
-
-.modal-header{
-
-border-bottom:3px dashed #ef7158;
-
-background:#f8d667;
-
-}
-
-.modal-title{
-
-font-family:'Luckiest Guy',cursive;
-
-color:#603600;
-
-}
-
-.modal-body{
-
-font-size:17px;
-
-line-height:1.8;
-
-}
-
-.modal-footer{
-
-border-top:3px dashed #ef7158;
-
-}
-
-.modal .btn-secondary{
-
-background:#ef7158;
-
-border:none;
-
-font-weight:bold;
-
-}
-
-.modal .btn-secondary:hover{
-
-background:#d95d39;
-
-}
-
-.close{
-
-font-size:30px;
-
-opacity:1;
-
-color:#603600;
-
-}
 
 /* ===========================
    MOBILE
 =========================== */
 
+
 @media(max-width:768px){
+
 
 .hero{
 
@@ -366,23 +588,50 @@ flex-direction:column;
 
 text-align:center;
 
-padding:40px 20px;
+padding:50px 20px;
+
+gap:30px;
 
 }
+
+
+.hero::before{
+
+width:220vw;
+
+height:220vw;
+
+top:35%;
+
+left:50%;
+
+}
+
+
 
 .content h1{
 
-font-size:4rem;
+font-size:3.5rem;
 
 }
+
+
+
+.content p{
+
+font-size:16px;
+
+}
+
+
 
 .camera img{
 
 width:280px;
 
-margin-top:40px;
-
 }
+
+
 
 .buttons{
 
@@ -392,104 +641,73 @@ flex-wrap:wrap;
 
 }
 
+
+
+.navbar-brand{
+
+font-size:24px;
+
+}
+
+
+
+.navbar-nav .nav-link{
+
+margin-left:0;
+
+text-align:center;
+
+}
+
+
+
 .gallery-row img{
 
 width:90%;
 
 }
 
-/* ===========================
-   BOOKING PAGE
-=========================== */
 
-.booking-container{
-
-    min-height:60vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:30px 20px;
-
-}
 
 .booking-card{
 
-    width:100%;
-    max-width:450px;   /* Reduced from 600px */
-
-    background:#fff5d9;
-
-    padding:28px;      /* Reduced from 40px */
-
-    border:5px solid #ef7158;
-
-    border-radius:18px;
-
-    box-shadow:8px 8px 0 #d95d39;
-
-    text-align:left;
+padding:25px;
 
 }
 
-.booking-card label{
-
-    display:block;
-
-    margin-top:12px;
-    margin-bottom:6px;
-
-    font-weight:600;
-
-    color:#603600;
 
 }
 
-.booking-card input{
 
-    width:100%;
 
-    padding:10px;
 
-    border:2px solid #ef7158;
+/* ===========================
+   SMALL PHONES
+=========================== */
 
-    border-radius:8px;
 
-    font-size:15px;
+@media(max-width:400px){
 
-}
 
-.booking-card input:focus{
+.content h1{
 
-    outline:none;
-
-    border-color:#d95d39;
-
-    box-shadow:0 0 6px rgba(239,113,88,.3);
+font-size:3rem;
 
 }
 
-.booking-card .btn-retro{
 
-    width:100%;
+.camera img{
 
-    margin-top:20px;
-
-    text-align:center;
-
-    padding:12px;
+width:240px;
 
 }
 
-#msg{
 
-    margin-top:18px;
+.btn-retro{
 
-    text-align:center;
+padding:12px 20px;
 
-    font-weight:bold;
+}
 
-    color:#2e7d32;
 
 }
