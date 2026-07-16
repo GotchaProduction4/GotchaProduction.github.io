@@ -98,25 +98,20 @@ position:relative;
 overflow:hidden;
 
 }
-
 /* Retro Sunburst */
-
 .hero::before{
 
 content:"";
 
 position:absolute;
 
-width:1800px;
-height:1800px;
+width:150vw;
+height:150vw;
 
 background:
-
 repeating-conic-gradient(
-
 #f8d667 0deg 15deg,
 #f2b861 15deg 30deg
-
 );
 
 border-radius:50%;
@@ -131,36 +126,6 @@ opacity:.6;
 z-index:-1;
 
 }
-
-.content{
-
-max-width:550px;
-
-}
-
-.content h1{
-
-font-family:'Luckiest Guy',cursive;
-
-font-size:6rem;
-
-line-height:.9;
-
-color:#2b211b;
-
-text-shadow:
-3px 3px 0 #79582d,
-6px 6px 0 rgba(0,0,0,.2);
-
-}
-
-.content p{
-
-margin-top:25px;
-font-size:18px;
-
-}
-
 /* ===========================
    BUTTONS
 =========================== */
