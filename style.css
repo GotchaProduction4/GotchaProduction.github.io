@@ -549,20 +549,15 @@ flex-wrap:wrap;
 
 
 .gallery-row img{
+    display:block;
 
+    width:min(320px,90vw);
 
-width:min(320px,90vw);
+    border-radius:15px;
 
+    transition:.3s;
 
-border-radius:15px;
-
-
-transition:.3s;
-
-
-box-shadow:0 8px 18px rgba(0,0,0,.2);
-
-
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
 }
 
 
