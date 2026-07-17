@@ -14,12 +14,21 @@ html{
 }
 
 
+html,
 body{
+    height:100%;
+}
 
+body{
     font-family:'Poppins',sans-serif;
     background:#f8e7ba;
     color:#333;
     overflow-x:hidden;
+
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
 
 }
 
