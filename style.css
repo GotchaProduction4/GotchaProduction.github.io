@@ -8,19 +8,15 @@
     box-sizing:border-box;
 }
 
-
 html{
     scroll-behavior:smooth;
 }
 
-
 body{
-
     font-family:'Poppins',sans-serif;
     background:#f8e7ba;
     color:#333;
     overflow-x:hidden;
-
 }
 
 
@@ -29,99 +25,56 @@ body{
 =========================== */
 
 .navbar{
-
     background:#ef7158;
-
     padding:15px clamp(20px,5vw,60px);
-
 }
-
-
 
 .navbar-brand{
-
     color:white !important;
-
     font-size:clamp(22px,3vw,28px);
-
     font-weight:bold;
-
     display:flex;
-
     align-items:center;
-
 }
-
 
 
 /* LOGO */
 
 .logo{
-
     width:40px;
-
     height:auto;
-
     margin-right:10px;
-
 }
-
 
 
 /* MOBILE MENU BUTTON */
 
 .navbar-toggler{
-
     border:3px solid #2d241d;
-
     padding:5px 10px;
-
     border-radius:8px;
-
 }
-
-
 
 .menu-icon{
-
     font-size:28px;
-
     color:#2d241d;
-
     font-weight:bold;
-
     line-height:1;
-
 }
-
-
-
 
 
 /* NAV LINKS */
 
 .navbar-nav .nav-link{
-
     color:#2d241d !important;
-
     font-weight:600;
-
     margin-left:20px;
-
     transition:.3s;
-
 }
-
-
 
 .navbar-nav .nav-link:hover{
-
     color:white !important;
-
 }
-
-
-
 
 
 /* ===========================
@@ -130,748 +83,336 @@ body{
 
 @media(max-width:767px){
 
+    .logo{
+        width:32px;
+    }
 
-.logo{
+    .navbar-nav{
+        text-align:center;
+        margin-top:15px;
+    }
 
-    width:32px;
-
-}
-
-
-.navbar-nav{
-
-    text-align:center;
-
-    margin-top:15px;
-
-}
-
-
-.navbar-nav .nav-link{
-
-    margin-left:0;
-
-    padding:12px;
+    .navbar-nav .nav-link{
+        margin-left:0;
+        padding:12px;
+    }
 
 }
-
-
-}
-
-
-
 
 
 /* SMALL PHONES */
 
 @media(max-width:400px){
 
+    .logo{
+        width:28px;
+    }
 
-.logo{
-
-    width:28px;
-
-}
-
-
-.navbar-brand{
-
-    font-size:22px;
+    .navbar-brand{
+        font-size:22px;
+    }
 
 }
 
 
-}
 /* ===========================
    TWO LINE CHECKER BORDER
 =========================== */
 
 .checker{
+    height:24px;
 
-height:24px;
+    background-color:white;
 
-background-color:white;
+    background-image:
+        linear-gradient(45deg, #ef7158 25%, transparent 25%),
+        linear-gradient(-45deg, #ef7158 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ef7158 75%),
+        linear-gradient(-45deg, transparent 75%, #ef7158 75%);
 
-background-image:
-linear-gradient(45deg, #ef7158 25%, transparent 25%),
-linear-gradient(-45deg, #ef7158 25%, transparent 25%),
-linear-gradient(45deg, transparent 75%, #ef7158 75%),
-linear-gradient(-45deg, transparent 75%, #ef7158 75%);
+    background-size:24px 24px;
 
-background-size:24px 24px;
-
-background-position:
-0 0,
-0 12px,
-12px -12px,
--12px 0;
-
+    background-position:
+        0 0,
+        0 12px,
+        12px -12px,
+        -12px 0;
 }
+
 
 /* ===========================
    HERO
 =========================== */
 
-
 .hero{
+    min-height:85vh;
 
-min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-display:flex;
+    gap:50px;
 
-align-items:center;
+    padding:60px 8%;
 
-justify-content:space-between;
-
-gap:50px;
-
-padding:60px 8%;
-
-position:relative;
-
-overflow:hidden;
-
+    position:relative;
+    overflow:hidden;
 }
-
-
-
 
 
 /* ===========================
    RETRO SUNBURST
 =========================== */
 
-
 .hero::before{
+    content:"";
 
-content:"";
+    position:absolute;
 
-position:absolute;
+    width:180vw;
+    height:180vw;
 
+    background:
+        repeating-conic-gradient(
+            #f8d667 0deg 15deg,
+            #f2b861 15deg 30deg
+        );
 
-width:180vw;
+    border-radius:50%;
 
-height:180vw;
+    top:50%;
+    left:75%;
 
+    transform:translate(-50%,-50%);
 
-background:
+    opacity:.6;
 
-repeating-conic-gradient(
-
-#f8d667 0deg 15deg,
-
-#f2b861 15deg 30deg
-
-);
-
-
-
-border-radius:50%;
-
-
-top:50%;
-
-left:75%;
-
-
-transform:translate(-50%,-50%);
-
-
-
-opacity:.6;
-
-
-z-index:-1;
-
+    z-index:-1;
 }
-
-
-
 
 
 /* ===========================
    HERO CONTENT
 =========================== */
 
-
 .content{
-
-max-width:550px;
-
-flex:1;
-
+    max-width:550px;
+    flex:1;
 }
-
-
 
 .content h1{
+    font-family:'Luckiest Guy',cursive;
 
-font-family:'Luckiest Guy',cursive;
+    font-size:clamp(3.5rem,6vw,6rem);
 
+    line-height:.9;
 
-font-size:clamp(3.5rem,6vw,6rem);
+    color:#2b211b;
 
-
-line-height:.9;
-
-
-color:#2b211b;
-
-
-text-shadow:
-
-3px 3px 0 #79582d,
-
-6px 6px 0 rgba(0,0,0,.2);
-
+    text-shadow:
+        3px 3px 0 #79582d,
+        6px 6px 0 rgba(0,0,0,.2);
 }
-
-
-
-
 
 .content p{
+    margin-top:25px;
 
-margin-top:25px;
+    font-size:clamp(15px,2vw,18px);
 
-
-font-size:clamp(15px,2vw,18px);
-
-
-line-height:1.6;
-
+    line-height:1.6;
 }
-
-
-
 
 
 /* ===========================
    BUTTONS
 =========================== */
 
-
 .buttons{
+    margin-top:35px;
 
-margin-top:35px;
+    display:flex;
 
-display:flex;
+    gap:20px;
 
-gap:20px;
-
-flex-wrap:wrap;
-
+    flex-wrap:wrap;
 }
-
-
 
 .btn-retro{
+    display:inline-block;
 
+    padding:14px 28px;
 
-display:inline-block;
+    background:#f4b64d;
 
+    color:#603600;
 
-padding:14px 28px;
+    font-weight:bold;
 
+    text-decoration:none;
 
-background:#f4b64d;
+    border-radius:8px;
 
+    box-shadow:0 6px 0 #946621;
 
-color:#603600;
-
-
-font-weight:bold;
-
-
-text-decoration:none;
-
-
-border-radius:8px;
-
-
-box-shadow:0 6px 0 #946621;
-
-
-transition:.2s;
-
-
+    transition:.2s;
 }
-
-
 
 .btn-retro:hover{
+    transform:translateY(4px);
 
+    box-shadow:0 2px 0 #946621;
 
-transform:translateY(4px);
-
-
-box-shadow:0 2px 0 #946621;
-
-
-color:#603600;
-
-
+    color:#603600;
 }
+
 
 /* ===========================
    CAMERA
 =========================== */
 
-
 .camera{
+    display:flex;
 
-display:flex;
+    justify-content:center;
+    align-items:center;
 
-justify-content:center;
-
-align-items:center;
-
-flex:1;
-
+    flex:1;
 }
-
-
 
 .camera img{
+    width:min(450px,35vw);
 
+    max-width:100%;
 
-width:min(450px,35vw);
-
-
-max-width:100%;
-
-
-filter:drop-shadow(12px 12px 0 white);
-
-
+    filter:drop-shadow(12px 12px 0 white);
 }
-
-
-
 
 
 /* ===========================
    FEATURES
 =========================== */
 
-
 .feature-card{
+    background:#fff5d9;
 
+    padding:30px;
 
-background:#fff5d9;
+    border-radius:18px;
 
+    margin-top:20px;
 
-padding:30px;
+    border:4px solid #ef7158;
 
+    box-shadow:5px 5px 0 #ef7158;
 
-border-radius:18px;
+    transition:.3s;
 
-
-margin-top:20px;
-
-
-border:4px solid #ef7158;
-
-
-box-shadow:5px 5px 0 #ef7158;
-
-
-transition:.3s;
-
-
-height:100%;
-
-
+    height:100%;
 }
-
-
 
 .feature-card:hover{
-
-
-transform:translateY(-8px);
-
-
+    transform:translateY(-8px);
 }
-
-
 
 
 /* ===========================
    GALLERY
 =========================== */
 
-
 .gallery{
-
-
-padding:60px 20px;
-
-
+    padding:60px 20px;
 }
-
-
 
 .gallery h2{
+    font-family:'Luckiest Guy',cursive;
 
+    font-size:clamp(28px,4vw,36px);
 
-font-family:'Luckiest Guy',cursive;
-
-
-font-size:clamp(28px,4vw,36px);
-
-
-margin-bottom:35px;
-
-
+    margin-bottom:35px;
 }
-
-
 
 .gallery-row{
+    display:flex;
 
+    justify-content:center;
 
-display:flex;
+    align-items:center;
 
+    gap:25px;
 
-justify-content:center;
-
-
-align-items:center;
-
-
-gap:25px;
-
-
-flex-wrap:wrap;
-
-
+    flex-wrap:wrap;
 }
-
-
 
 .gallery-row img{
+    width:min(320px,90vw);
 
+    border-radius:15px;
 
-width:min(320px,90vw);
+    transition:.3s;
 
-
-border-radius:15px;
-
-
-transition:.3s;
-
-
-box-shadow:0 8px 18px rgba(0,0,0,.2);
-
-
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
 }
-
-
 
 .gallery-row img:hover{
-
-
-transform:scale(1.05);
-
-
+    transform:scale(1.05);
 }
-
-
-
-
-
-/* ===========================
-   BOOKING PAGE
-=========================== */
-
-
-.booking-container{
-
-
-min-height:60vh;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-align-items:center;
-
-
-padding:40px 20px;
-
-
-}
-
-
-
-
-.booking-card{
-
-
-width:100%;
-
-
-max-width:450px;
-
-
-
-background:#fff5d9;
-
-
-
-padding:35px;
-
-
-
-border:5px solid #ef7158;
-
-
-
-border-radius:18px;
-
-
-
-box-shadow:8px 8px 0 #d95d39;
-
-
-
-text-align:left;
-
-
-}
-
-
-
-.booking-card label{
-
-
-display:block;
-
-
-margin-top:12px;
-
-
-margin-bottom:6px;
-
-
-font-weight:600;
-
-
-color:#603600;
-
-
-}
-
-
-
-.booking-card input{
-
-
-width:100%;
-
-
-padding:10px;
-
-
-border:2px solid #ef7158;
-
-
-border-radius:8px;
-
-
-font-size:15px;
-
-
-}
-
-
-
-.booking-card input:focus{
-
-
-outline:none;
-
-
-border-color:#d95d39;
-
-
-box-shadow:0 0 6px rgba(239,113,88,.3);
-
-
-}
-
-
-
-.booking-card .btn-retro{
-
-
-width:100%;
-
-
-margin-top:20px;
-
-
-text-align:center;
-
-
-padding:12px;
-
-
-}
-
-
-
-#msg{
-
-
-margin-top:18px;
-
-
-text-align:center;
-
-
-font-weight:bold;
-
-
-color:#2e7d32;
-
-
-}
-
-
-
 
 
 /* ===========================
    MODAL
 =========================== */
 
-
 .modal-content{
+    background:#fff5d9;
 
+    border:6px solid #ef7158;
 
-background:#fff5d9;
+    border-radius:18px;
 
-
-border:6px solid #ef7158;
-
-
-border-radius:18px;
-
-
-box-shadow:8px 8px 0 #d95d39;
-
-
+    box-shadow:8px 8px 0 #d95d39;
 }
-
-
-
 
 .modal-header{
+    border-bottom:3px dashed #ef7158;
 
-
-border-bottom:3px dashed #ef7158;
-
-
-background:#f8d667;
-
-
+    background:#f8d667;
 }
-
-
-
 
 .modal-title{
+    font-family:'Luckiest Guy',cursive;
 
-
-font-family:'Luckiest Guy',cursive;
-
-
-color:#603600;
-
-
+    color:#603600;
 }
-
-
-
-
 
 .modal-body{
+    font-size:17px;
 
-
-font-size:17px;
-
-
-line-height:1.8;
-
-
+    line-height:1.8;
 }
-
-
-
-
 
 .modal-footer{
-
-
-border-top:3px dashed #ef7158;
-
-
+    border-top:3px dashed #ef7158;
 }
-
-
-
-
 
 .modal .btn-secondary{
+    background:#ef7158;
 
+    border:none;
 
-background:#ef7158;
-
-
-border:none;
-
-
-font-weight:bold;
-
-
+    font-weight:bold;
 }
-
-
-
-
 
 .modal .btn-secondary:hover{
-
-
-background:#d95d39;
-
-
+    background:#d95d39;
 }
-
-
-
 
 .close{
+    font-size:30px;
 
+    opacity:1;
 
-font-size:30px;
-
-
-opacity:1;
-
-
-color:#603600;
-
-
+    color:#603600;
 }
-
-
-
 
 
 /* ===========================
@@ -879,7 +420,6 @@ color:#603600;
 =========================== */
 
 footer{
-
     margin-top:0;
 
     background:#ef7158;
@@ -889,30 +429,18 @@ footer{
     padding:20px;
 
     text-align:center;
-
 }
-
-
 
 footer a{
-
-
-color:white;
-
-
+    color:white;
 }
-
 
 footer a:hover{
+    color:#f8d667;
 
-
-color:#f8d667;
-
-
-text-decoration:none;
-
-
+    text-decoration:none;
 }
+
 
 /* =================================================
    LARGE LAPTOP / SMALL DESKTOP
@@ -920,48 +448,29 @@ text-decoration:none;
 
 @media (max-width:1200px){
 
+    .hero{
+        padding:50px 5%;
 
-.hero{
+        gap:40px;
+    }
 
-padding:50px 5%;
+    .content h1{
+        font-size:5rem;
+    }
 
-gap:40px;
+    .camera img{
+        width:350px;
+    }
 
-}
+    .hero::before{
+        width:170vw;
 
+        height:170vw;
 
-
-.content h1{
-
-font-size:5rem;
-
-}
-
-
-
-.camera img{
-
-width:350px;
-
-}
-
-
-
-.hero::before{
-
-width:170vw;
-
-height:170vw;
-
-left:70%;
+        left:70%;
+    }
 
 }
-
-
-}
-
-
-
 
 
 /* =================================================
@@ -974,62 +483,37 @@ left:70%;
 and (max-width:1200px)
 and (orientation:landscape){
 
+    .hero{
+        flex-direction:row;
 
+        align-items:center;
 
-.hero{
+        justify-content:space-between;
 
-flex-direction:row;
+        padding:50px;
+    }
 
-align-items:center;
+    .content{
+        max-width:500px;
+    }
 
-justify-content:space-between;
+    .content h1{
+        font-size:4.5rem;
+    }
 
-padding:50px;
+    .camera img{
+        width:320px;
+    }
 
-}
+    .hero::before{
+        width:170vw;
 
+        height:170vw;
 
-
-.content{
-
-max-width:500px;
-
-}
-
-
-
-.content h1{
-
-font-size:4.5rem;
-
-}
-
-
-
-.camera img{
-
-width:320px;
+        left:75%;
+    }
 
 }
-
-
-
-.hero::before{
-
-width:170vw;
-
-height:170vw;
-
-left:75%;
-
-}
-
-
-
-}
-
-
-
 
 
 /* =================================================
@@ -1042,74 +526,45 @@ left:75%;
 and (max-width:900px)
 and (orientation:portrait){
 
+    .hero{
+        flex-direction:column;
 
+        text-align:center;
 
-.hero{
+        justify-content:center;
 
-flex-direction:column;
+        padding:50px 30px;
 
-text-align:center;
+        gap:35px;
+    }
 
-justify-content:center;
+    .content{
+        max-width:700px;
+    }
 
-padding:50px 30px;
+    .content h1{
+        font-size:4rem;
+    }
 
-gap:35px;
+    .buttons{
+        justify-content:center;
+    }
 
-}
+    .camera img{
+        width:300px;
+    }
 
+    .hero::before{
+        width:230vw;
 
+        height:230vw;
 
-.content{
+        left:50%;
 
-max-width:700px;
-
-}
-
-
-
-.content h1{
-
-font-size:4rem;
-
-}
-
-
-
-.buttons{
-
-justify-content:center;
-
-}
-
-
-
-.camera img{
-
-width:300px;
+        top:40%;
+    }
 
 }
-
-
-
-.hero::before{
-
-width:230vw;
-
-height:230vw;
-
-left:50%;
-
-top:40%;
-
-}
-
-
-
-}
-
-
-
 
 
 /* =================================================
@@ -1120,27 +575,15 @@ top:40%;
 (min-width:600px)
 and (max-width:1024px){
 
+    .feature-card{
+        padding:25px;
+    }
 
-
-.feature-card{
-
-padding:25px;
-
-}
-
-
-
-.gallery-row img{
-
-width:280px;
+    .gallery-row img{
+        width:280px;
+    }
 
 }
-
-
-}
-
-
-
 
 
 /* =================================================
@@ -1151,80 +594,47 @@ width:280px;
 (max-width:900px)
 and (orientation:landscape){
 
+    .hero{
+        flex-direction:row;
 
+        min-height:100vh;
 
-.hero{
+        padding:25px;
 
-flex-direction:row;
+        gap:20px;
+    }
 
-min-height:100vh;
+    .content{
+        max-width:450px;
+    }
 
-padding:25px;
+    .content h1{
+        font-size:3rem;
+    }
 
-gap:20px;
+    .content p{
+        font-size:14px;
+    }
 
-}
+    .camera img{
+        width:220px;
+    }
 
+    .buttons{
+        justify-content:flex-start;
+    }
 
+    .hero::before{
+        width:220vw;
 
-.content{
+        height:220vw;
 
-max-width:450px;
+        left:65%;
 
-}
-
-
-
-.content h1{
-
-font-size:3rem;
-
-}
-
-
-
-.content p{
-
-font-size:14px;
-
-}
-
-
-
-.camera img{
-
-width:220px;
+        top:50%;
+    }
 
 }
-
-
-
-.buttons{
-
-justify-content:flex-start;
-
-}
-
-
-
-.hero::before{
-
-width:220vw;
-
-height:220vw;
-
-left:65%;
-
-top:50%;
-
-}
-
-
-
-}
-
-
-
 
 
 /* =================================================
@@ -1235,108 +645,59 @@ top:50%;
 (max-width:767px)
 and (orientation:portrait){
 
+    .hero{
+        flex-direction:column;
 
+        text-align:center;
 
-.hero{
+        padding:40px 20px;
 
-flex-direction:column;
+        gap:35px;
+    }
 
-text-align:center;
+    .content h1{
+        font-size:3.2rem;
+    }
 
-padding:40px 20px;
+    .content p{
+        font-size:15px;
+    }
 
-gap:35px;
+    .buttons{
+        justify-content:center;
+    }
 
-}
+    .camera img{
+        width:260px;
+    }
 
+    .hero::before{
+        width:250vw;
 
+        height:250vw;
 
-.content h1{
+        top:35%;
 
-font-size:3.2rem;
+        left:50%;
+    }
 
-}
+    .navbar-brand{
+        font-size:22px;
+    }
 
+    /* LOGO */
 
+    .logo{
+        width:32px;
+    }
 
-.content p{
+    .navbar-nav .nav-link{
+        margin-left:0;
 
-font-size:15px;
-
-}
-
-
-
-.buttons{
-
-justify-content:center;
-
-}
-
-
-
-.camera img{
-
-width:260px;
-
-}
-
-
-
-.hero::before{
-
-width:250vw;
-
-height:250vw;
-
-top:35%;
-
-left:50%;
+        text-align:center;
+    }
 
 }
-
-
-
-.navbar-brand{
-
-font-size:22px;
-
-}
-
-
-
-/* LOGO */
-
-.logo{
-
-width:32px;
-
-}
-
-
-
-.navbar-nav .nav-link{
-
-margin-left:0;
-
-text-align:center;
-
-}
-
-
-
-.booking-card{
-
-padding:25px;
-
-}
-
-
-
-}
-
-
-
 
 
 /* =================================================
@@ -1345,46 +706,24 @@ padding:25px;
 
 @media(max-width:400px){
 
+    .content h1{
+        font-size:2.8rem;
+    }
 
+    .camera img{
+        width:220px;
+    }
 
-.content h1{
+    .logo{
+        width:28px;
+    }
 
-font-size:2.8rem;
+    .btn-retro{
+        padding:12px 18px;
+    }
 
-}
-
-
-
-.camera img{
-
-width:220px;
-
-}
-
-
-
-.logo{
-
-width:28px;
-
-}
-
-
-
-.btn-retro{
-
-padding:12px 18px;
-
-}
-
-
-
-.feature-card{
-
-padding:20px;
-
-}
-
-
+    .feature-card{
+        padding:20px;
+    }
 
 }
