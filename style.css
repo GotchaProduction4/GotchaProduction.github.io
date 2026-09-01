@@ -1,5 +1,18 @@
-/* ===============================
-   GENERAL
+/* =================================
+   TALAKBAY COLOR PALETTE
+================================= */
+
+:root {
+    --cream: #fff4e6;
+    --blue: #2b4e8d;
+    --yellow: #f4d35e;
+    --red: #891917;
+    --black: #222222;
+}
+
+
+/* =================================
+   RESET
 ================================= */
 
 * {
@@ -8,180 +21,158 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-
-    background: #080808;
-
     font-family: 'Poppins', sans-serif;
-
-    color: #2d2d2d;
-
+    background: var(--black);
+    color: var(--black);
+    overflow-x: hidden;
 }
 
 
-/* Main Website */
+/* =================================
+   MAIN WEBSITE CONTAINER
+================================= */
 
 .website-container {
-
     width: 90%;
     max-width: 1200px;
+    min-height: 100vh;
 
     margin: 0 auto;
 
-    background: #f4efe5;
-
-    min-height: 100vh;
-
-    border: 1px solid #777;
+    background: var(--cream);
 
     overflow: hidden;
-
 }
 
 
-/* ===============================
-   NAVIGATION
+/* =================================
+   NAVBAR
 ================================= */
 
 .navbar {
+    min-height: 60px;
 
-    min-height: 70px;
+    padding: 8px 35px;
 
-    padding: 10px 35px;
+    background: var(--cream);
 
-    background: #f4efe5;
-
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid var(--black);
 
     position: relative;
-
 }
 
 
-/* Logo */
+/* =================================
+   LOGO
+================================= */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
 
 .logo {
-
-    width: 45px;
-
+    width: 42px;
     height: auto;
-
 }
 
 
-/* Navigation */
+/* =================================
+   NAVIGATION LINKS
+================================= */
 
 .navbar-nav {
-
-    gap: 10px;
-
+    gap: 8px;
 }
 
+.navbar-nav .nav-link {
+    color: white !important;
 
-.nav-link {
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 12px;
+    font-size: 11px;
 
     font-weight: 600;
 
-    letter-spacing: 0.5px;
-
-    color: white !important;
+    letter-spacing: .5px;
 
     padding: 7px 14px !important;
 
-    background: #333;
+    transition: .25s;
 
-    transition: 0.3s;
-
+    text-align: center;
 }
 
 
-/* Individual Navigation Colors */
+/* DEFAULT PAGE COLORS */
 
-.nav-item:nth-child(1) .nav-link {
-
-    background: #e9cf74;
-    color: #333 !important;
-
+.nav-item.home .nav-link {
+    background: var(--blue);
 }
 
-.nav-item:nth-child(2) .nav-link {
-
-    background: #3e557d;
-
+.nav-item.resources .nav-link {
+    background: var(--blue);
 }
 
-.nav-item:nth-child(3) .nav-link {
-
-    background: #8f2521;
-
+.nav-item.gallery .nav-link {
+    background: var(--red);
 }
 
-.nav-item:nth-child(4) .nav-link {
-
-    background: #333;
-
+.nav-item.contact .nav-link {
+    background: var(--black);
 }
 
 
-/* Hover */
+/* ACTIVE PAGE = YELLOW */
 
-.nav-link:hover {
+.nav-item.active .nav-link {
+    background: var(--yellow) !important;
+    color: var(--black) !important;
+}
 
+
+.navbar-nav .nav-link:hover {
     transform: translateY(-2px);
-
-    opacity: 0.85;
-
+    opacity: .85;
 }
 
 
-/* Mobile Menu */
-
-.menu-icon {
-
-    font-size: 25px;
-
-    color: #222;
-
-}
-
-
-/* ===============================
-   HERO SECTION
+/* =================================
+   MOBILE MENU BUTTON
 ================================= */
 
-.hero-section {
+.navbar-toggler {
+    border: 1px solid var(--black);
+    padding: 4px 10px;
+    border-radius: 0;
+}
 
-    min-height: 480px;
-
-    position: relative;
-
-    padding: 70px 70px 40px;
-
-    overflow: hidden;
-
-    background:
-
-    linear-gradient(
-        rgba(245,240,230,0.88),
-        rgba(245,240,230,0.88)
-    ),
-
-    url("images/camera-bg.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-
+.menu-icon {
+    font-size: 24px;
+    color: var(--black);
+    font-weight: bold;
 }
 
 
-/* Hero Content */
+/* =================================
+   REMOVE OLD CHECKER DESIGN
+================================= */
 
-.hero-content {
+.checker {
+    display: none;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    min-height: 480px;
 
     display: flex;
 
@@ -189,74 +180,93 @@ body {
 
     justify-content: space-between;
 
-    gap: 60px;
+    gap: 50px;
+
+    padding: 60px 8%;
 
     position: relative;
 
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255, 244, 230, .90),
+            rgba(255, 244, 230, .90)
+        ),
+        url("images/camera-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Remove old sunburst */
+
+.hero::before {
+    display: none;
+}
+
+
+/* =================================
+   HERO CONTENT
+================================= */
+
+.content {
+    max-width: 500px;
+    flex: 1;
+    position: relative;
     z-index: 2;
-
 }
 
-
-/* Hero Text */
-
-.hero-text {
-
-    width: 45%;
-
-}
-
-
-.hero-text h1 {
-
+.content h1 {
     font-family: 'Oswald', sans-serif;
 
-    font-size: 82px;
+    font-size: clamp(4rem, 7vw, 7rem);
 
     font-weight: 700;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 
-    line-height: 1;
+    line-height: .9;
 
-    margin-bottom: 12px;
+    color: var(--black);
 
+    text-shadow: none;
 }
 
+.content p {
+    margin-top: 15px;
 
-/* Subtitle */
-
-.subtitle {
+    max-width: 430px;
 
     font-size: 13px;
 
-    max-width: 420px;
+    line-height: 1.6;
 
-    line-height: 1.5;
-
-    margin-bottom: 28px;
-
+    color: var(--black);
 }
 
 
-/* ===============================
-   BUTTONS
+/* =================================
+   HERO BUTTON
 ================================= */
 
-.hero-buttons {
+.buttons {
+    margin-top: 28px;
 
     display: flex;
 
     gap: 15px;
 
+    flex-wrap: wrap;
 }
 
+.btn-retro {
+    display: inline-block;
 
-.retro-button {
+    padding: 11px 22px;
 
-    padding: 12px 20px;
-
-    border-radius: 25px;
+    background: var(--blue);
 
     color: white;
 
@@ -266,73 +276,71 @@ body {
 
     text-decoration: none;
 
-    transition: 0.3s;
+    border-radius: 25px;
 
+    transition: .25s;
 }
 
+.btn-retro:hover {
+    transform: translateY(-3px);
 
-.retro-button:hover {
+    background: var(--black);
 
     color: white;
 
     text-decoration: none;
-
-    transform: translateY(-3px);
-
 }
 
 
-.blue-button {
-
-    background: #3d557f;
-
-}
-
-
-.red-button {
-
-    background: #8e2822;
-
-}
-
-
-/* ===============================
+/* =================================
    HERO IMAGE
 ================================= */
 
-.hero-image {
+/*
+   Use this if you add:
 
-    width: 50%;
+   <div class="camera">
+       <img src="images/photowalk.jpg">
+   </div>
+*/
 
-    height: 300px;
+.camera {
+    display: flex;
 
-    overflow: hidden;
+    justify-content: center;
 
-    border-top-left-radius: 50px;
+    align-items: center;
 
-    border-bottom-left-radius: 80px;
+    flex: 1;
 
-    border-bottom-right-radius: 0;
+    position: relative;
 
+    z-index: 2;
 }
 
+.camera img {
+    width: min(480px, 42vw);
 
-.hero-image img {
+    height: 280px;
 
-    width: 100%;
-
-    height: 100%;
+    max-width: 100%;
 
     object-fit: cover;
 
+    filter: none;
+
+    border-top-left-radius: 55px;
+
+    border-bottom-left-radius: 80px;
 }
 
 
-/* ===============================
-   HERO STRIPES
+/* =================================
+   HERO DECORATIVE STRIPES
 ================================= */
 
-.hero-stripes {
+.hero::after {
+    content: "";
 
     position: absolute;
 
@@ -340,149 +348,103 @@ body {
 
     right: 0;
 
-    height: 45px;
+    width: 330px;
 
-    display: flex;
+    height: 40px;
 
+    background:
+        linear-gradient(
+            125deg,
+
+            transparent 0 8%,
+
+            var(--black) 8% 30%,
+
+            var(--red) 30% 52%,
+
+            var(--blue) 52% 74%,
+
+            var(--yellow) 74% 100%
+        );
 }
 
 
-.stripe {
-
-    width: 80px;
-
-    transform: skewX(-35deg);
-
-    margin-left: -20px;
-
-}
-
-
-.black {
-
-    background: #2b2b2b;
-
-}
-
-.red {
-
-    background: #9d2520;
-
-}
-
-.blue {
-
-    background: #3d557f;
-
-}
-
-.yellow {
-
-    background: #e8c75e;
-
-}
-
-
-/* ===============================
+/* =================================
    SECTION DIVIDER
 ================================= */
 
 .section-divider {
+    height: 40px;
 
-    height: 45px;
+    background: var(--yellow);
 
-    background: #e9cf74;
+    border-top: 1px solid var(--black);
 
-    border-top: 1px solid #777;
-
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid var(--black);
 
     position: relative;
 
+    overflow: hidden;
 }
-
 
 .divider-stripes {
-
-    display: flex;
-
     height: 100%;
 
-    width: 300px;
+    width: 280px;
 
+    display: flex;
 }
-
 
 .divider-stripes div {
-
     width: 80px;
 
-    transform: skewX(40deg);
+    transform: skewX(35deg);
 
-    margin-left: -25px;
-
+    margin-left: -20px;
 }
 
-
 .divider-yellow {
-
-    background: #e9cf74;
-
+    background: var(--yellow);
 }
 
 .divider-blue {
-
-    background: #3e557d;
-
+    background: var(--blue);
 }
 
 .divider-red {
-
-    background: #9d2520;
-
+    background: var(--red);
 }
 
 .divider-black {
-
-    background: #2c2c2c;
-
+    background: var(--black);
 }
 
 
-/* ===============================
+/* =================================
    ABOUT SECTION
 ================================= */
 
 .about-section {
-
     min-height: 520px;
 
-    padding: 60px 50px 100px;
+    padding: 55px 50px 90px;
 
     position: relative;
 
     overflow: hidden;
 
     background:
-
-    linear-gradient(
-        rgba(245,240,230,0.92),
-        rgba(245,240,230,0.92)
-    ),
-
-    url("images/camera-bg.jpg");
+        linear-gradient(
+            rgba(255, 244, 230, .92),
+            rgba(255, 244, 230, .92)
+        ),
+        url("images/camera-bg.jpg");
 
     background-size: cover;
-
     background-position: center;
-
 }
 
-
-/* About Layout */
-
 .about-content {
-
     display: flex;
 
     align-items: flex-start;
@@ -490,62 +452,50 @@ body {
     justify-content: space-between;
 
     gap: 50px;
-
 }
-
-
-/* About Text */
 
 .about-text {
-
     width: 45%;
-
 }
 
-
 .about-text h2 {
-
     font-family: 'Oswald', sans-serif;
 
-    font-size: 58px;
+    font-size: clamp(3rem, 5vw, 5rem);
 
     font-weight: 700;
 
     letter-spacing: 2px;
 
-    margin-bottom: 10px;
+    line-height: 1;
 
+    margin-bottom: 15px;
+
+    color: var(--black);
 }
-
 
 .about-description {
+    border: 1px solid var(--blue);
 
-    border: 1px solid #638bc0;
+    padding: 12px;
 
-    padding: 8px;
-
-    min-height: 250px;
-
+    min-height: 220px;
 }
-
 
 .about-description p {
+    font-size: 13px;
 
-    font-size: 15px;
-
-    line-height: 1.6;
+    line-height: 1.7;
 
     text-align: justify;
-
 }
 
 
-/* ===============================
+/* =================================
    ABOUT IMAGE
 ================================= */
 
 .about-image {
-
     width: 48%;
 
     height: 360px;
@@ -553,302 +503,369 @@ body {
     overflow: hidden;
 
     border-bottom-left-radius: 80px;
-
 }
 
-
 .about-image img {
-
     width: 100%;
 
     height: 100%;
 
     object-fit: cover;
-
 }
 
 
-/* ===============================
-   BOTTOM STRIPES
+/* =================================
+   BOTTOM DECORATIVE STRIPES
 ================================= */
 
 .bottom-stripes {
-
     position: absolute;
 
     bottom: 0;
 
     right: 0;
 
-    height: 45px;
+    height: 40px;
+
+    width: 420px;
 
     display: flex;
-
 }
 
-
 .bottom-stripes div {
-
-    width: 100px;
+    width: 110px;
 
     transform: skewX(-30deg);
 
     margin-left: -20px;
-
 }
 
-
 .bottom-black {
-
-    background: #292929;
-
+    background: var(--black);
 }
 
 .bottom-red {
-
-    background: #9d2520;
-
+    background: var(--red);
 }
 
 .bottom-blue {
-
-    background: #3d557f;
-
+    background: var(--blue);
 }
 
 .bottom-yellow {
-
-    background: #e8c75e;
-
+    background: var(--yellow);
 }
 
 
-/* ===============================
-   FOOTER
+/* =================================
+   FEATURE CARDS
+   KEEP FOR OTHER PAGES
 ================================= */
 
-footer {
+.feature-card {
+    background: var(--cream);
 
-    background: #242424;
+    padding: 30px;
 
-    color: white;
+    border: 1px solid var(--blue);
 
-    text-align: center;
+    margin-top: 20px;
 
-    padding: 40px 20px;
+    transition: .3s;
 
-    font-size: 13px;
+    height: 100%;
+}
 
+.feature-card:hover {
+    transform: translateY(-5px);
 }
 
 
-footer strong {
+/* =================================
+   GALLERY
+================================= */
 
-    font-size: 20px;
+.gallery {
+    padding: 60px 40px;
 
+    background: var(--cream);
+}
+
+.gallery h2 {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+.gallery-row {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.gallery-row img {
+    width: min(320px, 90vw);
+
+    transition: .3s;
+}
+
+.gallery-row img:hover {
+    transform: scale(1.03);
 }
 
 
-.footer-links {
-
-    margin: 20px 0;
-
-}
-
-
-footer a {
-
-    color: #e8c75e;
-
-    text-decoration: none;
-
-    margin: 0 8px;
-
-}
-
-
-footer a:hover {
-
-    color: white;
-
-}
-
-
-/* ===============================
+/* =================================
    MODAL
 ================================= */
 
 .modal-content {
+    background: var(--cream);
+
+    border: 1px solid var(--black);
 
     border-radius: 0;
-
-    border: none;
-
 }
 
-
 .modal-header {
-
-    background: #3d557f;
+    background: var(--blue);
 
     color: white;
 
+    border-bottom: none;
 }
-
 
 .modal-title {
-
     font-family: 'Oswald', sans-serif;
 
-    letter-spacing: 1px;
+    font-size: 25px;
 
+    letter-spacing: 1px;
+}
+
+.modal-body {
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.modal-footer {
+    border-top: 1px solid #ccc;
+}
+
+.modal .btn-secondary {
+    background: var(--black);
+
+    border: none;
+
+    border-radius: 0;
+}
+
+.modal .btn-secondary:hover {
+    background: var(--red);
+}
+
+.close {
+    color: white;
+
+    opacity: 1;
 }
 
 
-/* ===============================
-   RESPONSIVE
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    margin-top: 0;
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+footer strong {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: var(--yellow);
+
+    text-decoration: none;
+
+    margin: 0 8px;
+}
+
+footer a:hover {
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* =================================
+   TABLET
 ================================= */
 
 @media (max-width: 991px) {
 
     .website-container {
-
         width: 100%;
-
     }
 
+    .hero {
+        padding: 50px 40px;
 
-    .hero-section {
-
-        padding: 60px 40px;
-
+        gap: 35px;
     }
 
-
-    .hero-content {
-
-        gap: 30px;
-
+    .content h1 {
+        font-size: 5rem;
     }
 
+    .camera img {
+        width: 380px;
 
-    .hero-text h1 {
-
-        font-size: 65px;
-
+        height: 250px;
     }
 
+    .about-section {
+        padding: 50px 40px 90px;
+    }
 
 }
 
+
+/* =================================
+   MOBILE
+================================= */
 
 @media (max-width: 768px) {
 
-
-    .hero-content {
-
-        flex-direction: column;
-
+    .navbar {
+        padding: 10px 20px;
     }
-
-
-    .hero-text {
-
-        width: 100%;
-
-    }
-
-
-    .hero-image {
-
-        width: 100%;
-
-        height: 280px;
-
-    }
-
-
-    .about-content {
-
-        flex-direction: column;
-
-    }
-
-
-    .about-text {
-
-        width: 100%;
-
-    }
-
-
-    .about-image {
-
-        width: 100%;
-
-    }
-
 
     .navbar-nav {
+        margin-top: 15px;
 
-        margin-top: 20px;
-
+        gap: 5px;
     }
 
+    .navbar-nav .nav-link {
+        margin: 0;
 
-    .nav-item {
-
-        margin-bottom: 8px;
-
+        text-align: center;
     }
 
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 55px 25px 70px;
+
+        min-height: auto;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .content p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .camera img {
+        width: 100%;
+
+        height: 260px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image {
+        width: 100%;
+
+        height: 300px;
+    }
+
+    .about-description {
+        min-height: auto;
+    }
 
 }
 
 
+/* =================================
+   SMALL PHONES
+================================= */
+
 @media (max-width: 500px) {
 
-
-    .hero-section {
-
-        padding: 50px 25px;
-
+    .content h1 {
+        font-size: 3.8rem;
     }
 
-
-    .hero-text h1 {
-
-        font-size: 50px;
-
+    .content p {
+        font-size: 11px;
     }
 
-
-    .hero-buttons {
-
-        flex-wrap: wrap;
-
+    .camera img {
+        height: 220px;
     }
 
+    .hero::after {
+        width: 260px;
+
+        height: 30px;
+    }
 
     .about-section {
-
-        padding: 50px 25px 90px;
-
+        padding: 40px 25px 80px;
     }
-
 
     .about-text h2 {
-
-        font-size: 45px;
-
+        font-size: 3.5rem;
     }
-
 
     .about-image {
-
-        height: 280px;
-
+        height: 250px;
     }
 
+    .about-description p {
+        font-size: 12px;
+    }
 
 }
