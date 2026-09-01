@@ -1,871 +1,121 @@
 /* =================================
-   TALAKBAY COLOR PALETTE
-================================= */
-
-:root {
-    --cream: #fff4e6;
-    --blue: #2b4e8d;
-    --yellow: #f4d35e;
-    --red: #891917;
-    --black: #222222;
-}
-
-
-/* =================================
-   RESET
-================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--black);
-    color: var(--black);
-    overflow-x: hidden;
-}
-
-
-/* =================================
-   MAIN WEBSITE CONTAINER
-================================= */
-
-.website-container {
-    width: 90%;
-    max-width: 1200px;
-    min-height: 100vh;
-
-    margin: 0 auto;
-
-    background: var(--cream);
-
-    overflow: hidden;
-}
-
-
-/* =================================
-   NAVBAR
+   NAVBAR LOGO + PAGE COLOR STRIPES
 ================================= */
 
 .navbar {
     min-height: 60px;
-
-    padding: 8px 35px;
-
+    padding: 0 35px;
     background: var(--cream);
-
-    border-bottom: 1px solid var(--black);
-
+    border-bottom: 1px solid #b8b1a8;
     position: relative;
+    overflow: hidden;
 }
 
 
-/* =================================
-   LOGO
-================================= */
+/* LOGO AREA */
 
 .navbar-brand {
+    position: relative;
+    z-index: 2;
+
     display: flex;
     align-items: center;
+
+    height: 60px;
+    width: 90px;
+
     margin: 0;
 }
 
-.logo {
-    width: 42px;
-    height: auto;
-}
 
+/* Background behind logo */
 
-/* =================================
-   NAVIGATION LINKS
-================================= */
-
-.navbar-nav {
-    gap: 8px;
-}
-
-.navbar-nav .nav-link {
-    color: white !important;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: .5px;
-
-    padding: 7px 14px !important;
-
-    transition: .25s;
-
-    text-align: center;
-}
-
-
-/* DEFAULT PAGE COLORS */
-
-.nav-item.home .nav-link {
-    background: var(--blue);
-}
-
-.nav-item.resources .nav-link {
-    background: var(--blue);
-}
-
-.nav-item.gallery .nav-link {
-    background: var(--red);
-}
-
-.nav-item.contact .nav-link {
-    background: var(--black);
-}
-
-
-/* ACTIVE PAGE = YELLOW */
-
-.nav-item.active .nav-link {
-    background: var(--yellow) !important;
-    color: var(--black) !important;
-}
-
-
-.navbar-nav .nav-link:hover {
-    transform: translateY(-2px);
-    opacity: .85;
-}
-
-
-/* =================================
-   MOBILE MENU BUTTON
-================================= */
-
-.navbar-toggler {
-    border: 1px solid var(--black);
-    padding: 4px 10px;
-    border-radius: 0;
-}
-
-.menu-icon {
-    font-size: 24px;
-    color: var(--black);
-    font-weight: bold;
-}
-
-
-/* =================================
-   REMOVE OLD CHECKER DESIGN
-================================= */
-
-.checker {
-    display: none;
-}
-
-
-/* =================================
-   HERO
-================================= */
-
-.hero {
-    min-height: 480px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 50px;
-
-    padding: 60px 8%;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            rgba(255, 244, 230, .90),
-            rgba(255, 244, 230, .90)
-        ),
-        url("images/camera-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-}
-
-
-/* Remove old sunburst */
-
-.hero::before {
-    display: none;
-}
-
-
-/* =================================
-   HERO CONTENT
-================================= */
-
-.content {
-    max-width: 500px;
-    flex: 1;
-    position: relative;
-    z-index: 2;
-}
-
-.content h1 {
-    font-family: 'Oswald', sans-serif;
-
-    font-size: clamp(4rem, 7vw, 7rem);
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    line-height: .9;
-
-    color: var(--black);
-
-    text-shadow: none;
-}
-
-.content p {
-    margin-top: 15px;
-
-    max-width: 430px;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-    color: var(--black);
-}
-
-
-/* =================================
-   HERO BUTTON
-================================= */
-
-.buttons {
-    margin-top: 28px;
-
-    display: flex;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-}
-
-.btn-retro {
-    display: inline-block;
-
-    padding: 11px 22px;
-
-    background: var(--blue);
-
-    color: white;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    text-decoration: none;
-
-    border-radius: 25px;
-
-    transition: .25s;
-}
-
-.btn-retro:hover {
-    transform: translateY(-3px);
-
-    background: var(--black);
-
-    color: white;
-
-    text-decoration: none;
-}
-
-
-/* =================================
-   HERO IMAGE
-================================= */
-
-/*
-   Use this if you add:
-
-   <div class="camera">
-       <img src="images/photowalk.jpg">
-   </div>
-*/
-
-.camera {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex: 1;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-.camera img {
-    width: min(480px, 42vw);
-
-    height: 280px;
-
-    max-width: 100%;
-
-    object-fit: cover;
-
-    filter: none;
-
-    border-top-left-radius: 55px;
-
-    border-bottom-left-radius: 80px;
-}
-
-
-/* =================================
-   HERO DECORATIVE STRIPES
-================================= */
-
-.hero::after {
+.navbar-brand::before {
     content: "";
 
     position: absolute;
 
-    bottom: 0;
+    top: 0;
+    left: -35px;
 
-    right: 0;
-
-    width: 330px;
-
-    height: 40px;
-
-    background:
-        linear-gradient(
-            125deg,
-
-            transparent 0 8%,
-
-            var(--black) 8% 30%,
-
-            var(--red) 30% 52%,
-
-            var(--blue) 52% 74%,
-
-            var(--yellow) 74% 100%
-        );
-}
-
-
-/* =================================
-   SECTION DIVIDER
-================================= */
-
-.section-divider {
-    height: 40px;
+    width: 140px;
+    height: 60px;
 
     background: var(--yellow);
 
-    border-top: 1px solid var(--black);
-
-    border-bottom: 1px solid var(--black);
-
-    position: relative;
-
-    overflow: hidden;
+    z-index: -1;
 }
 
-.divider-stripes {
-    height: 100%;
 
-    width: 280px;
+/* LOGO */
 
-    display: flex;
-}
+.logo {
+    width: 42px;
+    height: auto;
 
-.divider-stripes div {
-    width: 80px;
-
-    transform: skewX(35deg);
-
-    margin-left: -20px;
-}
-
-.divider-yellow {
-    background: var(--yellow);
-}
-
-.divider-blue {
-    background: var(--blue);
-}
-
-.divider-red {
-    background: var(--red);
-}
-
-.divider-black {
-    background: var(--black);
+    margin-left: 10px;
 }
 
 
 /* =================================
-   ABOUT SECTION
+   DEFAULT DIAGONAL STRIPES
 ================================= */
 
-.about-section {
-    min-height: 520px;
+.navbar::before {
+    content: "";
 
-    padding: 55px 50px 90px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            rgba(255, 244, 230, .92),
-            rgba(255, 244, 230, .92)
-        ),
-        url("images/camera-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-}
-
-.about-content {
-    display: flex;
-
-    align-items: flex-start;
-
-    justify-content: space-between;
-
-    gap: 50px;
-}
-
-.about-text {
-    width: 45%;
-}
-
-.about-text h2 {
-    font-family: 'Oswald', sans-serif;
-
-    font-size: clamp(3rem, 5vw, 5rem);
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    line-height: 1;
-
-    margin-bottom: 15px;
-
-    color: var(--black);
-}
-
-.about-description {
-    border: 1px solid var(--blue);
-
-    padding: 12px;
-
-    min-height: 220px;
-}
-
-.about-description p {
-    font-size: 13px;
-
-    line-height: 1.7;
-
-    text-align: justify;
-}
-
-
-/* =================================
-   ABOUT IMAGE
-================================= */
-
-.about-image {
-    width: 48%;
-
-    height: 360px;
-
-    overflow: hidden;
-
-    border-bottom-left-radius: 80px;
-}
-
-.about-image img {
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-}
-
-
-/* =================================
-   BOTTOM DECORATIVE STRIPES
-================================= */
-
-.bottom-stripes {
     position: absolute;
 
-    bottom: 0;
+    top: 0;
+    left: 120px;
 
-    right: 0;
+    width: 180px;
+    height: 60px;
 
-    height: 40px;
+    background:
+        linear-gradient(
+            55deg,
+            var(--yellow) 0%,
+            var(--yellow) 25%,
+            var(--blue) 25%,
+            var(--blue) 50%,
+            var(--red) 50%,
+            var(--red) 75%,
+            var(--black) 75%,
+            var(--black) 100%
+        );
 
-    width: 420px;
+    clip-path: polygon(
+        0 0,
+        75% 0,
+        100% 100%,
+        25% 100%
+    );
 
-    display: flex;
 }
 
-.bottom-stripes div {
-    width: 110px;
 
-    transform: skewX(-30deg);
+/* =================================
+   PAGE COLOR HIGHLIGHT
+================================= */
 
-    margin-left: -20px;
-}
 
-.bottom-black {
-    background: var(--black);
-}
+/* HOME PAGE */
 
-.bottom-red {
-    background: var(--red);
-}
-
-.bottom-blue {
-    background: var(--blue);
-}
-
-.bottom-yellow {
+.home-page .navbar-brand::before {
     background: var(--yellow);
 }
 
 
-/* =================================
-   FEATURE CARDS
-   KEEP FOR OTHER PAGES
-================================= */
+/* RESOURCES PAGE */
 
-.feature-card {
-    background: var(--cream);
-
-    padding: 30px;
-
-    border: 1px solid var(--blue);
-
-    margin-top: 20px;
-
-    transition: .3s;
-
-    height: 100%;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-
-/* =================================
-   GALLERY
-================================= */
-
-.gallery {
-    padding: 60px 40px;
-
-    background: var(--cream);
-}
-
-.gallery h2 {
-    font-family: 'Oswald', sans-serif;
-
-    font-size: clamp(2.5rem, 5vw, 4rem);
-
-    font-weight: 700;
-
-    margin-bottom: 35px;
-}
-
-.gallery-row {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 25px;
-
-    flex-wrap: wrap;
-}
-
-.gallery-row img {
-    width: min(320px, 90vw);
-
-    transition: .3s;
-}
-
-.gallery-row img:hover {
-    transform: scale(1.03);
-}
-
-
-/* =================================
-   MODAL
-================================= */
-
-.modal-content {
-    background: var(--cream);
-
-    border: 1px solid var(--black);
-
-    border-radius: 0;
-}
-
-.modal-header {
+.resources-page .navbar-brand::before {
     background: var(--blue);
-
-    color: white;
-
-    border-bottom: none;
 }
 
-.modal-title {
-    font-family: 'Oswald', sans-serif;
 
-    font-size: 25px;
+/* GALLERY PAGE */
 
-    letter-spacing: 1px;
-}
-
-.modal-body {
-    font-size: 15px;
-
-    line-height: 1.8;
-}
-
-.modal-footer {
-    border-top: 1px solid #ccc;
-}
-
-.modal .btn-secondary {
-    background: var(--black);
-
-    border: none;
-
-    border-radius: 0;
-}
-
-.modal .btn-secondary:hover {
+.gallery-page .navbar-brand::before {
     background: var(--red);
-}
-
-.close {
-    color: white;
-
-    opacity: 1;
-}
-
-
-/* =================================
-   FOOTER
-================================= */
-
-footer {
-    margin-top: 0;
-
-    background: var(--black);
-
-    color: white;
-
-    padding: 35px 20px;
-
-    text-align: center;
-
-    font-size: 13px;
-}
-
-footer strong {
-    font-family: 'Oswald', sans-serif;
-
-    font-size: 24px;
-
-    letter-spacing: 1px;
-}
-
-footer a {
-    color: var(--yellow);
-
-    text-decoration: none;
-
-    margin: 0 8px;
-}
-
-footer a:hover {
-    color: white;
-
-    text-decoration: none;
-}
-
-
-/* =================================
-   TABLET
-================================= */
-
-@media (max-width: 991px) {
-
-    .website-container {
-        width: 100%;
-    }
-
-    .hero {
-        padding: 50px 40px;
-
-        gap: 35px;
-    }
-
-    .content h1 {
-        font-size: 5rem;
-    }
-
-    .camera img {
-        width: 380px;
-
-        height: 250px;
-    }
-
-    .about-section {
-        padding: 50px 40px 90px;
-    }
-
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        padding: 10px 20px;
-    }
-
-    .navbar-nav {
-        margin-top: 15px;
-
-        gap: 5px;
-    }
-
-    .navbar-nav .nav-link {
-        margin: 0;
-
-        text-align: center;
-    }
-
-    .hero {
-        flex-direction: column;
-
-        text-align: center;
-
-        padding: 55px 25px 70px;
-
-        min-height: auto;
-    }
-
-    .content {
-        max-width: 100%;
-    }
-
-    .content p {
-        margin-left: auto;
-
-        margin-right: auto;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-
-    .camera img {
-        width: 100%;
-
-        height: 260px;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-text {
-        width: 100%;
-    }
-
-    .about-image {
-        width: 100%;
-
-        height: 300px;
-    }
-
-    .about-description {
-        min-height: auto;
-    }
-
-}
-
-
-/* =================================
-   SMALL PHONES
-================================= */
-
-@media (max-width: 500px) {
-
-    .content h1 {
-        font-size: 3.8rem;
-    }
-
-    .content p {
-        font-size: 11px;
-    }
-
-    .camera img {
-        height: 220px;
-    }
-
-    .hero::after {
-        width: 260px;
-
-        height: 30px;
-    }
-
-    .about-section {
-        padding: 40px 25px 80px;
-    }
-
-    .about-text h2 {
-        font-size: 3.5rem;
-    }
-
-    .about-image {
-        height: 250px;
-    }
-
-    .about-description p {
-        font-size: 12px;
-    }
-
 }
