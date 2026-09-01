@@ -1,729 +1,854 @@
-/* ===========================
-   RESET
-=========================== */
+/* ===============================
+   GENERAL
+================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
+body {
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f8e7ba;
-    color:#333;
-    overflow-x:hidden;
-}
+    background: #080808;
 
+    font-family: 'Poppins', sans-serif;
 
-/* ===========================
-   NAVBAR
-=========================== */
-
-.navbar{
-    background:#ef7158;
-    padding:15px clamp(20px,5vw,60px);
-}
-
-.navbar-brand{
-    color:white !important;
-    font-size:clamp(22px,3vw,28px);
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-}
-
-
-/* LOGO */
-
-.logo{
-    width:40px;
-    height:auto;
-    margin-right:10px;
-}
-
-
-/* MOBILE MENU BUTTON */
-
-.navbar-toggler{
-    border:3px solid #2d241d;
-    padding:5px 10px;
-    border-radius:8px;
-}
-
-.menu-icon{
-    font-size:28px;
-    color:#2d241d;
-    font-weight:bold;
-    line-height:1;
-}
-
-
-/* NAV LINKS */
-
-.navbar-nav .nav-link{
-    color:#2d241d !important;
-    font-weight:600;
-    margin-left:20px;
-    transition:.3s;
-}
-
-.navbar-nav .nav-link:hover{
-    color:white !important;
-}
-
-
-/* ===========================
-   MOBILE NAVBAR
-=========================== */
-
-@media(max-width:767px){
-
-    .logo{
-        width:32px;
-    }
-
-    .navbar-nav{
-        text-align:center;
-        margin-top:15px;
-    }
-
-    .navbar-nav .nav-link{
-        margin-left:0;
-        padding:12px;
-    }
+    color: #2d2d2d;
 
 }
 
 
-/* SMALL PHONES */
+/* Main Website */
 
-@media(max-width:400px){
+.website-container {
 
-    .logo{
-        width:28px;
-    }
+    width: 90%;
+    max-width: 1200px;
 
-    .navbar-brand{
-        font-size:22px;
-    }
+    margin: 0 auto;
+
+    background: #f4efe5;
+
+    min-height: 100vh;
+
+    border: 1px solid #777;
+
+    overflow: hidden;
 
 }
 
 
-/* ===========================
-   TWO LINE CHECKER BORDER
-=========================== */
+/* ===============================
+   NAVIGATION
+================================= */
 
-.checker{
-    height:24px;
+.navbar {
 
-    background-color:white;
+    min-height: 70px;
 
-    background-image:
-        linear-gradient(45deg, #ef7158 25%, transparent 25%),
-        linear-gradient(-45deg, #ef7158 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ef7158 75%),
-        linear-gradient(-45deg, transparent 75%, #ef7158 75%);
+    padding: 10px 35px;
 
-    background-size:24px 24px;
+    background: #f4efe5;
 
-    background-position:
-        0 0,
-        0 12px,
-        12px -12px,
-        -12px 0;
+    border-bottom: 1px solid #777;
+
+    position: relative;
+
 }
 
 
-/* ===========================
-   HERO
-=========================== */
+/* Logo */
 
-.hero{
-    min-height:85vh;
+.logo {
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    width: 45px;
 
-    gap:50px;
+    height: auto;
 
-    padding:60px 8%;
-
-    position:relative;
-    overflow:hidden;
 }
 
 
-/* ===========================
-   RETRO SUNBURST
-=========================== */
+/* Navigation */
 
-.hero::before{
-    content:"";
+.navbar-nav {
 
-    position:absolute;
+    gap: 10px;
 
-    width:180vw;
-    height:180vw;
+}
+
+
+.nav-link {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    color: white !important;
+
+    padding: 7px 14px !important;
+
+    background: #333;
+
+    transition: 0.3s;
+
+}
+
+
+/* Individual Navigation Colors */
+
+.nav-item:nth-child(1) .nav-link {
+
+    background: #e9cf74;
+    color: #333 !important;
+
+}
+
+.nav-item:nth-child(2) .nav-link {
+
+    background: #3e557d;
+
+}
+
+.nav-item:nth-child(3) .nav-link {
+
+    background: #8f2521;
+
+}
+
+.nav-item:nth-child(4) .nav-link {
+
+    background: #333;
+
+}
+
+
+/* Hover */
+
+.nav-link:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.85;
+
+}
+
+
+/* Mobile Menu */
+
+.menu-icon {
+
+    font-size: 25px;
+
+    color: #222;
+
+}
+
+
+/* ===============================
+   HERO SECTION
+================================= */
+
+.hero-section {
+
+    min-height: 480px;
+
+    position: relative;
+
+    padding: 70px 70px 40px;
+
+    overflow: hidden;
 
     background:
-        repeating-conic-gradient(
-            #f8d667 0deg 15deg,
-            #f2b861 15deg 30deg
-        );
 
-    border-radius:50%;
+    linear-gradient(
+        rgba(245,240,230,0.88),
+        rgba(245,240,230,0.88)
+    ),
 
-    top:50%;
-    left:75%;
+    url("images/camera-bg.jpg");
 
-    transform:translate(-50%,-50%);
+    background-size: cover;
 
-    opacity:.6;
+    background-position: center;
 
-    z-index:-1;
 }
 
 
-/* ===========================
-   HERO CONTENT
-=========================== */
+/* Hero Content */
 
-.content{
-    max-width:550px;
-    flex:1;
-}
+.hero-content {
 
-.content h1{
-    font-family:'Luckiest Guy',cursive;
+    display: flex;
 
-    font-size:clamp(3.5rem,6vw,6rem);
+    align-items: center;
 
-    line-height:.9;
+    justify-content: space-between;
 
-    color:#2b211b;
+    gap: 60px;
 
-    text-shadow:
-        3px 3px 0 #79582d,
-        6px 6px 0 rgba(0,0,0,.2);
-}
+    position: relative;
 
-.content p{
-    margin-top:25px;
+    z-index: 2;
 
-    font-size:clamp(15px,2vw,18px);
-
-    line-height:1.6;
 }
 
 
-/* ===========================
+/* Hero Text */
+
+.hero-text {
+
+    width: 45%;
+
+}
+
+
+.hero-text h1 {
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 82px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    line-height: 1;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Subtitle */
+
+.subtitle {
+
+    font-size: 13px;
+
+    max-width: 420px;
+
+    line-height: 1.5;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* ===============================
    BUTTONS
-=========================== */
+================================= */
 
-.buttons{
-    margin-top:35px;
+.hero-buttons {
 
-    display:flex;
+    display: flex;
 
-    gap:20px;
+    gap: 15px;
 
-    flex-wrap:wrap;
-}
-
-.btn-retro{
-    display:inline-block;
-
-    padding:14px 28px;
-
-    background:#f4b64d;
-
-    color:#603600;
-
-    font-weight:bold;
-
-    text-decoration:none;
-
-    border-radius:8px;
-
-    box-shadow:0 6px 0 #946621;
-
-    transition:.2s;
-}
-
-.btn-retro:hover{
-    transform:translateY(4px);
-
-    box-shadow:0 2px 0 #946621;
-
-    color:#603600;
 }
 
 
-/* ===========================
-   CAMERA
-=========================== */
+.retro-button {
 
-.camera{
-    display:flex;
+    padding: 12px 20px;
 
-    justify-content:center;
-    align-items:center;
+    border-radius: 25px;
 
-    flex:1;
-}
+    color: white;
 
-.camera img{
-    width:min(450px,35vw);
+    font-size: 12px;
 
-    max-width:100%;
+    font-weight: 600;
 
-    filter:drop-shadow(12px 12px 0 white);
+    text-decoration: none;
+
+    transition: 0.3s;
+
 }
 
 
-/* ===========================
-   FEATURES
-=========================== */
+.retro-button:hover {
 
-.feature-card{
-    background:#fff5d9;
+    color: white;
 
-    padding:30px;
+    text-decoration: none;
 
-    border-radius:18px;
+    transform: translateY(-3px);
 
-    margin-top:20px;
-
-    border:4px solid #ef7158;
-
-    box-shadow:5px 5px 0 #ef7158;
-
-    transition:.3s;
-
-    height:100%;
-}
-
-.feature-card:hover{
-    transform:translateY(-8px);
 }
 
 
-/* ===========================
-   GALLERY
-=========================== */
+.blue-button {
 
-.gallery{
-    padding:60px 20px;
-}
+    background: #3d557f;
 
-.gallery h2{
-    font-family:'Luckiest Guy',cursive;
-
-    font-size:clamp(28px,4vw,36px);
-
-    margin-bottom:35px;
-}
-
-.gallery-row{
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-}
-
-.gallery-row img{
-    width:min(320px,90vw);
-
-    border-radius:15px;
-
-    transition:.3s;
-
-    box-shadow:0 8px 18px rgba(0,0,0,.2);
-}
-
-.gallery-row img:hover{
-    transform:scale(1.05);
 }
 
 
-/* ===========================
-   MODAL
-=========================== */
+.red-button {
 
-.modal-content{
-    background:#fff5d9;
+    background: #8e2822;
 
-    border:6px solid #ef7158;
-
-    border-radius:18px;
-
-    box-shadow:8px 8px 0 #d95d39;
-}
-
-.modal-header{
-    border-bottom:3px dashed #ef7158;
-
-    background:#f8d667;
-}
-
-.modal-title{
-    font-family:'Luckiest Guy',cursive;
-
-    color:#603600;
-}
-
-.modal-body{
-    font-size:17px;
-
-    line-height:1.8;
-}
-
-.modal-footer{
-    border-top:3px dashed #ef7158;
-}
-
-.modal .btn-secondary{
-    background:#ef7158;
-
-    border:none;
-
-    font-weight:bold;
-}
-
-.modal .btn-secondary:hover{
-    background:#d95d39;
-}
-
-.close{
-    font-size:30px;
-
-    opacity:1;
-
-    color:#603600;
 }
 
 
-/* ===========================
+/* ===============================
+   HERO IMAGE
+================================= */
+
+.hero-image {
+
+    width: 50%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border-top-left-radius: 50px;
+
+    border-bottom-left-radius: 80px;
+
+    border-bottom-right-radius: 0;
+
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ===============================
+   HERO STRIPES
+================================= */
+
+.hero-stripes {
+
+    position: absolute;
+
+    bottom: 0;
+
+    right: 0;
+
+    height: 45px;
+
+    display: flex;
+
+}
+
+
+.stripe {
+
+    width: 80px;
+
+    transform: skewX(-35deg);
+
+    margin-left: -20px;
+
+}
+
+
+.black {
+
+    background: #2b2b2b;
+
+}
+
+.red {
+
+    background: #9d2520;
+
+}
+
+.blue {
+
+    background: #3d557f;
+
+}
+
+.yellow {
+
+    background: #e8c75e;
+
+}
+
+
+/* ===============================
+   SECTION DIVIDER
+================================= */
+
+.section-divider {
+
+    height: 45px;
+
+    background: #e9cf74;
+
+    border-top: 1px solid #777;
+
+    border-bottom: 1px solid #777;
+
+    position: relative;
+
+}
+
+
+.divider-stripes {
+
+    display: flex;
+
+    height: 100%;
+
+    width: 300px;
+
+}
+
+
+.divider-stripes div {
+
+    width: 80px;
+
+    transform: skewX(40deg);
+
+    margin-left: -25px;
+
+}
+
+
+.divider-yellow {
+
+    background: #e9cf74;
+
+}
+
+.divider-blue {
+
+    background: #3e557d;
+
+}
+
+.divider-red {
+
+    background: #9d2520;
+
+}
+
+.divider-black {
+
+    background: #2c2c2c;
+
+}
+
+
+/* ===============================
+   ABOUT SECTION
+================================= */
+
+.about-section {
+
+    min-height: 520px;
+
+    padding: 60px 50px 100px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+    linear-gradient(
+        rgba(245,240,230,0.92),
+        rgba(245,240,230,0.92)
+    ),
+
+    url("images/camera-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/* About Layout */
+
+.about-content {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+
+/* About Text */
+
+.about-text {
+
+    width: 45%;
+
+}
+
+
+.about-text h2 {
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.about-description {
+
+    border: 1px solid #638bc0;
+
+    padding: 8px;
+
+    min-height: 250px;
+
+}
+
+
+.about-description p {
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    text-align: justify;
+
+}
+
+
+/* ===============================
+   ABOUT IMAGE
+================================= */
+
+.about-image {
+
+    width: 48%;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    border-bottom-left-radius: 80px;
+
+}
+
+
+.about-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ===============================
+   BOTTOM STRIPES
+================================= */
+
+.bottom-stripes {
+
+    position: absolute;
+
+    bottom: 0;
+
+    right: 0;
+
+    height: 45px;
+
+    display: flex;
+
+}
+
+
+.bottom-stripes div {
+
+    width: 100px;
+
+    transform: skewX(-30deg);
+
+    margin-left: -20px;
+
+}
+
+
+.bottom-black {
+
+    background: #292929;
+
+}
+
+.bottom-red {
+
+    background: #9d2520;
+
+}
+
+.bottom-blue {
+
+    background: #3d557f;
+
+}
+
+.bottom-yellow {
+
+    background: #e8c75e;
+
+}
+
+
+/* ===============================
    FOOTER
-=========================== */
+================================= */
 
-footer{
-    margin-top:0;
+footer {
 
-    background:#ef7158;
+    background: #242424;
 
-    color:white;
+    color: white;
 
-    padding:20px;
+    text-align: center;
 
-    text-align:center;
-}
+    padding: 40px 20px;
 
-footer a{
-    color:white;
-}
-
-footer a:hover{
-    color:#f8d667;
-
-    text-decoration:none;
-}
-
-
-/* =================================================
-   LARGE LAPTOP / SMALL DESKTOP
-================================================= */
-
-@media (max-width:1200px){
-
-    .hero{
-        padding:50px 5%;
-
-        gap:40px;
-    }
-
-    .content h1{
-        font-size:5rem;
-    }
-
-    .camera img{
-        width:350px;
-    }
-
-    .hero::before{
-        width:170vw;
-
-        height:170vw;
-
-        left:70%;
-    }
+    font-size: 13px;
 
 }
 
 
-/* =================================================
-   IPAD AIR GEN 5 LANDSCAPE
-   Around 1024px - 1180px
-================================================= */
+footer strong {
 
-@media
-(min-width:901px)
-and (max-width:1200px)
-and (orientation:landscape){
-
-    .hero{
-        flex-direction:row;
-
-        align-items:center;
-
-        justify-content:space-between;
-
-        padding:50px;
-    }
-
-    .content{
-        max-width:500px;
-    }
-
-    .content h1{
-        font-size:4.5rem;
-    }
-
-    .camera img{
-        width:320px;
-    }
-
-    .hero::before{
-        width:170vw;
-
-        height:170vw;
-
-        left:75%;
-    }
+    font-size: 20px;
 
 }
 
 
-/* =================================================
-   IPAD AIR GEN 5 PORTRAIT
-   768px - 900px
-================================================= */
+.footer-links {
 
-@media
-(min-width:768px)
-and (max-width:900px)
-and (orientation:portrait){
-
-    .hero{
-        flex-direction:column;
-
-        text-align:center;
-
-        justify-content:center;
-
-        padding:50px 30px;
-
-        gap:35px;
-    }
-
-    .content{
-        max-width:700px;
-    }
-
-    .content h1{
-        font-size:4rem;
-    }
-
-    .buttons{
-        justify-content:center;
-    }
-
-    .camera img{
-        width:300px;
-    }
-
-    .hero::before{
-        width:230vw;
-
-        height:230vw;
-
-        left:50%;
-
-        top:40%;
-    }
+    margin: 20px 0;
 
 }
 
 
-/* =================================================
-   TABLETS PORTRAIT / LANDSCAPE
-================================================= */
+footer a {
 
-@media
-(min-width:600px)
-and (max-width:1024px){
+    color: #e8c75e;
 
-    .feature-card{
-        padding:25px;
-    }
+    text-decoration: none;
 
-    .gallery-row img{
-        width:280px;
-    }
+    margin: 0 8px;
 
 }
 
 
-/* =================================================
-   PHONE LANDSCAPE
-================================================= */
+footer a:hover {
 
-@media
-(max-width:900px)
-and (orientation:landscape){
-
-    .hero{
-        flex-direction:row;
-
-        min-height:100vh;
-
-        padding:25px;
-
-        gap:20px;
-    }
-
-    .content{
-        max-width:450px;
-    }
-
-    .content h1{
-        font-size:3rem;
-    }
-
-    .content p{
-        font-size:14px;
-    }
-
-    .camera img{
-        width:220px;
-    }
-
-    .buttons{
-        justify-content:flex-start;
-    }
-
-    .hero::before{
-        width:220vw;
-
-        height:220vw;
-
-        left:65%;
-
-        top:50%;
-    }
+    color: white;
 
 }
 
 
-/* =================================================
-   PHONE PORTRAIT
-================================================= */
+/* ===============================
+   MODAL
+================================= */
 
-@media
-(max-width:767px)
-and (orientation:portrait){
+.modal-content {
 
-    .hero{
-        flex-direction:column;
+    border-radius: 0;
 
-        text-align:center;
-
-        padding:40px 20px;
-
-        gap:35px;
-    }
-
-    .content h1{
-        font-size:3.2rem;
-    }
-
-    .content p{
-        font-size:15px;
-    }
-
-    .buttons{
-        justify-content:center;
-    }
-
-    .camera img{
-        width:260px;
-    }
-
-    .hero::before{
-        width:250vw;
-
-        height:250vw;
-
-        top:35%;
-
-        left:50%;
-    }
-
-    .navbar-brand{
-        font-size:22px;
-    }
-
-    /* LOGO */
-
-    .logo{
-        width:32px;
-    }
-
-    .navbar-nav .nav-link{
-        margin-left:0;
-
-        text-align:center;
-    }
+    border: none;
 
 }
 
 
-/* =================================================
-   SMALL PHONES
-================================================= */
+.modal-header {
 
-@media(max-width:400px){
+    background: #3d557f;
 
-    .content h1{
-        font-size:2.8rem;
+    color: white;
+
+}
+
+
+.modal-title {
+
+    font-family: 'Oswald', sans-serif;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 991px) {
+
+    .website-container {
+
+        width: 100%;
+
     }
 
-    .camera img{
-        width:220px;
+
+    .hero-section {
+
+        padding: 60px 40px;
+
     }
 
-    .logo{
-        width:28px;
+
+    .hero-content {
+
+        gap: 30px;
+
     }
 
-    .btn-retro{
-        padding:12px 18px;
+
+    .hero-text h1 {
+
+        font-size: 65px;
+
     }
 
-    .feature-card{
-        padding:20px;
+
+}
+
+
+@media (max-width: 768px) {
+
+
+    .hero-content {
+
+        flex-direction: column;
+
     }
+
+
+    .hero-text {
+
+        width: 100%;
+
+    }
+
+
+    .hero-image {
+
+        width: 100%;
+
+        height: 280px;
+
+    }
+
+
+    .about-content {
+
+        flex-direction: column;
+
+    }
+
+
+    .about-text {
+
+        width: 100%;
+
+    }
+
+
+    .about-image {
+
+        width: 100%;
+
+    }
+
+
+    .navbar-nav {
+
+        margin-top: 20px;
+
+    }
+
+
+    .nav-item {
+
+        margin-bottom: 8px;
+
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    .hero-section {
+
+        padding: 50px 25px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .about-section {
+
+        padding: 50px 25px 90px;
+
+    }
+
+
+    .about-text h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .about-image {
+
+        height: 280px;
+
+    }
+
 
 }
