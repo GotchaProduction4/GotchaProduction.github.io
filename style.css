@@ -1,75 +1,19 @@
 /* =========================================
-   CUSTOM FONTS
+   DESKTOP LAYOUT CORRECTIONS
 ========================================= */
-
-@font-face {
-    font-family: 'Anton';
-    src: url('fonts/Anton-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Be Vietnam Pro';
-    src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Be Vietnam Pro';
-    src: url('fonts/BeVietnamPro-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-/* =========================================
-   COLOR PALETTE
-========================================= */
-
-:root {
-    --cream: #fff4e6;
-    --blue: #2b4e8d;
-    --yellow: #f4d35e;
-    --red: #891917;
-    --black: #222222;
-}
-
-
-/* =========================================
-   RESET
-========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
 
 body {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 300;
     background: #050505;
-    color: var(--black);
 }
 
 
-/* =========================================
-   MAIN WEBSITE
-========================================= */
+/* Match the narrower centered reference */
 
 .website-container {
     width: 90%;
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     background: var(--cream);
-    min-height: 100vh;
-    overflow: hidden;
 }
 
 
@@ -78,151 +22,16 @@ body {
 ========================================= */
 
 .navbar {
-    height: 80px;
-    padding: 0 35px;
-    background: var(--cream);
-    border-bottom: 1px solid rgba(34, 34, 34, .65);
-    position: relative;
-    overflow: hidden;
+    height: 78px;
+    min-height: 78px;
 }
 
 
-/* =========================================
-   LOGO
-========================================= */
-
-.navbar-brand {
-    height: 80px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    margin: 0;
-}
-
-
-/* Yellow background behind logo */
-
-.navbar-brand::before {
-    content: "";
-    position: absolute;
-    left: -35px;
-    top: 0;
-    width: 165px;
-    height: 80px;
-    background: var(--yellow);
-    z-index: -1;
-}
-
-
-/* =========================================
-   DIAGONAL HEADER STRIPES
-========================================= */
-
-.navbar-brand::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 105px;
-    width: 180px;
-    height: 80px;
-
-    background:
-        linear-gradient(
-            55deg,
-            var(--yellow) 0%,
-            var(--yellow) 25%,
-            var(--blue) 25%,
-            var(--blue) 50%,
-            var(--red) 50%,
-            var(--red) 75%,
-            var(--black) 75%,
-            var(--black) 100%
-        );
-
-    clip-path: polygon(
-        0 0,
-        72% 0,
-        100% 100%,
-        28% 100%
-    );
-
-    z-index: -2;
-}
-
-
-/* Logo Image */
-
-.logo {
-    width: 60px;
-    height: auto;
-    object-fit: contain;
-}
-
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-.navbar-collapse {
-    z-index: 5;
-}
+/* Keep navigation on one line */
 
 .navbar-nav {
-    gap: 10px;
-}
-
-.navbar-nav .nav-link {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 400;
-
-    color: white !important;
-
-    font-size: 14px;
-
-    letter-spacing: 1px;
-
-    padding: 7px 14px !important;
-
-    line-height: 1;
-
-    transition: .25s;
-}
-
-
-/* Default Navigation Colors */
-
-.nav-item.home .nav-link {
-    background: var(--blue);
-}
-
-.nav-item.resources .nav-link {
-    background: var(--blue);
-}
-
-.nav-item.gallery .nav-link {
-    background: var(--red);
-}
-
-.nav-item.contact .nav-link {
-    background: var(--black);
-}
-
-
-/* Active Page = Yellow */
-
-.nav-item.active .nav-link {
-    background: var(--yellow) !important;
-    color: var(--black) !important;
-}
-
-
-/* Navigation Hover */
-
-.navbar-nav .nav-link:hover {
-    transform: translateY(-2px);
-    opacity: .85;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
 }
 
 
@@ -232,102 +41,47 @@ body {
 
 .hero {
     min-height: 520px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    padding: 90px 70px 105px;
-
-    background:
-        linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
-        ),
-        url("images/camera-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
+    padding: 85px 55px 105px;
 }
 
-
-/* =========================================
-   HERO CONTENT
-========================================= */
 
 .hero-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    gap: 70px;
+    gap: 55px;
 }
 
-
-/* =========================================
-   HERO TEXT
-========================================= */
 
 .content {
-    width: 48%;
+    width: 100%;
 }
+
 
 .content h1 {
     font-family: 'Anton', sans-serif;
-    font-size: clamp(75px, 7vw, 125px);
-    font-weight: 400;
+    font-size: 72px;
+    line-height: 1;
     letter-spacing: 2px;
-    line-height: .9;
-    color: var(--black);
 }
 
+
 .content p {
-    margin-top: 12px;
-    max-width: 500px;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
+    max-width: 400px;
     line-height: 1.5;
 }
 
 
-/* =========================================
-   BUTTONS
-========================================= */
-
 .buttons {
-    display: flex;
-    gap: 16px;
-    margin-top: 28px;
+    margin-top: 20px;
+    gap: 12px;
 }
+
 
 .btn-retro {
-    padding: 13px 23px;
-    border-radius: 30px;
-
-    color: white;
-
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 400;
-
-    font-size: 14px;
-
-    text-decoration: none;
-
-    transition: .25s;
-}
-
-.btn-retro:hover {
-    color: white;
-    text-decoration: none;
-    transform: translateY(-3px);
-}
-
-.resources-btn {
-    background: var(--blue);
-}
-
-.gallery-btn {
-    background: var(--red);
+    padding: 12px 20px;
+    font-size: 12px;
 }
 
 
@@ -336,499 +90,68 @@ body {
 ========================================= */
 
 .hero-image {
-    width: 48%;
-    height: 330px;
-
-    overflow: hidden;
-
-    border-bottom-left-radius: 120px;
+    width: 100%;
+    height: 300px;
+    border-bottom-left-radius: 100px;
 }
+
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 
 /* =========================================
-   HERO BOTTOM STRIPES
-========================================= */
-
-.hero-stripes {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    height: 45px;
-    width: 370px;
-
-    display: flex;
-}
-
-.hero-stripes div {
-    height: 100%;
-    width: 110px;
-
-    transform: skewX(-38deg);
-    margin-left: -25px;
-}
-
-.stripe-black {
-    background: var(--black);
-}
-
-.stripe-red {
-    background: var(--red);
-}
-
-.stripe-blue {
-    background: var(--blue);
-}
-
-.stripe-yellow {
-    background: var(--yellow);
-}
-
-
-/* =========================================
-   SECTION DIVIDER
-========================================= */
-
-.section-divider {
-    height: 50px;
-    position: relative;
-
-    background: var(--yellow);
-
-    border-top: 1px solid rgba(34, 34, 34, .6);
-    border-bottom: 1px solid rgba(34, 34, 34, .6);
-
-    overflow: hidden;
-}
-
-.divider-stripes {
-    position: absolute;
-    left: 190px;
-    height: 100%;
-    display: flex;
-}
-
-.divider-stripes div {
-    width: 85px;
-    height: 100%;
-
-    transform: skewX(40deg);
-    margin-left: -25px;
-}
-
-.divider-blue {
-    background: var(--blue);
-}
-
-.divider-red {
-    background: var(--red);
-}
-
-.divider-black {
-    background: var(--black);
-}
-
-
-/* =========================================
-   ABOUT SECTION
+   ABOUT
 ========================================= */
 
 .about-section {
-    min-height: 720px;
-
-    position: relative;
-    overflow: hidden;
-
-    padding: 75px 60px 120px;
-
-    background:
-        linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
-        ),
-        url("images/camera-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
+    min-height: 620px;
+    padding: 70px 55px 110px;
 }
 
-
-/* =========================================
-   ABOUT CONTENT
-========================================= */
 
 .about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    align-items: start;
+    gap: 60px;
 }
 
-
-/* =========================================
-   ABOUT TEXT
-========================================= */
 
 .about-text {
-    width: 45%;
+    width: 100%;
 }
+
 
 .about-text h2 {
     font-family: 'Anton', sans-serif;
-    font-size: clamp(60px, 6vw, 95px);
-    font-weight: 400;
-    letter-spacing: 2px;
+    font-size: 58px;
     line-height: 1;
-    margin-bottom: 15px;
 }
 
+
 .about-text p {
-    max-width: 500px;
-
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 300;
-
-    font-size: 20px;
-
-    line-height: 1.45;
-
-    letter-spacing: 1px;
-
+    font-size: 15px;
+    line-height: 1.55;
+    letter-spacing: .5px;
     text-align: justify;
 }
 
 
-/* =========================================
-   ABOUT IMAGE
-========================================= */
-
 .about-image {
-    width: 50%;
-    height: 480px;
-
-    overflow: hidden;
-
-    border-bottom-left-radius: 130px;
+    width: 100%;
+    height: 390px;
+    border-bottom-left-radius: 110px;
 }
+
 
 .about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-
-/* =========================================
-   BOTTOM STRIPES
-========================================= */
-
-.bottom-stripes {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    height: 55px;
-    width: 720px;
-
-    display: flex;
-}
-
-.bottom-stripes div {
-    height: 100%;
-    width: 160px;
-
-    transform: skewX(-28deg);
-    margin-left: -30px;
-}
-
-.bottom-black {
-    background: var(--black);
-}
-
-.bottom-red {
-    background: var(--red);
-}
-
-.bottom-blue {
-    background: var(--blue);
-}
-
-.bottom-yellow {
-    background: var(--yellow);
-}
-
-
-/* =========================================
-   CONTACT MODAL
-========================================= */
-
-.modal-content {
-    background: var(--cream);
-    border: 1px solid var(--black);
-    border-radius: 0;
-}
-
-.modal-header {
-    background: var(--blue);
-    color: white;
-    border-bottom: none;
-}
-
-.modal-title {
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    letter-spacing: 1px;
-}
-
-.modal-body {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-.modal-footer {
-    border-top: 1px solid #ccc;
-}
-
-.modal .btn-secondary {
-    background: var(--black);
-    border: none;
-    border-radius: 0;
-}
-
-.modal .btn-secondary:hover {
-    background: var(--red);
-}
-
-.close {
-    color: white;
-    opacity: 1;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    margin-top: 0;
-
-    background: var(--black);
-    color: white;
-
-    padding: 35px 20px;
-
-    text-align: center;
-
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 300;
-
-    font-size: 13px;
-}
-
-footer strong {
-    font-family: 'Anton', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-footer a {
-    color: var(--yellow);
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-footer a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-
-/* =========================================
-   MOBILE NAVIGATION
-========================================= */
-
-.navbar-toggler {
-    border: 1px solid var(--black);
-    border-radius: 0;
-}
-
-.menu-icon {
-    color: var(--black);
-    font-size: 25px;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 991px) {
-
-    .website-container {
-        width: 100%;
-    }
-
-    .navbar-brand {
-        width: 220px;
-    }
-
-    .hero {
-        padding: 70px 45px 100px;
-    }
-
-    .hero-content {
-        gap: 40px;
-    }
-
-    .hero-image {
-        height: 300px;
-    }
-
-    .about-section {
-        padding: 60px 45px 110px;
-    }
-
-    .about-text p {
-        font-size: 17px;
-    }
-
-    .about-image {
-        height: 400px;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        height: auto;
-        min-height: 70px;
-    }
-
-    .navbar-brand::after {
-        display: none;
-    }
-
-    .navbar-brand {
-        width: auto;
-    }
-
-    .navbar-collapse {
-        background: var(--cream);
-        padding: 15px;
-        margin-top: 10px;
-    }
-
-    .navbar-nav {
-        gap: 8px;
-    }
-
-    .hero {
-        padding: 65px 30px 80px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-    }
-
-    .content {
-        width: 100%;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 300px;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-text {
-        width: 100%;
-    }
-
-    .about-image {
-        width: 100%;
-        height: 380px;
-    }
-
-    .about-text p {
-        font-size: 16px;
-    }
-
-    .divider-stripes {
-        left: 100px;
-    }
-
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 500px) {
-
-    .navbar {
-        padding: 0 20px;
-    }
-
-    .hero {
-        padding: 55px 25px 80px;
-    }
-
-    .content h1 {
-        font-size: 65px;
-    }
-
-    .content p {
-        font-size: 12px;
-    }
-
-    .buttons {
-        flex-wrap: wrap;
-    }
-
-    .hero-image {
-        height: 230px;
-        border-bottom-left-radius: 80px;
-    }
-
-    .about-section {
-        padding: 55px 25px 90px;
-    }
-
-    .about-text h2 {
-        font-size: 60px;
-    }
-
-    .about-text p {
-        font-size: 14px;
-    }
-
-    .about-image {
-        height: 280px;
-        border-bottom-left-radius: 90px;
-    }
-
-    .bottom-stripes {
-        width: 400px;
-    }
-
+    display: block;
 }
