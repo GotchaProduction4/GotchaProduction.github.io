@@ -16,7 +16,7 @@
 href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
 rel="stylesheet">
 
 <!-- Custom CSS -->
@@ -24,7 +24,14 @@ rel="stylesheet">
 
 </head>
 
+
 <body>
+
+
+<!-- ================= MAIN CONTAINER ================= -->
+
+<div class="website-container">
+
 
 <!-- ================= NAVIGATION ================= -->
 
@@ -33,30 +40,21 @@ rel="stylesheet">
 <a class="navbar-brand" href="index.html">
 
 <img src="images/logoblack.png"
-alt="Talakbay Logo"
+alt="Gotcha Productions Logo"
 class="logo">
-
-Talakbay
 
 </a>
 
-<!-- Mobile Menu Button -->
 
 <button class="navbar-toggler"
 type="button"
 data-toggle="collapse"
-data-target="#navbarNav"
-aria-controls="navbarNav"
-aria-expanded="false"
-aria-label="Toggle navigation">
+data-target="#navbarNav">
 
-<span class="menu-icon">
-☰
-</span>
+<span class="menu-icon">☰</span>
 
 </button>
 
-<!-- Navigation Links -->
 
 <div class="collapse navbar-collapse"
 id="navbarNav">
@@ -66,34 +64,29 @@ id="navbarNav">
 <li class="nav-item active">
 
 <a class="nav-link" href="index.html">
-Home
+HOME
 </a>
 
 </li>
 
-<li class="nav-item">
-
-<a class="nav-link" href="about.html">
-About
-</a>
-
-</li>
 
 <li class="nav-item">
 
 <a class="nav-link" href="resources.html">
-Resources
+RESOURCES
 </a>
 
 </li>
+
 
 <li class="nav-item">
 
 <a class="nav-link" href="gallery.html">
-Gallery
+GALLERY
 </a>
 
 </li>
+
 
 <li class="nav-item">
 
@@ -102,7 +95,7 @@ href="#"
 data-toggle="modal"
 data-target="#contactModal">
 
-Contact
+CONTACT
 
 </a>
 
@@ -115,35 +108,44 @@ Contact
 </nav>
 
 
-<!-- ================= CHECKER ================= -->
-
-<div class="checker"></div>
-
-
 <!-- ================= HERO ================= -->
 
-<section class="hero">
+<section class="hero-section">
 
-<div class="content">
 
-<h1>
-TALAKBAY
-</h1>
+<!-- Decorative Background -->
 
-<p>
+<div class="hero-decoration top-decoration"></div>
 
-Discover photography through our Cinematic Instructional Video
-and participate in a guided Structured Photowalk Program
-designed for Grade 12 Arts and Design students.
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>TALAKBAY</h1>
+
+<p class="subtitle">
+
+A Cinematic Instructional Video Series Applied on a Structured
+Photowalk Program
 
 </p>
 
-<div class="buttons">
+
+<div class="hero-buttons">
 
 <a href="resources.html"
-class="btn-retro">
+class="retro-button blue-button">
 
-Explore Lessons
+RESOURCES
+
+</a>
+
+
+<a href="gallery.html"
+class="retro-button red-button">
+
+GALLERY
 
 </a>
 
@@ -151,12 +153,105 @@ Explore Lessons
 
 </div>
 
+
+<!-- HERO IMAGE -->
+
+<div class="hero-image">
+
+<img src="images/photowalk.jpg"
+alt="Photowalk Activity">
+
+</div>
+
+</div>
+
+
+<div class="hero-stripes">
+
+<div class="stripe black"></div>
+<div class="stripe red"></div>
+<div class="stripe blue"></div>
+<div class="stripe yellow"></div>
+
+</div>
+
+
 </section>
 
 
-<!-- ================= CHECKER ================= -->
+<!-- ================= DIVIDER ================= -->
 
-<div class="checker"></div>
+<div class="section-divider">
+
+<div class="divider-stripes">
+
+<div class="divider-yellow"></div>
+<div class="divider-blue"></div>
+<div class="divider-red"></div>
+<div class="divider-black"></div>
+
+</div>
+
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section">
+
+
+<div class="about-content">
+
+
+<!-- TEXT -->
+
+<div class="about-text">
+
+<h2>ABOUT</h2>
+
+<div class="about-description">
+
+<p>
+
+Talakbay is a thesis project developed by Gotcha! Productions.
+It combines a Cinematic Instructional Video Series and a
+Structured Photowalk Program designed to help Grade 12 Arts
+and Design Track students develop their photography knowledge
+and skills through guided learning.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- IMAGE -->
+
+<div class="about-image">
+
+<img src="images/camera.jpg"
+alt="Photography Camera">
+
+</div>
+
+
+</div>
+
+
+<!-- Bottom Decorative Stripes -->
+
+<div class="bottom-stripes">
+
+<div class="bottom-black"></div>
+<div class="bottom-red"></div>
+<div class="bottom-blue"></div>
+<div class="bottom-yellow"></div>
+
+</div>
+
+
+</section>
 
 
 <!-- ================= FOOTER ================= -->
@@ -165,42 +260,34 @@ Explore Lessons
 
 <p>
 
-<strong>
-Talakbay
-</strong>
+<strong>Talakbay</strong>
 
 <br>
 
-A Cinematic Instructional Video and Structured Photowalk Program
+A Cinematic Instructional Video Series and Structured Photowalk Program
 
 </p>
 
 
-<br>
+<p class="footer-links">
 
-
-<p>
-
-<a href="about.html">
-About
-</a>
+<a href="resources.html">Resources</a>
 
 |
 
-<a href="resources.html">
-Resources
-</a>
+<a href="gallery.html">Gallery</a>
 
 |
 
-<a href="gallery.html">
-Gallery
+<a href="#"
+data-toggle="modal"
+data-target="#contactModal">
+
+Contact
+
 </a>
 
 </p>
-
-
-<br>
 
 
 <p>
@@ -210,6 +297,9 @@ Gallery
 </p>
 
 </footer>
+
+
+</div>
 
 
 <!-- ================= CONTACT MODAL ================= -->
@@ -223,8 +313,6 @@ tabindex="-1">
 <div class="modal-content">
 
 
-<!-- Modal Header -->
-
 <div class="modal-header">
 
 <h5 class="modal-title">
@@ -236,22 +324,16 @@ type="button"
 class="close"
 data-dismiss="modal">
 
-<span>
-&times;
-</span>
+<span>&times;</span>
 
 </button>
 
 </div>
 
 
-<!-- Modal Body -->
-
 <div class="modal-body">
 
-<h4>
-Gotcha! Productions
-</h4>
+<h4>Gotcha! Productions</h4>
 
 <hr>
 
@@ -265,8 +347,6 @@ Gotcha! Productions
 
 </div>
 
-
-<!-- Modal Footer -->
 
 <div class="modal-footer">
 
