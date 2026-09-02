@@ -134,6 +134,7 @@ body {
 .logo {
     width: 58px;
     height: auto;
+
     display: block;
 }
 
@@ -259,7 +260,6 @@ body {
 
     width: 100%;
 
-    /* SAME HEIGHT AS ABOUT */
     height: 600px;
 
     overflow: hidden;
@@ -490,55 +490,89 @@ body {
     width: 100%;
     height: 50px;
 
-    background: var(--yellow);
+    background: var(--cream);
 
-    border-top: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
+    /*
+       IMPORTANT:
+       Allows the right stripes to extend upward
+       outside the divider.
+    */
+    overflow: visible;
 
-    overflow: hidden;
+    z-index: 20;
 }
 
 
 /* =========================================================
-   YELLOW BAR
+   DIVIDER TOP LINE
 ========================================================= */
 
-.divider-yellow {
+.divider-line {
     position: absolute;
 
     left: 0;
+    right: 0;
+
     top: 0;
 
-    width: 100%;
-    height: 50px;
+    height: 1px;
 
-    background: var(--yellow);
+    background: var(--black);
 
-    z-index: 1;
+    z-index: 10;
 }
 
 
 /* =========================================================
-   DIVIDER LEFT STRIPES
-   BLUE → RED → BLACK
+   DIVIDER BOTTOM LINE
+========================================================= */
+
+.divider::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background: var(--black);
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   LEFT DIVIDER STRIPES
+   YELLOW → BLUE → RED → BLACK
 ========================================================= */
 
 .divider-left-stripes {
     position: absolute;
 
-    left: 103px;
+    left: 0;
     top: 0;
 
-    width: 210px;
+    width: 220px;
     height: 50px;
 
     display: flex;
 
-    z-index: 2;
+    z-index: 5;
+
+    overflow: hidden;
 }
+
+
+/* Individual left stripes */
 
 .divider-left-stripes span {
     display: block;
+
+    flex-shrink: 0;
 
     width: 65px;
     height: 50px;
@@ -546,16 +580,37 @@ body {
     margin-left: -17px;
 
     transform: skewX(40deg);
+
     transform-origin: bottom;
 }
+
+
+/* First stripe */
+
+.divider-left-stripes .stripe-yellow {
+    background: var(--yellow);
+
+    width: 125px;
+
+    margin-left: -18px;
+}
+
+
+/* Blue */
 
 .divider-left-stripes .stripe-blue {
     background: var(--blue);
 }
 
+
+/* Red */
+
 .divider-left-stripes .stripe-red {
     background: var(--red);
 }
+
+
+/* Black */
 
 .divider-left-stripes .stripe-black {
     background: var(--black);
@@ -563,47 +618,72 @@ body {
 
 
 /* =========================================================
-   DIVIDER RIGHT STRIPES
+   RIGHT DIVIDER STRIPES
    BLACK → RED → BLUE → YELLOW
 ========================================================= */
 
 .divider-right-stripes {
     position: absolute;
 
-    right: 20px;
-    top: -50px;
+    right: 0;
+
+    /*
+       This makes the stripes rise above
+       the divider line.
+    */
+    top: -48px;
 
     width: 350px;
-    height: 100px;
+    height: 98px;
 
     display: flex;
 
-    z-index: 3;
+    z-index: 15;
+
+    overflow: hidden;
 }
+
+
+/* Individual right stripes */
 
 .divider-right-stripes span {
     display: block;
 
+    flex-shrink: 0;
+
     width: 75px;
-    height: 100px;
+    height: 98px;
 
     margin-left: -18px;
 
     transform: skewX(-40deg);
+
     transform-origin: bottom;
 }
+
+
+/* Black */
 
 .divider-right-stripes .stripe-black {
     background: var(--black);
 }
 
+
+/* Red */
+
 .divider-right-stripes .stripe-red {
     background: var(--red);
 }
 
+
+/* Blue */
+
 .divider-right-stripes .stripe-blue {
     background: var(--blue);
 }
+
+
+/* Yellow */
 
 .divider-right-stripes .stripe-yellow {
     background: var(--yellow);
@@ -619,7 +699,6 @@ body {
 
     width: 100%;
 
-    /* SAME HEIGHT AS HERO */
     height: 600px;
 
     overflow: hidden;
@@ -938,11 +1017,11 @@ body {
     ===================================================== */
 
     .divider-left-stripes {
-        left: 100px;
+        left: 0;
     }
 
     .divider-right-stripes {
-        right: 15px;
+        right: 0;
     }
 }
 
@@ -1064,17 +1143,31 @@ body {
     }
 
     .divider-left-stripes {
-        left: 65px;
+        left: 0;
+        width: 175px;
+    }
+
+    .divider-left-stripes span {
+        width: 52px;
+        height: 50px;
+    }
+
+    .divider-left-stripes .stripe-yellow {
+        width: 95px;
     }
 
     .divider-right-stripes {
-        right: 10px;
-        top: -40px;
-        width: 260px;
+        right: 0;
+
+        top: -35px;
+
+        width: 250px;
+        height: 85px;
     }
 
     .divider-right-stripes span {
-        width: 60px;
+        width: 58px;
+        height: 85px;
     }
 
 
