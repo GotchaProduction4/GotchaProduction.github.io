@@ -520,12 +520,13 @@ body {
 
 /* =========================================================
    DIVIDER LEFT STRIPES
+   BLUE → RED → BLACK
 ========================================================= */
 
 .divider-left-stripes {
     position: absolute;
 
-    left: 145px;
+    left: 103px;
     top: 0;
 
     width: 210px;
@@ -537,8 +538,6 @@ body {
 }
 
 .divider-left-stripes span {
-    position: relative;
-
     display: block;
 
     width: 65px;
@@ -547,6 +546,7 @@ body {
     margin-left: -17px;
 
     transform: skewX(40deg);
+    transform-origin: bottom;
 }
 
 .divider-left-stripes .stripe-blue {
@@ -564,33 +564,33 @@ body {
 
 /* =========================================================
    DIVIDER RIGHT STRIPES
+   BLACK → RED → BLUE → YELLOW
 ========================================================= */
 
 .divider-right-stripes {
     position: absolute;
 
     right: 20px;
-    top: 0;
+    top: -50px;
 
-    width: 330px;
-    height: 50px;
+    width: 350px;
+    height: 100px;
 
     display: flex;
 
-    z-index: 2;
+    z-index: 3;
 }
 
 .divider-right-stripes span {
-    position: relative;
-
     display: block;
 
     width: 75px;
-    height: 50px;
+    height: 100px;
 
     margin-left: -18px;
 
     transform: skewX(-40deg);
+    transform-origin: bottom;
 }
 
 .divider-right-stripes .stripe-black {
@@ -877,7 +877,9 @@ body {
     }
 
 
-    /* SAME HEIGHT */
+    /* =====================================================
+       SAME HEIGHT
+    ===================================================== */
 
     .hero {
         height: 600px;
@@ -931,7 +933,9 @@ body {
     }
 
 
-    /* TABLET DIVIDER */
+    /* =====================================================
+       TABLET DIVIDER
+    ===================================================== */
 
     .divider-left-stripes {
         left: 100px;
@@ -995,9 +999,9 @@ body {
     }
 
 
-    /*
-       Mobile sections are also equal.
-    */
+    /* =====================================================
+       MOBILE SECTIONS
+    ===================================================== */
 
     .hero {
         height: 700px;
@@ -1012,6 +1016,7 @@ body {
         display: flex;
         flex-direction: column;
     }
+
 
     .hero-copy {
         position: relative;
@@ -1032,6 +1037,7 @@ body {
         width: 100%;
         font-size: 11px;
     }
+
 
     .hero-photo {
         position: relative;
@@ -1063,8 +1069,18 @@ body {
 
     .divider-right-stripes {
         right: 10px;
+        top: -40px;
+        width: 260px;
     }
 
+    .divider-right-stripes span {
+        width: 60px;
+    }
+
+
+    /* =====================================================
+       MOBILE ABOUT
+    ===================================================== */
 
     .about-copy {
         position: relative;
@@ -1086,6 +1102,7 @@ body {
         font-size: 14px;
     }
 
+
     .about-photo {
         position: relative;
 
@@ -1100,4 +1117,5 @@ body {
 
         height: 350px;
     }
+
 }
