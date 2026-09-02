@@ -36,6 +36,7 @@
         <!-- Yellow background -->
         <div class="brand-yellow"></div>
 
+
         <!-- Logo -->
         <a href="index.html" class="logo-link">
 
@@ -44,6 +45,7 @@
                  alt="Talakbay Logo">
 
         </a>
+
 
         <!-- Diagonal stripes -->
         <div class="top-stripes">
@@ -57,40 +59,32 @@
     </div>
 
 
-    <!-- NAVIGATION -->
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
     <nav class="main-navigation">
 
         <a href="index.html"
            class="nav-btn nav-home active">
-
             HOME
-
         </a>
-
 
         <a href="resources.html"
            class="nav-btn nav-resources">
-
             RESOURCES
-
         </a>
-
 
         <a href="gallery.html"
            class="nav-btn nav-gallery">
-
             GALLERY
-
         </a>
-
 
         <a href="#"
            class="nav-btn nav-contact"
            data-toggle="modal"
            data-target="#contactModal">
-
             CONTACT
-
         </a>
 
     </nav>
@@ -100,10 +94,15 @@
 
 
 <!-- =========================================================
-     HERO
+     MAIN CONTENT
 ========================================================= -->
 
 <main>
+
+
+<!-- =========================================================
+     HERO / LANDING PAGE
+========================================================= -->
 
 <section class="hero">
 
@@ -114,7 +113,8 @@
     <!-- Main hero content -->
     <div class="hero-inner">
 
-        <!-- LEFT -->
+
+        <!-- LEFT: TEXT -->
         <div class="hero-copy">
 
             <h1>TALAKBAY</h1>
@@ -129,17 +129,12 @@
 
                 <a href="resources.html"
                    class="hero-button blue-button">
-
                     RESOURCES
-
                 </a>
-
 
                 <a href="gallery.html"
                    class="hero-button red-button">
-
                     GALLERY
-
                 </a>
 
             </div>
@@ -147,7 +142,7 @@
         </div>
 
 
-        <!-- RIGHT PHOTO -->
+        <!-- RIGHT: PHOTO -->
         <div class="hero-photo">
 
             <img src="images/photowalk.jpg"
@@ -182,7 +177,8 @@
     <div class="divider-yellow"></div>
 
 
-    <!-- LEFT STRIPES -->
+    <!-- LEFT STRIPES
+         BLUE → RED → BLACK -->
     <div class="divider-left-stripes">
 
         <span class="stripe-blue"></span>
@@ -192,7 +188,8 @@
     </div>
 
 
-    <!-- RIGHT STRIPES -->
+    <!-- RIGHT STRIPES
+         BLACK → RED → BLUE → YELLOW -->
     <div class="divider-right-stripes">
 
         <span class="stripe-black"></span>
@@ -218,13 +215,13 @@
 
     <div class="about-inner">
 
-        <!-- LEFT TEXT -->
+
+        <!-- LEFT: TEXT -->
         <div class="about-copy">
 
             <h2>ABOUT</h2>
 
             <p>
-
                 Talakbay is a thesis project developed by
                 Gotcha! Productions that combines a Cinematic
                 Instructional Video Series and a Structured
@@ -232,13 +229,12 @@
                 Arts and Design Track students develop their
                 photography knowledge and skills through
                 guided and experiential learning.
-
             </p>
 
         </div>
 
 
-        <!-- RIGHT PHOTO -->
+        <!-- RIGHT: PHOTO -->
         <div class="about-photo">
 
             <img src="images/photowalk.jpg"
@@ -261,6 +257,7 @@
 
 </section>
 
+
 </main>
 
 
@@ -278,24 +275,27 @@
 
         <div class="modal-content">
 
+
+            <!-- MODAL HEADER -->
             <div class="modal-header">
 
                 <h5 class="modal-title">
                     CONTACT US
                 </h5>
 
-
                 <button type="button"
                         class="close"
-                        data-dismiss="modal">
+                        data-dismiss="modal"
+                        aria-label="Close">
 
-                    <span>&times;</span>
+                    <span aria-hidden="true">&times;</span>
 
                 </button>
 
             </div>
 
 
+            <!-- MODAL BODY -->
             <div class="modal-body">
 
                 <h4>
@@ -315,6 +315,7 @@
             </div>
 
 
+            <!-- MODAL FOOTER -->
             <div class="modal-footer">
 
                 <button type="button"
