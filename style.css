@@ -155,22 +155,29 @@ a:hover {
     left: 145px;
     top: 0;
 
-    width: 155px;
+    /*
+       Increased from 155px to 170px.
+       The skewed blue stripe needs extra room so
+       its angled edge is not clipped.
+    */
+    width: 170px;
     height: 80px;
 
     display: flex;
 
-    overflow: hidden;
+    overflow: visible;
 }
 
 .top-stripes span {
     display: block;
 
+    flex: 0 0 52px;
+
     width: 52px;
     height: 80px;
 
     transform: skewX(-20deg);
-    transform-origin: top;
+    transform-origin: top left;
 }
 
 .stripe-blue {
@@ -279,10 +286,6 @@ a:hover {
 
     width: 100%;
 
-    /*
-       Header = 80px
-       Hero fills the rest of the viewport.
-    */
     height: calc(100vh - 80px);
 
     min-height: 600px;
@@ -781,16 +784,31 @@ a:hover {
         width: 52px;
     }
 
+
+    /* =====================================================
+       TABLET TOP STRIPES
+       Extra width prevents the blue stripe from being cut.
+    ===================================================== */
+
     .top-stripes {
         left: 110px;
 
-        width: 120px;
+        width: 140px;
         height: 70px;
+
+        display: flex;
+
+        overflow: visible;
     }
 
     .top-stripes span {
+        flex: 0 0 42px;
+
         width: 42px;
         height: 70px;
+
+        transform: skewX(-20deg);
+        transform-origin: top left;
     }
 
 
@@ -880,13 +898,6 @@ a:hover {
 
 @media (max-width: 600px) {
 
-    /* =====================================================
-       HEADER
-       The desktop stripe design is NOT used here.
-       The mobile stripes are sized independently so
-       they don't get clipped or overlap.
-    ===================================================== */
-
     .site-header {
         height: 62px;
     }
@@ -899,7 +910,7 @@ a:hover {
 
         flex-shrink: 0;
 
-        overflow: hidden;
+        overflow: visible;
     }
 
     /* YELLOW */
@@ -940,20 +951,20 @@ a:hover {
         left: 55px;
         top: 0;
 
-        width: 90px;
+        width: 108px;
         height: 62px;
 
         display: flex;
 
-        overflow: hidden;
+        overflow: visible;
     }
 
     .top-stripes span {
         display: block;
 
-        flex: 0 0 30px;
+        flex: 0 0 36px;
 
-        width: 30px;
+        width: 36px;
         height: 62px;
 
         transform: skewX(-20deg);
@@ -991,10 +1002,6 @@ a:hover {
     ===================================================== */
 
     .hero {
-        /*
-           Header = 62px
-           Hero = remaining viewport height
-        */
         height: calc(100vh - 62px);
 
         min-height: 620px;
@@ -1249,17 +1256,20 @@ a:hover {
     .top-stripes {
         left: 48px;
 
-        width: 77px;
+        width: 87px;
         height: 58px;
+
+        overflow: visible;
     }
 
     .top-stripes span {
-        flex: 0 0 26px;
+        flex: 0 0 29px;
 
-        width: 26px;
+        width: 29px;
         height: 58px;
 
         transform: skewX(-20deg);
+        transform-origin: top left;
     }
 
 
