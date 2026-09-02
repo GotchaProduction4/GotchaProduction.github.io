@@ -460,69 +460,6 @@ img {
 
 
 /* =========================================================
-   HERO BOTTOM-RIGHT STRIPES
-   BLACK → RED → BLUE → YELLOW
-========================================================= */
-
-.hero-bottom-stripes {
-    position: absolute;
-
-    right: 0;
-    bottom: 0;
-
-    width: 350px;
-    height: 50px;
-
-    display: flex;
-
-    overflow: hidden;
-
-    z-index: 10;
-}
-
-.hero-bottom-stripes span {
-    display: block;
-
-    width: 88px;
-    height: 50px;
-
-    flex-shrink: 0;
-
-    margin-left: -20px;
-
-    transform: skewX(-40deg);
-}
-
-
-/* Black */
-
-.hero-bottom-stripes .stripe-black {
-    background: var(--black);
-}
-
-
-/* Red */
-
-.hero-bottom-stripes .stripe-red {
-    background: var(--red);
-}
-
-
-/* Blue */
-
-.hero-bottom-stripes .stripe-blue {
-    background: var(--blue);
-}
-
-
-/* Yellow */
-
-.hero-bottom-stripes .stripe-yellow {
-    background: var(--yellow);
-}
-
-
-/* =========================================================
    DIVIDER
 ========================================================= */
 
@@ -775,56 +712,6 @@ img {
 
 
 /* =========================================================
-   ABOUT BOTTOM STRIPES
-========================================================= */
-
-.about-bottom-stripes {
-    position: absolute;
-
-    right: -20px;
-    bottom: 0;
-
-    width: 710px;
-    height: 48px;
-
-    display: flex;
-
-    overflow: hidden;
-
-    z-index: 10;
-}
-
-.about-bottom-stripes span {
-    display: block;
-
-    height: 48px;
-    width: 150px;
-
-    flex-shrink: 0;
-
-    transform: skewX(-30deg);
-
-    margin-left: -25px;
-}
-
-.about-bottom-stripes .stripe-black {
-    background: var(--black);
-}
-
-.about-bottom-stripes .stripe-red {
-    background: var(--red);
-}
-
-.about-bottom-stripes .stripe-blue {
-    background: var(--blue);
-}
-
-.about-bottom-stripes .stripe-yellow {
-    background: var(--yellow);
-}
-
-
-/* =========================================================
    CONTACT MODAL
 ========================================================= */
 
@@ -871,7 +758,9 @@ img {
 
 @media (max-width: 900px) {
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     .site-header {
         height: 70px;
@@ -908,7 +797,9 @@ img {
     }
 
 
-    /* NAVIGATION */
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
 
     .main-navigation {
         gap: 5px;
@@ -924,7 +815,9 @@ img {
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
         height: 600px;
@@ -955,18 +848,9 @@ img {
     }
 
 
-    /* HERO STRIPES */
-
-    .hero-bottom-stripes {
-        width: 290px;
-    }
-
-    .hero-bottom-stripes span {
-        width: 75px;
-    }
-
-
-    /* DIVIDER */
+    /* =====================================================
+       DIVIDER
+    ===================================================== */
 
     .divider {
         height: 50px;
@@ -977,7 +861,9 @@ img {
     }
 
 
-    /* ABOUT */
+    /* =====================================================
+       ABOUT
+    ===================================================== */
 
     .about-section {
         height: 600px;
@@ -1006,13 +892,6 @@ img {
         height: 400px;
     }
 
-    .about-bottom-stripes {
-        width: 500px;
-    }
-
-    .about-bottom-stripes span {
-        width: 115px;
-    }
 }
 
 
@@ -1117,7 +996,9 @@ img {
     }
 
 
-    /* HERO PHOTO */
+    /* =====================================================
+       HERO PHOTO
+    ===================================================== */
 
     .hero-photo {
         position: relative;
@@ -1131,23 +1012,6 @@ img {
         max-width: none;
 
         height: 260px;
-    }
-
-
-    /* HERO STRIPES */
-
-    .hero-bottom-stripes {
-        right: -20px;
-
-        width: 260px;
-        height: 42px;
-    }
-
-    .hero-bottom-stripes span {
-        width: 65px;
-        height: 42px;
-
-        margin-left: -15px;
     }
 
 
@@ -1216,7 +1080,9 @@ img {
     }
 
 
-    /* ABOUT PHOTO */
+    /* =====================================================
+       ABOUT PHOTO
+    ===================================================== */
 
     .about-photo {
         position: relative;
@@ -1232,20 +1098,52 @@ img {
         height: 350px;
     }
 
+}
 
-    /* ABOUT STRIPES */
 
-    .about-bottom-stripes {
-        right: -20px;
+/* =========================================================
+   FOOTER
+========================================================= */
 
-        width: 420px;
-        height: 42px;
+.site-footer {
+    width: 100%;
+
+    padding: 18px 20px;
+
+    background: var(--black);
+
+    border-top: 1px solid var(--black);
+
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+
+    color: white;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    letter-spacing: .2px;
+}
+
+
+/* =========================================================
+   FOOTER MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding: 15px 20px;
     }
 
-    .about-bottom-stripes span {
-        width: 95px;
-        height: 42px;
-
-        margin-left: -18px;
+    .site-footer p {
+        font-size: 9px;
     }
+
 }
