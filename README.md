@@ -1,2 +1,0 @@
-# GotchaProduction.github.io
-Photowalk
