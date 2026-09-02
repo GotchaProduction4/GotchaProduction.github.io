@@ -1,6 +1,5 @@
 /* =========================================================
    TALAKBAY WEBSITE
-   REFERENCE-MATCHED LANDING PAGE
 ========================================================= */
 
 
@@ -9,66 +8,35 @@
 ========================================================= */
 
 @font-face {
-
     font-family: "Anton";
-
-    src: url("fonts/Anton-Regular.ttf")
-         format("truetype");
-
+    src: url("fonts/Anton-Regular.ttf") format("truetype");
     font-weight: 400;
-
-    font-style: normal;
-
 }
 
-
 @font-face {
-
     font-family: "Be Vietnam Pro";
-
-    src: url("fonts/BeVietnamPro-Light.ttf")
-         format("truetype");
-
+    src: url("fonts/BeVietnamPro-Light.ttf") format("truetype");
     font-weight: 300;
-
-    font-style: normal;
-
 }
-
 
 @font-face {
-
     font-family: "Be Vietnam Pro";
-
-    src: url("fonts/BeVietnamPro-Regular.ttf")
-         format("truetype");
-
+    src: url("fonts/BeVietnamPro-Regular.ttf") format("truetype");
     font-weight: 400;
-
-    font-style: normal;
-
 }
-
 
 
 /* =========================================================
-   COLOR PALETTE
+   COLORS
 ========================================================= */
 
 :root {
-
     --cream: #fff4e6;
-
     --blue: #2b4e8d;
-
     --yellow: #f4d35e;
-
     --red: #891917;
-
     --black: #222222;
-
 }
-
 
 
 /* =========================================================
@@ -76,38 +44,23 @@
 ========================================================= */
 
 * {
-
     box-sizing: border-box;
-
 }
-
 
 html,
 body {
-
     margin: 0;
-
     padding: 0;
-
     width: 100%;
-
     min-height: 100%;
-
 }
-
 
 body {
-
     background: var(--cream);
-
     color: var(--black);
-
     font-family: "Be Vietnam Pro", sans-serif;
-
     font-weight: 300;
-
 }
-
 
 
 /* =========================================================
@@ -115,64 +68,47 @@ body {
 ========================================================= */
 
 .site-header {
-
     position: relative;
-
     width: 100%;
-
     height: 80px;
 
     background: var(--cream);
 
     border-top: 2px solid var(--black);
-
     border-bottom: 1px solid var(--black);
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     overflow: hidden;
-
 }
-
 
 
 /* =========================================================
-   BRAND AREA
+   BRAND
 ========================================================= */
 
 .brand-area {
-
     position: relative;
 
     width: 325px;
-
     height: 78px;
 
     flex-shrink: 0;
-
 }
 
-
 .brand-yellow {
-
     position: absolute;
 
     left: 0;
-
     top: 0;
 
     width: 170px;
-
     height: 78px;
 
     background: var(--yellow);
-
 }
-
 
 
 /* =========================================================
@@ -180,108 +116,72 @@ body {
 ========================================================= */
 
 .logo-link {
-
     position: absolute;
 
     left: 21px;
-
     top: 0;
 
     width: 70px;
-
     height: 78px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     z-index: 5;
-
 }
-
 
 .logo {
-
     width: 58px;
-
     height: auto;
-
     display: block;
-
 }
-
 
 
 /* =========================================================
-   TOP LEFT STRIPES
+   TOP STRIPES
 ========================================================= */
 
 .top-stripes {
-
     position: absolute;
 
     left: 112px;
-
     top: 0;
 
     width: 175px;
-
     height: 78px;
 
     overflow: hidden;
 
     transform: skewX(35deg);
-
     transform-origin: top left;
-
 }
 
-
 .top-stripes span {
-
     position: absolute;
 
     top: 0;
 
     height: 78px;
-
 }
-
 
 .top-stripes .stripe-blue {
-
     left: 0;
-
     width: 60px;
-
     background: var(--blue);
-
 }
-
 
 .top-stripes .stripe-red {
-
     left: 58px;
-
     width: 60px;
-
     background: var(--red);
-
 }
-
 
 .top-stripes .stripe-black {
-
     left: 116px;
-
     width: 60px;
-
     background: var(--black);
-
 }
-
 
 
 /* =========================================================
@@ -289,24 +189,19 @@ body {
 ========================================================= */
 
 .main-navigation {
+    height: 100%;
 
     display: flex;
-
     align-items: center;
 
     gap: 10px;
 
     margin-right: 32px;
 
-    height: 100%;
-
     z-index: 20;
-
 }
 
-
 .nav-btn {
-
     height: 31px;
 
     padding: 0 13px;
@@ -314,95 +209,63 @@ body {
     border: 1px solid var(--black);
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     text-decoration: none;
 
     font-family: "Be Vietnam Pro", sans-serif;
-
     font-size: 13px;
-
     font-weight: 400;
 
     letter-spacing: .4px;
-
     line-height: 1;
 
     transition: opacity .2s ease;
-
 }
-
 
 .nav-btn:hover {
-
     text-decoration: none;
-
     opacity: .85;
-
 }
-
-
-
-/* Individual navigation colors */
 
 .nav-home {
-
     background: var(--yellow);
-
     color: var(--black);
-
 }
-
 
 .nav-resources {
-
     background: var(--blue);
-
     color: white;
-
 }
-
 
 .nav-gallery {
-
     background: var(--red);
-
     color: white;
-
 }
-
 
 .nav-contact {
-
     background: var(--black);
-
     color: white;
-
 }
-
 
 
 /* =========================================================
-   HERO
+   HERO / LANDING PAGE
 ========================================================= */
 
 .hero {
-
     position: relative;
 
     width: 100%;
 
-    height: 520px;
+    /* SAME HEIGHT AS ABOUT */
+    height: 600px;
 
     overflow: hidden;
 
     background: var(--cream);
-
 }
-
 
 
 /* =========================================================
@@ -410,18 +273,15 @@ body {
 ========================================================= */
 
 .hero-bg {
-
     position: absolute;
 
     inset: 0;
 
     background-image:
-
         linear-gradient(
             rgba(255, 244, 230, .89),
             rgba(255, 244, 230, .89)
         ),
-
         url("images/photowalk.jpg");
 
     background-size: cover;
@@ -429,9 +289,7 @@ body {
     background-position: center;
 
     opacity: 1;
-
 }
-
 
 
 /* =========================================================
@@ -439,17 +297,13 @@ body {
 ========================================================= */
 
 .hero-inner {
-
     position: relative;
 
     z-index: 5;
 
     width: 100%;
-
     height: 100%;
-
 }
-
 
 
 /* =========================================================
@@ -457,41 +311,30 @@ body {
 ========================================================= */
 
 .hero-copy {
-
     position: absolute;
 
     left: 5.8%;
-
     top: 88px;
 
     width: 440px;
-
 }
 
-
 .hero-copy h1 {
-
     margin: 0;
-
     padding: 0;
 
     font-family: "Anton", sans-serif;
 
     font-size: 96px;
-
     font-weight: 400;
 
     line-height: .92;
-
     letter-spacing: .5px;
 
     color: var(--black);
-
 }
 
-
 .hero-copy p {
-
     margin: 8px 0 0 3px;
 
     width: 420px;
@@ -499,15 +342,12 @@ body {
     font-family: "Be Vietnam Pro", sans-serif;
 
     font-size: 14px;
-
     font-weight: 300;
 
     line-height: 1.25;
 
     color: var(--black);
-
 }
-
 
 
 /* =========================================================
@@ -515,22 +355,16 @@ body {
 ========================================================= */
 
 .hero-buttons {
-
     display: flex;
-
     align-items: center;
 
     gap: 15px;
 
     margin-top: 19px;
-
     margin-left: 2px;
-
 }
 
-
 .hero-button {
-
     height: 50px;
 
     padding: 0 20px;
@@ -538,48 +372,32 @@ body {
     border-radius: 28px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     font-family: "Be Vietnam Pro", sans-serif;
 
     font-size: 14px;
-
     font-weight: 300;
 
     text-decoration: none;
 
     color: white;
-
 }
-
 
 .hero-button:hover {
-
     color: white;
-
     text-decoration: none;
-
     opacity: .9;
-
 }
-
 
 .blue-button {
-
     background: var(--blue);
-
 }
-
 
 .red-button {
-
     background: var(--red);
-
 }
-
 
 
 /* =========================================================
@@ -587,15 +405,12 @@ body {
 ========================================================= */
 
 .hero-photo {
-
     position: absolute;
 
     top: 91px;
-
     right: 7.2%;
 
     width: 41%;
-
     max-width: 450px;
 
     height: 300px;
@@ -603,38 +418,29 @@ body {
     overflow: hidden;
 
     border-bottom-left-radius: 105px;
-
 }
 
-
 .hero-photo img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     display: block;
-
 }
 
 
-
 /* =========================================================
-   HERO BOTTOM-RIGHT STRIPES
+   HERO BOTTOM STRIPES
 ========================================================= */
 
 .hero-bottom-stripes {
-
     position: absolute;
 
     right: -2px;
-
     bottom: 0;
 
     width: 355px;
-
     height: 49px;
 
     display: flex;
@@ -642,54 +448,36 @@ body {
     overflow: hidden;
 
     z-index: 10;
-
 }
 
-
 .hero-bottom-stripes span {
-
     position: relative;
 
     display: block;
 
     width: 95px;
-
     height: 49px;
 
     margin-left: -17px;
 
     transform: skewX(-40deg);
-
 }
-
 
 .hero-bottom-stripes .stripe-black {
-
     background: var(--black);
-
 }
-
 
 .hero-bottom-stripes .stripe-red {
-
     background: var(--red);
-
 }
-
 
 .hero-bottom-stripes .stripe-blue {
-
     background: var(--blue);
-
 }
-
 
 .hero-bottom-stripes .stripe-yellow {
-
     background: var(--yellow);
-
 }
-
 
 
 /* =========================================================
@@ -697,99 +485,83 @@ body {
 ========================================================= */
 
 .divider {
-
     position: relative;
 
-    height: 50px;
-
     width: 100%;
+    height: 50px;
 
     background: var(--yellow);
 
     border-top: 1px solid var(--black);
-
     border-bottom: 1px solid var(--black);
 
     overflow: hidden;
-
 }
 
+.divider-yellow {
+    position: absolute;
 
+    left: 0;
+    top: 0;
 
-/* left stripes */
+    width: 100%;
+    height: 50px;
+
+    background: var(--yellow);
+}
 
 .divider-stripes {
-
     position: absolute;
 
     left: 145px;
-
     top: 0;
 
     width: 255px;
-
     height: 50px;
 
     display: flex;
 
     overflow: hidden;
-
 }
 
-
 .divider-stripes span {
-
     width: 65px;
-
     height: 50px;
 
     margin-left: -1px;
 
     transform: skewX(40deg);
-
 }
-
 
 .divider-stripes .stripe-blue {
-
     background: var(--blue);
-
 }
-
 
 .divider-stripes .stripe-red {
-
     background: var(--red);
-
 }
-
 
 .divider-stripes .stripe-black {
-
     background: var(--black);
-
 }
-
 
 
 /* =========================================================
-   ABOUT SECTION
+   ABOUT
 ========================================================= */
 
 .about-section {
-
     position: relative;
 
     width: 100%;
 
-    height: 690px;
+    /* SAME HEIGHT AS HERO */
+    height: 600px;
 
     overflow: hidden;
 
     background: var(--cream);
-
 }
-
 
 
 /* =========================================================
@@ -797,44 +569,35 @@ body {
 ========================================================= */
 
 .about-bg {
-
     position: absolute;
 
     inset: 0;
 
     background-image:
-
         linear-gradient(
             rgba(255, 244, 230, .90),
             rgba(255, 244, 230, .90)
         ),
-
         url("images/photowalk.jpg");
 
     background-size: cover;
 
     background-position: center;
-
 }
 
 
-
 /* =========================================================
-   ABOUT CONTENT
+   ABOUT INNER
 ========================================================= */
 
 .about-inner {
-
     position: relative;
 
     z-index: 5;
 
     width: 100%;
-
     height: 100%;
-
 }
-
 
 
 /* =========================================================
@@ -842,37 +605,28 @@ body {
 ========================================================= */
 
 .about-copy {
-
     position: absolute;
 
     left: 4.1%;
-
     top: 61px;
 
     width: 430px;
-
 }
 
-
 .about-copy h2 {
-
     margin: 0 0 10px 0;
 
     font-family: "Anton", sans-serif;
 
     font-size: 86px;
-
     font-weight: 400;
 
     line-height: .95;
 
     color: var(--black);
-
 }
 
-
 .about-copy p {
-
     margin: 0;
 
     width: 455px;
@@ -880,7 +634,6 @@ body {
     font-family: "Be Vietnam Pro", sans-serif;
 
     font-size: 18px;
-
     font-weight: 300;
 
     line-height: 1.48;
@@ -888,9 +641,7 @@ body {
     letter-spacing: .2px;
 
     color: var(--black);
-
 }
-
 
 
 /* =========================================================
@@ -898,38 +649,30 @@ body {
 ========================================================= */
 
 .about-photo {
-
     position: absolute;
 
     top: 15px;
-
     right: 5.4%;
 
     width: 43%;
-
     max-width: 470px;
 
-    height: 485px;
+    /* adjusted to fit 600px section */
+    height: 460px;
 
     overflow: hidden;
 
     border-bottom-left-radius: 100px;
-
 }
 
-
 .about-photo img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     display: block;
-
 }
-
 
 
 /* =========================================================
@@ -937,15 +680,12 @@ body {
 ========================================================= */
 
 .about-bottom-stripes {
-
     position: absolute;
 
     right: -20px;
-
     bottom: 0;
 
     width: 710px;
-
     height: 48px;
 
     display: flex;
@@ -953,50 +693,32 @@ body {
     overflow: hidden;
 
     z-index: 10;
-
 }
 
-
 .about-bottom-stripes span {
-
     height: 48px;
-
     width: 150px;
 
     transform: skewX(-30deg);
 
     margin-left: -25px;
-
 }
-
 
 .about-bottom-stripes .stripe-black {
-
     background: var(--black);
-
 }
-
 
 .about-bottom-stripes .stripe-red {
-
     background: var(--red);
-
 }
-
 
 .about-bottom-stripes .stripe-blue {
-
     background: var(--blue);
-
 }
-
 
 .about-bottom-stripes .stripe-yellow {
-
     background: var(--yellow);
-
 }
-
 
 
 /* =========================================================
@@ -1004,375 +726,243 @@ body {
 ========================================================= */
 
 .modal-content {
-
     background: var(--cream);
 
     border: 2px solid var(--black);
 
     border-radius: 0;
-
 }
 
-
 .modal-header {
-
     background: var(--yellow);
 
     border-bottom: 1px solid var(--black);
-
 }
 
-
 .modal-title {
-
     font-family: "Anton", sans-serif;
 
     letter-spacing: .5px;
-
 }
-
 
 .modal-body {
-
     font-family: "Be Vietnam Pro", sans-serif;
-
 }
-
 
 .modal-footer {
-
     border-top: 1px solid var(--black);
-
 }
 
-
 .modal-footer .btn {
-
     border-radius: 0;
 
     background: var(--black);
 
     border-color: var(--black);
-
 }
 
 
-
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
 
-
     .site-header {
-
         height: 70px;
-
     }
-
 
     .brand-area {
-
         height: 68px;
-
         width: 220px;
-
     }
-
 
     .brand-yellow {
-
         height: 68px;
-
         width: 125px;
-
     }
-
 
     .logo-link {
-
         height: 68px;
-
         left: 12px;
-
     }
-
 
     .logo {
-
         width: 50px;
-
     }
-
 
     .top-stripes {
-
         left: 82px;
-
         height: 68px;
-
         width: 140px;
-
     }
-
 
     .top-stripes span {
-
         height: 68px;
-
         width: 48px;
-
     }
-
 
     .main-navigation {
-
         gap: 5px;
-
         margin-right: 10px;
-
     }
-
 
     .nav-btn {
-
         height: 27px;
-
         padding: 0 7px;
-
         font-size: 9px;
-
     }
 
 
+    /* SAME HEIGHT */
+
     .hero {
-
         height: 600px;
+    }
 
+    .about-section {
+        height: 600px;
     }
 
 
     .hero-copy {
-
         left: 5%;
-
         top: 70px;
-
         width: 43%;
-
     }
-
 
     .hero-copy h1 {
-
         font-size: 68px;
-
     }
-
 
     .hero-copy p {
-
         width: 100%;
-
         font-size: 11px;
-
     }
-
 
     .hero-photo {
-
         right: 5%;
-
         top: 70px;
-
         width: 44%;
-
         height: 260px;
-
     }
-
 
     .about-copy {
-
         left: 5%;
-
         width: 42%;
-
     }
-
 
     .about-copy h2 {
-
         font-size: 65px;
-
     }
-
 
     .about-copy p {
-
         width: 100%;
-
         font-size: 14px;
-
     }
-
 
     .about-photo {
-
         right: 5%;
-
         width: 44%;
-
         height: 400px;
-
     }
-
 }
 
 
-
 /* =========================================================
-   SMALL MOBILE
+   MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
 
-
     .site-header {
-
         height: 62px;
-
     }
-
 
     .brand-area {
-
         height: 60px;
-
         width: 150px;
-
     }
-
 
     .brand-yellow {
-
         height: 60px;
-
         width: 90px;
-
     }
-
 
     .logo-link {
-
         height: 60px;
-
         left: 7px;
-
     }
-
 
     .logo {
-
         width: 42px;
-
     }
-
 
     .top-stripes {
-
         left: 60px;
-
         height: 60px;
-
         width: 100px;
-
     }
-
 
     .top-stripes span {
-
         height: 60px;
-
         width: 35px;
-
     }
-
 
     .main-navigation {
-
         gap: 3px;
-
         margin-right: 5px;
-
     }
-
 
     .nav-btn {
-
         height: 23px;
-
         padding: 0 5px;
-
         font-size: 7px;
-
     }
 
 
+    /*
+       Mobile sections are also equal.
+    */
+
     .hero {
-
         height: 700px;
+    }
 
+    .about-section {
+        height: 700px;
     }
 
 
     .hero-inner {
-
         display: flex;
-
         flex-direction: column;
-
     }
 
-
     .hero-copy {
-
         position: relative;
 
         left: auto;
-
         top: auto;
 
         margin: 55px 25px 0;
 
         width: auto;
-
     }
-
 
     .hero-copy h1 {
-
         font-size: 58px;
-
     }
-
 
     .hero-copy p {
-
         width: 100%;
-
         font-size: 11px;
-
     }
 
-
     .hero-photo {
-
         position: relative;
 
         top: auto;
-
         right: auto;
 
         margin: 45px 25px 0;
@@ -1382,61 +972,38 @@ body {
         max-width: none;
 
         height: 260px;
-
     }
 
 
     .divider-stripes {
-
         left: 80px;
-
-    }
-
-
-    .about-section {
-
-        height: 800px;
-
     }
 
 
     .about-copy {
-
         position: relative;
 
         left: auto;
-
         top: auto;
 
         padding: 55px 25px 0;
 
         width: auto;
-
     }
-
 
     .about-copy h2 {
-
         font-size: 60px;
-
     }
-
 
     .about-copy p {
-
         width: 100%;
-
         font-size: 14px;
-
     }
 
-
     .about-photo {
-
         position: relative;
 
         top: auto;
-
         right: auto;
 
         margin: 40px 25px 0;
@@ -1446,7 +1013,5 @@ body {
         max-width: none;
 
         height: 350px;
-
     }
-
 }
