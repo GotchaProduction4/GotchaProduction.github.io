@@ -2,398 +2,276 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Talakbay | Home</title>
 
-    <!-- Website Icon -->
     <link rel="icon" type="image/png" href="images/logoblack.png">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
+    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 
 <body class="home-page">
 
-    <div class="website-container">
+<div class="site">
 
 
-        <!-- ================= NAVIGATION ================= -->
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
 
-        <nav class="navbar navbar-expand-lg">
+    <header class="navbar">
 
-            <!-- LOGO -->
+        <div class="brand-area">
 
-            <a class="navbar-brand" href="index.html">
-
+            <a href="index.html">
                 <img src="images/logoblack.png"
-                    alt="Gotcha Productions Logo"
-                    class="logo">
-
+                     class="logo"
+                     alt="Gotcha Productions">
             </a>
 
-
-            <!-- MOBILE MENU BUTTON -->
-
-            <button class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-
-                <span class="menu-icon">☰</span>
-
-            </button>
-
-
-            <!-- NAVIGATION LINKS -->
-
-            <div class="collapse navbar-collapse"
-                id="navbarNav">
-
-                <ul class="navbar-nav ml-auto">
-
-
-                    <!-- HOME -->
-
-                    <li class="nav-item home active">
-
-                        <a class="nav-link"
-                            href="index.html">
-
-                            HOME
-
-                        </a>
-
-                    </li>
-
-
-                    <!-- RESOURCES -->
-
-                    <li class="nav-item resources">
-
-                        <a class="nav-link"
-                            href="resources.html">
-
-                            RESOURCES
-
-                        </a>
-
-                    </li>
-
-
-                    <!-- GALLERY -->
-
-                    <li class="nav-item gallery">
-
-                        <a class="nav-link"
-                            href="gallery.html">
-
-                            GALLERY
-
-                        </a>
-
-                    </li>
-
-
-                    <!-- CONTACT -->
-
-                    <li class="nav-item contact">
-
-                        <a class="nav-link"
-                            href="#"
-                            data-toggle="modal"
-                            data-target="#contactModal">
-
-                            CONTACT
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
+            <div class="header-stripes">
+                <span class="stripe-blue"></span>
+                <span class="stripe-red"></span>
+                <span class="stripe-black"></span>
             </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html"
+               class="nav-button home active">
+                HOME
+            </a>
+
+            <a href="resources.html"
+               class="nav-button resources">
+                RESOURCES
+            </a>
+
+            <a href="gallery.html"
+               class="nav-button gallery">
+                GALLERY
+            </a>
+
+            <a href="#"
+               class="nav-button contact"
+               data-toggle="modal"
+               data-target="#contactModal">
+                CONTACT
+            </a>
 
         </nav>
 
-
-        <!-- ================= HERO SECTION ================= -->
-
-        <section class="hero">
-
-            <div class="hero-content">
+    </header>
 
 
-                <!-- HERO TEXT -->
 
-                <div class="content">
+    <!-- =====================================
+         HERO
+    ====================================== -->
 
-                    <h1>TALAKBAY</h1>
+    <section class="hero">
 
-                    <p>
-
-                        A Cinematic Instructional Video Series Applied on a Structured
-                        Photowalk Program
-
-                    </p>
+        <div class="hero-content">
 
 
-                    <!-- BUTTONS -->
+            <!-- LEFT -->
 
-                    <div class="buttons">
+            <div class="hero-text">
 
-                        <a href="resources.html"
-                            class="btn-retro resources-btn">
+                <h1>TALAKBAY</h1>
 
-                            RESOURCES
+                <p>
+                    A Cinematic Instructional Video Series Applied on a Structured
+                    Photowalk Program
+                </p>
 
-                        </a>
 
+                <div class="hero-buttons">
 
-                        <a href="gallery.html"
-                            class="btn-retro gallery-btn">
+                    <a href="resources.html"
+                       class="pill-button blue">
+                        RESOURCES
+                    </a>
 
-                            GALLERY
-
-                        </a>
-
-                    </div>
+                    <a href="gallery.html"
+                       class="pill-button red">
+                        GALLERY
+                    </a>
 
                 </div>
-
-
-                <!-- HERO IMAGE -->
-
-                <div class="hero-image">
-
-                    <!-- Change filename if needed -->
-
-                    <img src="images/photowalk.jpg"
-                        alt="Students participating in a photowalk">
-
-                </div>
-
 
             </div>
 
 
-            <!-- HERO DECORATIVE STRIPES -->
+            <!-- RIGHT -->
 
-            <div class="hero-stripes">
+            <div class="hero-photo">
 
-                <div class="stripe-black"></div>
-
-                <div class="stripe-red"></div>
-
-                <div class="stripe-blue"></div>
-
-                <div class="stripe-yellow"></div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SECTION DIVIDER ================= -->
-
-        <div class="section-divider">
-
-            <div class="divider-stripes">
-
-                <div class="divider-blue"></div>
-
-                <div class="divider-red"></div>
-
-                <div class="divider-black"></div>
+                <img src="images/dungeon.jpg"
+                     alt="Photowalk">
 
             </div>
 
         </div>
 
 
-        <!-- ================= ABOUT SECTION ================= -->
+        <!-- Decorative bottom stripes -->
 
-        <section class="about-section">
+        <div class="hero-bottom-decoration">
 
-            <div class="about-content">
+            <span class="black"></span>
+            <span class="red"></span>
+            <span class="blue"></span>
+            <span class="yellow"></span>
 
+        </div>
 
-                <!-- ABOUT TEXT -->
-
-                <div class="about-text">
-
-                    <h2>ABOUT</h2>
-
-                    <p>
-
-                        Talakbay is a thesis project developed by Gotcha!
-                        Productions that combines a Cinematic Instructional
-                        Video Series and a Structured Photowalk Program
-                        designed to help Grade 12 Arts and Design Track
-                        students develop their photography knowledge and
-                        skills through guided and experiential learning.
-
-                    </p>
-
-                </div>
+    </section>
 
 
-                <!-- ABOUT IMAGE -->
 
-                <div class="about-image">
+    <!-- =====================================
+         SECTION DIVIDER
+    ====================================== -->
 
-                    <!-- Change filename if needed -->
+    <div class="section-divider">
 
-                    <img src="images/camera.jpg"
-                        alt="Camera used for photography">
+        <div class="divider-stripes">
 
-                </div>
+            <span class="blue"></span>
+            <span class="red"></span>
+            <span class="black"></span>
 
-            </div>
-
-
-            <!-- BOTTOM DECORATIVE STRIPES -->
-
-            <div class="bottom-stripes">
-
-                <div class="bottom-black"></div>
-
-                <div class="bottom-red"></div>
-
-                <div class="bottom-blue"></div>
-
-                <div class="bottom-yellow"></div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= FOOTER ================= -->
-
-        <footer>
-
-            <p>
-
-                <strong>Talakbay</strong>
-
-                <br>
-
-                A Cinematic Instructional Video and Structured Photowalk Program
-
-            </p>
-
-            <br>
-
-            <p>
-
-                <a href="about.html">About</a>
-
-                |
-
-                <a href="resources.html">Resources</a>
-
-                |
-
-                <a href="gallery.html">Gallery</a>
-
-            </p>
-
-            <br>
-
-            <p>
-                © 2026 Gotcha! Productions
-            </p>
-
-        </footer>
-
+        </div>
 
     </div>
 
 
-    <!-- ================= CONTACT MODAL ================= -->
 
-    <div class="modal fade"
-        id="contactModal"
-        tabindex="-1"
-        aria-labelledby="contactModalLabel"
-        aria-hidden="true">
+    <!-- =====================================
+         ABOUT
+    ====================================== -->
 
-        <div class="modal-dialog modal-dialog-centered">
+    <section class="about">
 
-            <div class="modal-content">
+        <div class="about-content">
 
 
-                <!-- MODAL HEADER -->
+            <!-- LEFT TEXT -->
 
-                <div class="modal-header">
+            <div class="about-text">
 
-                    <h5 class="modal-title"
-                        id="contactModalLabel">
+                <h2>ABOUT</h2>
 
-                        CONTACT US
+                <p>
+                    Talakbay is a thesis project developed by Gotcha!
+                    Productions that combines a Cinematic Instructional
+                    Video Series and a Structured Photowalk Program designed
+                    to help Grade 12 Arts and Design Track students develop
+                    their photography knowledge and skills through guided
+                    and experiential learning.
+                </p>
 
-                    </h5>
+            </div>
 
 
-                    <button type="button"
+            <!-- RIGHT IMAGE -->
+
+            <div class="about-photo">
+
+                <img src="images/dungeon.jpg"
+                     alt="Photography">
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom decorative stripes -->
+
+        <div class="about-bottom-decoration">
+
+            <span class="black"></span>
+            <span class="red"></span>
+            <span class="blue"></span>
+            <span class="yellow"></span>
+
+        </div>
+
+    </section>
+
+
+
+</div>
+
+
+
+<!-- =====================================
+     CONTACT MODAL
+====================================== -->
+
+<div class="modal fade"
+     id="contactModal"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    CONTACT US
+                </h5>
+
+                <button type="button"
                         class="close"
-                        data-dismiss="modal"
-                        aria-label="Close">
+                        data-dismiss="modal">
 
-                        <span aria-hidden="true">
-                            &times;
-                        </span>
+                    <span>&times;</span>
 
-                    </button>
+                </button>
 
-                </div>
+            </div>
 
 
-                <!-- MODAL BODY -->
+            <div class="modal-body">
 
-                <div class="modal-body">
+                <h4>Gotcha! Productions</h4>
 
-                    <h4>Gotcha! Productions</h4>
+                <hr>
 
-                    <hr>
+                <p>
+                    📧 4gotchaproductions@gmail.com
+                </p>
 
-                    <p>
-                        📧 4gotchaproductions@gmail.com
-                    </p>
+                <p>
+                    📱 +63 916 426 0418
+                </p>
 
-                    <p>
-                        📱 +63 916 426 0418
-                    </p>
-
-                </div>
+            </div>
 
 
-                <!-- MODAL FOOTER -->
+            <div class="modal-footer">
 
-                <div class="modal-footer">
-
-                    <button type="button"
+                <button type="button"
                         class="btn btn-secondary"
                         data-dismiss="modal">
 
-                        CLOSE
+                    CLOSE
 
-                    </button>
-
-                </div>
+                </button>
 
             </div>
 
@@ -401,24 +279,19 @@
 
     </div>
 
-
-    <!-- ================= AUDIO ================= -->
-
-    <audio id="clickSound"
-        src="sounds/click1.mp3"
-        preload="auto">
-
-    </audio>
+</div>
 
 
-    <!-- ================= SCRIPTS ================= -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- =====================================
+     SCRIPTS
+====================================== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="script.js"></script>
 
 </body>
 
