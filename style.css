@@ -156,9 +156,8 @@ a:hover {
     top: 0;
 
     /*
-       Increased from 155px to 170px.
-       The skewed blue stripe needs extra room so
-       its angled edge is not clipped.
+       Extra width prevents the angled blue stripe
+       from being clipped.
     */
     width: 170px;
     height: 80px;
@@ -166,6 +165,8 @@ a:hover {
     display: flex;
 
     overflow: visible;
+
+    z-index: 2;
 }
 
 .top-stripes span {
@@ -274,6 +275,43 @@ a:hover {
 
 .nav-contact:hover {
     color: white;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 38px;
+    height: 38px;
+
+    margin-right: 10px;
+
+    padding: 0;
+
+    border: 1px solid var(--black);
+    border-radius: 50%;
+
+    background: var(--cream);
+    color: var(--black);
+
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 30;
+}
+
+.menu-toggle:focus {
+    outline: none;
 }
 
 
@@ -787,7 +825,6 @@ a:hover {
 
     /* =====================================================
        TABLET TOP STRIPES
-       Extra width prevents the blue stripe from being cut.
     ===================================================== */
 
     .top-stripes {
@@ -795,8 +832,6 @@ a:hover {
 
         width: 140px;
         height: 70px;
-
-        display: flex;
 
         overflow: visible;
     }
@@ -898,6 +933,10 @@ a:hover {
 
 @media (max-width: 600px) {
 
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
     .site-header {
         height: 62px;
     }
@@ -905,7 +944,11 @@ a:hover {
     .brand-area {
         position: relative;
 
-        width: 145px;
+        /*
+           Wide enough so the angled stripes are not
+           clipped by the logo area.
+        */
+        width: 160px;
         height: 62px;
 
         flex-shrink: 0;
@@ -957,6 +1000,8 @@ a:hover {
         display: flex;
 
         overflow: visible;
+
+        z-index: 2;
     }
 
     .top-stripes span {
@@ -977,23 +1022,58 @@ a:hover {
     ===================================================== */
 
     .main-navigation {
-        gap: 3px;
+        position: absolute;
 
-        margin-right: 5px;
+        top: 62px;
+        right: 0;
 
-        flex-shrink: 0;
+        width: 190px;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 5px;
+
+        margin: 0;
+
+        padding: 10px;
+
+        background: var(--cream);
+
+        border-left: 1px solid var(--black);
+        border-bottom: 1px solid var(--black);
+
+        z-index: 25;
+    }
+
+    .main-navigation.active {
+        display: flex;
     }
 
     .nav-btn {
-        height: 23px;
+        width: 100%;
+        height: 40px;
 
-        padding: 0 5px;
+        padding: 0 15px;
 
-        font-size: 7px;
+        border-radius: 20px;
 
-        letter-spacing: .2px;
+        font-size: 10px;
 
-        white-space: nowrap;
+        justify-content: center;
+    }
+
+
+    /* =====================================================
+       HAMBURGER BUTTON
+    ===================================================== */
+
+    .menu-toggle {
+        display: flex;
+
+        flex-shrink: 0;
     }
 
 
@@ -1230,8 +1310,10 @@ a:hover {
     }
 
     .brand-area {
-        width: 125px;
+        width: 145px;
         height: 58px;
+
+        overflow: visible;
     }
 
     .brand-yellow {
@@ -1251,7 +1333,9 @@ a:hover {
     }
 
 
-    /* SMALL PHONE STRIPES */
+    /* =====================================================
+       SMALL PHONE STRIPES
+    ===================================================== */
 
     .top-stripes {
         left: 48px;
@@ -1273,24 +1357,40 @@ a:hover {
     }
 
 
-    /* NAV */
+    /* =====================================================
+       SMALL PHONE HAMBURGER
+    ===================================================== */
+
+    .menu-toggle {
+        width: 32px;
+        height: 32px;
+
+        margin-right: 8px;
+
+        font-size: 19px;
+    }
+
+
+    /* =====================================================
+       SMALL PHONE NAVIGATION
+    ===================================================== */
 
     .main-navigation {
-        gap: 2px;
+        top: 58px;
 
-        margin-right: 3px;
+        width: 175px;
     }
 
     .nav-btn {
-        height: 21px;
+        height: 38px;
 
-        padding: 0 4px;
-
-        font-size: 6px;
+        font-size: 9px;
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
         height: calc(100vh - 58px);
@@ -1337,7 +1437,9 @@ a:hover {
     }
 
 
-    /* ABOUT */
+    /* =====================================================
+       ABOUT
+    ===================================================== */
 
     .about-copy {
         padding: 45px 20px 0;
@@ -1364,7 +1466,9 @@ a:hover {
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .site-footer {
         padding: 13px 15px;
