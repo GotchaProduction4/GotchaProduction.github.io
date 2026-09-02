@@ -3,20 +3,19 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Talakbay | Home</title>
+    <title>Talakbay | Home</title>
 
-<!-- Website Icon -->
-<link rel="icon" type="image/png" href="images/logoblack.png">
+    <link rel="icon" type="image/png" href="images/logoblack.png">
 
-<!-- Bootstrap -->
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-<!-- Custom CSS -->
-<link rel="stylesheet" href="style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -24,119 +23,74 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <body class="home-page">
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-<nav class="navbar navbar-expand-lg">
-
-
-    <!-- LOGO -->
-
-    <a class="navbar-brand" href="index.html">
-
-        <img src="images/logoblack.png"
-        alt="Talakbay Logo"
-        class="logo">
-
-    </a>
+<nav class="navbar">
 
 
-    <!-- DIAGONAL STRIPES -->
+    <!-- LOGO + STRIPES -->
 
-    <div class="header-stripes">
+    <div class="brand">
 
-        <span class="stripe-blue"></span>
+        <a href="index.html">
 
-        <span class="stripe-red"></span>
+            <img src="images/logoblack.png"
+                 alt="Gotcha Productions"
+                 class="logo">
 
-        <span class="stripe-black"></span>
+        </a>
+
+
+        <div class="top-stripes">
+
+            <span class="blue"></span>
+            <span class="red"></span>
+            <span class="black"></span>
+
+        </div>
 
     </div>
 
 
-    <!-- Mobile Menu Button -->
 
-    <button class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation">
+    <!-- NAVIGATION -->
 
-        <span class="menu-icon">
-            ☰
-        </span>
+    <div class="navigation">
 
-    </button>
+        <a href="index.html"
+           class="nav-button home active">
+
+            HOME
+
+        </a>
 
 
-    <!-- Navigation Links -->
+        <a href="resources.html"
+           class="nav-button resources">
 
-    <div class="collapse navbar-collapse"
-    id="navbarNav">
+            RESOURCES
 
-        <ul class="navbar-nav ml-auto">
-
-
-            <!-- HOME -->
-
-            <li class="nav-item active">
-
-                <a class="nav-link home-link"
-                href="index.html">
-
-                    HOME
-
-                </a>
-
-            </li>
+        </a>
 
 
-            <!-- RESOURCES -->
+        <a href="gallery.html"
+           class="nav-button gallery">
 
-            <li class="nav-item">
+            GALLERY
 
-                <a class="nav-link resources-link"
-                href="resources.html">
-
-                    RESOURCES
-
-                </a>
-
-            </li>
+        </a>
 
 
-            <!-- GALLERY -->
+        <a href="#"
+           class="nav-button contact"
+           data-toggle="modal"
+           data-target="#contactModal">
 
-            <li class="nav-item">
+            CONTACT
 
-                <a class="nav-link gallery-link"
-                href="gallery.html">
-
-                    GALLERY
-
-                </a>
-
-            </li>
-
-
-            <!-- CONTACT -->
-
-            <li class="nav-item">
-
-                <a class="nav-link contact-link"
-                href="#"
-                data-toggle="modal"
-                data-target="#contactModal">
-
-                    CONTACT
-
-                </a>
-
-            </li>
-
-
-        </ul>
+        </a>
 
     </div>
 
@@ -144,35 +98,39 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
 
-    <div class="content">
+    <!-- Faded Background -->
+
+    <div class="hero-background"></div>
+
+
+
+    <div class="hero-content">
 
 
         <!-- LEFT SIDE -->
 
         <div class="hero-text">
 
-            <h1>
-                TALAKBAY
-            </h1>
+            <h1>TALAKBAY</h1>
 
 
             <p>
-
                 A Cinematic Instructional Video Series Applied on a
                 Structured Photowalk Program
-
             </p>
 
 
-            <div class="buttons">
+            <div class="hero-buttons">
 
                 <a href="resources.html"
-                class="btn-retro blue-button">
+                   class="pill blue">
 
                     RESOURCES
 
@@ -180,7 +138,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 
                 <a href="gallery.html"
-                class="btn-retro red-button">
+                   class="pill red">
 
                     GALLERY
 
@@ -194,10 +152,10 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
         <!-- RIGHT SIDE IMAGE -->
 
-        <div class="hero-image">
+        <div class="hero-photo">
 
-            <img src="images/dungeon.jpg"
-            alt="Students participating in a photowalk">
+            <img src="images/photowalk.jpg"
+                 alt="Students participating in a photowalk">
 
         </div>
 
@@ -206,9 +164,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 
 
-    <!-- HERO DECORATION -->
+    <!-- BOTTOM RIGHT STRIPES -->
 
-    <div class="hero-decoration">
+    <div class="hero-stripes">
 
         <span class="black"></span>
 
@@ -225,187 +183,36 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 
 
-<!-- ================= SECTION DIVIDER ================= -->
-
-<div class="section-divider">
-
-
-    <div class="divider-stripes">
-
-        <span class="blue"></span>
-
-        <span class="red"></span>
-
-        <span class="black"></span>
-
-    </div>
-
-
-</div>
-
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="about">
-
-
-    <div class="about-content">
-
-
-        <!-- ABOUT TEXT -->
-
-        <div class="about-text">
-
-            <h2>
-                ABOUT
-            </h2>
-
-
-            <p>
-
-                Talakbay is a thesis project developed by
-                Gotcha! Productions that combines a Cinematic
-                Instructional Video Series and a Structured
-                Photowalk Program designed to help Grade 12
-                Arts and Design Track students develop their
-                photography knowledge and skills through
-                guided and experiential learning.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- ABOUT IMAGE -->
-
-        <div class="about-image">
-
-            <img src="images/dungeon.jpg"
-            alt="Camera used for photography">
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- ABOUT BOTTOM STRIPES -->
-
-    <div class="about-decoration">
-
-        <span class="black"></span>
-
-        <span class="red"></span>
-
-        <span class="blue"></span>
-
-        <span class="yellow"></span>
-
-    </div>
-
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <p>
-
-        <strong>
-            Talakbay
-        </strong>
-
-        <br>
-
-        A Cinematic Instructional Video and Structured
-        Photowalk Program
-
-    </p>
-
-
-    <br>
-
-
-    <p>
-
-        <a href="about.html">
-            About
-        </a>
-
-        |
-
-        <a href="resources.html">
-            Resources
-        </a>
-
-        |
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-    </p>
-
-
-    <br>
-
-
-    <p>
-
-        © 2026 Gotcha! Productions
-
-    </p>
-
-</footer>
-
-
-
-<!-- ================= CONTACT MODAL ================= -->
+<!-- =====================================================
+     CONTACT MODAL
+===================================================== -->
 
 <div class="modal fade"
-id="contactModal"
-tabindex="-1">
-
+     id="contactModal"
+     tabindex="-1">
 
     <div class="modal-dialog modal-dialog-centered">
-
 
         <div class="modal-content">
 
 
-            <!-- Modal Header -->
-
             <div class="modal-header">
 
                 <h5 class="modal-title">
-
                     CONTACT US
-
                 </h5>
 
 
-                <button
-                type="button"
-                class="close"
-                data-dismiss="modal">
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
 
-                    <span>
-                        &times;
-                    </span>
+                    <span>&times;</span>
 
                 </button>
 
             </div>
 
-
-
-            <!-- Modal Body -->
 
             <div class="modal-body">
 
@@ -426,15 +233,11 @@ tabindex="-1">
             </div>
 
 
-
-            <!-- Modal Footer -->
-
             <div class="modal-footer">
 
-                <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal">
 
                     CLOSE
 
@@ -451,25 +254,15 @@ tabindex="-1">
 
 
 
-<!-- ================= AUDIO ================= -->
-
-<audio
-id="clickSound"
-src="sounds/click1.mp3"
-preload="auto">
-
-</audio>
-
-
-
-<!-- ================= SCRIPTS ================= -->
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="script.js"></script>
-
 
 </body>
 
