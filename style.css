@@ -1,12 +1,12 @@
-/* =====================================================
-   TALAKBAY
-   LANDING PAGE
-===================================================== */
+/* =========================================================
+   TALAKBAY WEBSITE
+   REFERENCE-MATCHED LANDING PAGE
+========================================================= */
 
 
-/* =====================================================
+/* =========================================================
    FONTS
-===================================================== */
+========================================================= */
 
 @font-face {
 
@@ -16,6 +16,8 @@
          format("truetype");
 
     font-weight: 400;
+
+    font-style: normal;
 
 }
 
@@ -29,6 +31,8 @@
 
     font-weight: 300;
 
+    font-style: normal;
+
 }
 
 
@@ -41,13 +45,15 @@
 
     font-weight: 400;
 
+    font-style: normal;
+
 }
 
 
 
-/* =====================================================
+/* =========================================================
    COLOR PALETTE
-===================================================== */
+========================================================= */
 
 :root {
 
@@ -65,33 +71,34 @@
 
 
 
-/* =====================================================
+/* =========================================================
    RESET
-===================================================== */
+========================================================= */
 
 * {
-
-    margin: 0;
-
-    padding: 0;
 
     box-sizing: border-box;
 
 }
 
 
-html {
+html,
+body {
 
-    scroll-behavior: smooth;
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100%;
 
 }
 
 
 body {
 
-    margin: 0;
-
-    background: #000;
+    background: var(--cream);
 
     color: var(--black);
 
@@ -103,54 +110,29 @@ body {
 
 
 
-/* =====================================================
-   MAIN WEBSITE
-===================================================== */
+/* =========================================================
+   HEADER
+========================================================= */
 
-body > .site {
+.site-header {
 
-    width: 100%;
-
-}
-
-
-.home-page {
-
-    background: var(--cream);
-
-}
-
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.navbar {
+    position: relative;
 
     width: 100%;
 
     height: 80px;
 
-    min-height: 80px;
-
-    padding: 0;
-
-    margin: 0;
-
     background: var(--cream);
 
     border-top: 2px solid var(--black);
 
-    border-bottom: 2px solid var(--black);
+    border-bottom: 1px solid var(--black);
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
 
-    position: relative;
+    justify-content: space-between;
 
     overflow: hidden;
 
@@ -158,31 +140,24 @@ body > .site {
 
 
 
-/* =====================================================
-   BRAND
-===================================================== */
+/* =========================================================
+   BRAND AREA
+========================================================= */
 
-.brand {
-
-    height: 78px;
-
-    width: 285px;
+.brand-area {
 
     position: relative;
 
-    display: flex;
+    width: 325px;
 
-    align-items: center;
+    height: 78px;
+
+    flex-shrink: 0;
 
 }
 
 
-
-/* Yellow area */
-
-.brand::before {
-
-    content: "";
+.brand-yellow {
 
     position: absolute;
 
@@ -200,28 +175,36 @@ body > .site {
 
 
 
-/* =====================================================
+/* =========================================================
    LOGO
-===================================================== */
+========================================================= */
 
-.brand a {
+.logo-link {
 
-    position: relative;
+    position: absolute;
 
-    z-index: 5;
+    left: 21px;
 
-    margin-left: 25px;
+    top: 0;
+
+    width: 70px;
+
+    height: 78px;
 
     display: flex;
 
     align-items: center;
+
+    justify-content: center;
+
+    z-index: 5;
 
 }
 
 
 .logo {
 
-    width: 60px;
+    width: 58px;
 
     height: auto;
 
@@ -231,57 +214,69 @@ body > .site {
 
 
 
-/* =====================================================
-   TOP DIAGONAL STRIPES
-===================================================== */
+/* =========================================================
+   TOP LEFT STRIPES
+========================================================= */
 
 .top-stripes {
 
     position: absolute;
 
+    left: 112px;
+
     top: 0;
 
-    left: 105px;
-
-    width: 180px;
+    width: 175px;
 
     height: 78px;
 
-    display: flex;
+    overflow: hidden;
 
     transform: skewX(35deg);
 
-    overflow: hidden;
+    transform-origin: top left;
 
 }
 
 
 .top-stripes span {
 
-    width: 62px;
+    position: absolute;
+
+    top: 0;
 
     height: 78px;
-
-    display: block;
 
 }
 
 
-.top-stripes .blue {
+.top-stripes .stripe-blue {
+
+    left: 0;
+
+    width: 60px;
 
     background: var(--blue);
 
 }
 
 
-.top-stripes .red {
+.top-stripes .stripe-red {
+
+    left: 58px;
+
+    width: 60px;
 
     background: var(--red);
 
 }
 
 
-.top-stripes .black {
+.top-stripes .stripe-black {
+
+    left: 116px;
+
+    width: 60px;
 
     background: var(--black);
 
@@ -289,55 +284,59 @@ body > .site {
 
 
 
-/* =====================================================
-   NAVIGATION LINKS
-===================================================== */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
-.navigation {
-
-    height: 100%;
+.main-navigation {
 
     display: flex;
 
     align-items: center;
 
-    gap: 9px;
+    gap: 10px;
 
     margin-right: 32px;
 
-    position: relative;
+    height: 100%;
 
-    z-index: 10;
+    z-index: 20;
 
 }
 
 
-.nav-button {
+.nav-btn {
 
-    padding: 8px 12px;
+    height: 31px;
+
+    padding: 0 13px;
 
     border: 1px solid var(--black);
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    display: flex;
 
-    font-size: 11px;
+    align-items: center;
 
-    font-weight: 400;
-
-    line-height: 1;
-
-    letter-spacing: .4px;
+    justify-content: center;
 
     text-decoration: none;
 
-    white-space: nowrap;
+    font-family: "Be Vietnam Pro", sans-serif;
 
-    transition: .2s;
+    font-size: 13px;
+
+    font-weight: 400;
+
+    letter-spacing: .4px;
+
+    line-height: 1;
+
+    transition: opacity .2s ease;
 
 }
 
 
-.nav-button:hover {
+.nav-btn:hover {
 
     text-decoration: none;
 
@@ -347,11 +346,9 @@ body > .site {
 
 
 
-/* =====================================================
-   NAV COLORS
-===================================================== */
+/* Individual navigation colors */
 
-.nav-button.home {
+.nav-home {
 
     background: var(--yellow);
 
@@ -360,7 +357,7 @@ body > .site {
 }
 
 
-.nav-button.resources {
+.nav-resources {
 
     background: var(--blue);
 
@@ -369,7 +366,7 @@ body > .site {
 }
 
 
-.nav-button.gallery {
+.nav-gallery {
 
     background: var(--red);
 
@@ -378,7 +375,7 @@ body > .site {
 }
 
 
-.nav-button.contact {
+.nav-contact {
 
     background: var(--black);
 
@@ -388,17 +385,17 @@ body > .site {
 
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
 
-    height: 520px;
-
-    min-height: 520px;
-
     position: relative;
+
+    width: 100%;
+
+    height: 520px;
 
     overflow: hidden;
 
@@ -408,11 +405,11 @@ body > .site {
 
 
 
-/* =====================================================
-   HERO BACKGROUND IMAGE
-===================================================== */
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
 
-.hero-background {
+.hero-bg {
 
     position: absolute;
 
@@ -421,8 +418,8 @@ body > .site {
     background-image:
 
         linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
+            rgba(255, 244, 230, .89),
+            rgba(255, 244, 230, .89)
         ),
 
         url("images/photowalk.jpg");
@@ -437,79 +434,75 @@ body > .site {
 
 
 
-/* =====================================================
-   HERO CONTENT
-===================================================== */
+/* =========================================================
+   HERO INNER
+========================================================= */
 
-.hero-content {
+.hero-inner {
 
     position: relative;
 
-    z-index: 2;
+    z-index: 5;
 
     width: 100%;
 
     height: 100%;
 
-    padding-left: 75px;
-
-    padding-right: 75px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    align-items: start;
-
-    column-gap: 50px;
-
 }
 
 
 
-/* =====================================================
+/* =========================================================
    HERO TEXT
-===================================================== */
+========================================================= */
 
-.hero-text {
+.hero-copy {
 
-    padding-top: 82px;
+    position: absolute;
+
+    left: 5.8%;
+
+    top: 88px;
+
+    width: 440px;
 
 }
 
 
-.hero-text h1 {
+.hero-copy h1 {
 
     margin: 0;
 
+    padding: 0;
+
     font-family: "Anton", sans-serif;
 
-    font-size: 72px;
+    font-size: 96px;
 
     font-weight: 400;
 
-    line-height: .95;
+    line-height: .92;
 
-    letter-spacing: 1px;
+    letter-spacing: .5px;
 
     color: var(--black);
 
 }
 
 
-.hero-text p {
+.hero-copy p {
 
-    margin-top: 7px;
+    margin: 8px 0 0 3px;
 
-    max-width: 430px;
+    width: 420px;
 
     font-family: "Be Vietnam Pro", sans-serif;
 
-    font-size: 11px;
+    font-size: 14px;
 
     font-weight: 300;
 
-    line-height: 1.35;
+    line-height: 1.25;
 
     color: var(--black);
 
@@ -517,51 +510,53 @@ body > .site {
 
 
 
-/* =====================================================
+/* =========================================================
    HERO BUTTONS
-===================================================== */
+========================================================= */
 
 .hero-buttons {
 
     display: flex;
 
-    gap: 10px;
+    align-items: center;
 
-    margin-top: 16px;
+    gap: 15px;
+
+    margin-top: 19px;
+
+    margin-left: 2px;
 
 }
 
 
-.pill {
+.hero-button {
 
-    display: inline-flex;
+    height: 50px;
+
+    padding: 0 20px;
+
+    border-radius: 28px;
+
+    display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    min-width: 64px;
-
-    height: 28px;
-
-    padding: 0 14px;
-
-    border-radius: 20px;
-
     font-family: "Be Vietnam Pro", sans-serif;
 
-    font-size: 10px;
+    font-size: 14px;
 
-    font-weight: 400;
-
-    color: white;
+    font-weight: 300;
 
     text-decoration: none;
+
+    color: white;
 
 }
 
 
-.pill:hover {
+.hero-button:hover {
 
     color: white;
 
@@ -572,14 +567,14 @@ body > .site {
 }
 
 
-.pill.blue {
+.blue-button {
 
     background: var(--blue);
 
 }
 
 
-.pill.red {
+.red-button {
 
     background: var(--red);
 
@@ -587,25 +582,27 @@ body > .site {
 
 
 
-/* =====================================================
+/* =========================================================
    HERO PHOTO
-===================================================== */
+========================================================= */
 
 .hero-photo {
 
-    width: 100%;
+    position: absolute;
 
-    max-width: 430px;
+    top: 91px;
 
-    height: 280px;
+    right: 7.2%;
 
-    margin-top: 50px;
+    width: 41%;
 
-    margin-left: auto;
+    max-width: 450px;
+
+    height: 300px;
 
     overflow: hidden;
 
-    border-bottom-left-radius: 85px;
+    border-bottom-left-radius: 105px;
 
 }
 
@@ -624,23 +621,114 @@ body > .site {
 
 
 
-/* =====================================================
-   HERO BOTTOM RIGHT DECORATION
-===================================================== */
+/* =========================================================
+   HERO BOTTOM-RIGHT STRIPES
+========================================================= */
 
-.hero-stripes {
+.hero-bottom-stripes {
 
     position: absolute;
 
-    z-index: 5;
-
-    right: -20px;
+    right: -2px;
 
     bottom: 0;
 
-    width: 360px;
+    width: 355px;
 
-    height: 45px;
+    height: 49px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    z-index: 10;
+
+}
+
+
+.hero-bottom-stripes span {
+
+    position: relative;
+
+    display: block;
+
+    width: 95px;
+
+    height: 49px;
+
+    margin-left: -17px;
+
+    transform: skewX(-40deg);
+
+}
+
+
+.hero-bottom-stripes .stripe-black {
+
+    background: var(--black);
+
+}
+
+
+.hero-bottom-stripes .stripe-red {
+
+    background: var(--red);
+
+}
+
+
+.hero-bottom-stripes .stripe-blue {
+
+    background: var(--blue);
+
+}
+
+
+.hero-bottom-stripes .stripe-yellow {
+
+    background: var(--yellow);
+
+}
+
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+
+    position: relative;
+
+    height: 50px;
+
+    width: 100%;
+
+    background: var(--yellow);
+
+    border-top: 1px solid var(--black);
+
+    border-bottom: 1px solid var(--black);
+
+    overflow: hidden;
+
+}
+
+
+
+/* left stripes */
+
+.divider-stripes {
+
+    position: absolute;
+
+    left: 145px;
+
+    top: 0;
+
+    width: 255px;
+
+    height: 50px;
 
     display: flex;
 
@@ -649,41 +737,261 @@ body > .site {
 }
 
 
-.hero-stripes span {
+.divider-stripes span {
 
-    width: 95px;
+    width: 65px;
 
-    height: 45px;
+    height: 50px;
 
-    transform: skewX(-40deg);
+    margin-left: -1px;
 
-    margin-left: -18px;
-
-}
-
-
-.hero-stripes .black {
-
-    background: var(--black);
+    transform: skewX(40deg);
 
 }
 
 
-.hero-stripes .red {
-
-    background: var(--red);
-
-}
-
-
-.hero-stripes .blue {
+.divider-stripes .stripe-blue {
 
     background: var(--blue);
 
 }
 
 
-.hero-stripes .yellow {
+.divider-stripes .stripe-red {
+
+    background: var(--red);
+
+}
+
+
+.divider-stripes .stripe-black {
+
+    background: var(--black);
+
+}
+
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 690px;
+
+    overflow: hidden;
+
+    background: var(--cream);
+
+}
+
+
+
+/* =========================================================
+   ABOUT BACKGROUND
+========================================================= */
+
+.about-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255, 244, 230, .90),
+            rgba(255, 244, 230, .90)
+        ),
+
+        url("images/photowalk.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-inner {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+
+/* =========================================================
+   ABOUT TEXT
+========================================================= */
+
+.about-copy {
+
+    position: absolute;
+
+    left: 4.1%;
+
+    top: 61px;
+
+    width: 430px;
+
+}
+
+
+.about-copy h2 {
+
+    margin: 0 0 10px 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 86px;
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    color: var(--black);
+
+}
+
+
+.about-copy p {
+
+    margin: 0;
+
+    width: 455px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 300;
+
+    line-height: 1.48;
+
+    letter-spacing: .2px;
+
+    color: var(--black);
+
+}
+
+
+
+/* =========================================================
+   ABOUT PHOTO
+========================================================= */
+
+.about-photo {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 5.4%;
+
+    width: 43%;
+
+    max-width: 470px;
+
+    height: 485px;
+
+    overflow: hidden;
+
+    border-bottom-left-radius: 100px;
+
+}
+
+
+.about-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* =========================================================
+   ABOUT BOTTOM STRIPES
+========================================================= */
+
+.about-bottom-stripes {
+
+    position: absolute;
+
+    right: -20px;
+
+    bottom: 0;
+
+    width: 710px;
+
+    height: 48px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    z-index: 10;
+
+}
+
+
+.about-bottom-stripes span {
+
+    height: 48px;
+
+    width: 150px;
+
+    transform: skewX(-30deg);
+
+    margin-left: -25px;
+
+}
+
+
+.about-bottom-stripes .stripe-black {
+
+    background: var(--black);
+
+}
+
+
+.about-bottom-stripes .stripe-red {
+
+    background: var(--red);
+
+}
+
+
+.about-bottom-stripes .stripe-blue {
+
+    background: var(--blue);
+
+}
+
+
+.about-bottom-stripes .stripe-yellow {
 
     background: var(--yellow);
 
@@ -691,97 +999,335 @@ body > .site {
 
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================================
+   CONTACT MODAL
+========================================================= */
 
-@media (max-width: 768px) {
+.modal-content {
+
+    background: var(--cream);
+
+    border: 2px solid var(--black);
+
+    border-radius: 0;
+
+}
 
 
-    .navbar {
+.modal-header {
 
-        height: auto;
+    background: var(--yellow);
 
-        min-height: 65px;
+    border-bottom: 1px solid var(--black);
+
+}
+
+
+.modal-title {
+
+    font-family: "Anton", sans-serif;
+
+    letter-spacing: .5px;
+
+}
+
+
+.modal-body {
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+}
+
+
+.modal-footer {
+
+    border-top: 1px solid var(--black);
+
+}
+
+
+.modal-footer .btn {
+
+    border-radius: 0;
+
+    background: var(--black);
+
+    border-color: var(--black);
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+    .site-header {
+
+        height: 70px;
 
     }
 
 
-    .brand {
+    .brand-area {
 
-        width: 190px;
+        height: 68px;
 
-        height: 63px;
+        width: 220px;
 
     }
 
 
-    .brand::before {
+    .brand-yellow {
 
-        width: 120px;
+        height: 68px;
 
-        height: 63px;
+        width: 125px;
+
+    }
+
+
+    .logo-link {
+
+        height: 68px;
+
+        left: 12px;
 
     }
 
 
     .logo {
 
-        width: 48px;
+        width: 50px;
 
     }
 
 
     .top-stripes {
 
-        left: 75px;
+        left: 82px;
 
-        height: 63px;
+        height: 68px;
 
-        width: 130px;
+        width: 140px;
 
     }
 
 
     .top-stripes span {
 
-        height: 63px;
+        height: 68px;
 
-        width: 45px;
+        width: 48px;
 
     }
 
 
-    .navigation {
+    .main-navigation {
+
+        gap: 5px;
 
         margin-right: 10px;
 
-        gap: 4px;
-
     }
 
 
-    .nav-button {
+    .nav-btn {
 
-        padding: 6px 7px;
+        height: 27px;
 
-        font-size: 8px;
+        padding: 0 7px;
+
+        font-size: 9px;
 
     }
 
 
     .hero {
 
-        height: auto;
-
-        min-height: 650px;
+        height: 600px;
 
     }
 
 
-    .hero-content {
+    .hero-copy {
 
-        padding: 50px 30px 80px;
+        left: 5%;
+
+        top: 70px;
+
+        width: 43%;
+
+    }
+
+
+    .hero-copy h1 {
+
+        font-size: 68px;
+
+    }
+
+
+    .hero-copy p {
+
+        width: 100%;
+
+        font-size: 11px;
+
+    }
+
+
+    .hero-photo {
+
+        right: 5%;
+
+        top: 70px;
+
+        width: 44%;
+
+        height: 260px;
+
+    }
+
+
+    .about-copy {
+
+        left: 5%;
+
+        width: 42%;
+
+    }
+
+
+    .about-copy h2 {
+
+        font-size: 65px;
+
+    }
+
+
+    .about-copy p {
+
+        width: 100%;
+
+        font-size: 14px;
+
+    }
+
+
+    .about-photo {
+
+        right: 5%;
+
+        width: 44%;
+
+        height: 400px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    .site-header {
+
+        height: 62px;
+
+    }
+
+
+    .brand-area {
+
+        height: 60px;
+
+        width: 150px;
+
+    }
+
+
+    .brand-yellow {
+
+        height: 60px;
+
+        width: 90px;
+
+    }
+
+
+    .logo-link {
+
+        height: 60px;
+
+        left: 7px;
+
+    }
+
+
+    .logo {
+
+        width: 42px;
+
+    }
+
+
+    .top-stripes {
+
+        left: 60px;
+
+        height: 60px;
+
+        width: 100px;
+
+    }
+
+
+    .top-stripes span {
+
+        height: 60px;
+
+        width: 35px;
+
+    }
+
+
+    .main-navigation {
+
+        gap: 3px;
+
+        margin-right: 5px;
+
+    }
+
+
+    .nav-btn {
+
+        height: 23px;
+
+        padding: 0 5px;
+
+        font-size: 7px;
+
+    }
+
+
+    .hero {
+
+        height: 700px;
+
+    }
+
+
+    .hero-inner {
 
         display: flex;
 
@@ -790,29 +1336,116 @@ body > .site {
     }
 
 
-    .hero-text {
+    .hero-copy {
 
-        padding-top: 0;
+        position: relative;
+
+        left: auto;
+
+        top: auto;
+
+        margin: 55px 25px 0;
+
+        width: auto;
 
     }
 
 
-    .hero-text h1 {
+    .hero-copy h1 {
 
-        font-size: 65px;
+        font-size: 58px;
+
+    }
+
+
+    .hero-copy p {
+
+        width: 100%;
+
+        font-size: 11px;
 
     }
 
 
     .hero-photo {
 
-        margin-top: 45px;
+        position: relative;
 
-        margin-left: 0;
+        top: auto;
+
+        right: auto;
+
+        margin: 45px 25px 0;
+
+        width: calc(100% - 50px);
+
+        max-width: none;
+
+        height: 260px;
+
+    }
+
+
+    .divider-stripes {
+
+        left: 80px;
+
+    }
+
+
+    .about-section {
+
+        height: 800px;
+
+    }
+
+
+    .about-copy {
+
+        position: relative;
+
+        left: auto;
+
+        top: auto;
+
+        padding: 55px 25px 0;
+
+        width: auto;
+
+    }
+
+
+    .about-copy h2 {
+
+        font-size: 60px;
+
+    }
+
+
+    .about-copy p {
 
         width: 100%;
 
-        height: 280px;
+        font-size: 14px;
+
+    }
+
+
+    .about-photo {
+
+        position: relative;
+
+        top: auto;
+
+        right: auto;
+
+        margin: 40px 25px 0;
+
+        width: calc(100% - 50px);
+
+        max-width: none;
+
+        height: 350px;
 
     }
 
