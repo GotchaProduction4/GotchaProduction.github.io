@@ -104,7 +104,14 @@ a:hover {
     height: 80px;
 
     flex-shrink: 0;
+
+    overflow: visible;
 }
+
+
+/* =========================================================
+   YELLOW BRAND BLOCK
+========================================================= */
 
 .brand-yellow {
     position: absolute;
@@ -121,7 +128,15 @@ a:hover {
     transform-origin: top left;
 
     z-index: 1;
+
+    /* Decorative only */
+    pointer-events: none;
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo-link {
     position: absolute;
@@ -165,6 +180,9 @@ a:hover {
     overflow: visible;
 
     z-index: 2;
+
+    /* Decorative only */
+    pointer-events: none;
 }
 
 .top-stripes span {
@@ -228,7 +246,9 @@ a:hover {
 }
 
 
-/* HOME */
+/* =========================================================
+   HOME
+========================================================= */
 
 .nav-home {
     background: var(--yellow);
@@ -240,7 +260,9 @@ a:hover {
 }
 
 
-/* RESOURCES */
+/* =========================================================
+   RESOURCES
+========================================================= */
 
 .nav-resources {
     background: var(--blue);
@@ -252,7 +274,9 @@ a:hover {
 }
 
 
-/* GALLERY */
+/* =========================================================
+   GALLERY
+========================================================= */
 
 .nav-gallery {
     background: var(--red);
@@ -264,7 +288,9 @@ a:hover {
 }
 
 
-/* CONTACT */
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .nav-contact {
     background: var(--black);
@@ -282,6 +308,8 @@ a:hover {
 
 .menu-toggle {
     display: none;
+
+    position: relative;
 
     width: 38px;
     height: 38px;
@@ -305,11 +333,24 @@ a:hover {
 
     cursor: pointer;
 
-    z-index: 50;
+    z-index: 150;
+
+    flex-shrink: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.menu-toggle:hover {
+    background: var(--yellow);
 }
 
 .menu-toggle:focus {
     outline: none;
+}
+
+.menu-toggle:active {
+    transform: scale(.96);
 }
 
 
@@ -802,6 +843,8 @@ a:hover {
     .brand-area {
         width: 230px;
         height: 70px;
+
+        overflow: visible;
     }
 
     .brand-yellow {
@@ -845,7 +888,9 @@ a:hover {
     }
 
 
-    /* NAV */
+    /* =====================================================
+       TABLET NAV
+    ===================================================== */
 
     .main-navigation {
         gap: 5px;
@@ -862,7 +907,9 @@ a:hover {
     }
 
 
-    /* HERO */
+    /* =====================================================
+       TABLET HERO
+    ===================================================== */
 
     .hero {
         height: calc(100vh - 70px);
@@ -896,7 +943,9 @@ a:hover {
     }
 
 
-    /* ABOUT */
+    /* =====================================================
+       TABLET ABOUT
+    ===================================================== */
 
     .about-copy {
         left: 6%;
@@ -939,6 +988,8 @@ a:hover {
         height: 62px;
 
         overflow: visible;
+
+        z-index: 100;
     }
 
 
@@ -949,10 +1000,6 @@ a:hover {
     .brand-area {
         position: relative;
 
-        /*
-           Same visual yellow width as desktop.
-           Extra brand width keeps the stripes visible.
-        */
         width: 210px;
         height: 62px;
 
@@ -979,6 +1026,8 @@ a:hover {
         transform-origin: top left;
 
         z-index: 1;
+
+        pointer-events: none;
     }
 
 
@@ -1017,6 +1066,8 @@ a:hover {
         overflow: visible;
 
         z-index: 3;
+
+        pointer-events: none;
     }
 
     .top-stripes span {
@@ -1059,7 +1110,7 @@ a:hover {
 
         box-shadow: 5px 5px 0 var(--black);
 
-        z-index: 100;
+        z-index: 140;
     }
 
     .main-navigation.active {
@@ -1097,6 +1148,8 @@ a:hover {
         flex-shrink: 0;
 
         z-index: 150;
+
+        cursor: pointer;
     }
 
 
@@ -1328,10 +1381,16 @@ a:hover {
 
 @media (max-width: 380px) {
 
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
     .site-header {
         height: 58px;
 
         overflow: visible;
+
+        z-index: 100;
     }
 
 
@@ -1347,23 +1406,29 @@ a:hover {
     }
 
 
-    /* YELLOW
-       SAME 165PX WIDTH
-    */
+    /* =====================================================
+       YELLOW
+    ===================================================== */
 
     .brand-yellow {
         width: 165px;
         height: 58px;
+
+        pointer-events: none;
     }
 
 
-    /* LOGO */
+    /* =====================================================
+       LOGO
+    ===================================================== */
 
     .logo-link {
         left: 15px;
 
         width: 80px;
         height: 58px;
+
+        z-index: 5;
     }
 
     .logo {
@@ -1382,6 +1447,8 @@ a:hover {
         height: 58px;
 
         overflow: visible;
+
+        pointer-events: none;
     }
 
     .top-stripes span {
@@ -1400,6 +1467,8 @@ a:hover {
     ===================================================== */
 
     .menu-toggle {
+        display: flex;
+
         width: 32px;
         height: 32px;
 
@@ -1408,6 +1477,8 @@ a:hover {
         font-size: 19px;
 
         z-index: 150;
+
+        cursor: pointer;
     }
 
 
@@ -1420,6 +1491,8 @@ a:hover {
         right: 8px;
 
         width: 175px;
+
+        z-index: 140;
     }
 
     .nav-btn {
@@ -1518,4 +1591,26 @@ a:hover {
     .site-footer p {
         font-size: 8px;
     }
+}
+
+
+/* =========================================================
+   MOBILE MENU SAFETY FIX
+========================================================= */
+
+/*
+   Keep decorative header elements from intercepting clicks.
+   The logo remains clickable because .logo-link has
+   pointer events enabled by default.
+*/
+
+.brand-yellow,
+.top-stripes {
+    pointer-events: none;
+}
+
+.menu-toggle {
+    pointer-events: auto;
+    position: relative;
+    z-index: 150;
 }
