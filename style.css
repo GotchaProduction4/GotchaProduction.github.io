@@ -498,6 +498,11 @@ body {
     overflow: hidden;
 }
 
+
+/* =========================================================
+   YELLOW BAR
+========================================================= */
+
 .divider-yellow {
     position: absolute;
 
@@ -508,41 +513,100 @@ body {
     height: 50px;
 
     background: var(--yellow);
+
+    z-index: 1;
 }
 
-.divider-stripes {
+
+/* =========================================================
+   DIVIDER LEFT STRIPES
+========================================================= */
+
+.divider-left-stripes {
     position: absolute;
 
     left: 145px;
     top: 0;
 
-    width: 255px;
+    width: 210px;
     height: 50px;
 
     display: flex;
 
-    overflow: hidden;
+    z-index: 2;
 }
 
-.divider-stripes span {
+.divider-left-stripes span {
+    position: relative;
+
+    display: block;
+
     width: 65px;
     height: 50px;
 
-    margin-left: -1px;
+    margin-left: -17px;
 
     transform: skewX(40deg);
 }
 
-.divider-stripes .stripe-blue {
+.divider-left-stripes .stripe-blue {
     background: var(--blue);
 }
 
-.divider-stripes .stripe-red {
+.divider-left-stripes .stripe-red {
     background: var(--red);
 }
 
-.divider-stripes .stripe-black {
+.divider-left-stripes .stripe-black {
     background: var(--black);
+}
+
+
+/* =========================================================
+   DIVIDER RIGHT STRIPES
+========================================================= */
+
+.divider-right-stripes {
+    position: absolute;
+
+    right: 20px;
+    top: 0;
+
+    width: 330px;
+    height: 50px;
+
+    display: flex;
+
+    z-index: 2;
+}
+
+.divider-right-stripes span {
+    position: relative;
+
+    display: block;
+
+    width: 75px;
+    height: 50px;
+
+    margin-left: -18px;
+
+    transform: skewX(-40deg);
+}
+
+.divider-right-stripes .stripe-black {
+    background: var(--black);
+}
+
+.divider-right-stripes .stripe-red {
+    background: var(--red);
+}
+
+.divider-right-stripes .stripe-blue {
+    background: var(--blue);
+}
+
+.divider-right-stripes .stripe-yellow {
+    background: var(--yellow);
 }
 
 
@@ -657,7 +721,6 @@ body {
     width: 43%;
     max-width: 470px;
 
-    /* adjusted to fit 600px section */
     height: 460px;
 
     overflow: hidden;
@@ -866,6 +929,17 @@ body {
         width: 44%;
         height: 400px;
     }
+
+
+    /* TABLET DIVIDER */
+
+    .divider-left-stripes {
+        left: 100px;
+    }
+
+    .divider-right-stripes {
+        right: 15px;
+    }
 }
 
 
@@ -975,8 +1049,20 @@ body {
     }
 
 
-    .divider-stripes {
-        left: 80px;
+    /* =====================================================
+       MOBILE DIVIDER
+    ===================================================== */
+
+    .divider {
+        height: 50px;
+    }
+
+    .divider-left-stripes {
+        left: 65px;
+    }
+
+    .divider-right-stripes {
+        right: 10px;
     }
 
 
