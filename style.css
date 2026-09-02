@@ -62,6 +62,10 @@ body {
     font-weight: 300;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 /* =========================================================
    HEADER
@@ -69,6 +73,7 @@ body {
 
 .site-header {
     position: relative;
+
     width: 100%;
     height: 80px;
 
@@ -86,7 +91,7 @@ body {
 
 
 /* =========================================================
-   BRAND
+   BRAND AREA
 ========================================================= */
 
 .brand-area {
@@ -97,6 +102,9 @@ body {
 
     flex-shrink: 0;
 }
+
+
+/* Yellow logo block */
 
 .brand-yellow {
     position: absolute;
@@ -118,17 +126,17 @@ body {
 .logo-link {
     position: absolute;
 
-    left: 21px;
+    left: 20px;
     top: 0;
 
-    width: 70px;
+    width: 72px;
     height: 78px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    z-index: 5;
+    z-index: 10;
 }
 
 .logo {
@@ -140,7 +148,7 @@ body {
 
 
 /* =========================================================
-   TOP STRIPES
+   TOP BRAND STRIPES
 ========================================================= */
 
 .top-stripes {
@@ -156,6 +164,8 @@ body {
 
     transform: skewX(35deg);
     transform-origin: top left;
+
+    z-index: 5;
 }
 
 .top-stripes span {
@@ -164,23 +174,30 @@ body {
     top: 0;
 
     height: 78px;
+    width: 60px;
 }
+
+
+/* Blue */
 
 .top-stripes .stripe-blue {
     left: 0;
-    width: 60px;
     background: var(--blue);
 }
 
+
+/* Red */
+
 .top-stripes .stripe-red {
     left: 58px;
-    width: 60px;
     background: var(--red);
 }
 
+
+/* Black */
+
 .top-stripes .stripe-black {
     left: 116px;
-    width: 60px;
     background: var(--black);
 }
 
@@ -230,20 +247,32 @@ body {
     opacity: .85;
 }
 
+
+/* Home */
+
 .nav-home {
     background: var(--yellow);
     color: var(--black);
 }
+
+
+/* Resources */
 
 .nav-resources {
     background: var(--blue);
     color: white;
 }
 
+
+/* Gallery */
+
 .nav-gallery {
     background: var(--red);
     color: white;
 }
+
+
+/* Contact */
 
 .nav-contact {
     background: var(--black);
@@ -252,14 +281,13 @@ body {
 
 
 /* =========================================================
-   HERO / LANDING PAGE
+   HERO
 ========================================================= */
 
 .hero {
     position: relative;
 
     width: 100%;
-
     height: 600px;
 
     overflow: hidden;
@@ -285,10 +313,9 @@ body {
         url("images/photowalk.jpg");
 
     background-size: cover;
-
     background-position: center;
 
-    opacity: 1;
+    z-index: 1;
 }
 
 
@@ -299,10 +326,10 @@ body {
 .hero-inner {
     position: relative;
 
-    z-index: 5;
-
     width: 100%;
     height: 100%;
+
+    z-index: 5;
 }
 
 
@@ -387,7 +414,9 @@ body {
 
 .hero-button:hover {
     color: white;
+
     text-decoration: none;
+
     opacity: .9;
 }
 
@@ -431,17 +460,18 @@ body {
 
 
 /* =========================================================
-   HERO BOTTOM STRIPES
+   HERO BOTTOM-RIGHT STRIPES
+   BLACK → RED → BLUE → YELLOW
 ========================================================= */
 
 .hero-bottom-stripes {
     position: absolute;
 
-    right: -2px;
+    right: 0;
     bottom: 0;
 
-    width: 355px;
-    height: 49px;
+    width: 350px;
+    height: 50px;
 
     display: flex;
 
@@ -451,29 +481,41 @@ body {
 }
 
 .hero-bottom-stripes span {
-    position: relative;
-
     display: block;
 
-    width: 95px;
-    height: 49px;
+    width: 88px;
+    height: 50px;
 
-    margin-left: -17px;
+    flex-shrink: 0;
+
+    margin-left: -20px;
 
     transform: skewX(-40deg);
 }
+
+
+/* Black */
 
 .hero-bottom-stripes .stripe-black {
     background: var(--black);
 }
 
+
+/* Red */
+
 .hero-bottom-stripes .stripe-red {
     background: var(--red);
 }
 
+
+/* Blue */
+
 .hero-bottom-stripes .stripe-blue {
     background: var(--blue);
 }
+
+
+/* Yellow */
 
 .hero-bottom-stripes .stripe-yellow {
     background: var(--yellow);
@@ -492,61 +534,17 @@ body {
 
     background: var(--cream);
 
-    /*
-       IMPORTANT:
-       Allows the right stripes to extend upward
-       outside the divider.
-    */
-    overflow: visible;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
 
-    z-index: 20;
-}
-
-
-/* =========================================================
-   DIVIDER TOP LINE
-========================================================= */
-
-.divider-line {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    top: 0;
-
-    height: 1px;
-
-    background: var(--black);
+    overflow: hidden;
 
     z-index: 10;
 }
 
 
 /* =========================================================
-   DIVIDER BOTTOM LINE
-========================================================= */
-
-.divider::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    bottom: 0;
-
-    height: 1px;
-
-    background: var(--black);
-
-    z-index: 10;
-}
-
-
-/* =========================================================
-   LEFT DIVIDER STRIPES
+   DIVIDER LEFT STRIPES
    YELLOW → BLUE → RED → BLACK
 ========================================================= */
 
@@ -556,137 +554,96 @@ body {
     left: 0;
     top: 0;
 
-    width: 220px;
+    width: 300px;
     height: 50px;
 
     display: flex;
 
-    z-index: 5;
-
     overflow: hidden;
+
+    z-index: 2;
 }
 
 
-/* Individual left stripes */
+/* Yellow */
 
-.divider-left-stripes span {
-    display: block;
+.divider-left-stripes .stripe-yellow {
+    width: 115px;
+    height: 50px;
 
     flex-shrink: 0;
 
-    width: 65px;
-    height: 50px;
-
-    margin-left: -17px;
-
-    transform: skewX(40deg);
-
-    transform-origin: bottom;
-}
-
-
-/* First stripe */
-
-.divider-left-stripes .stripe-yellow {
     background: var(--yellow);
 
-    width: 125px;
-
-    margin-left: -18px;
+    clip-path: polygon(
+        0 0,
+        78% 0,
+        100% 100%,
+        0 100%
+    );
 }
 
 
 /* Blue */
 
 .divider-left-stripes .stripe-blue {
+    width: 62px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    margin-left: -24px;
+
     background: var(--blue);
+
+    clip-path: polygon(
+        0 0,
+        65% 0,
+        100% 100%,
+        35% 100%
+    );
 }
 
 
 /* Red */
 
 .divider-left-stripes .stripe-red {
+    width: 62px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    margin-left: -20px;
+
     background: var(--red);
+
+    clip-path: polygon(
+        0 0,
+        65% 0,
+        100% 100%,
+        35% 100%
+    );
 }
 
 
 /* Black */
 
 .divider-left-stripes .stripe-black {
-    background: var(--black);
-}
-
-
-/* =========================================================
-   RIGHT DIVIDER STRIPES
-   BLACK → RED → BLUE → YELLOW
-========================================================= */
-
-.divider-right-stripes {
-    position: absolute;
-
-    right: 0;
-
-    /*
-       This makes the stripes rise above
-       the divider line.
-    */
-    top: -48px;
-
-    width: 350px;
-    height: 98px;
-
-    display: flex;
-
-    z-index: 15;
-
-    overflow: hidden;
-}
-
-
-/* Individual right stripes */
-
-.divider-right-stripes span {
-    display: block;
+    width: 62px;
+    height: 50px;
 
     flex-shrink: 0;
 
-    width: 75px;
-    height: 98px;
+    margin-left: -20px;
 
-    margin-left: -18px;
-
-    transform: skewX(-40deg);
-
-    transform-origin: bottom;
-}
-
-
-/* Black */
-
-.divider-right-stripes .stripe-black {
     background: var(--black);
-}
 
-
-/* Red */
-
-.divider-right-stripes .stripe-red {
-    background: var(--red);
-}
-
-
-/* Blue */
-
-.divider-right-stripes .stripe-blue {
-    background: var(--blue);
-}
-
-
-/* Yellow */
-
-.divider-right-stripes .stripe-yellow {
-    background: var(--yellow);
+    clip-path: polygon(
+        0 0,
+        65% 0,
+        100% 100%,
+        35% 100%
+    );
 }
 
 
@@ -698,7 +655,6 @@ body {
     position: relative;
 
     width: 100%;
-
     height: 600px;
 
     overflow: hidden;
@@ -724,8 +680,9 @@ body {
         url("images/photowalk.jpg");
 
     background-size: cover;
-
     background-position: center;
+
+    z-index: 1;
 }
 
 
@@ -736,10 +693,10 @@ body {
 .about-inner {
     position: relative;
 
-    z-index: 5;
-
     width: 100%;
     height: 100%;
+
+    z-index: 5;
 }
 
 
@@ -838,8 +795,12 @@ body {
 }
 
 .about-bottom-stripes span {
+    display: block;
+
     height: 48px;
     width: 150px;
+
+    flex-shrink: 0;
 
     transform: skewX(-30deg);
 
@@ -910,23 +871,25 @@ body {
 
 @media (max-width: 900px) {
 
+    /* HEADER */
+
     .site-header {
         height: 70px;
     }
 
     .brand-area {
-        height: 68px;
         width: 220px;
+        height: 68px;
     }
 
     .brand-yellow {
-        height: 68px;
         width: 125px;
+        height: 68px;
     }
 
     .logo-link {
-        height: 68px;
         left: 12px;
+        height: 68px;
     }
 
     .logo {
@@ -944,6 +907,9 @@ body {
         width: 48px;
     }
 
+
+    /* NAVIGATION */
+
     .main-navigation {
         gap: 5px;
         margin-right: 10px;
@@ -951,27 +917,23 @@ body {
 
     .nav-btn {
         height: 27px;
+
         padding: 0 7px;
+
         font-size: 9px;
     }
 
 
-    /* =====================================================
-       SAME HEIGHT
-    ===================================================== */
+    /* HERO */
 
     .hero {
         height: 600px;
     }
 
-    .about-section {
-        height: 600px;
-    }
-
-
     .hero-copy {
         left: 5%;
         top: 70px;
+
         width: 43%;
     }
 
@@ -987,12 +949,44 @@ body {
     .hero-photo {
         right: 5%;
         top: 70px;
+
         width: 44%;
         height: 260px;
     }
 
+
+    /* HERO STRIPES */
+
+    .hero-bottom-stripes {
+        width: 290px;
+    }
+
+    .hero-bottom-stripes span {
+        width: 75px;
+    }
+
+
+    /* DIVIDER */
+
+    .divider {
+        height: 50px;
+    }
+
+    .divider-left-stripes {
+        width: 260px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        height: 600px;
+    }
+
     .about-copy {
         left: 5%;
+        top: 55px;
+
         width: 42%;
     }
 
@@ -1007,21 +1001,17 @@ body {
 
     .about-photo {
         right: 5%;
+
         width: 44%;
         height: 400px;
     }
 
-
-    /* =====================================================
-       TABLET DIVIDER
-    ===================================================== */
-
-    .divider-left-stripes {
-        left: 0;
+    .about-bottom-stripes {
+        width: 500px;
     }
 
-    .divider-right-stripes {
-        right: 0;
+    .about-bottom-stripes span {
+        width: 115px;
     }
 }
 
@@ -1032,23 +1022,27 @@ body {
 
 @media (max-width: 600px) {
 
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
     .site-header {
         height: 62px;
     }
 
     .brand-area {
-        height: 60px;
         width: 150px;
+        height: 60px;
     }
 
     .brand-yellow {
-        height: 60px;
         width: 90px;
+        height: 60px;
     }
 
     .logo-link {
-        height: 60px;
         left: 7px;
+        height: 60px;
     }
 
     .logo {
@@ -1057,14 +1051,20 @@ body {
 
     .top-stripes {
         left: 60px;
-        height: 60px;
+
         width: 100px;
+        height: 60px;
     }
 
     .top-stripes span {
-        height: 60px;
         width: 35px;
+        height: 60px;
     }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
 
     .main-navigation {
         gap: 3px;
@@ -1073,29 +1073,25 @@ body {
 
     .nav-btn {
         height: 23px;
+
         padding: 0 5px;
+
         font-size: 7px;
     }
 
 
     /* =====================================================
-       MOBILE SECTIONS
+       HERO
     ===================================================== */
 
     .hero {
         height: 700px;
     }
 
-    .about-section {
-        height: 700px;
-    }
-
-
     .hero-inner {
         display: flex;
         flex-direction: column;
     }
-
 
     .hero-copy {
         position: relative;
@@ -1114,9 +1110,14 @@ body {
 
     .hero-copy p {
         width: 100%;
+
         font-size: 11px;
+
+        line-height: 1.35;
     }
 
+
+    /* HERO PHOTO */
 
     .hero-photo {
         position: relative;
@@ -1127,15 +1128,31 @@ body {
         margin: 45px 25px 0;
 
         width: calc(100% - 50px);
-
         max-width: none;
 
         height: 260px;
     }
 
 
+    /* HERO STRIPES */
+
+    .hero-bottom-stripes {
+        right: -20px;
+
+        width: 260px;
+        height: 42px;
+    }
+
+    .hero-bottom-stripes span {
+        width: 65px;
+        height: 42px;
+
+        margin-left: -15px;
+    }
+
+
     /* =====================================================
-       MOBILE DIVIDER
+       DIVIDER
     ===================================================== */
 
     .divider {
@@ -1144,36 +1161,36 @@ body {
 
     .divider-left-stripes {
         left: 0;
-        width: 175px;
-    }
 
-    .divider-left-stripes span {
-        width: 52px;
+        width: 230px;
         height: 50px;
     }
 
     .divider-left-stripes .stripe-yellow {
         width: 95px;
+        height: 50px;
     }
 
-    .divider-right-stripes {
-        right: 0;
-
-        top: -35px;
-
-        width: 250px;
-        height: 85px;
-    }
-
-    .divider-right-stripes span {
-        width: 58px;
-        height: 85px;
+    .divider-left-stripes .stripe-blue,
+    .divider-left-stripes .stripe-red,
+    .divider-left-stripes .stripe-black {
+        width: 55px;
+        height: 50px;
     }
 
 
     /* =====================================================
-       MOBILE ABOUT
+       ABOUT
     ===================================================== */
+
+    .about-section {
+        height: 700px;
+    }
+
+    .about-inner {
+        display: flex;
+        flex-direction: column;
+    }
 
     .about-copy {
         position: relative;
@@ -1192,9 +1209,14 @@ body {
 
     .about-copy p {
         width: 100%;
+
         font-size: 14px;
+
+        line-height: 1.45;
     }
 
+
+    /* ABOUT PHOTO */
 
     .about-photo {
         position: relative;
@@ -1205,10 +1227,25 @@ body {
         margin: 40px 25px 0;
 
         width: calc(100% - 50px);
-
         max-width: none;
 
         height: 350px;
     }
 
+
+    /* ABOUT STRIPES */
+
+    .about-bottom-stripes {
+        right: -20px;
+
+        width: 420px;
+        height: 42px;
+    }
+
+    .about-bottom-stripes span {
+        width: 95px;
+        height: 42px;
+
+        margin-left: -18px;
+    }
 }
