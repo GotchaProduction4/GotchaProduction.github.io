@@ -11,17 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const navigation = document.getElementById("mainNavigation");
 
     if (!menuToggle || !navigation) {
+        console.log("Mobile menu elements not found.");
         return;
     }
 
+    menuToggle.addEventListener("click", function (event) {
 
-    /* =====================================================
-       OPEN / CLOSE MOBILE MENU
-    ===================================================== */
+        event.preventDefault();
+        event.stopPropagation();
 
-    menuToggle.addEventListener("click", function () {
+        navigation.classList.toggle("active");
 
-        const isOpen = navigation.classList.toggle("active");
+        const isOpen = navigation.classList.contains("active");
 
         menuToggle.setAttribute(
             "aria-expanded",
@@ -29,13 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
         menuToggle.innerHTML = isOpen ? "✕" : "☰";
-
     });
 
 
-    /* =====================================================
-       CLOSE MENU AFTER CLICKING A NAVIGATION LINK
-    ===================================================== */
+    /* CLOSE MENU WHEN A LINK IS CLICKED */
 
     const navLinks = navigation.querySelectorAll(".nav-btn");
 
@@ -51,8 +49,30 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             menuToggle.innerHTML = "☰";
-
         });
+
+    });
+
+
+    /* CLOSE MENU WHEN CLICKING OUTSIDE */
+
+    document.addEventListener("click", function (event) {
+
+        if (
+            navigation.classList.contains("active") &&
+            !navigation.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+
+            navigation.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.innerHTML = "☰";
+        }
 
     });
 
