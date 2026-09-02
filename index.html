@@ -8,13 +8,14 @@
 
     <title>Talakbay | Home</title>
 
-    <link rel="icon" type="image/png" href="images/logoblack.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logoblack.jpg">
 
     <!-- Bootstrap -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
+    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -23,31 +24,42 @@
 <body class="home-page">
 
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-<nav class="navbar">
+<header class="site-header">
 
 
-    <!-- LOGO + STRIPES -->
+    <!-- LEFT BRAND AREA -->
 
-    <div class="brand">
+    <div class="brand-area">
 
-        <a href="index.html">
+        <!-- Yellow background -->
 
-            <img src="images/logoblack.png"
-                 alt="Gotcha Productions"
+        <div class="brand-yellow"></div>
+
+
+        <!-- Logo -->
+
+        <a href="index.html" class="logo-link">
+
+            <img src="images/logoblack.jpg"
+                 alt="Gotcha Productions Logo"
                  class="logo">
 
         </a>
 
 
+        <!-- Diagonal stripes -->
+
         <div class="top-stripes">
 
-            <span class="blue"></span>
-            <span class="red"></span>
-            <span class="black"></span>
+            <span class="stripe-blue"></span>
+
+            <span class="stripe-red"></span>
+
+            <span class="stripe-black"></span>
 
         </div>
 
@@ -57,10 +69,11 @@
 
     <!-- NAVIGATION -->
 
-    <div class="navigation">
+    <nav class="main-navigation">
+
 
         <a href="index.html"
-           class="nav-button home active">
+           class="nav-btn nav-home active">
 
             HOME
 
@@ -68,7 +81,7 @@
 
 
         <a href="resources.html"
-           class="nav-button resources">
+           class="nav-btn nav-resources">
 
             RESOURCES
 
@@ -76,7 +89,7 @@
 
 
         <a href="gallery.html"
-           class="nav-button gallery">
+           class="nav-btn nav-gallery">
 
             GALLERY
 
@@ -84,7 +97,7 @@
 
 
         <a href="#"
-           class="nav-button contact"
+           class="nav-btn nav-contact"
            data-toggle="modal"
            data-target="#contactModal">
 
@@ -92,31 +105,37 @@
 
         </a>
 
-    </div>
 
-</nav>
+    </nav>
+
+</header>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
+
+<main>
+
 
 <section class="hero">
 
 
-    <!-- Faded Background -->
+    <!-- Faded background photograph -->
 
-    <div class="hero-background"></div>
-
-
-
-    <div class="hero-content">
+    <div class="hero-bg"></div>
 
 
-        <!-- LEFT SIDE -->
 
-        <div class="hero-text">
+    <!-- Main hero content -->
+
+    <div class="hero-inner">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-copy">
 
             <h1>TALAKBAY</h1>
 
@@ -129,8 +148,9 @@
 
             <div class="hero-buttons">
 
+
                 <a href="resources.html"
-                   class="pill blue">
+                   class="hero-button blue-button">
 
                     RESOURCES
 
@@ -138,11 +158,12 @@
 
 
                 <a href="gallery.html"
-                   class="pill red">
+                   class="hero-button red-button">
 
                     GALLERY
 
                 </a>
+
 
             </div>
 
@@ -150,7 +171,7 @@
 
 
 
-        <!-- RIGHT SIDE IMAGE -->
+        <!-- RIGHT PHOTO -->
 
         <div class="hero-photo">
 
@@ -164,17 +185,17 @@
 
 
 
-    <!-- BOTTOM RIGHT STRIPES -->
+    <!-- Bottom-right decorative stripes -->
 
-    <div class="hero-stripes">
+    <div class="hero-bottom-stripes">
 
-        <span class="black"></span>
+        <span class="stripe-black"></span>
 
-        <span class="red"></span>
+        <span class="stripe-red"></span>
 
-        <span class="blue"></span>
+        <span class="stripe-blue"></span>
 
-        <span class="yellow"></span>
+        <span class="stripe-yellow"></span>
 
     </div>
 
@@ -183,15 +204,117 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
+     DIVIDER
+========================================================= -->
+
+<section class="divider">
+
+
+    <div class="divider-yellow"></div>
+
+
+    <div class="divider-stripes">
+
+        <span class="stripe-blue"></span>
+
+        <span class="stripe-red"></span>
+
+        <span class="stripe-black"></span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about-section">
+
+
+    <!-- Faded background -->
+
+    <div class="about-bg"></div>
+
+
+
+    <div class="about-inner">
+
+
+        <!-- LEFT TEXT -->
+
+        <div class="about-copy">
+
+            <h2>ABOUT</h2>
+
+
+            <p>
+
+                Talakbay is a thesis project developed by
+                Gotcha! Productions that combines a Cinematic
+                Instructional Video Series and a Structured
+                Photowalk Program designed to help Grade 12
+                Arts and Design Track students develop their
+                photography knowledge and skills through
+                guided and experiential learning.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- RIGHT PHOTO -->
+
+        <div class="about-photo">
+
+            <img src="images/photowalk.jpg"
+                 alt="Camera used for photography">
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Bottom decoration -->
+
+    <div class="about-bottom-stripes">
+
+        <span class="stripe-black"></span>
+
+        <span class="stripe-red"></span>
+
+        <span class="stripe-blue"></span>
+
+        <span class="stripe-yellow"></span>
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
      CONTACT MODAL
-===================================================== -->
+========================================================= -->
 
 <div class="modal fade"
      id="contactModal"
-     tabindex="-1">
+     tabindex="-1"
+     aria-hidden="true">
+
 
     <div class="modal-dialog modal-dialog-centered">
+
 
         <div class="modal-content">
 
@@ -254,15 +377,16 @@
 
 
 
-<!-- =====================================================
-     SCRIPTS
-===================================================== -->
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="script.js"></script>
+
 
 </body>
 
