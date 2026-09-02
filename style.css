@@ -1,33 +1,11 @@
 /* =========================================================
    TALAKBAY WEBSITE
+   STYLE.CSS
 ========================================================= */
 
 
 /* =========================================================
-   FONTS
-========================================================= */
-
-@font-face {
-    font-family: "Anton";
-    src: url("font/Anton-Regular.ttf") format("truetype");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Be Vietnam Pro";
-    src: url("font/BeVietnamPro-Light.ttf") format("truetype");
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: "Be Vietnam Pro";
-    src: url("font/BeVietnamPro-Regular.ttf") format("truetype");
-    font-weight: 400;
-}
-
-
-/* =========================================================
-   COLORS
+   ROOT VARIABLES
 ========================================================= */
 
 :root {
@@ -40,30 +18,61 @@
 
 
 /* =========================================================
-   RESET
+   LOCAL FONTS
+========================================================= */
+
+@font-face {
+    font-family: "Anton";
+    src: url("font/Anton-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro";
+    src: url("font/BeVietnamPro-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Be Vietnam Pro";
+    src: url("font/BeVietnamPro-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* =========================================================
+   GENERAL
 ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    min-height: 100%;
-}
 
-body {
     background: var(--cream);
     color: var(--black);
+
     font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 300;
+
+    overflow-x: hidden;
 }
 
-img {
-    max-width: 100%;
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 
@@ -77,34 +86,30 @@ img {
     width: 100%;
     height: 80px;
 
-    background: var(--cream);
-
-    border-top: 2px solid var(--black);
-    border-bottom: 1px solid var(--black);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    overflow: hidden;
+    background: var(--cream);
+
+    border-bottom: 1px solid var(--black);
+
+    z-index: 20;
 }
 
 
 /* =========================================================
-   BRAND AREA
+   LOGO AREA
 ========================================================= */
 
 .brand-area {
     position: relative;
 
-    width: 325px;
-    height: 78px;
+    width: 300px;
+    height: 80px;
 
     flex-shrink: 0;
 }
-
-
-/* Yellow logo block */
 
 .brand-yellow {
     position: absolute;
@@ -112,16 +117,14 @@ img {
     left: 0;
     top: 0;
 
-    width: 170px;
-    height: 78px;
+    width: 165px;
+    height: 80px;
 
     background: var(--yellow);
+
+    transform: skewX(-20deg);
+    transform-origin: top left;
 }
-
-
-/* =========================================================
-   LOGO
-========================================================= */
 
 .logo-link {
     position: absolute;
@@ -129,75 +132,61 @@ img {
     left: 20px;
     top: 0;
 
-    width: 72px;
-    height: 78px;
+    width: 85px;
+    height: 80px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    z-index: 10;
+    z-index: 3;
 }
 
 .logo {
-    width: 58px;
-    height: auto;
-
     display: block;
+
+    width: 62px;
+    height: auto;
 }
 
 
 /* =========================================================
-   TOP BRAND STRIPES
+   TOP STRIPES
 ========================================================= */
 
 .top-stripes {
     position: absolute;
 
-    left: 112px;
+    left: 145px;
     top: 0;
 
-    width: 175px;
-    height: 78px;
+    width: 155px;
+    height: 80px;
+
+    display: flex;
 
     overflow: hidden;
-
-    transform: skewX(35deg);
-    transform-origin: top left;
-
-    z-index: 5;
 }
 
 .top-stripes span {
-    position: absolute;
+    display: block;
 
-    top: 0;
+    width: 52px;
+    height: 80px;
 
-    height: 78px;
-    width: 60px;
+    transform: skewX(-20deg);
+    transform-origin: top;
 }
 
-
-/* Blue */
-
-.top-stripes .stripe-blue {
-    left: 0;
+.stripe-blue {
     background: var(--blue);
 }
 
-
-/* Red */
-
-.top-stripes .stripe-red {
-    left: 58px;
+.stripe-red {
     background: var(--red);
 }
 
-
-/* Black */
-
-.top-stripes .stripe-black {
-    left: 116px;
+.stripe-black {
     background: var(--black);
 }
 
@@ -207,75 +196,81 @@ img {
 ========================================================= */
 
 .main-navigation {
-    height: 100%;
-
     display: flex;
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
-    margin-right: 32px;
-
-    z-index: 20;
+    margin-right: 30px;
 }
 
 .nav-btn {
-    height: 31px;
-
-    padding: 0 13px;
-
-    border: 1px solid var(--black);
+    height: 32px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    text-decoration: none;
+    padding: 0 15px;
+
+    border-radius: 18px;
 
     font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 400;
 
     letter-spacing: .4px;
-    line-height: 1;
 
-    transition: opacity .2s ease;
-}
+    color: var(--black);
 
-.nav-btn:hover {
-    text-decoration: none;
-    opacity: .85;
+    transition: .2s ease;
 }
 
 
-/* Home */
+/* HOME */
 
 .nav-home {
     background: var(--yellow);
+}
+
+.nav-home:hover,
+.nav-home.active {
     color: var(--black);
 }
 
 
-/* Resources */
+/* RESOURCES */
 
 .nav-resources {
     background: var(--blue);
     color: white;
 }
 
+.nav-resources:hover {
+    color: white;
+}
 
-/* Gallery */
+
+/* GALLERY */
 
 .nav-gallery {
     background: var(--red);
     color: white;
 }
 
+.nav-gallery:hover {
+    color: white;
+}
 
-/* Contact */
+
+/* CONTACT */
 
 .nav-contact {
     background: var(--black);
+    color: white;
+}
+
+.nav-contact:hover {
     color: white;
 }
 
@@ -288,7 +283,14 @@ img {
     position: relative;
 
     width: 100%;
-    height: 600px;
+
+    /*
+       Header is 80px.
+       Hero fills the remaining viewport.
+    */
+    height: calc(100vh - 80px);
+
+    min-height: 600px;
 
     overflow: hidden;
 
@@ -307,15 +309,17 @@ img {
 
     background-image:
         linear-gradient(
-            rgba(255, 244, 230, .89),
-            rgba(255, 244, 230, .89)
+            rgba(255, 244, 230, .78),
+            rgba(255, 244, 230, .78)
         ),
         url("images/photowalk.jpg");
 
     background-size: cover;
     background-position: center;
 
-    z-index: 1;
+    opacity: .42;
+
+    z-index: 0;
 }
 
 
@@ -329,49 +333,52 @@ img {
     width: 100%;
     height: 100%;
 
-    z-index: 5;
+    z-index: 2;
 }
 
 
 /* =========================================================
-   HERO TEXT
+   HERO COPY
 ========================================================= */
 
 .hero-copy {
     position: absolute;
 
-    left: 5.8%;
-    top: 88px;
+    left: 8%;
+    top: 50%;
 
-    width: 440px;
+    transform: translateY(-50%);
+
+    width: 42%;
 }
 
 .hero-copy h1 {
     margin: 0;
-    padding: 0;
 
     font-family: "Anton", sans-serif;
 
-    font-size: 96px;
+    font-size: clamp(75px, 10vw, 150px);
+
     font-weight: 400;
 
-    line-height: .92;
+    line-height: .85;
+
     letter-spacing: .5px;
 
     color: var(--black);
 }
 
 .hero-copy p {
-    margin: 8px 0 0 3px;
+    width: 430px;
 
-    width: 420px;
+    margin: 25px 0 0 4px;
 
     font-family: "Be Vietnam Pro", sans-serif;
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
 
-    line-height: 1.25;
+    line-height: 1.55;
 
     color: var(--black);
 }
@@ -383,49 +390,54 @@ img {
 
 .hero-buttons {
     display: flex;
-    align-items: center;
 
-    gap: 15px;
+    gap: 12px;
 
-    margin-top: 19px;
+    margin-top: 25px;
     margin-left: 2px;
 }
 
 .hero-button {
-    height: 50px;
+    height: 45px;
 
-    padding: 0 20px;
-
-    border-radius: 28px;
-
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
+    padding: 0 23px;
+
+    border-radius: 25px;
+
     font-family: "Be Vietnam Pro", sans-serif;
 
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 11px;
+    font-weight: 400;
 
-    text-decoration: none;
+    letter-spacing: .4px;
 
-    color: white;
-}
-
-.hero-button:hover {
-    color: white;
-
-    text-decoration: none;
-
-    opacity: .9;
+    transition: .2s ease;
 }
 
 .blue-button {
     background: var(--blue);
+    color: white;
+}
+
+.blue-button:hover {
+    color: white;
+
+    transform: translateY(-2px);
 }
 
 .red-button {
     background: var(--red);
+    color: white;
+}
+
+.red-button:hover {
+    color: white;
+
+    transform: translateY(-2px);
 }
 
 
@@ -436,17 +448,19 @@ img {
 .hero-photo {
     position: absolute;
 
-    top: 91px;
-    right: 7.2%;
+    right: 6%;
+    top: 50%;
 
-    width: 41%;
-    max-width: 450px;
+    transform: translateY(-50%);
 
-    height: 300px;
+    width: 43%;
+    max-width: 650px;
+
+    height: 65%;
 
     overflow: hidden;
 
-    border-bottom-left-radius: 105px;
+    border-radius: 0 0 0 105px;
 }
 
 .hero-photo img {
@@ -467,22 +481,19 @@ img {
     position: relative;
 
     width: 100%;
-    height: 50px;
+    height: 55px;
 
     background: var(--cream);
 
-    border-top: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
 
     overflow: hidden;
-
-    z-index: 10;
 }
 
 
 /* =========================================================
    DIVIDER LEFT STRIPES
-   YELLOW → BLUE → RED → BLACK
 ========================================================= */
 
 .divider-left-stripes {
@@ -491,101 +502,50 @@ img {
     left: 0;
     top: 0;
 
-    width: 300px;
-    height: 50px;
+    width: 330px;
+    height: 55px;
 
     display: flex;
 
     overflow: hidden;
-
-    z-index: 2;
 }
 
+.divider-left-stripes span {
+    display: block;
 
-/* Yellow */
+    height: 55px;
+
+    transform: skewX(-20deg);
+    transform-origin: top;
+}
 
 .divider-left-stripes .stripe-yellow {
-    width: 115px;
-    height: 50px;
-
-    flex-shrink: 0;
+    width: 135px;
 
     background: var(--yellow);
-
-    clip-path: polygon(
-        0 0,
-        78% 0,
-        100% 100%,
-        0 100%
-    );
 }
-
-
-/* Blue */
 
 .divider-left-stripes .stripe-blue {
-    width: 62px;
-    height: 50px;
-
-    flex-shrink: 0;
-
-    margin-left: -24px;
+    width: 75px;
 
     background: var(--blue);
-
-    clip-path: polygon(
-        0 0,
-        65% 0,
-        100% 100%,
-        35% 100%
-    );
 }
-
-
-/* Red */
 
 .divider-left-stripes .stripe-red {
-    width: 62px;
-    height: 50px;
-
-    flex-shrink: 0;
-
-    margin-left: -20px;
+    width: 75px;
 
     background: var(--red);
-
-    clip-path: polygon(
-        0 0,
-        65% 0,
-        100% 100%,
-        35% 100%
-    );
 }
 
-
-/* Black */
-
 .divider-left-stripes .stripe-black {
-    width: 62px;
-    height: 50px;
-
-    flex-shrink: 0;
-
-    margin-left: -20px;
+    width: 75px;
 
     background: var(--black);
-
-    clip-path: polygon(
-        0 0,
-        65% 0,
-        100% 100%,
-        35% 100%
-    );
 }
 
 
 /* =========================================================
-   ABOUT
+   ABOUT SECTION
 ========================================================= */
 
 .about-section {
@@ -611,15 +571,17 @@ img {
 
     background-image:
         linear-gradient(
-            rgba(255, 244, 230, .90),
-            rgba(255, 244, 230, .90)
+            rgba(255, 244, 230, .86),
+            rgba(255, 244, 230, .86)
         ),
         url("images/photowalk.jpg");
 
     background-size: cover;
     background-position: center;
 
-    z-index: 1;
+    opacity: .35;
+
+    z-index: 0;
 }
 
 
@@ -633,49 +595,50 @@ img {
     width: 100%;
     height: 100%;
 
-    z-index: 5;
+    z-index: 2;
 }
 
 
 /* =========================================================
-   ABOUT TEXT
+   ABOUT COPY
 ========================================================= */
 
 .about-copy {
     position: absolute;
 
-    left: 4.1%;
-    top: 61px;
+    left: 8%;
+    top: 50%;
 
-    width: 430px;
+    transform: translateY(-50%);
+
+    width: 40%;
 }
 
 .about-copy h2 {
-    margin: 0 0 10px 0;
+    margin: 0;
 
     font-family: "Anton", sans-serif;
 
-    font-size: 86px;
+    font-size: 100px;
+
     font-weight: 400;
 
-    line-height: .95;
+    line-height: .9;
 
     color: var(--black);
 }
 
 .about-copy p {
-    margin: 0;
+    width: 450px;
 
-    width: 455px;
+    margin: 25px 0 0 4px;
 
     font-family: "Be Vietnam Pro", sans-serif;
 
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 300;
 
-    line-height: 1.48;
-
-    letter-spacing: .2px;
+    line-height: 1.65;
 
     color: var(--black);
 }
@@ -688,17 +651,19 @@ img {
 .about-photo {
     position: absolute;
 
-    top: 15px;
-    right: 5.4%;
+    right: 6%;
+    top: 50%;
+
+    transform: translateY(-50%);
 
     width: 43%;
-    max-width: 470px;
+    max-width: 650px;
 
-    height: 460px;
+    height: 65%;
 
     overflow: hidden;
 
-    border-bottom-left-radius: 100px;
+    border-radius: 0 0 0 105px;
 }
 
 .about-photo img {
@@ -708,396 +673,6 @@ img {
     object-fit: cover;
 
     display: block;
-}
-
-
-/* =========================================================
-   CONTACT MODAL
-========================================================= */
-
-.modal-content {
-    background: var(--cream);
-
-    border: 2px solid var(--black);
-
-    border-radius: 0;
-}
-
-.modal-header {
-    background: var(--yellow);
-
-    border-bottom: 1px solid var(--black);
-}
-
-.modal-title {
-    font-family: "Anton", sans-serif;
-
-    letter-spacing: .5px;
-}
-
-.modal-body {
-    font-family: "Be Vietnam Pro", sans-serif;
-}
-
-.modal-footer {
-    border-top: 1px solid var(--black);
-}
-
-.modal-footer .btn {
-    border-radius: 0;
-
-    background: var(--black);
-
-    border-color: var(--black);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
-    .site-header {
-        height: 70px;
-    }
-
-    .brand-area {
-        width: 220px;
-        height: 68px;
-    }
-
-    .brand-yellow {
-        width: 125px;
-        height: 68px;
-    }
-
-    .logo-link {
-        left: 12px;
-        height: 68px;
-    }
-
-    .logo {
-        width: 50px;
-    }
-
-    .top-stripes {
-        left: 82px;
-        height: 68px;
-        width: 140px;
-    }
-
-    .top-stripes span {
-        height: 68px;
-        width: 48px;
-    }
-
-
-    /* =====================================================
-       NAVIGATION
-    ===================================================== */
-
-    .main-navigation {
-        gap: 5px;
-        margin-right: 10px;
-    }
-
-    .nav-btn {
-        height: 27px;
-
-        padding: 0 7px;
-
-        font-size: 9px;
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .hero {
-        height: 600px;
-    }
-
-    .hero-copy {
-        left: 5%;
-        top: 70px;
-
-        width: 43%;
-    }
-
-    .hero-copy h1 {
-        font-size: 68px;
-    }
-
-    .hero-copy p {
-        width: 100%;
-        font-size: 11px;
-    }
-
-    .hero-photo {
-        right: 5%;
-        top: 70px;
-
-        width: 44%;
-        height: 260px;
-    }
-
-
-    /* =====================================================
-       DIVIDER
-    ===================================================== */
-
-    .divider {
-        height: 50px;
-    }
-
-    .divider-left-stripes {
-        width: 260px;
-    }
-
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-
-    .about-section {
-        height: 600px;
-    }
-
-    .about-copy {
-        left: 5%;
-        top: 55px;
-
-        width: 42%;
-    }
-
-    .about-copy h2 {
-        font-size: 65px;
-    }
-
-    .about-copy p {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .about-photo {
-        right: 5%;
-
-        width: 44%;
-        height: 400px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
-    .site-header {
-        height: 62px;
-    }
-
-    .brand-area {
-        width: 150px;
-        height: 60px;
-    }
-
-    .brand-yellow {
-        width: 90px;
-        height: 60px;
-    }
-
-    .logo-link {
-        left: 7px;
-        height: 60px;
-    }
-
-    .logo {
-        width: 42px;
-    }
-
-    .top-stripes {
-        left: 60px;
-
-        width: 100px;
-        height: 60px;
-    }
-
-    .top-stripes span {
-        width: 35px;
-        height: 60px;
-    }
-
-
-    /* =====================================================
-       MOBILE NAVIGATION
-    ===================================================== */
-
-    .main-navigation {
-        gap: 3px;
-        margin-right: 5px;
-    }
-
-    .nav-btn {
-        height: 23px;
-
-        padding: 0 5px;
-
-        font-size: 7px;
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .hero {
-        height: 700px;
-    }
-
-    .hero-inner {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-copy {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        margin: 55px 25px 0;
-
-        width: auto;
-    }
-
-    .hero-copy h1 {
-        font-size: 58px;
-    }
-
-    .hero-copy p {
-        width: 100%;
-
-        font-size: 11px;
-
-        line-height: 1.35;
-    }
-
-
-    /* =====================================================
-       HERO PHOTO
-    ===================================================== */
-
-    .hero-photo {
-        position: relative;
-
-        top: auto;
-        right: auto;
-
-        margin: 45px 25px 0;
-
-        width: calc(100% - 50px);
-        max-width: none;
-
-        height: 260px;
-    }
-
-
-    /* =====================================================
-       DIVIDER
-    ===================================================== */
-
-    .divider {
-        height: 50px;
-    }
-
-    .divider-left-stripes {
-        left: 0;
-
-        width: 230px;
-        height: 50px;
-    }
-
-    .divider-left-stripes .stripe-yellow {
-        width: 95px;
-        height: 50px;
-    }
-
-    .divider-left-stripes .stripe-blue,
-    .divider-left-stripes .stripe-red,
-    .divider-left-stripes .stripe-black {
-        width: 55px;
-        height: 50px;
-    }
-
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-
-    .about-section {
-        height: 700px;
-    }
-
-    .about-inner {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-copy {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        padding: 55px 25px 0;
-
-        width: auto;
-    }
-
-    .about-copy h2 {
-        font-size: 60px;
-    }
-
-    .about-copy p {
-        width: 100%;
-
-        font-size: 14px;
-
-        line-height: 1.45;
-    }
-
-
-    /* =====================================================
-       ABOUT PHOTO
-    ===================================================== */
-
-    .about-photo {
-        position: relative;
-
-        top: auto;
-        right: auto;
-
-        margin: 40px 25px 0;
-
-        width: calc(100% - 50px);
-        max-width: none;
-
-        height: 350px;
-    }
-
 }
 
 
@@ -1125,7 +700,6 @@ img {
     font-family: "Be Vietnam Pro", sans-serif;
 
     font-size: 11px;
-
     font-weight: 300;
 
     letter-spacing: .2px;
@@ -1133,10 +707,460 @@ img {
 
 
 /* =========================================================
-   FOOTER MOBILE
+   CONTACT MODAL
+========================================================= */
+
+.modal-content {
+    border: 0;
+
+    border-radius: 0;
+
+    background: var(--cream);
+}
+
+.modal-header {
+    background: var(--yellow);
+
+    border-bottom: 1px solid var(--black);
+}
+
+.modal-title {
+    font-family: "Anton", sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: .5px;
+}
+
+.modal-body {
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 13px;
+}
+
+.modal-body h4 {
+    font-family: "Anton", sans-serif;
+
+    font-size: 25px;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--black);
+}
+
+.modal-footer .btn {
+    border-radius: 20px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* HEADER */
+
+    .site-header {
+        height: 70px;
+    }
+
+    .brand-area {
+        width: 230px;
+        height: 70px;
+    }
+
+    .brand-yellow {
+        width: 125px;
+        height: 70px;
+    }
+
+    .logo-link {
+        left: 15px;
+
+        width: 70px;
+        height: 70px;
+    }
+
+    .logo {
+        width: 52px;
+    }
+
+    .top-stripes {
+        left: 110px;
+
+        width: 120px;
+        height: 70px;
+    }
+
+    .top-stripes span {
+        width: 42px;
+        height: 70px;
+    }
+
+
+    /* NAV */
+
+    .main-navigation {
+        gap: 5px;
+
+        margin-right: 15px;
+    }
+
+    .nav-btn {
+        height: 29px;
+
+        padding: 0 11px;
+
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: calc(100vh - 70px);
+
+        min-height: 600px;
+    }
+
+    .hero-copy {
+        left: 6%;
+
+        width: 43%;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(65px, 10vw, 105px);
+    }
+
+    .hero-copy p {
+        width: 100%;
+
+        font-size: 13px;
+    }
+
+    .hero-photo {
+        right: 5%;
+
+        width: 44%;
+        height: 60%;
+
+        border-bottom-left-radius: 80px;
+    }
+
+
+    /* ABOUT */
+
+    .about-copy {
+        left: 6%;
+
+        width: 43%;
+    }
+
+    .about-copy h2 {
+        font-size: 75px;
+    }
+
+    .about-copy p {
+        width: 100%;
+
+        font-size: 13px;
+    }
+
+    .about-photo {
+        right: 5%;
+
+        width: 44%;
+        height: 60%;
+
+        border-bottom-left-radius: 80px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .site-header {
+        height: 62px;
+    }
+
+    .brand-area {
+        width: 135px;
+        height: 60px;
+    }
+
+    .brand-yellow {
+        width: 78px;
+        height: 60px;
+    }
+
+    .logo-link {
+        left: 5px;
+
+        width: 55px;
+        height: 60px;
+    }
+
+    .logo {
+        width: 38px;
+    }
+
+    .top-stripes {
+        left: 52px;
+
+        width: 90px;
+        height: 60px;
+    }
+
+    .top-stripes span {
+        width: 32px;
+        height: 60px;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    .main-navigation {
+        gap: 3px;
+
+        margin-right: 5px;
+    }
+
+    .nav-btn {
+        height: 23px;
+
+        padding: 0 5px;
+
+        font-size: 7px;
+
+        letter-spacing: .2px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        height: calc(100vh - 62px);
+
+        min-height: 620px;
+    }
+
+    .hero-inner {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* =====================================================
+       HERO TEXT
+    ===================================================== */
+
+    .hero-copy {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        margin: 55px 25px 0;
+
+        width: auto;
+    }
+
+    .hero-copy h1 {
+        font-size: 54px;
+
+        line-height: .92;
+
+        letter-spacing: .3px;
+    }
+
+    .hero-copy p {
+        width: 100%;
+
+        margin: 10px 0 0 1px;
+
+        font-size: 10px;
+
+        line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       HERO BUTTONS
+    ===================================================== */
+
+    .hero-buttons {
+        gap: 10px;
+
+        margin-top: 17px;
+
+        margin-left: 0;
+    }
+
+    .hero-button {
+        height: 42px;
+
+        padding: 0 17px;
+
+        border-radius: 23px;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       HERO PHOTO
+    ===================================================== */
+
+    .hero-photo {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        margin: 38px 25px 0;
+
+        width: calc(100% - 50px);
+
+        max-width: none;
+
+        height: 235px;
+
+        border-radius: 0 0 0 70px;
+    }
+
+
+    /* =====================================================
+       DIVIDER
+    ===================================================== */
+
+    .divider {
+        height: 50px;
+    }
+
+    .divider-left-stripes {
+        left: 0;
+
+        width: 230px;
+        height: 50px;
+    }
+
+    .divider-left-stripes span {
+        height: 50px;
+    }
+
+    .divider-left-stripes .stripe-yellow {
+        width: 95px;
+    }
+
+    .divider-left-stripes .stripe-blue,
+    .divider-left-stripes .stripe-red,
+    .divider-left-stripes .stripe-black {
+        width: 55px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-section {
+        height: auto;
+
+        min-height: 700px;
+    }
+
+    .about-inner {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+    }
+
+    .about-copy {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        padding: 55px 25px 0;
+
+        width: auto;
+    }
+
+    .about-copy h2 {
+        font-size: 55px;
+
+        line-height: .95;
+
+        margin-bottom: 12px;
+    }
+
+    .about-copy p {
+        width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        letter-spacing: 0;
+    }
+
+
+    /* =====================================================
+       ABOUT PHOTO
+    ===================================================== */
+
+    .about-photo {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        margin: 35px 25px 40px;
+
+        width: calc(100% - 50px);
+
+        max-width: none;
+
+        height: 300px;
+
+        border-radius: 0 0 0 70px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .site-footer {
         padding: 15px 20px;
@@ -1145,5 +1169,151 @@ img {
     .site-footer p {
         font-size: 9px;
     }
+}
 
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .site-header {
+        height: 58px;
+    }
+
+    .brand-area {
+        width: 120px;
+        height: 58px;
+    }
+
+    .brand-yellow {
+        width: 68px;
+        height: 58px;
+    }
+
+    .logo-link {
+        left: 3px;
+
+        width: 50px;
+        height: 58px;
+    }
+
+    .logo {
+        width: 34px;
+    }
+
+    .top-stripes {
+        left: 46px;
+
+        width: 80px;
+        height: 58px;
+    }
+
+    .top-stripes span {
+        width: 28px;
+        height: 58px;
+    }
+
+
+    /* NAV */
+
+    .main-navigation {
+        gap: 2px;
+
+        margin-right: 3px;
+    }
+
+    .nav-btn {
+        height: 21px;
+
+        padding: 0 4px;
+
+        font-size: 6px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: calc(100vh - 58px);
+
+        min-height: 600px;
+    }
+
+    .hero-copy {
+        margin: 45px 20px 0;
+    }
+
+    .hero-copy h1 {
+        font-size: 47px;
+    }
+
+    .hero-copy p {
+        font-size: 9px;
+
+        line-height: 1.4;
+    }
+
+    .hero-buttons {
+        gap: 7px;
+
+        margin-top: 14px;
+    }
+
+    .hero-button {
+        height: 38px;
+
+        padding: 0 14px;
+
+        font-size: 9px;
+    }
+
+    .hero-photo {
+        margin: 30px 20px 0;
+
+        width: calc(100% - 40px);
+
+        height: 215px;
+
+        border-bottom-left-radius: 60px;
+    }
+
+
+    /* ABOUT */
+
+    .about-copy {
+        padding: 45px 20px 0;
+    }
+
+    .about-copy h2 {
+        font-size: 48px;
+    }
+
+    .about-copy p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+    .about-photo {
+        margin: 30px 20px 35px;
+
+        width: calc(100% - 40px);
+
+        height: 270px;
+
+        border-bottom-left-radius: 60px;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 13px 15px;
+    }
+
+    .site-footer p {
+        font-size: 8px;
+    }
 }
