@@ -1,16 +1,819 @@
+/* =====================================================
+   TALAKBAY
+   LANDING PAGE
+===================================================== */
+
+
+/* =====================================================
+   FONTS
+===================================================== */
+
 @font-face {
+
     font-family: "Anton";
-    src: url("fonts/Anton-Regular.ttf") format("truetype");
-}
 
-@font-face {
-    font-family: "Be Vietnam Pro";
-    src: url("fonts/BeVietnamPro-Light.ttf") format("truetype");
-    font-weight: 300;
-}
+    src: url("fonts/Anton-Regular.ttf")
+         format("truetype");
 
-@font-face {
-    font-family: "Be Vietnam Pro";
-    src: url("fonts/BeVietnamPro-Regular.ttf") format("truetype");
     font-weight: 400;
+
+}
+
+
+@font-face {
+
+    font-family: "Be Vietnam Pro";
+
+    src: url("fonts/BeVietnamPro-Light.ttf")
+         format("truetype");
+
+    font-weight: 300;
+
+}
+
+
+@font-face {
+
+    font-family: "Be Vietnam Pro";
+
+    src: url("fonts/BeVietnamPro-Regular.ttf")
+         format("truetype");
+
+    font-weight: 400;
+
+}
+
+
+
+/* =====================================================
+   COLOR PALETTE
+===================================================== */
+
+:root {
+
+    --cream: #fff4e6;
+
+    --blue: #2b4e8d;
+
+    --yellow: #f4d35e;
+
+    --red: #891917;
+
+    --black: #222222;
+
+}
+
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: #000;
+
+    color: var(--black);
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-weight: 300;
+
+}
+
+
+
+/* =====================================================
+   MAIN WEBSITE
+===================================================== */
+
+body > .site {
+
+    width: 100%;
+
+}
+
+
+.home-page {
+
+    background: var(--cream);
+
+}
+
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar {
+
+    width: 100%;
+
+    height: 80px;
+
+    min-height: 80px;
+
+    padding: 0;
+
+    margin: 0;
+
+    background: var(--cream);
+
+    border-top: 2px solid var(--black);
+
+    border-bottom: 2px solid var(--black);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+
+    height: 78px;
+
+    width: 285px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+/* Yellow area */
+
+.brand::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 170px;
+
+    height: 78px;
+
+    background: var(--yellow);
+
+}
+
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.brand a {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin-left: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    width: 60px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+
+/* =====================================================
+   TOP DIAGONAL STRIPES
+===================================================== */
+
+.top-stripes {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 105px;
+
+    width: 180px;
+
+    height: 78px;
+
+    display: flex;
+
+    transform: skewX(35deg);
+
+    overflow: hidden;
+
+}
+
+
+.top-stripes span {
+
+    width: 62px;
+
+    height: 78px;
+
+    display: block;
+
+}
+
+
+.top-stripes .blue {
+
+    background: var(--blue);
+
+}
+
+
+.top-stripes .red {
+
+    background: var(--red);
+
+}
+
+
+.top-stripes .black {
+
+    background: var(--black);
+
+}
+
+
+
+/* =====================================================
+   NAVIGATION LINKS
+===================================================== */
+
+.navigation {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-right: 32px;
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+
+.nav-button {
+
+    padding: 8px 12px;
+
+    border: 1px solid var(--black);
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: .4px;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: .2s;
+
+}
+
+
+.nav-button:hover {
+
+    text-decoration: none;
+
+    opacity: .85;
+
+}
+
+
+
+/* =====================================================
+   NAV COLORS
+===================================================== */
+
+.nav-button.home {
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+}
+
+
+.nav-button.resources {
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+
+.nav-button.gallery {
+
+    background: var(--red);
+
+    color: white;
+
+}
+
+
+.nav-button.contact {
+
+    background: var(--black);
+
+    color: white;
+
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    height: 520px;
+
+    min-height: 520px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--cream);
+
+}
+
+
+
+/* =====================================================
+   HERO BACKGROUND IMAGE
+===================================================== */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255, 244, 230, .88),
+            rgba(255, 244, 230, .88)
+        ),
+
+        url("images/photowalk.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 1;
+
+}
+
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding-left: 75px;
+
+    padding-right: 75px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: start;
+
+    column-gap: 50px;
+
+}
+
+
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+
+.hero-text {
+
+    padding-top: 82px;
+
+}
+
+
+.hero-text h1 {
+
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 72px;
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    letter-spacing: 1px;
+
+    color: var(--black);
+
+}
+
+
+.hero-text p {
+
+    margin-top: 7px;
+
+    max-width: 430px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    line-height: 1.35;
+
+    color: var(--black);
+
+}
+
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 16px;
+
+}
+
+
+.pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 64px;
+
+    height: 28px;
+
+    padding: 0 14px;
+
+    border-radius: 20px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+.pill:hover {
+
+    color: white;
+
+    text-decoration: none;
+
+    opacity: .9;
+
+}
+
+
+.pill.blue {
+
+    background: var(--blue);
+
+}
+
+
+.pill.red {
+
+    background: var(--red);
+
+}
+
+
+
+/* =====================================================
+   HERO PHOTO
+===================================================== */
+
+.hero-photo {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: 280px;
+
+    margin-top: 50px;
+
+    margin-left: auto;
+
+    overflow: hidden;
+
+    border-bottom-left-radius: 85px;
+
+}
+
+
+.hero-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* =====================================================
+   HERO BOTTOM RIGHT DECORATION
+===================================================== */
+
+.hero-stripes {
+
+    position: absolute;
+
+    z-index: 5;
+
+    right: -20px;
+
+    bottom: 0;
+
+    width: 360px;
+
+    height: 45px;
+
+    display: flex;
+
+    overflow: hidden;
+
+}
+
+
+.hero-stripes span {
+
+    width: 95px;
+
+    height: 45px;
+
+    transform: skewX(-40deg);
+
+    margin-left: -18px;
+
+}
+
+
+.hero-stripes .black {
+
+    background: var(--black);
+
+}
+
+
+.hero-stripes .red {
+
+    background: var(--red);
+
+}
+
+
+.hero-stripes .blue {
+
+    background: var(--blue);
+
+}
+
+
+.hero-stripes .yellow {
+
+    background: var(--yellow);
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+
+    .navbar {
+
+        height: auto;
+
+        min-height: 65px;
+
+    }
+
+
+    .brand {
+
+        width: 190px;
+
+        height: 63px;
+
+    }
+
+
+    .brand::before {
+
+        width: 120px;
+
+        height: 63px;
+
+    }
+
+
+    .logo {
+
+        width: 48px;
+
+    }
+
+
+    .top-stripes {
+
+        left: 75px;
+
+        height: 63px;
+
+        width: 130px;
+
+    }
+
+
+    .top-stripes span {
+
+        height: 63px;
+
+        width: 45px;
+
+    }
+
+
+    .navigation {
+
+        margin-right: 10px;
+
+        gap: 4px;
+
+    }
+
+
+    .nav-button {
+
+        padding: 6px 7px;
+
+        font-size: 8px;
+
+    }
+
+
+    .hero {
+
+        height: auto;
+
+        min-height: 650px;
+
+    }
+
+
+    .hero-content {
+
+        padding: 50px 30px 80px;
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+    .hero-text {
+
+        padding-top: 0;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .hero-photo {
+
+        margin-top: 45px;
+
+        margin-left: 0;
+
+        width: 100%;
+
+        height: 280px;
+
+    }
+
 }
