@@ -3,11 +3,6 @@
    STYLE.CSS
 ========================================================= */
 
-
-/* =========================================================
-   ROOT VARIABLES
-========================================================= */
-
 :root {
     --cream: #fff4e6;
     --blue: #2b4e8d;
@@ -276,7 +271,7 @@ a:hover {
 
 
 /* =========================================================
-   HERO
+   HERO / LANDING PAGE
 ========================================================= */
 
 .hero {
@@ -285,8 +280,8 @@ a:hover {
     width: 100%;
 
     /*
-       Header is 80px.
-       Hero fills the remaining viewport.
+       Header = 80px
+       Hero fills the rest of the viewport.
     */
     height: calc(100vh - 80px);
 
@@ -761,8 +756,6 @@ a:hover {
 
 @media (max-width: 900px) {
 
-    /* HEADER */
-
     .site-header {
         height: 70px;
     }
@@ -889,6 +882,9 @@ a:hover {
 
     /* =====================================================
        HEADER
+       The desktop stripe design is NOT used here.
+       The mobile stripes are sized independently so
+       they don't get clipped or overlap.
     ===================================================== */
 
     .site-header {
@@ -896,36 +892,72 @@ a:hover {
     }
 
     .brand-area {
-        width: 135px;
-        height: 60px;
+        position: relative;
+
+        width: 145px;
+        height: 62px;
+
+        flex-shrink: 0;
+
+        overflow: hidden;
     }
+
+    /* YELLOW */
 
     .brand-yellow {
+        left: 0;
+        top: 0;
+
         width: 78px;
-        height: 60px;
+        height: 62px;
+
+        transform: skewX(-20deg);
+        transform-origin: top left;
     }
 
+    /* LOGO */
+
     .logo-link {
-        left: 5px;
+        left: 4px;
+        top: 0;
 
         width: 55px;
-        height: 60px;
+        height: 62px;
     }
 
     .logo {
-        width: 38px;
+        width: 39px;
     }
 
+
+    /* =====================================================
+       MOBILE TOP STRIPES
+    ===================================================== */
+
     .top-stripes {
-        left: 52px;
+        position: absolute;
+
+        left: 55px;
+        top: 0;
 
         width: 90px;
-        height: 60px;
+        height: 62px;
+
+        display: flex;
+
+        overflow: hidden;
     }
 
     .top-stripes span {
-        width: 32px;
-        height: 60px;
+        display: block;
+
+        flex: 0 0 30px;
+
+        width: 30px;
+        height: 62px;
+
+        transform: skewX(-20deg);
+        transform-origin: top left;
     }
 
 
@@ -937,6 +969,8 @@ a:hover {
         gap: 3px;
 
         margin-right: 5px;
+
+        flex-shrink: 0;
     }
 
     .nav-btn {
@@ -947,14 +981,20 @@ a:hover {
         font-size: 7px;
 
         letter-spacing: .2px;
+
+        white-space: nowrap;
     }
 
 
     /* =====================================================
-       HERO
+       MOBILE HERO
     ===================================================== */
 
     .hero {
+        /*
+           Header = 62px
+           Hero = remaining viewport height
+        */
         height: calc(100vh - 62px);
 
         min-height: 620px;
@@ -971,7 +1011,7 @@ a:hover {
 
 
     /* =====================================================
-       HERO TEXT
+       MOBILE HERO COPY
     ===================================================== */
 
     .hero-copy {
@@ -1007,7 +1047,7 @@ a:hover {
 
 
     /* =====================================================
-       HERO BUTTONS
+       MOBILE HERO BUTTONS
     ===================================================== */
 
     .hero-buttons {
@@ -1030,7 +1070,7 @@ a:hover {
 
 
     /* =====================================================
-       HERO PHOTO
+       MOBILE HERO PHOTO
     ===================================================== */
 
     .hero-photo {
@@ -1054,7 +1094,7 @@ a:hover {
 
 
     /* =====================================================
-       DIVIDER
+       MOBILE DIVIDER
     ===================================================== */
 
     .divider {
@@ -1084,7 +1124,7 @@ a:hover {
 
 
     /* =====================================================
-       ABOUT
+       MOBILE ABOUT
     ===================================================== */
 
     .about-section {
@@ -1135,7 +1175,7 @@ a:hover {
 
 
     /* =====================================================
-       ABOUT PHOTO
+       MOBILE ABOUT PHOTO
     ===================================================== */
 
     .about-photo {
@@ -1159,7 +1199,7 @@ a:hover {
 
 
     /* =====================================================
-       FOOTER
+       MOBILE FOOTER
     ===================================================== */
 
     .site-footer {
@@ -1183,7 +1223,7 @@ a:hover {
     }
 
     .brand-area {
-        width: 120px;
+        width: 125px;
         height: 58px;
     }
 
@@ -1195,7 +1235,7 @@ a:hover {
     .logo-link {
         left: 3px;
 
-        width: 50px;
+        width: 49px;
         height: 58px;
     }
 
@@ -1203,16 +1243,23 @@ a:hover {
         width: 34px;
     }
 
-    .top-stripes {
-        left: 46px;
 
-        width: 80px;
+    /* SMALL PHONE STRIPES */
+
+    .top-stripes {
+        left: 48px;
+
+        width: 77px;
         height: 58px;
     }
 
     .top-stripes span {
-        width: 28px;
+        flex: 0 0 26px;
+
+        width: 26px;
         height: 58px;
+
+        transform: skewX(-20deg);
     }
 
 
