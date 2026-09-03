@@ -988,23 +988,6 @@ a:hover {
 
 
 /* =========================================================
-   RESOURCE NUMBER
-========================================================= */
-
-.resource-number {
-    margin-bottom: 15px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 40px;
-
-    line-height: 1;
-
-    color: var(--red);
-}
-
-
-/* =========================================================
    RESOURCE CONTENT
 ========================================================= */
 
@@ -1196,25 +1179,6 @@ a:hover {
 
 
 /* =========================================================
-   EPISODE NUMBER
-========================================================= */
-
-.episode-track .episode-number {
-    display: block;
-
-    margin-bottom: 25px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 22px;
-
-    line-height: 1;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
    EPISODE LABEL
 ========================================================= */
 
@@ -1394,49 +1358,6 @@ a:hover {
 
 .episode-dot.active {
     background: var(--black);
-}
-
-
-/* =========================================================
-   LEARNING TOPICS
-========================================================= */
-
-.learning-card {
-    background: var(--yellow);
-}
-
-.topic-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
-
-    margin-top: 25px;
-}
-
-.topic-item {
-    min-height: 55px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 12px 18px;
-
-    background: var(--cream);
-
-    border: 1px solid var(--black);
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 11px;
-
-    font-weight: 400;
-
-    letter-spacing: .3px;
-
-    color: var(--black);
 }
 
 
@@ -2250,17 +2171,6 @@ a:hover {
 
 
     /* =====================================================
-       MOBILE EPISODE NUMBER
-    ===================================================== */
-
-    .episode-track .episode-number {
-        margin-bottom: 20px;
-
-        font-size: 20px;
-    }
-
-
-    /* =====================================================
        MOBILE EPISODE LABEL
     ===================================================== */
 
@@ -2339,24 +2249,6 @@ a:hover {
         height: 10px;
     }
 
-
-    /* =====================================================
-       MOBILE LEARNING TOPICS
-    ===================================================== */
-
-    .topic-grid {
-        grid-template-columns: 1fr;
-
-        gap: 8px;
-
-        margin-top: 20px;
-    }
-
-    .topic-item {
-        min-height: 48px;
-
-        font-size: 9px;
-    }
 
     .resources-back {
         margin-top: 45px;
@@ -2574,13 +2466,7 @@ a:hover {
     .resource-content p {
         font-size: 10px;
     }
-
-    .topic-item {
-        font-size: 8px;
-    }
-
-
-    /* =====================================================
+/* =====================================================
        VERY SMALL PHONE EPISODE CARD
     ===================================================== */
 
@@ -2596,14 +2482,7 @@ a:hover {
 
         box-shadow: 5px 5px 0 var(--black);
     }
-
-    .episode-track .episode-number {
-        font-size: 18px;
-
-        margin-bottom: 16px;
-    }
-
-    .episode-track .episode-label {
+.episode-track .episode-label {
         font-size: 6px;
 
         letter-spacing: .9px;
