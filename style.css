@@ -3291,3 +3291,59 @@ a:hover {
         height: 9px;
     }
 }
+/* =========================================================
+   FINAL MOBILE + WINDOWS DRAG FIX
+   TOUCH + MOUSE + TRACKPAD
+========================================================= */
+
+.episode-track {
+    cursor: grab;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    touch-action: pan-x;
+}
+
+.episode-track.is-dragging {
+    cursor: grabbing;
+
+    scroll-behavior: auto;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Prevent YouTube iframe from stealing the drag */
+.episode-track.is-dragging iframe {
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE DRAG FIX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .episode-track {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+
+        -webkit-overflow-scrolling: touch;
+
+        touch-action: pan-x;
+
+        overscroll-behavior-x: contain;
+    }
+
+    .episode-track .episode-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+
+        user-select: none;
+        -webkit-user-select: none;
+    }
+}
