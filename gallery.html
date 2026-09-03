@@ -64,20 +64,13 @@
     }
 
 
-    .gallery-page .top-stripes {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-
-    .gallery-page .top-stripes span {
-        display: block;
-        flex: 1 1 0;
-        min-width: 0;
-        height: 100%;
-    }
+    .gallery-page .site-header { height: 80px; }
+    .gallery-page .brand-area { width: 300px; height: 80px; position: relative; flex-shrink: 0; }
+    .gallery-page .brand-yellow { width: 145px; height: 80px; position: absolute; left: 0; top: 0; background: var(--red) !important; z-index: 1; }
+    .gallery-page .logo-link { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); z-index: 5; }
+    .gallery-page .logo { display: block; width: 105px; height: auto; }
+    .gallery-page .top-stripes { position: absolute; left: 145px; top: 0; width: 208px; height: 80px; display: flex; overflow: visible; z-index: 2; pointer-events: none; }
+    .gallery-page .top-stripes span { display: block; flex: 0 0 52px; width: 52px; height: 80px; transform: skewX(-20deg); transform-origin: top left; min-width: 0; }
 
 
     .gallery-page .top-stripes .stripe-red {
@@ -99,6 +92,45 @@
         background: var(--black) !important;
     }
 
+
+    @media (max-width: 900px) {
+        .gallery-page .site-header { height: 70px; }
+        .gallery-page .brand-area { width: 230px; height: 70px; }
+        .gallery-page .brand-yellow { width: 110px; height: 70px; }
+        .gallery-page .logo-link { left: 15px; }
+        .gallery-page .logo { width: 90px; }
+        .gallery-page .top-stripes { left: 110px; width: 168px; height: 70px; }
+        .gallery-page .top-stripes span { flex-basis: 42px; width: 42px; height: 70px; }
+    }
+    @media (max-width: 600px) {
+        .gallery-page .site-header { height: 62px; }
+        .gallery-page .brand-area { width: 210px; height: 62px; }
+        .gallery-page .brand-yellow { width: 145px; height: 62px; }
+        .gallery-page .logo-link { left: 12px; }
+        .gallery-page .logo { width: 88px; }
+        .gallery-page .top-stripes { left: 145px; width: 208px; height: 62px; }
+        .gallery-page .top-stripes span { flex-basis: 52px; width: 52px; height: 62px; }
+        .gallery-page .menu-toggle { display:flex; position:relative; width:38px; height:38px; margin-right:10px; padding:0; border:1px solid var(--black); border-radius:50%; background:var(--cream); color:var(--black); font-family:Arial,sans-serif; font-size:22px; line-height:1; align-items:center; justify-content:center; cursor:pointer; z-index:150; flex-shrink:0; appearance:none; -webkit-appearance:none; }
+        .gallery-page .menu-toggle:hover { background:var(--yellow); }
+        .gallery-page .menu-toggle:focus { outline:none; }
+        .gallery-page .main-navigation { position:absolute; top:62px; right:10px; width:190px; display:none; flex-direction:column; background:var(--cream); border:1px solid var(--black); box-shadow:5px 5px 0 var(--black); z-index:140; }
+        .gallery-page .main-navigation.mobile-open { display:flex !important; }
+        .gallery-page .main-navigation .nav-btn { width:100%; }
+    }
+    @media (max-width:380px) {
+        .gallery-page .site-header { height:58px; }
+        .gallery-page .brand-area { width:190px; height:58px; }
+        .gallery-page .brand-yellow { width:145px; height:58px; }
+        .gallery-page .logo { width:82px; }
+        .gallery-page .top-stripes { left:145px; width:192px; height:58px; }
+        .gallery-page .top-stripes span { flex-basis:48px; width:48px; height:58px; }
+        .gallery-page .menu-toggle { width:32px; height:32px; margin-right:8px; font-size:19px; }
+        .gallery-page .main-navigation { top:58px; right:8px; width:175px; }
+    }
+    .gallery-page .site-footer { width:100%; padding:18px 20px; background:var(--black); border-top:1px solid var(--black); text-align:center; }
+    .gallery-page .site-footer p { margin:0; color:white; font-family:"Be Vietnam Pro",sans-serif; font-size:11px; font-weight:300; letter-spacing:.2px; }
+    @media (max-width:600px) { .gallery-page .site-footer { padding:15px 20px; } .gallery-page .site-footer p { font-size:9px; } }
+    @media (max-width:380px) { .gallery-page .site-footer { padding:13px 15px; } .gallery-page .site-footer p { font-size:8px; } }
 
     /* =========================================================
        GALLERY HERO
@@ -1269,7 +1301,8 @@
             id="menuToggle"
             type="button"
             aria-label="Open navigation menu"
-            aria-expanded="false">
+            aria-expanded="false"
+            onclick="toggleMobileMenu()">
 
         ☰
 
@@ -1715,54 +1748,7 @@
      ========================================================= -->
 
 <footer class="site-footer">
-
-
-    <p>
-
-        <strong>Talakbay</strong>
-
-        <br>
-
-        A Cinematic Instructional Video and
-        Structured Photowalk Program
-
-    </p>
-
-
-    <br>
-
-
-    <p>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        |
-
-        <a href="resources.html">
-            Resources
-        </a>
-
-        |
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-    </p>
-
-
-    <br>
-
-
-    <p>
-
-        © 2026 Gotcha! Productions
-
-    </p>
-
-
+    <p>© 2026 Gotcha! Productions. All Rights Reserved.</p>
 </footer>
 
 
@@ -1906,3 +1892,40 @@
 
 <!-- =========================================================
      BOOTSTRAP
+</audio>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function toggleMobileMenu() {
+    const menu=document.getElementById("mainNavigation");
+    const button=document.getElementById("menuToggle");
+    if(!menu||!button)return;
+    const open=menu.classList.toggle("mobile-open");
+    button.setAttribute("aria-expanded",open?"true":"false");
+}
+function openGalleryImage(item) {
+    const img=item&&item.querySelector("img"), box=document.getElementById("galleryLightbox"), out=document.getElementById("lightboxImage"), sound=document.getElementById("clickSound");
+    if(!img||!box||!out)return;
+    out.src=img.src; out.alt=img.alt||"Expanded gallery image"; box.classList.add("active"); document.body.style.overflow="hidden";
+    if(sound){sound.currentTime=0;sound.play().catch(()=>{});}
+}
+function closeGalleryImage(event) {
+    const box=document.getElementById("galleryLightbox");
+    if(!box)return;
+    if(event && event.target && event.target.id==="lightboxImage")return;
+    if(event && event.target!==box && !event.target.closest(".lightbox-close"))return;
+    box.classList.remove("active"); document.getElementById("lightboxImage").src=""; document.body.style.overflow="";
+}
+document.addEventListener("click",function(e){
+    const m=document.getElementById("mainNavigation"),b=document.getElementById("menuToggle");
+    if(m&&b&&window.innerWidth<=600&&!m.contains(e.target)&&!b.contains(e.target)){m.classList.remove("mobile-open");b.setAttribute("aria-expanded","false");}
+});
+document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"){const b=document.getElementById("galleryLightbox");if(b&&b.classList.contains("active")){b.classList.remove("active");document.getElementById("lightboxImage").src="";document.body.style.overflow="";}}
+});
+</script>
+</body>
+</html>
+gallery_new.html
+HTML
