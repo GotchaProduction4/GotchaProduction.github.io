@@ -1065,10 +1065,7 @@ a:hover {
 
 
 /* =========================================================
-   =========================================================
    EPISODE CARDS
-   SCREENSHOT-STYLE LAYOUT
-   =========================================================
 ========================================================= */
 
 .episode-card {
@@ -1101,7 +1098,7 @@ a:hover {
 
 
 /* =========================================================
-   EPISODE 1 — BLUE
+   EPISODE COLORS
 ========================================================= */
 
 .episode-blue {
@@ -1109,20 +1106,10 @@ a:hover {
     color: white;
 }
 
-
-/* =========================================================
-   EPISODE 2 — YELLOW
-========================================================= */
-
 .episode-yellow {
     background: var(--yellow);
     color: var(--black);
 }
-
-
-/* =========================================================
-   EPISODE 3 — RED
-========================================================= */
 
 .episode-red {
     background: var(--red);
@@ -1147,7 +1134,6 @@ a:hover {
 
 /* =========================================================
    HIDE NUMBER INSIDE EPISODE
-   The screenshot focuses on episode title/topic.
 ========================================================= */
 
 .episode-card .resource-number {
@@ -1644,7 +1630,7 @@ a:hover {
 
     /* =====================================================
        LOGO
-    ===================================================== */
+========================================================= */
 
     .logo-link {
         left: 20px;
@@ -2204,10 +2190,6 @@ a:hover {
 
 @media (max-width: 380px) {
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
     .site-header {
         height: 58px;
 
@@ -2216,11 +2198,6 @@ a:hover {
         z-index: 100;
     }
 
-
-    /* =====================================================
-       SMALL PHONE BRAND
-    ===================================================== */
-
     .brand-area {
         width: 190px;
         height: 58px;
@@ -2228,22 +2205,12 @@ a:hover {
         overflow: visible;
     }
 
-
-    /* =====================================================
-       BRAND BLOCK
-    ===================================================== */
-
     .brand-yellow {
         width: 165px;
         height: 58px;
 
         pointer-events: none;
     }
-
-
-    /* =====================================================
-       LOGO
-    ===================================================== */
 
     .logo-link {
         left: 15px;
@@ -2255,11 +2222,6 @@ a:hover {
     .logo {
         width: 43px;
     }
-
-
-    /* =====================================================
-       SMALL PHONE STRIPES
-    ===================================================== */
 
     .top-stripes {
         left: 145px;
@@ -2285,11 +2247,6 @@ a:hover {
         transform-origin: top left;
     }
 
-
-    /* =====================================================
-       SMALL PHONE HAMBURGER
-    ===================================================== */
-
     .menu-toggle {
         display: flex;
 
@@ -2304,11 +2261,6 @@ a:hover {
 
         cursor: pointer;
     }
-
-
-    /* =====================================================
-       SMALL PHONE NAVIGATION
-    ===================================================== */
 
     .main-navigation {
         top: 58px;
@@ -2325,11 +2277,6 @@ a:hover {
 
         font-size: 9px;
     }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
 
     .hero {
         height: calc(100vh - 58px);
@@ -2372,11 +2319,6 @@ a:hover {
         border-bottom-left-radius: 60px;
     }
 
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-
     .about-copy {
         padding: 45px 20px 0;
     }
@@ -2400,11 +2342,6 @@ a:hover {
         border-bottom-left-radius: 60px;
     }
 
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
     .site-footer {
         padding: 13px 15px;
     }
@@ -2412,11 +2349,6 @@ a:hover {
     .site-footer p {
         font-size: 8px;
     }
-
-
-    /* =====================================================
-       VERY SMALL PHONE RESOURCES
-    ===================================================== */
 
     .resources-hero {
         min-height: 320px;
@@ -2440,11 +2372,6 @@ a:hover {
         padding: 35px 20px;
     }
 
-
-    /* =====================================================
-       VERY SMALL NORMAL RESOURCE CARDS
-    ===================================================== */
-
     .resource-card {
         padding: 22px 18px;
 
@@ -2466,11 +2393,6 @@ a:hover {
     .topic-item {
         font-size: 8px;
     }
-
-
-    /* =====================================================
-       VERY SMALL EPISODES
-    ===================================================== */
 
     .episode-card {
         padding: 38px 20px;
@@ -2524,28 +2446,30 @@ a:hover {
 
 
 /* =========================================================
-   FINAL RESOURCES HEADER COLOR
-   DESKTOP + TABLET + MOBILE
-
-   RESOURCES HEADER:
+   FINAL RESOURCES HEADER
    BLUE → YELLOW → RED → BLACK
 
-   DIVIDER REMAINS:
-   YELLOW → BLUE → RED → BLACK
+   IMPORTANT:
+   These rules are AFTER all responsive media queries.
+   This keeps Windows/Desktop, Tablet and Mobile identical.
 ========================================================= */
 
+/* BLUE BRAND BLOCK */
 .resources-page .brand-yellow {
     background: var(--blue) !important;
 }
 
+/* FIRST TOP STRIPE = YELLOW */
 .resources-page .top-stripes .stripe-blue {
     background: var(--yellow) !important;
 }
 
+/* SECOND TOP STRIPE = RED */
 .resources-page .top-stripes .stripe-red {
     background: var(--red) !important;
 }
 
+/* THIRD TOP STRIPE = BLACK */
 .resources-page .top-stripes .stripe-black {
     background: var(--black) !important;
 }
@@ -2574,6 +2498,10 @@ a:hover {
 /* =========================================================
    KEEP DIVIDER COLORS UNCHANGED
    YELLOW → BLUE → RED → BLACK
+
+   NOTE:
+   These rules ONLY affect the divider.
+   They do NOT affect the header stripes.
 ========================================================= */
 
 .resources-page .divider-left-stripes .stripe-yellow {
