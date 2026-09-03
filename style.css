@@ -3298,3 +3298,65 @@ a:hover {
         height: 58px;
     }
 }
+
+/* =========================================================
+   FINAL GALLERY HEADER STRIPES
+   RED → YELLOW → BLUE → BLACK
+   Same TOTAL length as Resources
+========================================================= */
+
+.gallery-page .top-stripes {
+    left: 145px;
+    width: 170px;
+    height: 80px;
+}
+
+.gallery-page .top-stripes span {
+    flex: 0 0 42.5px;
+    width: 42.5px;
+    height: 80px;
+    transform: skewX(-20deg);
+    transform-origin: top left;
+}
+
+@media (max-width: 900px) {
+    .gallery-page .top-stripes {
+        left: 110px;
+        width: 140px;
+        height: 70px;
+    }
+
+    .gallery-page .top-stripes span {
+        flex: 0 0 35px;
+        width: 35px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-page .top-stripes {
+        left: 145px;
+        width: 155px;
+        height: 62px;
+    }
+
+    .gallery-page .top-stripes span {
+        flex: 0 0 38.75px;
+        width: 38.75px;
+        height: 62px;
+    }
+}
+
+@media (max-width: 380px) {
+    .gallery-page .top-stripes {
+        left: 145px;
+        width: 145px;
+        height: 58px;
+    }
+
+    .gallery-page .top-stripes span {
+        flex: 0 0 36.25px;
+        width: 36.25px;
+        height: 58px;
+    }
+}
