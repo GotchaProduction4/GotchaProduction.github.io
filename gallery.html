@@ -3,1011 +3,1165 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Talakbay | Gallery</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<!-- Website Icon -->
-<link rel="icon"
-      type="image/png"
-      href="images/logoblack.png">
+    <title>Talakbay | Gallery</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-<!-- Main Website CSS -->
-<link rel="stylesheet"
-      href="style.css">
+    <!-- =========================================================
+         WEBSITE ICON
+         ========================================================= -->
 
-<style>
+    <link rel="icon"
+          type="image/png"
+          href="images/logoblack.png">
 
-/* =========================================================
-   TALAKBAY GALLERY PAGE
-   ========================================================= */
 
-.gallery-page {
-    background: var(--cream);
-}
+    <!-- =========================================================
+         BOOTSTRAP
+         ========================================================= -->
 
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-/* =========================================================
-   GALLERY HEADER COLOR
-   RED → BLUE → BLACK
-   ========================================================= */
 
-.gallery-page .brand-yellow {
-    background: var(--red) !important;
-}
+    <!-- =========================================================
+         MAIN WEBSITE CSS
+         ========================================================= -->
 
-.gallery-page .top-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
+    <link rel="stylesheet"
+          href="style.css">
 
-.gallery-page .top-stripes .stripe-red {
-    background: var(--blue) !important;
-}
 
-.gallery-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
+    <style>
 
+        /* =========================================================
+           TALAKBAY GALLERY PAGE
+           ========================================================= */
 
-/*
-   The first stripe element is normally blue.
-   For Gallery we want the visible header arrangement
-   to emphasize RED as the brand block.
-*/
+        .gallery-page {
+            background: var(--cream);
+            color: var(--black);
+        }
 
 
-/* =========================================================
-   GALLERY HERO
-   ========================================================= */
+        /* =========================================================
+           GALLERY HEADER
+           
+           BRAND:
+           RED
 
-.gallery-hero {
-    position: relative;
+           TOP STRIPES:
+           RED → YELLOW → BLUE → BLACK
+           ========================================================= */
 
-    width: 100%;
-    min-height: 400px;
+        .gallery-page .brand-yellow {
+            background: var(--red) !important;
+        }
 
-    overflow: hidden;
 
-    background: var(--cream);
+        .gallery-page .top-stripes {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
 
-    border-bottom: 1px solid var(--black);
-}
 
+        .gallery-page .top-stripes span {
+            display: block;
+            flex: 1 1 0;
+            min-width: 0;
+            height: 100%;
+        }
 
-.gallery-hero-bg {
-    position: absolute;
 
-    inset: 0;
+        .gallery-page .top-stripes .stripe-red {
+            background: var(--red) !important;
+        }
 
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
-        ),
-        url("images/photowalk.jpg");
 
-    background-size: cover;
-    background-position: center;
+        .gallery-page .top-stripes .stripe-yellow {
+            background: var(--yellow) !important;
+        }
 
-    opacity: .42;
 
-    z-index: 0;
-}
+        .gallery-page .top-stripes .stripe-blue {
+            background: var(--blue) !important;
+        }
 
 
-.gallery-hero-inner {
-    position: relative;
+        .gallery-page .top-stripes .stripe-black {
+            background: var(--black) !important;
+        }
 
-    min-height: 400px;
 
-    display: flex;
+        /* =========================================================
+           GALLERY HERO
+           ========================================================= */
 
-    align-items: center;
+        .gallery-hero {
+            position: relative;
 
-    padding: 60px 8%;
+            width: 100%;
+            min-height: 400px;
 
-    z-index: 2;
-}
+            overflow: hidden;
 
+            background: var(--cream);
 
-.gallery-title {
-    width: 100%;
-    max-width: 900px;
-}
+            border-bottom: 1px solid var(--black);
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-.gallery-label {
-    margin: 0 0 14px 3px;
+            text-align: center;
+        }
 
-    font-family: "Be Vietnam Pro", sans-serif;
 
-    font-size: 10px;
+        .gallery-hero-bg {
+            position: absolute;
 
-    font-weight: 400;
+            inset: 0;
 
-    letter-spacing: 2px;
+            background-image:
+                linear-gradient(
+                    rgba(255, 244, 230, .88),
+                    rgba(255, 244, 230, .88)
+                ),
+                url("images/photowalk.jpg");
 
-    color: var(--red);
-}
+            background-size: cover;
+            background-position: center;
 
+            opacity: .42;
 
-.gallery-title h1 {
-    margin: 0;
+            z-index: 0;
+        }
 
-    font-family: "Anton", sans-serif;
 
-    font-size: clamp(70px, 9vw, 120px);
+        .gallery-hero-inner {
+            position: relative;
 
-    font-weight: 400;
+            width: 100%;
+            min-height: 400px;
 
-    line-height: .86;
+            display: flex;
 
-    letter-spacing: .5px;
+            align-items: center;
+            justify-content: center;
 
-    color: var(--black);
-}
+            padding: 60px 8%;
 
+            z-index: 2;
 
-.gallery-intro {
-    width: 500px;
+            text-align: center;
+        }
 
-    max-width: 100%;
 
-    margin: 22px 0 0 4px;
+        .gallery-title {
+            width: 100%;
+            max-width: 900px;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+            margin: 0 auto;
 
-    font-size: 14px;
+            text-align: center;
+        }
 
-    font-weight: 300;
 
-    line-height: 1.6;
+        .gallery-label {
+            margin: 0 0 14px;
 
-    color: var(--black);
-}
+            font-family: "Be Vietnam Pro", sans-serif;
 
+            font-size: 10px;
 
-/* =========================================================
-   GALLERY CONTENT
-   ========================================================= */
+            font-weight: 400;
 
-.gallery-content {
-    position: relative;
+            letter-spacing: 2px;
 
-    width: 100%;
+            color: var(--red);
 
-    padding: 60px 8%;
+            text-align: center;
+        }
 
-    background: var(--cream);
-}
 
+        .gallery-title h1 {
+            margin: 0;
 
-.gallery-container {
-    width: 100%;
+            font-family: "Anton", sans-serif;
 
-    max-width: 1100px;
+            font-size: clamp(70px, 9vw, 120px);
 
-    margin: 0 auto;
-}
+            font-weight: 400;
 
+            line-height: .86;
 
-/* =========================================================
-   GALLERY SECTION
-   ========================================================= */
+            letter-spacing: .5px;
 
-.gallery-section {
-    margin-bottom: 85px;
-}
+            color: var(--black);
 
+            text-align: center;
+        }
 
-.gallery-section:last-child {
-    margin-bottom: 20px;
-}
 
+        .gallery-intro {
+            width: 500px;
 
-.gallery-section-heading {
-    margin-bottom: 30px;
-}
+            max-width: 100%;
 
+            margin: 22px auto 0;
 
-.gallery-section-label {
-    display: block;
+            font-family: "Be Vietnam Pro", sans-serif;
 
-    margin-bottom: 8px;
+            font-size: 14px;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 300;
 
-    font-size: 9px;
+            line-height: 1.6;
 
-    font-weight: 400;
+            color: var(--black);
 
-    letter-spacing: 2px;
+            text-align: center;
+        }
 
-    color: var(--red);
-}
 
+        /* =========================================================
+           GALLERY CONTENT
+           ========================================================= */
 
-.gallery-section-heading h2 {
-    margin: 0;
+        .gallery-content {
+            position: relative;
 
-    font-family: "Anton", sans-serif;
+            width: 100%;
 
-    font-size: clamp(42px, 5vw, 65px);
+            padding: 60px 8%;
 
-    font-weight: 400;
+            background: var(--cream);
+        }
 
-    line-height: .9;
 
-    color: var(--black);
-}
+        .gallery-container {
+            width: 100%;
 
+            max-width: 1100px;
 
-.gallery-section-heading p {
-    width: 650px;
+            margin: 0 auto;
+        }
 
-    max-width: 100%;
 
-    margin: 16px 0 0;
+        /* =========================================================
+           GALLERY SECTION
+           ========================================================= */
 
-    font-family: "Be Vietnam Pro", sans-serif;
+        .gallery-section {
+            margin-bottom: 85px;
 
-    font-size: 13px;
+            text-align: center;
+        }
 
-    font-weight: 300;
 
-    line-height: 1.65;
+        .gallery-section:last-child {
+            margin-bottom: 20px;
+        }
 
-    color: var(--black);
-}
 
+        .gallery-section-heading {
+            width: 100%;
 
-/* =========================================================
-   SPECIAL AWARDS
-   ========================================================= */
+            margin: 0 auto 30px;
 
-.awards-grid {
-    display: grid;
+            text-align: center;
+        }
 
-    grid-template-columns: 1.4fr 1fr;
 
-    grid-template-rows: 240px 240px;
+        .gallery-section-label {
+            display: block;
 
-    gap: 12px;
+            margin-bottom: 8px;
 
-    width: 100%;
-}
+            font-family: "Be Vietnam Pro", sans-serif;
 
+            font-size: 9px;
 
-.award-item {
-    position: relative;
+            font-weight: 400;
 
-    overflow: hidden;
+            letter-spacing: 2px;
 
-    background: var(--black);
+            color: var(--red);
 
-    border: 2px solid var(--black);
+            text-align: center;
+        }
 
-    box-shadow: 8px 8px 0 var(--black);
 
-    cursor: pointer;
-}
+        .gallery-section-heading h2 {
+            margin: 0;
 
+            font-family: "Anton", sans-serif;
 
-.award-item:first-child {
-    grid-row: 1 / 3;
-}
+            font-size: clamp(42px, 5vw, 65px);
 
+            font-weight: 400;
 
-.award-item img {
-    width: 100%;
-    height: 100%;
+            line-height: .9;
 
-    display: block;
+            color: var(--black);
 
-    object-fit: cover;
+            text-align: center;
+        }
 
-    transition: transform .35s ease;
-}
 
+        .gallery-section-heading p {
+            width: 650px;
 
-.award-item:hover img {
-    transform: scale(1.04);
-}
+            max-width: 100%;
 
+            margin: 16px auto 0;
 
-.award-caption {
-    position: absolute;
+            font-family: "Be Vietnam Pro", sans-serif;
 
-    left: 0;
-    right: 0;
-    bottom: 0;
+            font-size: 13px;
 
-    padding: 14px 18px;
+            font-weight: 300;
 
-    background: rgba(34, 34, 34, .88);
+            line-height: 1.65;
 
-    color: white;
+            color: var(--black);
 
-    font-family: "Be Vietnam Pro", sans-serif;
+            text-align: center;
+        }
 
-    font-size: 10px;
 
-    letter-spacing: 1px;
+        /* =========================================================
+           SPECIAL AWARDS
+           ========================================================= */
 
-    text-transform: uppercase;
-}
+        .awards-grid {
+            display: grid;
 
+            grid-template-columns: 1.4fr 1fr;
 
-/* =========================================================
-   NORMAL GALLERY
-   ========================================================= */
+            grid-template-rows: 240px 240px;
 
-.gallery-grid {
-    display: grid;
+            gap: 12px;
 
-    grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+        }
 
-    gap: 12px;
 
-    width: 100%;
-}
+        .award-item {
+            position: relative;
 
+            overflow: hidden;
 
-.gallery-item {
-    position: relative;
+            background: var(--black);
 
-    aspect-ratio: 4 / 3;
+            border: 2px solid var(--black);
 
-    overflow: hidden;
+            box-shadow: 8px 8px 0 var(--black);
 
-    background: var(--black);
+            cursor: pointer;
+        }
 
-    border: 2px solid var(--black);
 
-    box-shadow: 6px 6px 0 var(--black);
+        .award-item:first-child {
+            grid-row: 1 / 3;
+        }
 
-    cursor: pointer;
-}
 
+        .award-item img {
+            width: 100%;
+            height: 100%;
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
+            display: block;
 
-    display: block;
+            object-fit: cover;
 
-    object-fit: cover;
+            transition: transform .35s ease;
+        }
 
-    transition:
-        transform .35s ease,
-        filter .35s ease;
-}
 
+        .award-item:hover img {
+            transform: scale(1.04);
+        }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
 
+        .award-caption {
+            position: absolute;
 
-.gallery-item::after {
-    content: "+";
+            left: 0;
+            right: 0;
+            bottom: 0;
 
-    position: absolute;
+            padding: 14px 18px;
 
-    right: 12px;
-    bottom: 10px;
+            background: rgba(34, 34, 34, .88);
 
-    width: 30px;
-    height: 30px;
+            color: white;
 
-    display: flex;
+            font-family: "Be Vietnam Pro", sans-serif;
 
-    align-items: center;
-    justify-content: center;
+            font-size: 10px;
 
-    border-radius: 50%;
+            letter-spacing: 1px;
 
-    background: var(--red);
+            text-transform: uppercase;
 
-    color: white;
+            text-align: left;
+        }
 
-    font-family: "Anton", sans-serif;
 
-    font-size: 18px;
+        /* =========================================================
+           NORMAL GALLERY
+           ========================================================= */
 
-    line-height: 1;
+        .gallery-grid {
+            display: grid;
 
-    opacity: 0;
+            grid-template-columns: repeat(3, 1fr);
 
-    transform: scale(.8);
+            gap: 12px;
 
-    transition: .2s ease;
-}
+            width: 100%;
+        }
 
 
-.gallery-item:hover::after {
-    opacity: 1;
+        .gallery-item {
+            position: relative;
 
-    transform: scale(1);
-}
+            aspect-ratio: 4 / 3;
 
+            overflow: hidden;
 
-/* =========================================================
-   PHOTO DOCUMENTATION
-   ========================================================= */
+            background: var(--black);
 
-.documentation-grid {
-    display: grid;
+            border: 2px solid var(--black);
 
-    grid-template-columns: repeat(2, 1fr);
+            box-shadow: 6px 6px 0 var(--black);
 
-    gap: 14px;
+            cursor: pointer;
+        }
 
-    width: 100%;
-}
 
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
 
-.documentation-item {
-    position: relative;
+            display: block;
 
-    overflow: hidden;
+            object-fit: cover;
 
-    background: var(--black);
+            transition:
+                transform .35s ease,
+                filter .35s ease;
+        }
 
-    border: 2px solid var(--black);
 
-    box-shadow: 7px 7px 0 var(--black);
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
 
-    cursor: pointer;
-}
 
+        .gallery-item::after {
+            content: "+";
 
-.documentation-item:nth-child(3n) {
-    grid-column: span 2;
-}
+            position: absolute;
 
+            right: 12px;
+            bottom: 10px;
 
-.documentation-item img {
-    width: 100%;
-    height: 280px;
+            width: 30px;
+            height: 30px;
 
-    display: block;
+            display: flex;
 
-    object-fit: cover;
+            align-items: center;
+            justify-content: center;
 
-    transition: transform .35s ease;
-}
+            border-radius: 50%;
 
+            background: var(--red);
 
-.documentation-item:nth-child(3n) img {
-    height: 360px;
-}
+            color: white;
 
+            font-family: "Anton", sans-serif;
 
-.documentation-item:hover img {
-    transform: scale(1.04);
-}
+            font-size: 18px;
 
+            line-height: 1;
 
-.documentation-caption {
-    position: absolute;
+            opacity: 0;
 
-    left: 0;
-    bottom: 0;
+            transform: scale(.8);
 
-    padding: 10px 14px;
+            transition: .2s ease;
+        }
 
-    background: var(--black);
 
-    color: white;
+        .gallery-item:hover::after {
+            opacity: 1;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+            transform: scale(1);
+        }
 
-    font-size: 9px;
 
-    letter-spacing: 1px;
+        /* =========================================================
+           PHOTO DOCUMENTATION
+           ========================================================= */
 
-    text-transform: uppercase;
-}
+        .documentation-grid {
+            display: grid;
 
+            grid-template-columns: repeat(2, 1fr);
 
-/* =========================================================
-   GALLERY DIVIDER
-   ========================================================= */
+            gap: 14px;
 
-.gallery-divider {
-    position: relative;
+            width: 100%;
+        }
 
-    width: 100%;
-    height: 55px;
 
-    background: var(--cream);
+        .documentation-item {
+            position: relative;
 
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
+            overflow: hidden;
 
-    overflow: hidden;
-}
+            background: var(--black);
 
+            border: 2px solid var(--black);
 
-.gallery-divider-stripes {
-    position: absolute;
+            box-shadow: 7px 7px 0 var(--black);
 
-    left: 0;
-    top: 0;
+            cursor: pointer;
+        }
 
-    width: 330px;
-    height: 55px;
 
-    display: flex;
+        .documentation-item:nth-child(3n) {
+            grid-column: span 2;
+        }
 
-    overflow: hidden;
-}
 
+        .documentation-item img {
+            width: 100%;
+            height: 280px;
 
-.gallery-divider-stripes span {
-    display: block;
+            display: block;
 
-    height: 55px;
+            object-fit: cover;
 
-    transform: skewX(-20deg);
+            transition: transform .35s ease;
+        }
 
-    transform-origin: top;
-}
 
+        .documentation-item:nth-child(3n) img {
+            height: 360px;
+        }
 
-.gallery-divider-stripes .stripe-yellow {
-    width: 135px;
 
-    background: var(--yellow);
-}
+        .documentation-item:hover img {
+            transform: scale(1.04);
+        }
 
 
-.gallery-divider-stripes .stripe-blue,
-.gallery-divider-stripes .stripe-red,
-.gallery-divider-stripes .stripe-black {
-    width: 75px;
-}
+        .documentation-caption {
+            position: absolute;
 
+            left: 0;
+            bottom: 0;
 
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
+            padding: 10px 14px;
 
-.gallery-lightbox {
-    position: fixed;
+            background: var(--black);
 
-    inset: 0;
+            color: white;
 
-    display: none;
+            font-family: "Be Vietnam Pro", sans-serif;
 
-    align-items: center;
-    justify-content: center;
+            font-size: 9px;
 
-    padding: 30px;
+            letter-spacing: 1px;
 
-    background: rgba(34, 34, 34, .94);
+            text-transform: uppercase;
+        }
 
-    z-index: 9999;
 
-    cursor: pointer;
-}
+        /* =========================================================
+           GALLERY DIVIDER
+           
+           IMPORTANT:
+           YELLOW → BLUE → RED → BLACK
 
+           This is intentionally different from the
+           TOP HEADER STRIPES.
+           ========================================================= */
 
-.gallery-lightbox.active {
-    display: flex;
-}
+        .gallery-divider {
+            position: relative;
 
+            width: 100%;
+            height: 55px;
 
-.gallery-lightbox img {
-    max-width: 92vw;
-    max-height: 88vh;
+            background: var(--cream);
 
-    object-fit: contain;
+            border-top: 2px solid var(--black);
+            border-bottom: 2px solid var(--black);
 
-    border: 2px solid white;
+            overflow: hidden;
+        }
 
-    box-shadow: 10px 10px 0 var(--red);
 
-    cursor: default;
-}
+        .gallery-divider-stripes {
+            position: absolute;
 
+            left: 0;
+            top: 0;
 
-.lightbox-close {
-    position: absolute;
+            width: 330px;
+            height: 55px;
 
-    top: 20px;
-    right: 25px;
+            display: flex;
 
-    width: 42px;
-    height: 42px;
+            overflow: hidden;
+        }
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+        .gallery-divider-stripes span {
+            display: block;
 
-    border: 2px solid white;
+            height: 55px;
 
-    border-radius: 50%;
+            transform: skewX(-20deg);
 
-    background: var(--red);
+            transform-origin: top;
+        }
 
-    color: white;
 
-    font-size: 25px;
+        .gallery-divider-stripes .stripe-yellow {
+            width: 135px;
 
-    line-height: 1;
+            background: var(--yellow);
+        }
 
-    cursor: pointer;
-}
 
+        .gallery-divider-stripes .stripe-blue,
+        .gallery-divider-stripes .stripe-red,
+        .gallery-divider-stripes .stripe-black {
+            width: 75px;
+        }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
 
-@media (max-width: 900px) {
+        .gallery-divider-stripes .stripe-blue {
+            background: var(--blue);
+        }
 
-    .gallery-hero {
-        min-height: 380px;
-    }
 
-    .gallery-hero-inner {
-        min-height: 380px;
+        .gallery-divider-stripes .stripe-red {
+            background: var(--red);
+        }
 
-        padding: 55px 6%;
-    }
 
-    .gallery-title h1 {
-        font-size: clamp(60px, 9vw, 100px);
-    }
+        .gallery-divider-stripes .stripe-black {
+            background: var(--black);
+        }
 
-    .gallery-intro {
-        width: 480px;
 
-        font-size: 13px;
-    }
+        /* =========================================================
+           LIGHTBOX
+           ========================================================= */
 
-    .gallery-content {
-        padding: 55px 6%;
-    }
+        .gallery-lightbox {
+            position: fixed;
 
-    .gallery-section {
-        margin-bottom: 70px;
-    }
+            inset: 0;
 
-    .awards-grid {
-        grid-template-rows: 210px 210px;
-    }
+            display: none;
 
-    .gallery-grid {
-        gap: 10px;
-    }
+            align-items: center;
+            justify-content: center;
 
-    .documentation-grid {
-        gap: 10px;
-    }
+            padding: 30px;
 
-    .documentation-item img {
-        height: 230px;
-    }
+            background: rgba(34, 34, 34, .94);
 
-    .documentation-item:nth-child(3n) img {
-        height: 300px;
-    }
+            z-index: 9999;
 
-}
+            cursor: pointer;
+        }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+        .gallery-lightbox.active {
+            display: flex;
+        }
 
-@media (max-width: 600px) {
 
-    /* =====================================================
-       GALLERY HERO
-       ===================================================== */
+        .gallery-lightbox img {
+            max-width: 92vw;
+            max-height: 88vh;
 
-    .gallery-hero {
-        min-height: 350px;
-    }
+            object-fit: contain;
 
-    .gallery-hero-inner {
-        min-height: 350px;
+            border: 2px solid white;
 
-        padding: 55px 25px;
+            box-shadow: 10px 10px 0 var(--red);
 
-        align-items: center;
-    }
+            cursor: default;
+        }
 
-    .gallery-label {
-        font-size: 8px;
 
-        letter-spacing: 1.5px;
-    }
+        .lightbox-close {
+            position: absolute;
 
-    .gallery-title h1 {
-        font-size: 54px;
+            top: 20px;
+            right: 25px;
 
-        line-height: .9;
-    }
+            width: 42px;
+            height: 42px;
 
-    .gallery-intro {
-        width: 100%;
+            display: flex;
 
-        margin-top: 18px;
+            align-items: center;
+            justify-content: center;
 
-        font-size: 10px;
+            border: 2px solid white;
 
-        line-height: 1.5;
-    }
+            border-radius: 50%;
 
+            background: var(--red);
 
-    /* =====================================================
-       CONTENT
-       ===================================================== */
+            color: white;
 
-    .gallery-content {
-        padding: 45px 25px;
-    }
+            font-size: 25px;
 
-    .gallery-section {
-        margin-bottom: 65px;
-    }
+            line-height: 1;
 
-    .gallery-section-heading {
-        margin-bottom: 25px;
-    }
+            cursor: pointer;
+        }
 
-    .gallery-section-label {
-        font-size: 8px;
 
-        letter-spacing: 1.5px;
-    }
+        /* =========================================================
+           TABLET
+           ========================================================= */
 
-    .gallery-section-heading h2 {
-        font-size: 42px;
+        @media (max-width: 900px) {
 
-        line-height: .92;
-    }
+            .gallery-hero {
+                min-height: 380px;
+            }
 
-    .gallery-section-heading p {
-        width: 100%;
 
-        margin-top: 13px;
+            .gallery-hero-inner {
+                min-height: 380px;
 
-        font-size: 10px;
+                padding: 55px 6%;
+            }
 
-        line-height: 1.55;
-    }
 
+            .gallery-title h1 {
+                font-size: clamp(60px, 9vw, 100px);
+            }
 
-    /* =====================================================
-       SPECIAL AWARDS
-       ===================================================== */
 
-    .awards-grid {
-        display: grid;
+            .gallery-intro {
+                width: 480px;
 
-        grid-template-columns: 1fr;
+                font-size: 13px;
+            }
 
-        grid-template-rows: none;
 
-        gap: 12px;
-    }
+            .gallery-content {
+                padding: 55px 6%;
+            }
 
-    .award-item:first-child {
-        grid-row: auto;
-    }
 
-    .award-item {
-        aspect-ratio: 4 / 3;
+            .gallery-section {
+                margin-bottom: 70px;
+            }
 
-        box-shadow: 5px 5px 0 var(--black);
-    }
 
+            .awards-grid {
+                grid-template-rows: 210px 210px;
+            }
 
-    /* =====================================================
-       GALLERY GRID
-       ===================================================== */
 
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
+            .gallery-grid {
+                gap: 10px;
+            }
 
-        gap: 9px;
-    }
 
-    .gallery-item {
-        box-shadow: 4px 4px 0 var(--black);
+            .documentation-grid {
+                gap: 10px;
+            }
 
-        border-width: 1px;
-    }
 
-    .gallery-item::after {
-        width: 24px;
-        height: 24px;
+            .documentation-item img {
+                height: 230px;
+            }
 
-        right: 7px;
-        bottom: 7px;
 
-        font-size: 15px;
+            .documentation-item:nth-child(3n) img {
+                height: 300px;
+            }
 
-        opacity: 1;
+        }
 
-        transform: scale(.9);
-    }
 
+        /* =========================================================
+           MOBILE
+           ========================================================= */
 
-    /* =====================================================
-       DOCUMENTATION
-       ===================================================== */
+        @media (max-width: 600px) {
 
-    .documentation-grid {
-        grid-template-columns: 1fr;
+            /* =====================================================
+               HEADER STRIPES
+               ===================================================== */
 
-        gap: 12px;
-    }
+            .gallery-page .top-stripes {
+                height: 100%;
+            }
 
-    .documentation-item:nth-child(3n) {
-        grid-column: auto;
-    }
 
-    .documentation-item img,
-    .documentation-item:nth-child(3n) img {
-        height: 240px;
-    }
+            .gallery-page .top-stripes span {
+                flex: 1 1 25%;
+            }
 
-    .documentation-item {
-        box-shadow: 5px 5px 0 var(--black);
-    }
 
+            /* =====================================================
+               HERO
+               ===================================================== */
 
-    /* =====================================================
-       DIVIDER
-       ===================================================== */
+            .gallery-hero {
+                min-height: 350px;
 
-    .gallery-divider {
-        height: 50px;
-    }
+                text-align: center;
+            }
 
-    .gallery-divider-stripes {
-        width: 230px;
 
-        height: 50px;
-    }
+            .gallery-hero-inner {
+                min-height: 350px;
 
-    .gallery-divider-stripes span {
-        height: 50px;
-    }
+                padding: 55px 25px;
 
-    .gallery-divider-stripes .stripe-yellow {
-        width: 95px;
-    }
+                align-items: center;
+                justify-content: center;
 
-    .gallery-divider-stripes .stripe-blue,
-    .gallery-divider-stripes .stripe-red,
-    .gallery-divider-stripes .stripe-black {
-        width: 55px;
-    }
+                text-align: center;
+            }
 
 
-    /* =====================================================
-       LIGHTBOX
-       ===================================================== */
+            .gallery-title {
+                text-align: center;
+            }
 
-    .gallery-lightbox {
-        padding: 18px;
-    }
 
-    .gallery-lightbox img {
-        max-width: 94vw;
-        max-height: 80vh;
+            .gallery-label {
+                font-size: 8px;
 
-        box-shadow: 6px 6px 0 var(--red);
-    }
+                letter-spacing: 1.5px;
 
-    .lightbox-close {
-        top: 12px;
-        right: 14px;
+                text-align: center;
+            }
 
-        width: 36px;
-        height: 36px;
 
-        font-size: 21px;
-    }
+            .gallery-title h1 {
+                font-size: 54px;
 
-}
+                line-height: .9;
 
+                text-align: center;
+            }
 
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
 
-@media (max-width: 380px) {
+            .gallery-intro {
+                width: 100%;
 
-    .gallery-hero {
-        min-height: 320px;
-    }
+                margin-top: 18px;
 
-    .gallery-hero-inner {
-        min-height: 320px;
+                font-size: 10px;
 
-        padding: 45px 20px;
-    }
+                line-height: 1.5;
 
-    .gallery-title h1 {
-        font-size: 46px;
-    }
+                text-align: center;
+            }
 
-    .gallery-intro {
-        font-size: 9px;
-    }
 
-    .gallery-content {
-        padding: 35px 20px;
-    }
+            /* =====================================================
+               CONTENT
+               ===================================================== */
 
-    .gallery-section-heading h2 {
-        font-size: 36px;
-    }
+            .gallery-content {
+                padding: 45px 25px;
+            }
 
-    .gallery-section-heading p {
-        font-size: 9px;
-    }
 
-    .gallery-grid {
-        gap: 7px;
-    }
+            .gallery-section {
+                margin-bottom: 65px;
 
-    .awards-grid {
-        gap: 9px;
-    }
+                text-align: center;
+            }
 
-    .award-item {
-        box-shadow: 4px 4px 0 var(--black);
-    }
 
-    .documentation-grid {
-        gap: 9px;
-    }
+            .gallery-section-heading {
+                margin-bottom: 25px;
 
-    .documentation-item img,
-    .documentation-item:nth-child(3n) img {
-        height: 205px;
-    }
+                text-align: center;
+            }
 
-}
 
+            .gallery-section-label {
+                font-size: 8px;
 
-/* =========================================================
-   FINAL GALLERY HEADER
-   RED BRAND → BLUE → BLACK
-   ========================================================= */
+                letter-spacing: 1.5px;
 
-.gallery-page .brand-yellow {
-    background: var(--red) !important;
-}
+                text-align: center;
+            }
 
-.gallery-page .top-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
 
-.gallery-page .top-stripes .stripe-red {
-    background: var(--blue) !important;
-}
+            .gallery-section-heading h2 {
+                font-size: 42px;
 
-.gallery-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
+                line-height: .92;
 
-</style>
+                text-align: center;
+            }
+
+
+            .gallery-section-heading p {
+                width: 100%;
+
+                margin-top: 13px;
+
+                font-size: 10px;
+
+                line-height: 1.55;
+
+                text-align: center;
+            }
+
+
+            /* =====================================================
+               SPECIAL AWARDS
+               ===================================================== */
+
+            .awards-grid {
+                display: grid;
+
+                grid-template-columns: 1fr;
+
+                grid-template-rows: none;
+
+                gap: 12px;
+            }
+
+
+            .award-item:first-child {
+                grid-row: auto;
+            }
+
+
+            .award-item {
+                aspect-ratio: 4 / 3;
+
+                box-shadow: 5px 5px 0 var(--black);
+            }
+
+
+            /* =====================================================
+               GALLERY GRID
+               ===================================================== */
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 9px;
+            }
+
+
+            .gallery-item {
+                box-shadow: 4px 4px 0 var(--black);
+
+                border-width: 1px;
+            }
+
+
+            .gallery-item::after {
+                width: 24px;
+                height: 24px;
+
+                right: 7px;
+                bottom: 7px;
+
+                font-size: 15px;
+
+                opacity: 1;
+
+                transform: scale(.9);
+            }
+
+
+            /* =====================================================
+               DOCUMENTATION
+               ===================================================== */
+
+            .documentation-grid {
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+            }
+
+
+            .documentation-item:nth-child(3n) {
+                grid-column: auto;
+            }
+
+
+            .documentation-item img,
+            .documentation-item:nth-child(3n) img {
+                height: 240px;
+            }
+
+
+            .documentation-item {
+                box-shadow: 5px 5px 0 var(--black);
+            }
+
+
+            /* =====================================================
+               DIVIDER
+               ===================================================== */
+
+            .gallery-divider {
+                height: 50px;
+            }
+
+
+            .gallery-divider-stripes {
+                width: 230px;
+
+                height: 50px;
+            }
+
+
+            .gallery-divider-stripes span {
+                height: 50px;
+            }
+
+
+            .gallery-divider-stripes .stripe-yellow {
+                width: 95px;
+            }
+
+
+            .gallery-divider-stripes .stripe-blue,
+            .gallery-divider-stripes .stripe-red,
+            .gallery-divider-stripes .stripe-black {
+                width: 55px;
+            }
+
+
+            /* =====================================================
+               LIGHTBOX
+               ===================================================== */
+
+            .gallery-lightbox {
+                padding: 18px;
+            }
+
+
+            .gallery-lightbox img {
+                max-width: 94vw;
+                max-height: 80vh;
+
+                box-shadow: 6px 6px 0 var(--red);
+            }
+
+
+            .lightbox-close {
+                top: 12px;
+                right: 14px;
+
+                width: 36px;
+                height: 36px;
+
+                font-size: 21px;
+            }
+
+        }
+
+
+        /* =========================================================
+           VERY SMALL PHONES
+           ========================================================= */
+
+        @media (max-width: 380px) {
+
+            .gallery-hero {
+                min-height: 320px;
+            }
+
+
+            .gallery-hero-inner {
+                min-height: 320px;
+
+                padding: 45px 20px;
+            }
+
+
+            .gallery-title h1 {
+                font-size: 46px;
+            }
+
+
+            .gallery-intro {
+                font-size: 9px;
+            }
+
+
+            .gallery-content {
+                padding: 35px 20px;
+            }
+
+
+            .gallery-section-heading h2 {
+                font-size: 36px;
+            }
+
+
+            .gallery-section-heading p {
+                font-size: 9px;
+            }
+
+
+            .gallery-grid {
+                gap: 7px;
+            }
+
+
+            .awards-grid {
+                gap: 9px;
+            }
+
+
+            .award-item {
+                box-shadow: 4px 4px 0 var(--black);
+            }
+
+
+            .documentation-grid {
+                gap: 9px;
+            }
+
+
+            .documentation-item img,
+            .documentation-item:nth-child(3n) img {
+                height: 205px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -1015,31 +1169,534 @@
 <body class="gallery-page">
 
 
-<!-- =========================================================
-     HEADER
-     ========================================================= -->
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
 
-<header class="site-header">
+    <header class="site-header">
 
-    <div class="brand-area">
-
-        <!-- RED BRAND BLOCK -->
-        <div class="brand-yellow"></div>
+        <div class="brand-area">
 
 
-        <!-- WHITE LOGO -->
-        <a href="index.html"
-           class="logo-link">
+            <!-- RED BRAND BLOCK -->
 
-            <img src="images/whitelogo.png"
-                 alt="Talakbay Logo"
-                 class="logo">
-
-        </a>
+            <div class="brand-yellow"></div>
 
 
-        <!-- TOP STRIPES -->
-        <div class="top-stripes">
+            <!-- WHITE LOGO -->
+
+            <a href="index.html"
+               class="logo-link">
+
+                <img src="images/whitelogo.png"
+                     alt="Talakbay Logo"
+                     class="logo">
+
+            </a>
+
+
+            <!-- =================================================
+                 TOP STRIPES
+
+                 RED → YELLOW → BLUE → BLACK
+                 ================================================= -->
+
+            <div class="top-stripes">
+
+                <span class="stripe-red"></span>
+
+                <span class="stripe-yellow"></span>
+
+                <span class="stripe-blue"></span>
+
+                <span class="stripe-black"></span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =====================================================
+             DESKTOP NAVIGATION
+             ===================================================== -->
+
+        <nav class="main-navigation"
+             id="mainNavigation">
+
+
+            <a href="index.html"
+               class="nav-btn nav-home">
+
+                HOME
+
+            </a>
+
+
+            <a href="resources.html"
+               class="nav-btn nav-resources">
+
+                RESOURCES
+
+            </a>
+
+
+            <a href="gallery.html"
+               class="nav-btn nav-gallery active">
+
+                GALLERY
+
+            </a>
+
+
+            <a href="#"
+               class="nav-btn nav-contact"
+               data-toggle="modal"
+               data-target="#contactModal">
+
+                CONTACT
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- =====================================================
+             MOBILE MENU
+             ===================================================== -->
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+    </header>
+
+
+
+    <!-- =========================================================
+         GALLERY HERO
+         ========================================================= -->
+
+    <section class="gallery-hero">
+
+
+        <div class="gallery-hero-bg"></div>
+
+
+        <div class="gallery-hero-inner">
+
+            <div class="gallery-title">
+
+
+                <p class="gallery-label">
+
+                    TALAKBAY PROJECT ARCHIVE
+
+                </p>
+
+
+                <h1>
+
+                    GALLERY
+
+                </h1>
+
+
+                <p class="gallery-intro">
+
+                    Explore selected works, special awards, and
+                    photographic documentation from the Talakbay
+                    Structured Photowalk Program.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================================
+         GALLERY CONTENT
+         ========================================================= -->
+
+    <main class="gallery-content">
+
+        <div class="gallery-container">
+
+
+            <!-- =================================================
+                 SPECIAL AWARDS
+                 ================================================= -->
+
+            <section class="gallery-section">
+
+
+                <div class="gallery-section-heading">
+
+
+                    <span class="gallery-section-label">
+
+                        RECOGNITION
+
+                    </span>
+
+
+                    <h2>
+
+                        SPECIAL AWARDS
+
+                    </h2>
+
+
+                    <p>
+
+                        Recognized photographs and outstanding works
+                        created by participants of the Talakbay
+                        Structured Photowalk Program.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="awards-grid">
+
+
+                    <article class="award-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise side view.png"
+                             alt="Special Award photograph 1"
+                             loading="lazy">
+
+                        <div class="award-caption">
+
+                            Special Award 01
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="award-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise top view.png"
+                             alt="Special Award photograph 2"
+                             loading="lazy">
+
+                        <div class="award-caption">
+
+                            Special Award 02
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="award-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise.png"
+                             alt="Special Award photograph 3"
+                             loading="lazy">
+
+                        <div class="award-caption">
+
+                            Special Award 03
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SAMPLE WORKS
+                 ================================================= -->
+
+            <section class="gallery-section">
+
+
+                <div class="gallery-section-heading">
+
+
+                    <span class="gallery-section-label">
+
+                        FEATURED WORKS
+
+                    </span>
+
+
+                    <h2>
+
+                        GALLERY
+
+                    </h2>
+
+
+                    <p>
+
+                        Explore sample works and photographs from
+                        the Talakbay project.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+
+                    <article class="gallery-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise side view.png"
+                             alt="Gallery Sample 1"
+                             loading="lazy">
+
+                    </article>
+
+
+                    <article class="gallery-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise top view.png"
+                             alt="Gallery Sample 2"
+                             loading="lazy">
+
+                    </article>
+
+
+                    <article class="gallery-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise.png"
+                             alt="Gallery Sample 3"
+                             loading="lazy">
+
+                    </article>
+
+
+                    <article class="gallery-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise side view.png"
+                             alt="Gallery Sample 4"
+                             loading="lazy">
+
+                    </article>
+
+
+                    <article class="gallery-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise top view.png"
+                             alt="Gallery Sample 5"
+                             loading="lazy">
+
+                    </article>
+
+
+                    <article class="gallery-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise.png"
+                             alt="Gallery Sample 6"
+                             loading="lazy">
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PHOTO DOCUMENTATION
+                 ================================================= -->
+
+            <section class="gallery-section">
+
+
+                <div class="gallery-section-heading">
+
+
+                    <span class="gallery-section-label">
+
+                        PROJECT RECORD
+
+                    </span>
+
+
+                    <h2>
+
+                        PHOTO DOCUMENTATION
+
+                    </h2>
+
+
+                    <p>
+
+                        Photos documenting the activities, participants,
+                        and experiences during the Structured Photowalk
+                        Program.
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="documentation-grid">
+
+
+                    <article class="documentation-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise side view.png"
+                             alt="Photo Documentation 1"
+                             loading="lazy">
+
+                        <div class="documentation-caption">
+
+                            Photowalk Documentation 01
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="documentation-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise top view.png"
+                             alt="Photo Documentation 2"
+                             loading="lazy">
+
+                        <div class="documentation-caption">
+
+                            Photowalk Documentation 02
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="documentation-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise.png"
+                             alt="Photo Documentation 3"
+                             loading="lazy">
+
+                        <div class="documentation-caption">
+
+                            Photowalk Documentation 03
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="documentation-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise side view.png"
+                             alt="Photo Documentation 4"
+                             loading="lazy">
+
+                        <div class="documentation-caption">
+
+                            Photowalk Documentation 04
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="documentation-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise top view.png"
+                             alt="Photo Documentation 5"
+                             loading="lazy">
+
+                        <div class="documentation-caption">
+
+                            Photowalk Documentation 05
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="documentation-item"
+                             onclick="openGalleryImage(this)">
+
+                        <img src="images/dungeon revise.png"
+                             alt="Photo Documentation 6"
+                             loading="lazy">
+
+                        <div class="documentation-caption">
+
+                            Photowalk Documentation 06
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         DIVIDER
+         
+         YELLOW → BLUE → RED → BLACK
+
+         DO NOT CONFUSE WITH HEADER STRIPES.
+         ========================================================= -->
+
+    <section class="gallery-divider">
+
+
+        <div class="gallery-divider-stripes">
+
+            <span class="stripe-yellow"></span>
 
             <span class="stripe-blue"></span>
 
@@ -1049,746 +1706,448 @@
 
         </div>
 
-    </div>
-
-
-    <!-- DESKTOP NAVIGATION -->
-
-    <nav class="main-navigation"
-         id="mainNavigation">
-
-        <a href="index.html"
-           class="nav-btn nav-home">
-
-            HOME
-
-        </a>
-
-
-        <a href="resources.html"
-           class="nav-btn nav-resources">
-
-            RESOURCES
-
-        </a>
-
-
-        <a href="gallery.html"
-           class="nav-btn nav-gallery active">
-
-            GALLERY
-
-        </a>
-
-
-        <a href="#"
-           class="nav-btn nav-contact"
-           data-toggle="modal"
-           data-target="#contactModal">
-
-            CONTACT
-
-        </a>
-
-    </nav>
-
-
-    <!-- MOBILE MENU -->
-
-    <button class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false">
-
-        ☰
-
-    </button>
-
-</header>
-
-
-<!-- =========================================================
-     GALLERY HERO
-     ========================================================= -->
-
-<section class="gallery-hero">
-
-    <div class="gallery-hero-bg"></div>
-
-
-    <div class="gallery-hero-inner">
-
-        <div class="gallery-title">
-
-            <p class="gallery-label">
-                TALAKBAY PROJECT ARCHIVE
-            </p>
-
-
-            <h1>
-                GALLERY
-            </h1>
-
-
-            <p class="gallery-intro">
-                Explore selected works, special awards, and
-                photographic documentation from the Talakbay
-                Structured Photowalk Program.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     GALLERY CONTENT
-     ========================================================= -->
-
-<main class="gallery-content">
-
-<div class="gallery-container">
-
-
-    <!-- =====================================================
-         SPECIAL AWARDS
-         ===================================================== -->
-
-    <section class="gallery-section">
-
-        <div class="gallery-section-heading">
-
-            <span class="gallery-section-label">
-                RECOGNITION
-            </span>
-
-            <h2>
-                SPECIAL AWARDS
-            </h2>
-
-            <p>
-                Recognized photographs and outstanding works
-                created by participants of the Talakbay
-                Structured Photowalk Program.
-            </p>
-
-        </div>
-
-
-        <div class="awards-grid">
-
-
-            <article class="award-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise side view.png"
-                     alt="Special Award photograph 1"
-                     loading="lazy">
-
-                <div class="award-caption">
-                    Special Award 01
-                </div>
-
-            </article>
-
-
-            <article class="award-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise top view.png"
-                     alt="Special Award photograph 2"
-                     loading="lazy">
-
-                <div class="award-caption">
-                    Special Award 02
-                </div>
-
-            </article>
-
-
-            <article class="award-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise.png"
-                     alt="Special Award photograph 3"
-                     loading="lazy">
-
-                <div class="award-caption">
-                    Special Award 03
-                </div>
-
-            </article>
-
-
-        </div>
 
     </section>
 
 
 
-    <!-- =====================================================
-         SAMPLE WORKS
-         ===================================================== -->
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
 
-    <section class="gallery-section">
+    <footer class="site-footer">
 
-        <div class="gallery-section-heading">
 
-            <span class="gallery-section-label">
-                FEATURED WORKS
-            </span>
+        <p>
 
-            <h2>
-                GALLERY
-            </h2>
+            <strong>Talakbay</strong>
 
-            <p>
-                Explore sample works and photographs from
-                the Talakbay project.
-            </p>
+            <br>
 
-        </div>
+            A Cinematic Instructional Video and
+            Structured Photowalk Program
 
+        </p>
 
-        <div class="gallery-grid">
-
-
-            <article class="gallery-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise side view.png"
-                     alt="Gallery Sample 1"
-                     loading="lazy">
-
-            </article>
-
-
-            <article class="gallery-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise top view.png"
-                     alt="Gallery Sample 2"
-                     loading="lazy">
-
-            </article>
-
-
-            <article class="gallery-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise.png"
-                     alt="Gallery Sample 3"
-                     loading="lazy">
-
-            </article>
-
-
-            <article class="gallery-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise side view.png"
-                     alt="Gallery Sample 4"
-                     loading="lazy">
-
-            </article>
-
-
-            <article class="gallery-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise top view.png"
-                     alt="Gallery Sample 5"
-                     loading="lazy">
-
-            </article>
-
-
-            <article class="gallery-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise.png"
-                     alt="Gallery Sample 6"
-                     loading="lazy">
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         PHOTO DOCUMENTATION
-         ===================================================== -->
-
-    <section class="gallery-section">
-
-        <div class="gallery-section-heading">
-
-            <span class="gallery-section-label">
-                PROJECT RECORD
-            </span>
-
-            <h2>
-                PHOTO DOCUMENTATION
-            </h2>
-
-            <p>
-                Photos documenting the activities, participants,
-                and experiences during the Structured Photowalk
-                Program.
-            </p>
-
-        </div>
-
-
-        <div class="documentation-grid">
-
-
-            <article class="documentation-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise side view.png"
-                     alt="Photo Documentation 1"
-                     loading="lazy">
-
-                <div class="documentation-caption">
-                    Photowalk Documentation 01
-                </div>
-
-            </article>
-
-
-            <article class="documentation-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise top view.png"
-                     alt="Photo Documentation 2"
-                     loading="lazy">
-
-                <div class="documentation-caption">
-                    Photowalk Documentation 02
-                </div>
-
-            </article>
-
-
-            <article class="documentation-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise.png"
-                     alt="Photo Documentation 3"
-                     loading="lazy">
-
-                <div class="documentation-caption">
-                    Photowalk Documentation 03
-                </div>
-
-            </article>
-
-
-            <article class="documentation-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise side view.png"
-                     alt="Photo Documentation 4"
-                     loading="lazy">
-
-                <div class="documentation-caption">
-                    Photowalk Documentation 04
-                </div>
-
-            </article>
-
-
-            <article class="documentation-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise top view.png"
-                     alt="Photo Documentation 5"
-                     loading="lazy">
-
-                <div class="documentation-caption">
-                    Photowalk Documentation 05
-                </div>
-
-            </article>
-
-
-            <article class="documentation-item"
-                     onclick="openGalleryImage(this)">
-
-                <img src="images/dungeon revise.png"
-                     alt="Photo Documentation 6"
-                     loading="lazy">
-
-                <div class="documentation-caption">
-                    Photowalk Documentation 06
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-</div>
-
-</main>
-
-
-<!-- =========================================================
-     DIVIDER
-     YELLOW → BLUE → RED → BLACK
-     ========================================================= -->
-
-<section class="gallery-divider">
-
-    <div class="gallery-divider-stripes">
-
-        <span class="stripe-yellow"></span>
-
-        <span class="stripe-blue"></span>
-
-        <span class="stripe-red"></span>
-
-        <span class="stripe-black"></span>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
-
-<footer class="site-footer">
-
-    <p>
-
-        <strong>Talakbay</strong>
 
         <br>
 
-        A Cinematic Instructional Video and
-        Structured Photowalk Program
 
-    </p>
+        <p>
 
-    <br>
+            <a href="index.html">
+                Home
+            </a>
 
-    <p>
+            |
 
-        <a href="index.html">
-            Home
-        </a>
+            <a href="resources.html">
+                Resources
+            </a>
 
-        |
+            |
 
-        <a href="resources.html">
-            Resources
-        </a>
+            <a href="gallery.html">
+                Gallery
+            </a>
 
-        |
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-    </p>
-
-    <br>
-
-    <p>
-
-        © 2026 Gotcha! Productions
-
-    </p>
-
-</footer>
+        </p>
 
 
-<!-- =========================================================
-     CONTACT MODAL
-     ========================================================= -->
-
-<div class="modal fade"
-     id="contactModal"
-     tabindex="-1"
-     aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content">
+        <br>
 
 
-            <div class="modal-header">
+        <p>
 
-                <h5 class="modal-title">
-                    Contact Us
-                </h5>
+            © 2026 Gotcha! Productions
 
-                <button type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close">
-
-                    <span>
-                        &times;
-                    </span>
-
-                </button>
-
-            </div>
+        </p>
 
 
-            <div class="modal-body">
-
-                <p>
-                    <strong>
-                        Gotcha! Productions
-                    </strong>
-                </p>
-
-                <p>
-                    📧 gotchaproductions@gmail.com
-                </p>
-
-                <p>
-                    📱 +63 916 426 0418
-                </p>
-
-            </div>
+    </footer>
 
 
-            <div class="modal-footer">
 
-                <button type="button"
-                        class="btn btn-secondary"
-                        data-dismiss="modal">
+    <!-- =========================================================
+         CONTACT MODAL
+         ========================================================= -->
 
-                    Close
+    <div class="modal fade"
+         id="contactModal"
+         tabindex="-1"
+         aria-hidden="true">
 
-                </button>
+
+        <div class="modal-dialog modal-dialog-centered">
+
+
+            <div class="modal-content">
+
+
+                <div class="modal-header">
+
+
+                    <h5 class="modal-title">
+
+                        Contact Us
+
+                    </h5>
+
+
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+
+                        <span>
+
+                            &times;
+
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+                <div class="modal-body">
+
+
+                    <p>
+
+                        <strong>
+
+                            Gotcha! Productions
+
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        📧 gotchaproductions@gmail.com
+
+                    </p>
+
+
+                    <p>
+
+                        📱 +63 916 426 0418
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="modal-footer">
+
+
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal">
+
+                        Close
+
+                    </button>
+
+
+                </div>
+
 
             </div>
 
 
         </div>
 
+
     </div>
 
-</div>
 
 
-<!-- =========================================================
-     LIGHTBOX
-     ========================================================= -->
+    <!-- =========================================================
+         LIGHTBOX
+         ========================================================= -->
 
-<div class="gallery-lightbox"
-     id="galleryLightbox"
-     onclick="closeGalleryImage(event)">
+    <div class="gallery-lightbox"
+         id="galleryLightbox"
+         onclick="closeGalleryImage(event)">
 
-    <button class="lightbox-close"
-            type="button"
-            aria-label="Close image">
 
-        &times;
+        <button class="lightbox-close"
+                type="button"
+                aria-label="Close image">
 
-    </button>
+            &times;
 
+        </button>
 
-    <img id="lightboxImage"
-         src=""
-         alt="Expanded gallery image">
 
-</div>
+        <img id="lightboxImage"
+             src=""
+             alt="Expanded gallery image">
 
 
-<!-- =========================================================
-     AUDIO
-     ========================================================= -->
+    </div>
 
-<audio id="clickSound"
-        src="sounds/click1.mp3"
-        preload="auto">
-</audio>
 
 
-<!-- =========================================================
-     BOOTSTRAP
-     ========================================================= -->
+    <!-- =========================================================
+         AUDIO
+         ========================================================= -->
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <audio id="clickSound"
+            src="sounds/click1.mp3"
+            preload="auto">
+    </audio>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-<!-- =========================================================
-     EXISTING WEBSITE SCRIPT
-     ========================================================= -->
+    <!-- =========================================================
+         BOOTSTRAP
+         ========================================================= -->
 
-<script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- =========================================================
-     GALLERY SCRIPT
-     ========================================================= -->
 
-<script>
 
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
+    <!-- =========================================================
+         EXISTING WEBSITE SCRIPT
+         ========================================================= -->
 
-const menuToggle = document.getElementById("menuToggle");
-const mainNavigation = document.getElementById("mainNavigation");
+    <script src="script.js"></script>
 
-if (menuToggle && mainNavigation) {
 
-    menuToggle.addEventListener("click", function () {
 
-        mainNavigation.classList.toggle("active");
+    <!-- =========================================================
+         GALLERY SCRIPT
+         ========================================================= -->
 
-        const isOpen =
-            mainNavigation.classList.contains("active");
+    <script>
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen ? "true" : "false"
-        );
 
-    });
+        /* =========================================================
+           MOBILE MENU
+           ========================================================= */
 
+        const menuToggle =
+            document.getElementById("menuToggle");
 
-    /*
-       Close menu when clicking a navigation link.
-    */
+        const mainNavigation =
+            document.getElementById("mainNavigation");
 
-    mainNavigation
-        .querySelectorAll("a")
-        .forEach(function(link) {
 
-            link.addEventListener("click", function() {
+        if (menuToggle && mainNavigation) {
 
-                mainNavigation.classList.remove("active");
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+            menuToggle.addEventListener(
+                "click",
+                function () {
 
-            });
 
-        });
+                    mainNavigation.classList.toggle("active");
 
-}
 
+                    const isOpen =
+                        mainNavigation.classList.contains("active");
 
-/* =========================================================
-   GALLERY LIGHTBOX
-   ========================================================= */
 
-function openGalleryImage(item) {
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        isOpen ? "true" : "false"
+                    );
 
-    const image = item.querySelector("img");
 
-    if (!image) {
-        return;
-    }
+                }
+            );
 
-    const lightbox =
-        document.getElementById("galleryLightbox");
 
-    const lightboxImage =
-        document.getElementById("lightboxImage");
+            /*
+             * Close menu after clicking a navigation link.
+             */
 
-    lightboxImage.src = image.src;
+            mainNavigation
+                .querySelectorAll("a")
+                .forEach(function(link) {
 
-    lightboxImage.alt = image.alt;
 
-    lightbox.classList.add("active");
+                    link.addEventListener(
+                        "click",
+                        function() {
 
-    document.body.style.overflow = "hidden";
 
-}
+                            mainNavigation.classList.remove(
+                                "active"
+                            );
 
 
-/* =========================================================
-   CLOSE LIGHTBOX
-   ========================================================= */
+                            menuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
 
-function closeGalleryImage(event) {
 
-    /*
-       Do not close when clicking the actual image.
-    */
+                        }
+                    );
 
-    if (
-        event.target.id === "lightboxImage"
-    ) {
-        return;
-    }
 
+                });
 
-    const lightbox =
-        document.getElementById("galleryLightbox");
 
-    lightbox.classList.remove("active");
+        }
 
-    document.getElementById(
-        "lightboxImage"
-    ).src = "";
 
-    document.body.style.overflow = "";
 
-}
+        /* =========================================================
+           GALLERY LIGHTBOX
+           ========================================================= */
 
+        function openGalleryImage(item) {
 
-/* =========================================================
-   ESCAPE KEY
-   ========================================================= */
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+            const image =
+                item.querySelector("img");
 
-        if (event.key === "Escape") {
+
+            if (!image) {
+                return;
+            }
+
 
             const lightbox =
                 document.getElementById(
                     "galleryLightbox"
                 );
 
-            if (
-                lightbox &&
-                lightbox.classList.contains("active")
-            ) {
 
-                lightbox.classList.remove("active");
-
+            const lightboxImage =
                 document.getElementById(
                     "lightboxImage"
-                ).src = "";
+                );
 
-                document.body.style.overflow = "";
 
-            }
+            lightboxImage.src =
+                image.src;
+
+
+            lightboxImage.alt =
+                image.alt;
+
+
+            lightbox.classList.add(
+                "active"
+            );
+
+
+            document.body.style.overflow =
+                "hidden";
+
 
         }
 
-    }
-);
 
-</script>
+
+        /* =========================================================
+           CLOSE LIGHTBOX
+           ========================================================= */
+
+        function closeGalleryImage(event) {
+
+
+            /*
+             * Do not close when clicking
+             * the actual image.
+             */
+
+            if (
+                event.target.id ===
+                "lightboxImage"
+            ) {
+
+                return;
+
+            }
+
+
+            const lightbox =
+                document.getElementById(
+                    "galleryLightbox"
+                );
+
+
+            lightbox.classList.remove(
+                "active"
+            );
+
+
+            document.getElementById(
+                "lightboxImage"
+            ).src = "";
+
+
+            document.body.style.overflow =
+                "";
+
+
+        }
+
+
+
+        /* =========================================================
+           ESCAPE KEY
+           ========================================================= */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+
+                if (event.key === "Escape") {
+
+
+                    const lightbox =
+                        document.getElementById(
+                            "galleryLightbox"
+                        );
+
+
+                    if (
+                        lightbox &&
+                        lightbox.classList.contains(
+                            "active"
+                        )
+                    ) {
+
+
+                        lightbox.classList.remove(
+                            "active"
+                        );
+
+
+                        document.getElementById(
+                            "lightboxImage"
+                        ).src = "";
+
+
+                        document.body.style.overflow =
+                            "";
+
+
+                    }
+
+
+                }
+
+
+            }
+        );
+
+
+    </script>
 
 
 </body>
