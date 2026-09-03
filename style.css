@@ -2681,3 +2681,468 @@ a:hover {
         -webkit-user-select: none;
     }
 }
+
+/* =========================================================
+   GALLERY PAGE
+   RED → YELLOW → BLUE → BLACK HEADER
+========================================================= */
+
+.gallery-page .brand-yellow {
+    background: var(--red) !important;
+}
+
+/* Override the existing three-stripe setup so Gallery can use
+   RED → YELLOW → BLUE → BLACK when the HTML includes 4 spans. */
+.gallery-page .top-stripes {
+    left: 145px;
+    display: flex;
+    overflow: visible;
+}
+
+.gallery-page .top-stripes span {
+    transform: skewX(-20deg);
+    transform-origin: top left;
+}
+
+.gallery-page .top-stripes .stripe-red {
+    background: var(--red) !important;
+}
+
+.gallery-page .top-stripes .stripe-yellow {
+    background: var(--yellow) !important;
+}
+
+.gallery-page .top-stripes .stripe-blue {
+    background: var(--blue) !important;
+}
+
+.gallery-page .top-stripes .stripe-black {
+    background: var(--black) !important;
+}
+
+
+/* =========================================================
+   GALLERY HERO
+========================================================= */
+
+.gallery-hero {
+    position: relative;
+    width: 100%;
+    min-height: 430px;
+    overflow: hidden;
+    background: var(--cream);
+    border-bottom: 1px solid var(--black);
+}
+
+.gallery-bg {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 244, 230, .88),
+            rgba(255, 244, 230, .88)
+        ),
+        url("images/photowalk.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: .45;
+    z-index: 0;
+}
+
+.gallery-hero-inner {
+    position: relative;
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 8%;
+    text-align: center;
+
+    z-index: 2;
+}
+
+.gallery-title {
+    width: 100%;
+    max-width: 900px;
+}
+
+.gallery-title h1 {
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+    font-size: clamp(70px, 9vw, 120px);
+    font-weight: 400;
+    line-height: .86;
+    letter-spacing: .5px;
+
+    color: var(--black);
+    text-align: center;
+}
+
+.gallery-intro {
+    width: 500px;
+    max-width: 100%;
+
+    margin: 22px auto 0;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+
+    color: var(--black);
+    text-align: center;
+}
+
+
+/* =========================================================
+   GALLERY CONTENT
+========================================================= */
+
+.gallery-section {
+    width: 100%;
+    padding: 60px 8%;
+    background: var(--cream);
+}
+
+.gallery-section + .gallery-section {
+    padding-top: 0;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-heading {
+    margin: 0 0 14px;
+
+    font-family: "Anton", sans-serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 400;
+    line-height: .95;
+
+    color: var(--black);
+    text-align: center;
+}
+
+.gallery-description {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.65;
+
+    color: var(--black);
+    text-align: center;
+}
+
+
+/* =========================================================
+   IMAGE GRIDS
+========================================================= */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+.gallery-grid.gallery-grid-six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-item {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: var(--black);
+
+    border: 2px solid var(--black);
+
+    box-shadow: 6px 6px 0 var(--black);
+
+    cursor: pointer;
+
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.gallery-item:hover {
+    transform: translate(-2px, -2px);
+
+    box-shadow: 9px 9px 0 var(--black);
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   SPECIAL AWARDS
+========================================================= */
+
+.awards-grid .gallery-item:first-child {
+    grid-column: auto;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(34, 34, 34, .92);
+
+    z-index: 1000;
+}
+
+.gallery-lightbox.active {
+    display: flex;
+}
+
+.gallery-lightbox img {
+    display: block;
+
+    max-width: 95vw;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border: 2px solid var(--cream);
+}
+
+.gallery-lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--cream);
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--cream);
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   GALLERY TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .gallery-hero {
+        min-height: 400px;
+    }
+
+    .gallery-hero-inner {
+        min-height: 400px;
+        padding: 55px 6%;
+    }
+
+    .gallery-title h1 {
+        font-size: clamp(60px, 9vw, 100px);
+    }
+
+    .gallery-intro {
+        font-size: 13px;
+    }
+
+    .gallery-section {
+        padding: 55px 6%;
+    }
+
+    .gallery-grid,
+    .gallery-grid.gallery-grid-six {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   GALLERY MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .gallery-page .top-stripes {
+        left: 145px;
+        top: 0;
+
+        width: 210px;
+        height: 62px;
+
+        display: flex;
+        overflow: visible;
+    }
+
+    .gallery-page .top-stripes span {
+        flex: 0 0 52px;
+
+        width: 52px;
+        height: 62px;
+    }
+
+    .gallery-hero {
+        min-height: 350px;
+    }
+
+    .gallery-hero-inner {
+        min-height: 350px;
+        padding: 55px 25px;
+    }
+
+    .gallery-title h1 {
+        font-size: 54px;
+        line-height: .9;
+    }
+
+    .gallery-intro {
+        width: 100%;
+
+        margin-top: 18px;
+
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .gallery-section {
+        padding: 45px 25px;
+    }
+
+    .gallery-section + .gallery-section {
+        padding-top: 0;
+    }
+
+    .gallery-heading {
+        font-size: 38px;
+    }
+
+    .gallery-description {
+        margin-bottom: 28px;
+
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .gallery-grid,
+    .gallery-grid.gallery-grid-six {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .gallery-item {
+        box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .gallery-item:hover {
+        transform: none;
+
+        box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .gallery-lightbox {
+        padding: 20px;
+    }
+
+    .gallery-lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+
+/* =========================================================
+   GALLERY VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .gallery-page .top-stripes {
+        left: 145px;
+
+        width: 192px;
+        height: 58px;
+    }
+
+    .gallery-page .top-stripes span {
+        flex: 0 0 48px;
+
+        width: 48px;
+        height: 58px;
+    }
+
+    .gallery-hero-inner {
+        padding: 45px 20px;
+    }
+
+    .gallery-title h1 {
+        font-size: 46px;
+    }
+
+    .gallery-intro {
+        font-size: 9px;
+    }
+
+    .gallery-section {
+        padding: 35px 20px;
+    }
+
+    .gallery-heading {
+        font-size: 34px;
+    }
+
+    .gallery-description {
+        font-size: 10px;
+    }
+}
