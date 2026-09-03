@@ -1065,15 +1065,209 @@ a:hover {
 
 
 /* =========================================================
-   VIDEO
+   =========================================================
+   EPISODE CARDS
+   SCREENSHOT-STYLE LAYOUT
+   =========================================================
 ========================================================= */
 
-.video-wrapper {
+.episode-card {
     position: relative;
 
     width: 100%;
 
-    margin-top: 25px;
+    min-height: 380px;
+
+    margin-bottom: 0;
+
+    padding: 55px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    overflow: hidden;
+
+    border: 0;
+
+    box-shadow: none;
+
+    color: white;
+}
+
+
+/* =========================================================
+   EPISODE 1 — BLUE
+========================================================= */
+
+.episode-blue {
+    background: var(--blue);
+    color: white;
+}
+
+
+/* =========================================================
+   EPISODE 2 — YELLOW
+========================================================= */
+
+.episode-yellow {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+
+/* =========================================================
+   EPISODE 3 — RED
+========================================================= */
+
+.episode-red {
+    background: var(--red);
+    color: white;
+}
+
+
+/* =========================================================
+   EPISODE INFORMATION
+========================================================= */
+
+.episode-info {
+    position: relative;
+
+    width: 43%;
+
+    flex: 0 0 43%;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HIDE NUMBER INSIDE EPISODE
+   The screenshot focuses on episode title/topic.
+========================================================= */
+
+.episode-card .resource-number {
+    display: none;
+}
+
+
+/* =========================================================
+   EPISODE LABEL
+========================================================= */
+
+.episode-card .episode-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    color: currentColor;
+
+    opacity: .85;
+}
+
+
+/* =========================================================
+   EPISODE TITLE
+========================================================= */
+
+.episode-card .episode-info h2 {
+    margin: 0 0 16px;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    font-weight: 400;
+
+    line-height: .92;
+
+    letter-spacing: .3px;
+
+    color: currentColor;
+}
+
+
+/* =========================================================
+   EPISODE TOPIC TITLE
+========================================================= */
+
+.episode-card .episode-info h3 {
+    margin: 0 0 3px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: .5px;
+
+    color: currentColor;
+}
+
+
+/* =========================================================
+   EPISODE TOPIC LIST
+========================================================= */
+
+.episode-card .episode-info ul {
+    margin: 0;
+
+    padding-left: 20px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.4;
+
+    color: currentColor;
+}
+
+.episode-card .episode-info li {
+    margin: 0;
+}
+
+
+/* =========================================================
+   EPISODE VIDEO AREA
+========================================================= */
+
+.episode-video {
+    position: relative;
+
+    width: 47%;
+
+    flex: 0 0 47%;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   EPISODE VIDEO
+========================================================= */
+
+.episode-card .video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
 
     padding-bottom: 56.25%;
 
@@ -1083,10 +1277,12 @@ a:hover {
 
     background: var(--black);
 
-    border: 1px solid var(--black);
+    border: 0;
+
+    border-radius: 0 75px 0 0;
 }
 
-.video-wrapper iframe {
+.episode-card .video-wrapper iframe {
     position: absolute;
 
     top: 0;
@@ -1348,6 +1544,45 @@ a:hover {
 
     .resource-content p {
         font-size: 12px;
+    }
+
+
+    /* =====================================================
+       TABLET EPISODES
+    ===================================================== */
+
+    .episode-card {
+        min-height: 340px;
+
+        padding: 45px 5%;
+
+        gap: 35px;
+    }
+
+    .episode-info {
+        width: 45%;
+        flex-basis: 45%;
+    }
+
+    .episode-video {
+        width: 50%;
+        flex-basis: 50%;
+    }
+
+    .episode-card .episode-info h2 {
+        font-size: 38px;
+    }
+
+    .episode-card .episode-info h3 {
+        font-size: 12px;
+    }
+
+    .episode-card .episode-info ul {
+        font-size: 12px;
+    }
+
+    .episode-card .video-wrapper {
+        border-radius: 0 60px 0 0;
     }
 
 }
@@ -1796,6 +2031,11 @@ a:hover {
         max-width: none;
     }
 
+
+    /* =====================================================
+       MOBILE NORMAL RESOURCE CARDS
+    ===================================================== */
+
     .resource-card {
         display: block;
 
@@ -1826,15 +2066,116 @@ a:hover {
         line-height: 1.6;
     }
 
-    .episode-label {
+
+    /* =====================================================
+       MOBILE EPISODES
+    ===================================================== */
+
+    .episode-card {
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 30px;
+
+        padding: 45px 25px;
+
+        margin: 0;
+
+        width: 100%;
+
+        box-shadow: none;
+
+        border: 0;
+    }
+
+
+    /* =====================================================
+       MOBILE EPISODE INFORMATION
+    ===================================================== */
+
+    .episode-info {
+        width: 100%;
+
+        flex: none;
+    }
+
+
+    /* =====================================================
+       MOBILE EPISODE LABEL
+    ===================================================== */
+
+    .episode-card .episode-label {
+        margin-bottom: 8px;
+
         font-size: 7px;
 
-        letter-spacing: 1px;
+        letter-spacing: 1.1px;
     }
 
-    .video-wrapper {
-        margin-top: 20px;
+
+    /* =====================================================
+       MOBILE EPISODE TITLE
+    ===================================================== */
+
+    .episode-card .episode-info h2 {
+        margin-bottom: 15px;
+
+        font-size: 38px;
+
+        line-height: .92;
     }
+
+
+    /* =====================================================
+       MOBILE EPISODE TOPIC
+    ===================================================== */
+
+    .episode-card .episode-info h3 {
+        font-size: 11px;
+
+        margin-bottom: 3px;
+    }
+
+    .episode-card .episode-info ul {
+        padding-left: 18px;
+
+        font-size: 11px;
+
+        line-height: 1.45;
+    }
+
+
+    /* =====================================================
+       MOBILE EPISODE VIDEO
+    ===================================================== */
+
+    .episode-video {
+        width: 100%;
+
+        flex: none;
+    }
+
+    .episode-card .video-wrapper {
+        width: 100%;
+
+        margin: 0;
+
+        padding-bottom: 56.25%;
+
+        border-radius: 0 55px 0 0;
+    }
+
+
+    /* =====================================================
+       MOBILE LEARNING TOPICS
+    ===================================================== */
 
     .topic-grid {
         grid-template-columns: 1fr;
@@ -2099,6 +2440,11 @@ a:hover {
         padding: 35px 20px;
     }
 
+
+    /* =====================================================
+       VERY SMALL NORMAL RESOURCE CARDS
+    ===================================================== */
+
     .resource-card {
         padding: 22px 18px;
 
@@ -2119,6 +2465,41 @@ a:hover {
 
     .topic-item {
         font-size: 8px;
+    }
+
+
+    /* =====================================================
+       VERY SMALL EPISODES
+    ===================================================== */
+
+    .episode-card {
+        padding: 38px 20px;
+
+        gap: 25px;
+    }
+
+    .episode-card .episode-label {
+        font-size: 6.5px;
+
+        letter-spacing: .9px;
+    }
+
+    .episode-card .episode-info h2 {
+        font-size: 33px;
+    }
+
+    .episode-card .episode-info h3 {
+        font-size: 10px;
+    }
+
+    .episode-card .episode-info ul {
+        font-size: 10px;
+
+        line-height: 1.4;
+    }
+
+    .episode-card .video-wrapper {
+        border-radius: 0 45px 0 0;
     }
 
 }
@@ -2143,8 +2524,8 @@ a:hover {
 
 
 /* =========================================================
-   FINAL RESOURCES HEADER COLOR OVERRIDE
-   APPLIES TO DESKTOP + TABLET + MOBILE
+   FINAL RESOURCES HEADER COLOR
+   DESKTOP + TABLET + MOBILE
 
    RESOURCES HEADER:
    BLUE → YELLOW → RED → BLACK
@@ -2166,5 +2547,47 @@ a:hover {
 }
 
 .resources-page .top-stripes .stripe-black {
+    background: var(--black) !important;
+}
+
+
+/* =========================================================
+   FINAL EPISODE COLOR SAFETY
+========================================================= */
+
+.resources-page .episode-blue {
+    background: var(--blue) !important;
+    color: white !important;
+}
+
+.resources-page .episode-yellow {
+    background: var(--yellow) !important;
+    color: var(--black) !important;
+}
+
+.resources-page .episode-red {
+    background: var(--red) !important;
+    color: white !important;
+}
+
+
+/* =========================================================
+   KEEP DIVIDER COLORS UNCHANGED
+   YELLOW → BLUE → RED → BLACK
+========================================================= */
+
+.resources-page .divider-left-stripes .stripe-yellow {
+    background: var(--yellow) !important;
+}
+
+.resources-page .divider-left-stripes .stripe-blue {
+    background: var(--blue) !important;
+}
+
+.resources-page .divider-left-stripes .stripe-red {
+    background: var(--red) !important;
+}
+
+.resources-page .divider-left-stripes .stripe-black {
     background: var(--black) !important;
 }
