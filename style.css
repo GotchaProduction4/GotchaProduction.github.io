@@ -134,16 +134,6 @@ a:hover {
 
 
 /* =========================================================
-   RESOURCES PAGE BLUE BRAND BLOCK
-   CHANGES YELLOW TO BLUE ONLY ON RESOURCES
-========================================================= */
-
-.resources-page .brand-yellow {
-    background: var(--blue);
-}
-
-
-/* =========================================================
    LOGO
 ========================================================= */
 
@@ -219,12 +209,24 @@ a:hover {
 
 
 /* =========================================================
-   RESOURCES PAGE
-   FIRST HEADER STRIPE ALSO BLUE
+   RESOURCES PAGE TOP STRIPES
+   BLUE BRAND → YELLOW → RED → BLACK
 ========================================================= */
 
-.resources-page .top-stripes .stripe-blue {
+.resources-page .brand-yellow {
     background: var(--blue);
+}
+
+.resources-page .top-stripes .stripe-blue {
+    background: var(--yellow);
+}
+
+.resources-page .top-stripes .stripe-red {
+    background: var(--red);
+}
+
+.resources-page .top-stripes .stripe-black {
+    background: var(--black);
 }
 
 
@@ -587,6 +589,7 @@ a:hover {
 
 /* =========================================================
    DIVIDER LEFT STRIPES
+   YELLOW → BLUE → RED → BLACK
 ========================================================= */
 
 .divider-left-stripes {
@@ -846,11 +849,29 @@ a:hover {
 
 
 /* =========================================================
-   RESOURCES BLUE HEADER
+   RESOURCES BLUE BRAND
 ========================================================= */
 
 .resources-page .brand-yellow {
     background: var(--blue);
+}
+
+
+/* =========================================================
+   RESOURCES TOP STRIPES
+   BLUE BRAND → YELLOW → RED → BLACK
+========================================================= */
+
+.resources-page .top-stripes .stripe-blue {
+    background: var(--yellow);
+}
+
+.resources-page .top-stripes .stripe-red {
+    background: var(--red);
+}
+
+.resources-page .top-stripes .stripe-black {
+    background: var(--black);
 }
 
 
