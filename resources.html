@@ -776,6 +776,8 @@ function toggleMobileMenu() {
 
 <!-- =========================================================
      SWIPEABLE EPISODE NAVIGATION
+     MOBILE + TABLET + WINDOWS
+     TOUCH + MOUSE DRAG + TRACKPAD + DOTS
 ========================================================= -->
 
 <script>
@@ -783,25 +785,182 @@ function toggleMobileMenu() {
 const episodeTrack =
     document.querySelector(".episode-track");
 
-
-const episodeCards =
-    document.querySelectorAll(".episode-card");
-
-
 const episodeDots =
     document.querySelectorAll(".episode-dot");
 
 
-
-if (
-    episodeTrack &&
-    episodeCards.length &&
-    episodeDots.length
-) {
+if (episodeTrack) {
 
 
     /* =====================================================
-       UPDATE ACTIVE DOT WHEN SWIPING
+       DRAG VARIABLES
+    ====================================================== */
+
+    let isDragging = false;
+
+    let startX = 0;
+
+    let startScrollLeft = 0;
+
+
+
+    /* =====================================================
+       START DRAG
+    ====================================================== */
+
+    episodeTrack.addEventListener(
+        "pointerdown",
+        function (e) {
+
+            /*
+             * Only respond to the primary mouse button.
+             * Touch and pen are allowed.
+             */
+
+            if (
+                e.pointerType === "mouse" &&
+                e.button !== 0
+            ) {
+                return;
+            }
+
+
+            isDragging = true;
+
+
+            startX = e.clientX;
+
+
+            startScrollLeft =
+                episodeTrack.scrollLeft;
+
+
+            episodeTrack.classList.add(
+                "is-dragging"
+            );
+
+
+            /*
+             * Keep receiving pointer movement even
+             * when the pointer leaves the slider.
+             */
+
+            try {
+
+                episodeTrack.setPointerCapture(
+                    e.pointerId
+                );
+
+            } catch (error) {
+
+                // Ignore unsupported browsers
+
+            }
+
+        }
+    );
+
+
+
+    /* =====================================================
+       DRAG
+    ====================================================== */
+
+    episodeTrack.addEventListener(
+        "pointermove",
+        function (e) {
+
+            if (!isDragging) {
+                return;
+            }
+
+
+            const distance =
+                e.clientX - startX;
+
+
+            episodeTrack.scrollLeft =
+                startScrollLeft - distance;
+
+        }
+    );
+
+
+
+    /* =====================================================
+       STOP DRAG
+    ====================================================== */
+
+    function stopEpisodeDrag() {
+
+        if (!isDragging) {
+            return;
+        }
+
+
+        isDragging = false;
+
+
+        episodeTrack.classList.remove(
+            "is-dragging"
+        );
+
+
+
+        /*
+         * Snap to the closest episode card.
+         */
+
+        const cardWidth =
+            episodeTrack.clientWidth;
+
+
+        if (cardWidth > 0) {
+
+            const episodeIndex =
+                Math.round(
+                    episodeTrack.scrollLeft /
+                    cardWidth
+                );
+
+
+            episodeTrack.scrollTo({
+
+                left:
+                    episodeIndex *
+                    cardWidth,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    }
+
+
+
+    episodeTrack.addEventListener(
+        "pointerup",
+        stopEpisodeDrag
+    );
+
+
+    episodeTrack.addEventListener(
+        "pointercancel",
+        stopEpisodeDrag
+    );
+
+
+    episodeTrack.addEventListener(
+        "lostpointercapture",
+        stopEpisodeDrag
+    );
+
+
+
+    /* =====================================================
+       UPDATE DOTS WHILE SWIPING
     ====================================================== */
 
     episodeTrack.addEventListener(
@@ -812,7 +971,12 @@ if (
                 episodeTrack.clientWidth;
 
 
-            const index =
+            if (!cardWidth) {
+                return;
+            }
+
+
+            const episodeIndex =
                 Math.round(
                     episodeTrack.scrollLeft /
                     cardWidth
@@ -820,11 +984,11 @@ if (
 
 
             episodeDots.forEach(
-                function (dot, i) {
+                function (dot, index) {
 
                     dot.classList.toggle(
                         "active",
-                        i === index
+                        index === episodeIndex
                     );
 
                 }
@@ -836,7 +1000,7 @@ if (
 
 
     /* =====================================================
-       CLICK DOT TO MOVE TO EPISODE
+       DOT BUTTONS
     ====================================================== */
 
     episodeDots.forEach(
@@ -846,10 +1010,14 @@ if (
                 "click",
                 function () {
 
+                    const cardWidth =
+                        episodeTrack.clientWidth;
+
+
                     episodeTrack.scrollTo({
 
                         left:
-                            episodeTrack.clientWidth *
+                            cardWidth *
                             index,
 
                         behavior: "smooth"
