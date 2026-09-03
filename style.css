@@ -1,3116 +1,3113 @@
-/* =========================================================
-   TALAKBAY WEBSITE
-   STYLE.CSS
-========================================================= */
-
-:root {
-    --cream: #fff4e6;
-    --blue: #2b4e8d;
-    --yellow: #f4d35e;
-    --red: #891917;
-    --black: #222222;
-}
-
-
-/* =========================================================
-   LOCAL FONTS
-========================================================= */
-
-@font-face {
-    font-family: "Anton";
-    src: url("font/Anton-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Be Vietnam Pro";
-    src: url("font/BeVietnamPro-Light.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Be Vietnam Pro";
-    src: url("font/BeVietnamPro-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-/* =========================================================
-   GENERAL
-========================================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-
-    background: var(--cream);
-    color: var(--black);
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header {
-    position: relative;
-
-    width: 100%;
-    height: 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: var(--cream);
-
-    border-bottom: 1px solid var(--black);
-
-    z-index: 20;
-}
-
-
-/* =========================================================
-   LOGO AREA
-========================================================= */
-
-.brand-area {
-    position: relative;
-
-    width: 300px;
-    height: 80px;
-
-    flex-shrink: 0;
-
-    overflow: visible;
-}
-
-
-/* =========================================================
-   BRAND BLOCK
-========================================================= */
-
-.brand-yellow {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 165px;
-    height: 80px;
-
-    background: var(--yellow);
-
-    transform: skewX(-20deg);
-    transform-origin: top left;
-
-    z-index: 1;
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo-link {
-    position: absolute;
-
-    left: 20px;
-    top: 0;
-
-    width: 85px;
-    height: 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 5;
-}
-
-.logo {
-    display: block;
-
-    width: 62px;
-    height: auto;
-}
-
-
-/* =========================================================
-   TOP STRIPES
-========================================================= */
-
-.top-stripes {
-    position: absolute;
-
-    left: 145px;
-    top: 0;
-
-    width: 170px;
-    height: 80px;
-
-    display: flex;
-
-    overflow: visible;
-
-    z-index: 2;
-
-    pointer-events: none;
-}
-
-.top-stripes span {
-    display: block;
-
-    flex: 0 0 52px;
-
-    width: 52px;
-    height: 80px;
-
-    transform: skewX(-20deg);
-    transform-origin: top left;
-}
-
-.stripe-blue {
-    background: var(--blue);
-}
-
-.stripe-red {
-    background: var(--red);
-}
-
-.stripe-black {
-    background: var(--black);
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.main-navigation {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    margin-right: 30px;
-}
-
-.nav-btn {
-    height: 32px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0 15px;
-
-    border-radius: 18px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-
-    letter-spacing: .4px;
-
-    color: var(--black);
-
-    transition: .2s ease;
-}
-
-
-/* =========================================================
-   HOME
-========================================================= */
-
-.nav-home {
-    background: var(--yellow);
-}
-
-.nav-home:hover,
-.nav-home.active {
-    color: var(--black);
-}
-
-
-/* =========================================================
-   RESOURCES
-========================================================= */
-
-.nav-resources {
-    background: var(--blue);
-    color: white;
-}
-
-.nav-resources:hover,
-.nav-resources.active {
-    color: white;
-}
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
-
-.nav-gallery {
-    background: var(--red);
-    color: white;
-}
-
-.nav-gallery:hover,
-.nav-gallery.active {
-    color: white;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.nav-contact {
-    background: var(--black);
-    color: white;
-}
-
-.nav-contact:hover {
-    color: white;
-}
-
-
-/* =========================================================
-   MOBILE MENU BUTTON
-========================================================= */
-
-.menu-toggle {
-    display: none;
-
-    position: relative;
-
-    width: 38px;
-    height: 38px;
-
-    margin-right: 10px;
-
-    padding: 0;
-
-    border: 1px solid var(--black);
-    border-radius: 50%;
-
-    background: var(--cream);
-    color: var(--black);
-
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    line-height: 1;
-
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    z-index: 150;
-
-    flex-shrink: 0;
-
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-.menu-toggle:hover {
-    background: var(--yellow);
-}
-
-.menu-toggle:focus {
-    outline: none;
-}
-
-.menu-toggle:active {
-    transform: scale(.96);
-}
-
-
-/* =========================================================
-   HERO / LANDING PAGE
-========================================================= */
-
-.hero {
-    position: relative;
-
-    width: 100%;
-
-    height: calc(100vh - 80px);
-
-    min-height: 600px;
-
-    overflow: hidden;
-
-    background: var(--cream);
-}
-
-
-/* =========================================================
-   HERO BACKGROUND
-========================================================= */
-
-.hero-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .78),
-            rgba(255, 244, 230, .78)
-        ),
-        url("images/photowalk.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    opacity: .42;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   HERO INNER
-========================================================= */
-
-.hero-inner {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   HERO COPY
-========================================================= */
-
-.hero-copy {
-    position: absolute;
-
-    left: 8%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 42%;
-}
-
-.hero-copy h1 {
-    margin: 0;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: clamp(75px, 10vw, 150px);
-
-    font-weight: 400;
-
-    line-height: .85;
-
-    letter-spacing: .5px;
-
-    color: var(--black);
-}
-
-.hero-copy p {
-    width: 430px;
-
-    margin: 25px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 15px;
-    font-weight: 300;
-
-    line-height: 1.55;
-
-    color: var(--black);
-}
-
-
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
-
-.hero-buttons {
-    display: flex;
-
-    gap: 12px;
-
-    margin-top: 25px;
-    margin-left: 2px;
-}
-
-.hero-button {
-    height: 45px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0 23px;
-
-    border-radius: 25px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 11px;
-    font-weight: 400;
-
-    letter-spacing: .4px;
-
-    transition: .2s ease;
-}
-
-.blue-button {
-    background: var(--blue);
-    color: white;
-}
-
-.blue-button:hover {
-    color: white;
-    transform: translateY(-2px);
-}
-
-.red-button {
-    background: var(--red);
-    color: white;
-}
-
-.red-button:hover {
-    color: white;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   HERO PHOTO
-========================================================= */
-
-.hero-photo {
-    position: absolute;
-
-    right: 6%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 43%;
-    max-width: 650px;
-
-    height: 65%;
-
-    overflow: hidden;
-
-    border-radius: 0 0 0 105px;
-}
-
-.hero-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-/* =========================================================
-   DIVIDER
-========================================================= */
-
-.divider {
-    position: relative;
-
-    width: 100%;
-    height: 55px;
-
-    background: var(--cream);
-
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
-
-    overflow: hidden;
-}
-
-
-/* =========================================================
-   DIVIDER LEFT STRIPES
-   YELLOW → BLUE → RED → BLACK
-========================================================= */
-
-.divider-left-stripes {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 330px;
-    height: 55px;
-
-    display: flex;
-
-    overflow: hidden;
-}
-
-.divider-left-stripes span {
-    display: block;
-
-    height: 55px;
-
-    transform: skewX(-20deg);
-    transform-origin: top;
-}
-
-.divider-left-stripes .stripe-yellow {
-    width: 135px;
-    background: var(--yellow);
-}
-
-.divider-left-stripes .stripe-blue {
-    width: 75px;
-    background: var(--blue);
-}
-
-.divider-left-stripes .stripe-red {
-    width: 75px;
-    background: var(--red);
-}
-
-.divider-left-stripes .stripe-black {
-    width: 75px;
-    background: var(--black);
-}
-
-
-/* =========================================================
-   ABOUT SECTION
-========================================================= */
-
-.about-section {
-    position: relative;
-
-    width: 100%;
-    height: 600px;
-
-    overflow: hidden;
-
-    background: var(--cream);
-}
-
-
-/* =========================================================
-   ABOUT BACKGROUND
-========================================================= */
-
-.about-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .86),
-            rgba(255, 244, 230, .86)
-        ),
-        url("images/photowalk.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    opacity: .35;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   ABOUT INNER
-========================================================= */
-
-.about-inner {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   ABOUT COPY
-========================================================= */
-
-.about-copy {
-    position: absolute;
-
-    left: 8%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 40%;
-}
-
-.about-copy h2 {
-    margin: 0;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 100px;
-
-    font-weight: 400;
-
-    line-height: .9;
-
-    color: var(--black);
-}
-
-.about-copy p {
-    width: 450px;
-
-    margin: 25px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 15px;
-    font-weight: 300;
-
-    line-height: 1.65;
-
-    color: var(--black);
-}
-
-
-/* =========================================================
-   ABOUT PHOTO
-========================================================= */
-
-.about-photo {
-    position: absolute;
-
-    right: 6%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 43%;
-    max-width: 650px;
-
-    height: 65%;
-
-    overflow: hidden;
-
-    border-radius: 0 0 0 105px;
-}
-
-.about-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer {
-    width: 100%;
-
-    padding: 18px 20px;
-
-    background: var(--black);
-
-    border-top: 1px solid var(--black);
-
-    text-align: center;
-}
-
-.site-footer p {
-    margin: 0;
-
-    color: white;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 11px;
-    font-weight: 300;
-
-    letter-spacing: .2px;
-}
-
-
-/* =========================================================
-   CONTACT MODAL
-========================================================= */
-
-.modal-content {
-    border: 0;
-    border-radius: 0;
-    background: var(--cream);
-}
-
-.modal-header {
-    background: var(--yellow);
-    border-bottom: 1px solid var(--black);
-}
-
-.modal-title {
-    font-family: "Anton", sans-serif;
-    font-size: 25px;
-    letter-spacing: .5px;
-}
-
-.modal-body {
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 13px;
-}
-
-.modal-body h4 {
-    font-family: "Anton", sans-serif;
-    font-size: 25px;
-}
-
-.modal-footer {
-    border-top: 1px solid var(--black);
-}
-
-.modal-footer .btn {
-    border-radius: 20px;
-    font-size: 10px;
-}
-
-
-/* =========================================================
-   RESOURCES PAGE
-========================================================= */
-
-.resources-page {
-    background: var(--cream);
-}
-
-
-/* =========================================================
-   RESOURCES BLUE BRAND
-========================================================= */
-
-.resources-page .brand-yellow {
-    background: var(--blue);
-}
-
-
-/* =========================================================
-   RESOURCES HERO
-========================================================= */
-
-.resources-hero {
-    position: relative;
-
-    width: 100%;
-
-    min-height: 430px;
-
-    overflow: hidden;
-
-    background: var(--cream);
-
-    border-bottom: 1px solid var(--black);
-}
-
-.resources-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
-        ),
-        url("images/photowalk.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    opacity: .45;
-
-    z-index: 0;
-}
-
-.resources-hero-inner {
-    position: relative;
-
-    min-height: 430px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 60px 8%;
-
-    z-index: 2;
-}
-
-.resources-title {
-    width: 100%;
-    max-width: 900px;
-}
-
-.section-label {
-    margin: 0 0 14px 3px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 10px;
-
-    font-weight: 400;
-
-    letter-spacing: 2px;
-
-    color: var(--red);
-}
-
-.resources-title h1 {
-    margin: 0;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: clamp(70px, 9vw, 120px);
-
-    font-weight: 400;
-
-    line-height: .86;
-
-    letter-spacing: .5px;
-
-    color: var(--black);
-}
-
-.resources-intro {
-    width: 500px;
-
-    max-width: 100%;
-
-    margin: 22px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 300;
-
-    line-height: 1.6;
-
-    color: var(--black);
-}
-
-
-/* =========================================================
-   RESOURCES CONTENT
-========================================================= */
-
-.resources-section {
-    position: relative;
-
-    width: 100%;
-
-    padding: 60px 8%;
-
-    background: var(--cream);
-}
-
-.resources-container {
-    width: 100%;
-
-    max-width: 1000px;
-
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   RESOURCE CARD
-========================================================= */
-
-.resource-card {
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-
-    margin-bottom: 45px;
-
-    padding: 35px;
-
-    background: var(--cream);
-
-    border: 1px solid var(--black);
-
-    box-shadow: 8px 8px 0 var(--black);
-}
-
-
-/* =========================================================
-   RESOURCE CONTENT
-========================================================= */
-
-.resource-content {
-    width: 100%;
-}
-
-.resource-content h2 {
-    margin: 0;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 45px;
-
-    font-weight: 400;
-
-    line-height: .95;
-
-    color: var(--black);
-}
-
-.resource-content p {
-    max-width: 800px;
-
-    margin: 18px 0 0;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 300;
-
-    line-height: 1.7;
-
-    color: var(--black);
-}
-
-
-/* =========================================================
-   EPISODE LABEL
-========================================================= */
-
-.episode-label {
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 9px;
-
-    font-weight: 400;
-
-    letter-spacing: 1.5px;
-
-    color: var(--blue);
-}
-
-
-/* =========================================================
-   SWIPEABLE EPISODE CARDS
-========================================================= */
-
-.episode-slider {
-    position: relative;
-
-    width: 100%;
-
-    max-width: 1100px;
-
-    margin: 60px auto 70px;
-
-    overflow: visible;
-}
-
-
-/* =========================================================
-   HORIZONTAL SWIPE AREA
-========================================================= */
-
-.episode-track {
-    display: flex;
-
-    width: 100%;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
-
-    cursor: grab;
-
-    touch-action: pan-x;
-
-    padding: 0 5px 12px;
-
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.episode-track:active {
-    cursor: grabbing;
-}
-
-.episode-track::-webkit-scrollbar {
-    display: none;
-}
-
-.episode-track.is-dragging {
-    cursor: grabbing;
-
-    scroll-behavior: auto;
-
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.episode-track.is-dragging iframe {
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   EACH EPISODE = ONE CARD
-========================================================= */
-
-.episode-track .episode-card {
-    position: relative;
-
-    flex: 0 0 100%;
-
-    width: 100%;
-    min-width: 100%;
-
-    min-height: 430px;
-
-    margin: 0;
-
-    padding: 50px;
-
-    display: grid;
-
-    grid-template-columns: 42% 58%;
-
-    align-items: center;
-
-    gap: 0;
-
-    overflow: hidden;
-
-    border: 2px solid var(--black);
-
-    box-shadow: 10px 10px 0 var(--black);
-
-    scroll-snap-align: start;
-
-    scroll-snap-stop: always;
-
-    color: white;
-
-    box-sizing: border-box;
-}
-
-
-/* =========================================================
-   EPISODE COLORS
-========================================================= */
-
-.episode-track .episode-blue {
-    background: var(--blue) !important;
-    color: white !important;
-}
-
-.episode-track .episode-yellow {
-    background: var(--yellow) !important;
-    color: var(--black) !important;
-}
-
-.episode-track .episode-red {
-    background: var(--red) !important;
-    color: white !important;
-}
-
-
-/* =========================================================
-   EPISODE INFORMATION
-========================================================= */
-
-.episode-track .episode-info {
-    width: 100%;
-
-    min-width: 0;
-
-    padding-right: 35px;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   EPISODE LABEL
-========================================================= */
-
-.episode-track .episode-label {
-    display: block;
-
-    margin-bottom: 12px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 9px;
-
-    font-weight: 400;
-
-    letter-spacing: 1.5px;
-
-    color: currentColor;
-
-    opacity: .85;
-}
-
-
-/* =========================================================
-   EPISODE TITLE
-========================================================= */
-
-.episode-track .episode-info h2 {
-    margin: 0 0 25px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: clamp(45px, 5vw, 70px);
-
-    font-weight: 400;
-
-    line-height: .9;
-
-    letter-spacing: .3px;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
-   EPISODE TOPIC TITLE
-========================================================= */
-
-.episode-track .episode-info h3 {
-    margin: 0 0 5px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 400;
-
-    letter-spacing: 1px;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
-   EPISODE TOPIC LIST
-========================================================= */
-
-.episode-track .episode-info ul {
-    margin: 0;
-
-    padding-left: 18px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 300;
-
-    line-height: 1.5;
-
-    color: currentColor;
-}
-
-.episode-track .episode-info li {
-    margin-bottom: 2px;
-}
-
-
-/* =========================================================
-   EPISODE VIDEO AREA
-========================================================= */
-
-.episode-track .episode-video {
-    width: 100%;
-
-    min-width: 0;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   EPISODE VIDEO
-========================================================= */
-
-.episode-track .video-wrapper {
-    position: relative;
-
-    width: 100%;
-
-    height: 0;
-
-    padding-bottom: 56.25%;
-
-    margin: 0;
-
-    overflow: hidden;
-
-    background: var(--black);
-
-    border: 2px solid var(--black);
-
-    border-radius: 0 75px 0 0;
-}
-
-.episode-track .video-wrapper iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-
-    display: block;
-}
-
-
-/* =========================================================
-   SWIPE DOTS
-========================================================= */
-
-.episode-dots {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    margin-top: 28px;
-}
-
-.episode-dot {
-    width: 12px;
-    height: 12px;
-
-    padding: 0;
-
-    border: 2px solid var(--black);
-
-    border-radius: 50%;
-
-    background: var(--cream);
-
-    cursor: pointer;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-.episode-dot:hover {
-    transform: scale(1.15);
-}
-
-.episode-dot.active {
-    background: var(--black);
-}
-
-
-/* =========================================================
-   RESOURCES BACK BUTTON
-========================================================= */
-
-.resources-back {
-    display: flex;
-
-    justify-content: center;
-
-    margin-top: 50px;
-}
-
-
-/* =========================================================
-   RESOURCES ACTIVE NAV
-========================================================= */
-
-.nav-resources.active {
-    color: white;
-
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .site-header {
-        height: 70px;
-    }
-
-    .brand-area {
-        width: 230px;
-        height: 70px;
-
-        overflow: visible;
-    }
-
-    .brand-yellow {
-        width: 125px;
-        height: 70px;
-    }
-
-    .logo-link {
-        left: 15px;
-
-        width: 70px;
-        height: 70px;
-    }
-
-    .logo {
-        width: 52px;
-    }
-
-
-    /* =====================================================
-       TABLET TOP STRIPES
-    ===================================================== */
-
-    .top-stripes {
-        left: 110px;
-
-        width: 140px;
-        height: 70px;
-
-        overflow: visible;
-    }
-
-    .top-stripes span {
-        flex: 0 0 42px;
-
-        width: 42px;
-        height: 70px;
-
-        transform: skewX(-20deg);
-        transform-origin: top left;
-    }
-
-
-    /* =====================================================
-       TABLET NAV
-    ===================================================== */
-
-    .main-navigation {
-        gap: 5px;
-
-        margin-right: 15px;
-    }
-
-    .nav-btn {
-        height: 29px;
-
-        padding: 0 11px;
-
-        font-size: 9px;
-    }
-
-
-    /* =====================================================
-       TABLET HERO
-    ===================================================== */
-
-    .hero {
-        height: calc(100vh - 70px);
-
-        min-height: 600px;
-    }
-
-    .hero-copy {
-        left: 6%;
-        width: 43%;
-    }
-
-    .hero-copy h1 {
-        font-size: clamp(65px, 10vw, 105px);
-    }
-
-    .hero-copy p {
-        width: 100%;
-        font-size: 13px;
-    }
-
-    .hero-photo {
-        right: 5%;
-        width: 44%;
-        height: 60%;
-
-        border-bottom-left-radius: 80px;
-    }
-
-
-    /* =====================================================
-       TABLET ABOUT
-    ===================================================== */
-
-    .about-copy {
-        left: 6%;
-        width: 43%;
-    }
-
-    .about-copy h2 {
-        font-size: 75px;
-    }
-
-    .about-copy p {
-        width: 100%;
-        font-size: 13px;
-    }
-
-    .about-photo {
-        right: 5%;
-        width: 44%;
-        height: 60%;
-
-        border-bottom-left-radius: 80px;
-    }
-
-
-    /* =====================================================
-       TABLET RESOURCES
-    ===================================================== */
-
-    .resources-hero {
-        min-height: 400px;
-    }
-
-    .resources-hero-inner {
-        min-height: 400px;
-
-        padding: 55px 6%;
-    }
-
-    .resources-title h1 {
-        font-size: clamp(60px, 9vw, 100px);
-    }
-
-    .resources-intro {
-        width: 480px;
-        font-size: 13px;
-    }
-
-    .resources-section {
-        padding: 55px 6%;
-    }
-
-    .resources-container {
-        max-width: 900px;
-    }
-
-    .resource-card {
-        padding: 30px;
-
-        margin-bottom: 40px;
-
-        box-shadow: 7px 7px 0 var(--black);
-    }
-
-    .resource-content h2 {
-        font-size: 40px;
-    }
-
-    .resource-content p {
-        font-size: 12px;
-    }
-
-
-    /* =====================================================
-       TABLET SWIPE EPISODES
-    ===================================================== */
-
-    .episode-slider {
-        width: 100%;
-
-        margin: 50px auto 60px;
-    }
-
-    .episode-track {
-        padding: 0 4px 10px;
-    }
-
-    .episode-track .episode-card {
-        min-height: 380px;
-
-        padding: 40px;
-
-        grid-template-columns: 45% 55%;
-    }
-
-    .episode-track .episode-info {
-        padding-right: 25px;
-    }
-
-    .episode-track .episode-info h2 {
-        font-size: 45px;
-    }
-
-    .episode-track .episode-info ul {
-        font-size: 11px;
-    }
-
-    .episode-track .video-wrapper {
-        border-radius: 0 60px 0 0;
-    }
-
-
-    /* =====================================================
-       TABLET GALLERY
-    ===================================================== */
-
-    .gallery-hero {
-        min-height: 400px;
-    }
-
-    .gallery-hero-inner {
-        min-height: 400px;
-
-        padding: 55px 6%;
-    }
-
-    .gallery-title h1 {
-        font-size: clamp(60px, 9vw, 100px);
-    }
-
-    .gallery-intro {
-        font-size: 13px;
-    }
-
-    .gallery-section {
-        padding: 55px 6%;
-    }
-
-    .gallery-grid,
-    .gallery-grid.gallery-grid-six {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
-    .site-header {
-        height: 62px;
-
-        overflow: visible;
-
-        z-index: 100;
-    }
-
-
-    /* =====================================================
-       BRAND AREA
-    ===================================================== */
-
-    .brand-area {
-        position: relative;
-
-        width: 210px;
-        height: 62px;
-
-        flex-shrink: 0;
-
-        overflow: visible;
-    }
-
-
-    /* =====================================================
-       BRAND BLOCK
-    ===================================================== */
-
-    .brand-yellow {
-        left: 0;
-        top: 0;
-
-        width: 165px;
-        height: 62px;
-
-        background: var(--yellow);
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-
-        z-index: 1;
-
-        pointer-events: none;
-    }
-
-
-    /* =====================================================
-       LOGO
-    ===================================================== */
-
-    .logo-link {
-        left: 20px;
-        top: 0;
-
-        width: 85px;
-        height: 62px;
-
-        z-index: 5;
-    }
-
-    .logo {
-        width: 48px;
-    }
-
-
-    /* =====================================================
-       MOBILE TOP STRIPES
-    ===================================================== */
-
-    .top-stripes {
-        left: 145px;
-        top: 0;
-
-        width: 155px;
-        height: 62px;
-
-        display: flex;
-
-        overflow: visible;
-
-        z-index: 3;
-
-        pointer-events: none;
-    }
-
-    .top-stripes span {
-        flex: 0 0 52px;
-
-        width: 52px;
-        height: 62px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-    }
-
-
-    /* =====================================================
-       MOBILE NAVIGATION
-    ===================================================== */
-
-    .main-navigation {
-        position: absolute;
-
-        top: 62px;
-        right: 10px;
-
-        width: 190px;
-
-        display: none;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 5px;
-
-        margin: 0;
-        padding: 10px;
-
-        background: var(--cream);
-
-        border: 1px solid var(--black);
-
-        box-shadow: 5px 5px 0 var(--black);
-
-        z-index: 140;
-    }
-
-    .main-navigation.active {
-        display: flex;
-    }
-
-    .nav-btn {
-        width: 100%;
-
-        height: 40px;
-
-        padding: 0 15px;
-
-        border-radius: 20px;
-
-        font-size: 10px;
-
-        justify-content: center;
-    }
-
-
-    /* =====================================================
-       HAMBURGER BUTTON
-    ===================================================== */
-
-    .menu-toggle {
-        display: flex;
-
-        position: relative;
-
-        width: 38px;
-        height: 38px;
-
-        margin-right: 10px;
-
-        flex-shrink: 0;
-
-        z-index: 150;
-
-        cursor: pointer;
-    }
-
-
-    /* =====================================================
-       MOBILE HERO
-    ===================================================== */
-
-    .hero {
-        height: calc(100vh - 62px);
-
-        min-height: 620px;
-    }
-
-    .hero-inner {
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-        height: 100%;
-    }
-
-
-    /* =====================================================
-       MOBILE HERO COPY
-    ===================================================== */
-
-    .hero-copy {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        transform: none;
-
-        margin: 55px 25px 0;
-
-        width: auto;
-    }
-
-    .hero-copy h1 {
-        font-size: 54px;
-
-        line-height: .92;
-
-        letter-spacing: .3px;
-    }
-
-    .hero-copy p {
-        width: 100%;
-
-        margin: 10px 0 0 1px;
-
-        font-size: 10px;
-
-        line-height: 1.4;
-    }
-
-
-    /* =====================================================
-       MOBILE HERO BUTTONS
-    ===================================================== */
-
-    .hero-buttons {
-        gap: 10px;
-
-        margin-top: 17px;
-
-        margin-left: 0;
-    }
-
-    .hero-button {
-        height: 42px;
-
-        padding: 0 17px;
-
-        border-radius: 23px;
-
-        font-size: 11px;
-    }
-
-
-    /* =====================================================
-       MOBILE HERO PHOTO
-    ===================================================== */
-
-    .hero-photo {
-        position: relative;
-
-        top: auto;
-        right: auto;
-
-        transform: none;
-
-        margin: 38px 25px 0;
-
-        width: calc(100% - 50px);
-
-        max-width: none;
-
-        height: 235px;
-
-        border-radius: 0 0 0 70px;
-    }
-
-
-    /* =====================================================
-       MOBILE DIVIDER
-    ===================================================== */
-
-    .divider {
-        height: 50px;
-    }
-
-    .divider-left-stripes {
-        left: 0;
-
-        width: 230px;
-
-        height: 50px;
-    }
-
-    .divider-left-stripes span {
-        height: 50px;
-    }
-
-    .divider-left-stripes .stripe-yellow {
-        width: 95px;
-    }
-
-    .divider-left-stripes .stripe-blue,
-    .divider-left-stripes .stripe-red,
-    .divider-left-stripes .stripe-black {
-        width: 55px;
-    }
-
-
-    /* =====================================================
-       MOBILE ABOUT
-    ===================================================== */
-
-    .about-section {
-        height: auto;
-
-        min-height: 700px;
-    }
-
-    .about-inner {
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-
-        height: auto;
-    }
-
-    .about-copy {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        transform: none;
-
-        padding: 55px 25px 0;
-
-        width: auto;
-    }
-
-    .about-copy h2 {
-        font-size: 55px;
-
-        line-height: .95;
-
-        margin-bottom: 12px;
-    }
-
-    .about-copy p {
-        width: 100%;
-
-        font-size: 13px;
-
-        line-height: 1.5;
-
-        letter-spacing: 0;
-    }
-
-
-    /* =====================================================
-       MOBILE ABOUT PHOTO
-    ===================================================== */
-
-    .about-photo {
-        position: relative;
-
-        top: auto;
-        right: auto;
-
-        transform: none;
-
-        margin: 35px 25px 40px;
-
-        width: calc(100% - 50px);
-
-        max-width: none;
-
-        height: 300px;
-
-        border-radius: 0 0 0 70px;
-    }
-
-
-    /* =====================================================
-       MOBILE FOOTER
-    ===================================================== */
-
-    .site-footer {
-        padding: 15px 20px;
-    }
-
-    .site-footer p {
-        font-size: 9px;
-    }
-
-
-    /* =====================================================
-       MOBILE RESOURCES HERO
-    ===================================================== */
-
-    .resources-hero {
-        min-height: 350px;
-    }
-
-    .resources-hero-inner {
-        min-height: 350px;
-
-        padding: 55px 25px;
-    }
-
-    .section-label {
-        font-size: 8px;
-
-        letter-spacing: 1.5px;
-    }
-
-    .resources-title h1 {
-        font-size: 54px;
-
-        line-height: .9;
-    }
-
-    .resources-intro {
-        width: 100%;
-
-        margin-top: 18px;
-
-        font-size: 10px;
-
-        line-height: 1.5;
-    }
-
-
-    /* =====================================================
-       MOBILE RESOURCES CONTENT
-    ===================================================== */
-
-    .resources-section {
-        padding: 45px 25px;
-    }
-
-    .resources-container {
-        max-width: none;
-    }
-
-
-    /* =====================================================
-       MOBILE NORMAL RESOURCE CARDS
-    ===================================================== */
-
-    .resource-card {
-        display: block;
-
-        margin-bottom: 30px;
-
-        padding: 25px 22px;
-
-        box-shadow: 5px 5px 0 var(--black);
-    }
-
-    .resource-content h2 {
-        font-size: 32px;
-
-        line-height: .95;
-    }
-
-    .resource-content p {
-        margin-top: 15px;
-
-        font-size: 11px;
-
-        line-height: 1.6;
-    }
-
-
-    /* =====================================================
-       MOBILE SWIPEABLE EPISODES
-    ===================================================== */
-
-    .episode-slider {
-        width: 100%;
-
-        margin: 40px auto 55px;
-    }
-
-    .episode-track {
-        width: 100%;
-
-        padding: 0 3px 10px;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        scroll-snap-type: x mandatory;
-
-        -webkit-overflow-scrolling: touch;
-
-        touch-action: pan-x;
-
-        overscroll-behavior-x: contain;
-    }
-
-
-    /* =====================================================
-       MOBILE EPISODE CARD
-    ===================================================== */
-
-    .episode-track .episode-card {
-        flex: 0 0 100%;
-
-        width: 100%;
-        min-width: 100%;
-
-        min-height: 0;
-
-        padding: 30px 25px 30px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        justify-content: flex-start;
-
-        gap: 25px;
-
-        margin: 0;
-
-        border: 2px solid var(--black);
-
-        box-shadow: 6px 6px 0 var(--black);
-
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
-       MOBILE EPISODE INFORMATION
-    ===================================================== */
-
-    .episode-track .episode-info {
-        width: 100%;
-
-        padding-right: 0;
-    }
-
-
-    /* =====================================================
-       MOBILE EPISODE LABEL
-    ===================================================== */
-
-    .episode-track .episode-label {
-        margin-bottom: 9px;
-
-        font-size: 7px;
-
-        letter-spacing: 1px;
-    }
-
-
-    /* =====================================================
-       MOBILE EPISODE TITLE
-    ===================================================== */
-
-    .episode-track .episode-info h2 {
-        margin-bottom: 20px;
-
-        font-size: 42px;
-
-        line-height: .9;
-    }
-
-
-    /* =====================================================
-       MOBILE EPISODE TOPIC
-    ===================================================== */
-
-    .episode-track .episode-info h3 {
-        font-size: 10px;
-
-        margin-bottom: 4px;
-    }
-
-    .episode-track .episode-info ul {
-        padding-left: 18px;
-
-        font-size: 10px;
-
-        line-height: 1.45;
-    }
-
-
-    /* =====================================================
-       MOBILE EPISODE VIDEO
-    ===================================================== */
-
-    .episode-track .episode-video {
-        width: 100%;
-
-        flex: none;
-    }
-
-    .episode-track .video-wrapper {
-        width: 100%;
-
-        padding-bottom: 56.25%;
-
-        border-radius: 0 50px 0 0;
-    }
-
-
-    /* =====================================================
-       MOBILE DOTS
-    ===================================================== */
-
-    .episode-dots {
-        margin-top: 22px;
-
-        gap: 8px;
-    }
-
-    .episode-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-    .resources-back {
-        margin-top: 45px;
-    }
-
-
-    /* =====================================================
-       MOBILE GALLERY
-    ===================================================== */
-
-    .gallery-hero {
-        min-height: 350px;
-    }
-
-    .gallery-hero-inner {
-        min-height: 350px;
-
-        padding: 55px 25px;
-    }
-
-    .gallery-title h1 {
-        font-size: 54px;
-
-        line-height: .9;
-    }
-
-    .gallery-intro {
-        width: 100%;
-
-        margin-top: 18px;
-
-        font-size: 10px;
-
-        line-height: 1.5;
-    }
-
-
-    /* =====================================================
-       MOBILE GALLERY SECTION
-    ===================================================== */
-
-    .gallery-section {
-        padding: 45px 25px;
-    }
-
-    .gallery-section + .gallery-section {
-        padding-top: 0;
-    }
-
-    .gallery-heading {
-        font-size: 38px;
-    }
-
-    .gallery-description {
-        margin-bottom: 28px;
-
-        font-size: 11px;
-
-        line-height: 1.6;
-    }
-
-
-    /* =====================================================
-       MOBILE GALLERY GRID
-    ===================================================== */
-
-    .gallery-grid,
-    .gallery-grid.gallery-grid-six {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-    .gallery-item {
-        box-shadow: 5px 5px 0 var(--black);
-    }
-
-    .gallery-item:hover {
-        transform: none;
-
-        box-shadow: 5px 5px 0 var(--black);
-    }
-
-
-    /* =====================================================
-       MOBILE GALLERY LIGHTBOX
-    ===================================================== */
-
-    .gallery-lightbox {
-        padding: 20px;
-    }
-
-    .gallery-lightbox-close {
-        top: 12px;
-        right: 12px;
-    }
-
-
-    /* =====================================================
-       GALLERY MOBILE HAMBURGER
-    ===================================================== */
-
-    .gallery-page .menu-toggle {
-        display: flex;
-
-        width: 38px;
-        height: 38px;
-
-        margin-right: 10px;
-
-        padding: 0;
-
-        border: 1px solid var(--black);
-
-        border-radius: 50%;
-
-        background: var(--cream);
-
-        color: var(--black);
-
-        font-size: 0;
-
-        line-height: 1;
-
-        align-items: center;
-        justify-content: center;
-
-        cursor: pointer;
-
-        z-index: 150;
-
-        flex-shrink: 0;
-
-        appearance: none;
-        -webkit-appearance: none;
-    }
-
-    .gallery-page .menu-toggle::before {
-        content: "";
-
-        display: block;
-
-        width: 16px;
-        height: 2px;
-
-        background: var(--black);
-
-        border-radius: 2px;
-
-        box-shadow:
-            0 -5px 0 var(--black),
-            0 5px 0 var(--black);
-    }
-
-    .gallery-page .menu-toggle:hover {
-        background: var(--yellow);
-    }
-
-    .gallery-page .menu-toggle:focus {
-        outline: none;
-    }
-
-    .gallery-page .menu-toggle:active {
-        transform: scale(.96);
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 380px) {
-
-    .site-header {
-        height: 58px;
-
-        overflow: visible;
-
-        z-index: 100;
-    }
-
-    .brand-area {
-        width: 190px;
-        height: 58px;
-
-        overflow: visible;
-    }
-
-    .brand-yellow {
-        width: 165px;
-        height: 58px;
-
-        pointer-events: none;
-    }
-
-    .logo-link {
-        left: 15px;
-
-        width: 80px;
-        height: 58px;
-    }
-
-    .logo {
-        width: 43px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL TOP STRIPES
-    ===================================================== */
-
-    .top-stripes {
-        left: 145px;
-
-        width: 145px;
-
-        height: 58px;
-
-        overflow: visible;
-
-        pointer-events: none;
-    }
-
-    .top-stripes span {
-        flex: 0 0 48px;
-
-        width: 48px;
-
-        height: 58px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-    }
-
-
-    /* =====================================================
-       VERY SMALL MENU
-    ===================================================== */
-
-    .menu-toggle {
-        display: flex;
-
-        width: 32px;
-        height: 32px;
-
-        margin-right: 8px;
-
-        font-size: 19px;
-
-        z-index: 150;
-
-        cursor: pointer;
-    }
-
-    .main-navigation {
-        top: 58px;
-
-        right: 8px;
-
-        width: 175px;
-
-        z-index: 140;
-    }
-
-    .nav-btn {
-        height: 38px;
-
-        font-size: 9px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL HERO
-    ===================================================== */
-
-    .hero {
-        height: calc(100vh - 58px);
-
-        min-height: 600px;
-    }
-
-    .hero-copy {
-        margin: 45px 20px 0;
-    }
-
-    .hero-copy h1 {
-        font-size: 47px;
-    }
-
-    .hero-copy p {
-        font-size: 9px;
-
-        line-height: 1.4;
-    }
-
-    .hero-buttons {
-        gap: 7px;
-
-        margin-top: 14px;
-    }
-
-    .hero-button {
-        height: 38px;
-
-        padding: 0 14px;
-
-        font-size: 9px;
-    }
-
-    .hero-photo {
-        margin: 30px 20px 0;
-
-        width: calc(100% - 40px);
-
-        height: 215px;
-
-        border-bottom-left-radius: 60px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL ABOUT
-    ===================================================== */
-
-    .about-copy {
-        padding: 45px 20px 0;
-    }
-
-    .about-copy h2 {
-        font-size: 48px;
-    }
-
-    .about-copy p {
-        font-size: 12px;
-
-        line-height: 1.5;
-    }
-
-    .about-photo {
-        margin: 30px 20px 35px;
-
-        width: calc(100% - 40px);
-
-        height: 270px;
-
-        border-bottom-left-radius: 60px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL FOOTER
-    ===================================================== */
-
-    .site-footer {
-        padding: 13px 15px;
-    }
-
-    .site-footer p {
-        font-size: 8px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL RESOURCES
-    ===================================================== */
-
-    .resources-hero {
-        min-height: 320px;
-    }
-
-    .resources-hero-inner {
-        min-height: 320px;
-
-        padding: 45px 20px;
-    }
-
-    .resources-title h1 {
-        font-size: 46px;
-    }
-
-    .resources-intro {
-        font-size: 9px;
-    }
-
-    .resources-section {
-        padding: 35px 20px;
-    }
-
-    .resource-card {
-        padding: 22px 18px;
-
-        box-shadow: 4px 4px 0 var(--black);
-    }
-
-    .resource-content h2 {
-        font-size: 27px;
-    }
-
-    .resource-content p {
-        font-size: 10px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL EPISODE CARD
-    ===================================================== */
-
-    .episode-slider {
-        margin-top: 35px;
-
-        margin-bottom: 45px;
-    }
-
-    .episode-track .episode-card {
-        padding: 25px 20px 25px;
-
-        gap: 20px;
-
-        box-shadow: 5px 5px 0 var(--black);
-    }
-
-    .episode-track .episode-label {
-        font-size: 6px;
-
-        letter-spacing: .9px;
-    }
-
-    .episode-track .episode-info h2 {
-        font-size: 36px;
-
-        line-height: .9;
-    }
-
-    .episode-track .episode-info h3 {
-        font-size: 9px;
-    }
-
-    .episode-track .episode-info ul {
-        font-size: 9px;
-
-        line-height: 1.4;
-    }
-
-    .episode-track .video-wrapper {
-        border-radius: 0 42px 0 0;
-    }
-
-    .episode-dots {
-        margin-top: 18px;
-
-        gap: 7px;
-    }
-
-    .episode-dot {
-        width: 9px;
-        height: 9px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL GALLERY
-    ===================================================== */
-
-    .gallery-hero {
-        min-height: 320px;
-    }
-
-    .gallery-hero-inner {
-        min-height: 320px;
-
-        padding: 45px 20px;
-    }
-
-    .gallery-title h1 {
-        font-size: 46px;
-    }
-
-    .gallery-intro {
-        font-size: 9px;
-    }
-
-    .gallery-section {
-        padding: 35px 20px;
-    }
-
-    .gallery-heading {
-        font-size: 34px;
-    }
-
-    .gallery-description {
-        font-size: 10px;
-    }
-
-
-    /* =====================================================
-       VERY SMALL GALLERY MENU
-    ===================================================== */
-
-    .gallery-page .menu-toggle {
-        display: flex;
-
-        width: 32px;
-        height: 32px;
-
-        margin-right: 8px;
-    }
-
-    .gallery-page .menu-toggle::before {
-        width: 14px;
-        height: 2px;
-
-        box-shadow:
-            0 -4px 0 var(--black),
-            0 4px 0 var(--black);
-    }
-
-}
-
-
-/* =========================================================
-   FINAL CLICK / STACKING SAFETY
-========================================================= */
-
-.brand-yellow,
-.top-stripes {
-    pointer-events: none;
-}
-
-.menu-toggle {
-    pointer-events: auto;
-
-    position: relative;
-
-    z-index: 150;
-}
-
-
-/* =========================================================
-   FINAL RESOURCES HEADER
-   BLUE → YELLOW → RED → BLACK
-========================================================= */
-
-.resources-page .brand-yellow {
-    background: var(--blue) !important;
-}
-
-.resources-page .top-stripes .stripe-blue {
-    background: var(--yellow) !important;
-}
-
-.resources-page .top-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.resources-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
-   FINAL EPISODE COLOR SAFETY
-========================================================= */
-
-.resources-page .episode-blue {
-    background: var(--blue) !important;
-
-    color: white !important;
-}
-
-.resources-page .episode-yellow {
-    background: var(--yellow) !important;
-
-    color: var(--black) !important;
-}
-
-.resources-page .episode-red {
-    background: var(--red) !important;
-
-    color: white !important;
-}
-
-
-/* =========================================================
-   KEEP DIVIDER COLORS UNCHANGED
-   YELLOW → BLUE → RED → BLACK
-========================================================= */
-
-.resources-page .divider-left-stripes .stripe-yellow {
-    background: var(--yellow) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
+/* ========================================================= 
+   TALAKBAY WEBSITE 
+   STYLE.CSS 
+========================================================= */ 
+ 
+:root { 
+    --cream: #fff4e6; 
+    --blue: #2b4e8d; 
+    --yellow: #f4d35e; 
+    --red: #891917; 
+    --black: #222222; 
+} 
+ 
+ 
+/* ========================================================= 
+   LOCAL FONTS 
+========================================================= */ 
+ 
+@font-face { 
+    font-family: "Anton"; 
+    src: url("font/Anton-Regular.ttf") format("truetype"); 
+    font-weight: 400; 
+    font-style: normal; 
+} 
+ 
+@font-face { 
+    font-family: "Be Vietnam Pro"; 
+    src: url("font/BeVietnamPro-Light.ttf") format("truetype"); 
+    font-weight: 300; 
+    font-style: normal; 
+} 
+ 
+@font-face { 
+    font-family: "Be Vietnam Pro"; 
+    src: url("font/BeVietnamPro-Regular.ttf") format("truetype"); 
+    font-weight: 400; 
+    font-style: normal; 
+} 
+ 
+ 
+/* ========================================================= 
+   GENERAL 
+========================================================= */ 
+ 
+* { 
+    box-sizing: border-box; 
+} 
+ 
+html { 
+    scroll-behavior: smooth; 
+} 
+ 
+body { 
+    margin: 0; 
+    padding: 0; 
+ 
+    background: var(--cream); 
+    color: var(--black); 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    overflow-x: hidden; 
+} 
+ 
+a { 
+    text-decoration: none; 
+} 
+ 
+a:hover { 
+    text-decoration: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   HEADER 
+========================================================= */ 
+ 
+.site-header { 
+    position: relative; 
+ 
+    width: 100%; 
+    height: 80px; 
+ 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+ 
+    background: var(--cream); 
+ 
+    border-bottom: 1px solid var(--black); 
+ 
+    z-index: 20; 
+} 
+ 
+ 
+/* ========================================================= 
+   LOGO AREA 
+========================================================= */ 
+ 
+.brand-area { 
+    position: relative; 
+ 
+    width: 300px; 
+    height: 80px; 
+ 
+    flex-shrink: 0; 
+ 
+    overflow: visible; 
+} 
+ 
+ 
+/* ========================================================= 
+   BRAND BLOCK 
+========================================================= */ 
+ 
+.brand-yellow { 
+    position: absolute; 
+ 
+    left: 0; 
+    top: 0; 
+ 
+    width: 165px; 
+    height: 80px; 
+ 
+    background: var(--yellow); 
+ 
+    transform: skewX(-20deg); 
+    transform-origin: top left; 
+ 
+    z-index: 1; 
+ 
+    pointer-events: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   LOGO 
+========================================================= */ 
+ 
+.logo-link { 
+    position: absolute; 
+ 
+    left: 20px; 
+    top: 0; 
+ 
+    width: 85px; 
+    height: 80px; 
+ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+ 
+    z-index: 5; 
+} 
+ 
+.logo { 
+    display: block; 
+ 
+    width: 62px; 
+    height: auto; 
+} 
+ 
+ 
+/* ========================================================= 
+   TOP STRIPES 
+========================================================= */ 
+ 
+.top-stripes { 
+    position: absolute; 
+ 
+    left: 145px; 
+    top: 0; 
+ 
+    width: 170px; 
+    height: 80px; 
+ 
+    display: flex; 
+ 
+    overflow: visible; 
+ 
+    z-index: 2; 
+ 
+    pointer-events: none; 
+} 
+ 
+.top-stripes span { 
+    display: block; 
+ 
+    flex: 0 0 52px; 
+ 
+    width: 52px; 
+    height: 80px; 
+ 
+    transform: skewX(-20deg); 
+    transform-origin: top left; 
+} 
+ 
+.stripe-blue { 
+    background: var(--blue); 
+} 
+ 
+.stripe-red { 
+    background: var(--red); 
+} 
+ 
+.stripe-black { 
+    background: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   NAVIGATION 
+========================================================= */ 
+ 
+.main-navigation { 
+    display: flex; 
+    align-items: center; 
+ 
+    gap: 8px; 
+ 
+    margin-right: 30px; 
+} 
+ 
+.nav-btn { 
+    height: 32px; 
+ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+ 
+    padding: 0 15px; 
+ 
+    border-radius: 18px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+    font-size: 11px; 
+    font-weight: 400; 
+ 
+    letter-spacing: .4px; 
+ 
+    color: var(--black); 
+ 
+    transition: .2s ease; 
+} 
+ 
+ 
+/* ========================================================= 
+   HOME 
+========================================================= */ 
+ 
+.nav-home { 
+    background: var(--yellow); 
+} 
+ 
+.nav-home:hover, 
+.nav-home.active { 
+    color: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCES 
+========================================================= */ 
+ 
+.nav-resources { 
+    background: var(--blue); 
+    color: white; 
+} 
+ 
+.nav-resources:hover, 
+.nav-resources.active { 
+    color: white; 
+} 
+ 
+ 
+/* ========================================================= 
+   GALLERY 
+========================================================= */ 
+ 
+.nav-gallery { 
+    background: var(--red); 
+    color: white; 
+} 
+ 
+.nav-gallery:hover, 
+.nav-gallery.active { 
+    color: white; 
+} 
+ 
+ 
+/* ========================================================= 
+   CONTACT 
+========================================================= */ 
+ 
+.nav-contact { 
+    background: var(--black); 
+    color: white; 
+} 
+ 
+.nav-contact:hover { 
+    color: white; 
+} 
+ 
+ 
+/* ========================================================= 
+   MOBILE MENU BUTTON 
+========================================================= */ 
+ 
+.menu-toggle { 
+    display: none; 
+ 
+    position: relative; 
+ 
+    width: 38px; 
+    height: 38px; 
+ 
+    margin-right: 10px; 
+ 
+    padding: 0; 
+ 
+    border: 1px solid var(--black); 
+    border-radius: 50%; 
+ 
+    background: var(--cream); 
+    color: var(--black); 
+ 
+    font-family: Arial, sans-serif; 
+    font-size: 22px; 
+    line-height: 1; 
+ 
+    align-items: center; 
+    justify-content: center; 
+ 
+    cursor: pointer; 
+ 
+    z-index: 150; 
+ 
+    flex-shrink: 0; 
+ 
+    appearance: none; 
+    -webkit-appearance: none; 
+} 
+ 
+.menu-toggle:hover { 
+    background: var(--yellow); 
+} 
+ 
+.menu-toggle:focus { 
+    outline: none; 
+} 
+ 
+.menu-toggle:active { 
+    transform: scale(.96); 
+} 
+ 
+ 
+/* ========================================================= 
+   HERO / LANDING PAGE 
+========================================================= */ 
+ 
+.hero { 
+    position: relative; 
+ 
+    width: 100%; 
+ 
+    height: calc(100vh - 80px); 
+ 
+    min-height: 600px; 
+ 
+    overflow: hidden; 
+ 
+    background: var(--cream); 
+} 
+ 
+ 
+/* ========================================================= 
+   HERO BACKGROUND 
+========================================================= */ 
+ 
+.hero-bg { 
+    position: absolute; 
+ 
+    inset: 0; 
+ 
+    background-image: 
+        linear-gradient( 
+            rgba(255, 244, 230, .78), 
+            rgba(255, 244, 230, .78) 
+        ), 
+        url("images/photowalk.jpg"); 
+ 
+    background-size: cover; 
+    background-position: center; 
+ 
+    opacity: .42; 
+ 
+    z-index: 0; 
+} 
+ 
+ 
+/* ========================================================= 
+   HERO INNER 
+========================================================= */ 
+ 
+.hero-inner { 
+    position: relative; 
+ 
+    width: 100%; 
+    height: 100%; 
+ 
+    z-index: 2; 
+} 
+ 
+ 
+/* ========================================================= 
+   HERO COPY 
+========================================================= */ 
+ 
+.hero-copy { 
+    position: absolute; 
+ 
+    left: 8%; 
+    top: 50%; 
+ 
+    transform: translateY(-50%); 
+ 
+    width: 42%; 
+} 
+ 
+.hero-copy h1 { 
+    margin: 0; 
+ 
+    font-family: "Anton", sans-serif; 
+ 
+    font-size: clamp(75px, 10vw, 150px); 
+ 
+    font-weight: 400; 
+ 
+    line-height: .85; 
+ 
+    letter-spacing: .5px; 
+ 
+    color: var(--black); 
+} 
+ 
+.hero-copy p { 
+    width: 430px; 
+ 
+    margin: 25px 0 0 4px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 15px; 
+    font-weight: 300; 
+ 
+    line-height: 1.55; 
+ 
+    color: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   HERO BUTTONS 
+========================================================= */ 
+ 
+.hero-buttons { 
+    display: flex; 
+ 
+    gap: 12px; 
+ 
+    margin-top: 25px; 
+    margin-left: 2px; 
+} 
+ 
+.hero-button { 
+    height: 45px; 
+ 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+ 
+    padding: 0 23px; 
+ 
+    border-radius: 25px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 11px; 
+    font-weight: 400; 
+ 
+    letter-spacing: .4px; 
+ 
+    transition: .2s ease; 
+} 
+ 
+.blue-button { 
+    background: var(--blue); 
+    color: white; 
+} 
+ 
+.blue-button:hover { 
+    color: white; 
+    transform: translateY(-2px); 
+} 
+ 
+.red-button { 
+    background: var(--red); 
+    color: white; 
+} 
+ 
+.red-button:hover { 
+    color: white; 
+    transform: translateY(-2px); 
+} 
+ 
+ 
+/* ========================================================= 
+   HERO PHOTO 
+========================================================= */ 
+ 
+.hero-photo { 
+    position: absolute; 
+ 
+    right: 6%; 
+    top: 50%; 
+ 
+    transform: translateY(-50%); 
+ 
+    width: 43%; 
+    max-width: 650px; 
+ 
+    height: 65%; 
+ 
+    overflow: hidden; 
+ 
+    border-radius: 0 0 0 105px; 
+} 
+ 
+.hero-photo img { 
+    width: 100%; 
+    height: 100%; 
+ 
+    object-fit: cover; 
+ 
+    display: block; 
+} 
+ 
+ 
+/* ========================================================= 
+   DIVIDER 
+========================================================= */ 
+ 
+.divider { 
+    position: relative; 
+ 
+    width: 100%; 
+    height: 55px; 
+ 
+    background: var(--cream); 
+ 
+    border-top: 2px solid var(--black); 
+    border-bottom: 2px solid var(--black); 
+ 
+    overflow: hidden; 
+} 
+ 
+ 
+/* ========================================================= 
+   DIVIDER LEFT STRIPES 
+   YELLOW → BLUE → RED → BLACK 
+========================================================= */ 
+ 
+.divider-left-stripes { 
+    position: absolute; 
+ 
+    left: 0; 
+    top: 0; 
+ 
+    width: 330px; 
+    height: 55px; 
+ 
+    display: flex; 
+ 
+    overflow: hidden; 
+} 
+ 
+.divider-left-stripes span { 
+    display: block; 
+ 
+    height: 55px; 
+ 
+    transform: skewX(-20deg); 
+    transform-origin: top; 
+} 
+ 
+.divider-left-stripes .stripe-yellow { 
+    width: 135px; 
+    background: var(--yellow); 
+} 
+ 
+.divider-left-stripes .stripe-blue { 
+    width: 75px; 
+    background: var(--blue); 
+} 
+ 
+.divider-left-stripes .stripe-red { 
+    width: 75px; 
+    background: var(--red); 
+} 
+ 
+.divider-left-stripes .stripe-black { 
+    width: 75px; 
+    background: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   ABOUT SECTION 
+========================================================= */ 
+ 
+.about-section { 
+    position: relative; 
+ 
+    width: 100%; 
+    height: 600px; 
+ 
+    overflow: hidden; 
+ 
+    background: var(--cream); 
+} 
+ 
+ 
+/* ========================================================= 
+   ABOUT BACKGROUND 
+========================================================= */ 
+ 
+.about-bg { 
+    position: absolute; 
+ 
+    inset: 0; 
+ 
+    background-image: 
+        linear-gradient( 
+            rgba(255, 244, 230, .86), 
+            rgba(255, 244, 230, .86) 
+        ), 
+        url("images/photowalk.jpg"); 
+ 
+    background-size: cover; 
+    background-position: center; 
+ 
+    opacity: .35; 
+ 
+    z-index: 0; 
+} 
+ 
+ 
+/* ========================================================= 
+   ABOUT INNER 
+========================================================= */ 
+ 
+.about-inner { 
+    position: relative; 
+ 
+    width: 100%; 
+    height: 100%; 
+ 
+    z-index: 2; 
+} 
+ 
+ 
+/* ========================================================= 
+   ABOUT COPY 
+========================================================= */ 
+ 
+.about-copy { 
+    position: absolute; 
+ 
+    left: 8%; 
+    top: 50%; 
+ 
+    transform: translateY(-50%); 
+ 
+    width: 40%; 
+} 
+ 
+.about-copy h2 { 
+    margin: 0; 
+ 
+    font-family: "Anton", sans-serif; 
+ 
+    font-size: 100px; 
+ 
+    font-weight: 400; 
+ 
+    line-height: .9; 
+ 
+    color: var(--black); 
+} 
+ 
+.about-copy p { 
+    width: 450px; 
+ 
+    margin: 25px 0 0 4px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 15px; 
+    font-weight: 300; 
+ 
+    line-height: 1.65; 
+ 
+    color: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   ABOUT PHOTO 
+========================================================= */ 
+ 
+.about-photo { 
+    position: absolute; 
+ 
+    right: 6%; 
+    top: 50%; 
+ 
+    transform: translateY(-50%); 
+ 
+    width: 43%; 
+    max-width: 650px; 
+ 
+    height: 65%; 
+ 
+    overflow: hidden; 
+ 
+    border-radius: 0 0 0 105px; 
+} 
+ 
+.about-photo img { 
+    width: 100%; 
+    height: 100%; 
+ 
+    object-fit: cover; 
+ 
+    display: block; 
+} 
+ 
+ 
+/* ========================================================= 
+   FOOTER 
+========================================================= */ 
+ 
+.site-footer { 
+    width: 100%; 
+ 
+    padding: 18px 20px; 
+ 
+    background: var(--black); 
+ 
+    border-top: 1px solid var(--black); 
+ 
+    text-align: center; 
+} 
+ 
+.site-footer p { 
+    margin: 0; 
+ 
+    color: white; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 11px; 
+    font-weight: 300; 
+ 
+    letter-spacing: .2px; 
+} 
+ 
+ 
+/* ========================================================= 
+   CONTACT MODAL 
+========================================================= */ 
+ 
+.modal-content { 
+    border: 0; 
+    border-radius: 0; 
+    background: var(--cream); 
+} 
+ 
+.modal-header { 
+    background: var(--yellow); 
+    border-bottom: 1px solid var(--black); 
+} 
+ 
+.modal-title { 
+    font-family: "Anton", sans-serif; 
+    font-size: 25px; 
+    letter-spacing: .5px; 
+} 
+ 
+.modal-body { 
+    font-family: "Be Vietnam Pro", sans-serif; 
+    font-size: 13px; 
+} 
+ 
+.modal-body h4 { 
+    font-family: "Anton", sans-serif; 
+    font-size: 25px; 
+} 
+ 
+.modal-footer { 
+    border-top: 1px solid var(--black); 
+} 
+ 
+.modal-footer .btn { 
+    border-radius: 20px; 
+    font-size: 10px; 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCES PAGE 
+========================================================= */ 
+ 
+.resources-page { 
+    background: var(--cream); 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCES BLUE BRAND 
+========================================================= */ 
+ 
+.resources-page .brand-yellow { 
+    background: var(--blue); 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCES HERO 
+========================================================= */ 
+ 
+.resources-hero { 
+    position: relative; 
+ 
+    width: 100%; 
+ 
+    min-height: 430px; 
+ 
+    overflow: hidden; 
+ 
+    background: var(--cream); 
+ 
+    border-bottom: 1px solid var(--black); 
+} 
+ 
+.resources-bg { 
+    position: absolute; 
+ 
+    inset: 0; 
+ 
+    background-image: 
+        linear-gradient( 
+            rgba(255, 244, 230, .88), 
+            rgba(255, 244, 230, .88) 
+        ), 
+        url("images/photowalk.jpg"); 
+ 
+    background-size: cover; 
+    background-position: center; 
+ 
+    opacity: .45; 
+ 
+    z-index: 0; 
+} 
+ 
+.resources-hero-inner { 
+    position: relative; 
+ 
+    min-height: 430px; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    padding: 60px 8%; 
+ 
+    z-index: 2; 
+} 
+ 
+.resources-title { 
+    width: 100%; 
+    max-width: 900px; 
+} 
+ 
+.section-label { 
+    margin: 0 0 14px 3px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 10px; 
+ 
+    font-weight: 400; 
+ 
+    letter-spacing: 2px; 
+ 
+    color: var(--red); 
+} 
+ 
+.resources-title h1 { 
+    margin: 0; 
+ 
+    font-family: "Anton", sans-serif; 
+ 
+    font-size: clamp(70px, 9vw, 120px); 
+ 
+    font-weight: 400; 
+ 
+    line-height: .86; 
+ 
+    letter-spacing: .5px; 
+ 
+    color: var(--black); 
+} 
+ 
+.resources-intro { 
+    width: 500px; 
+ 
+    max-width: 100%; 
+ 
+    margin: 22px 0 0 4px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 14px; 
+ 
+    font-weight: 300; 
+ 
+    line-height: 1.6; 
+ 
+    color: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCES CONTENT 
+========================================================= */ 
+ 
+.resources-section { 
+    position: relative; 
+ 
+    width: 100%; 
+ 
+    padding: 60px 8%; 
+ 
+    background: var(--cream); 
+} 
+ 
+.resources-container { 
+    width: 100%; 
+ 
+    max-width: 1000px; 
+ 
+    margin: 0 auto; 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCE CARD 
+========================================================= */ 
+ 
+.resource-card { 
+    position: relative; 
+ 
+    display: block; 
+ 
+    width: 100%; 
+ 
+    margin-bottom: 45px; 
+ 
+    padding: 35px; 
+ 
+    background: var(--cream); 
+ 
+    border: 1px solid var(--black); 
+ 
+    box-shadow: 8px 8px 0 var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCE CONTENT 
+========================================================= */ 
+ 
+.resource-content { 
+    width: 100%; 
+} 
+ 
+.resource-content h2 { 
+    margin: 0; 
+ 
+    font-family: "Anton", sans-serif; 
+ 
+    font-size: 45px; 
+ 
+    font-weight: 400; 
+ 
+    line-height: .95; 
+ 
+    color: var(--black); 
+} 
+ 
+.resource-content p { 
+    max-width: 800px; 
+ 
+    margin: 18px 0 0; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 13px; 
+ 
+    font-weight: 300; 
+ 
+    line-height: 1.7; 
+ 
+    color: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE LABEL 
+========================================================= */ 
+ 
+.episode-label { 
+    display: block; 
+ 
+    margin-bottom: 8px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 9px; 
+ 
+    font-weight: 400; 
+ 
+    letter-spacing: 1.5px; 
+ 
+    color: var(--blue); 
+} 
+ 
+ 
+/* ========================================================= 
+   SWIPEABLE EPISODE CARDS 
+========================================================= */ 
+ 
+.episode-slider { 
+    position: relative; 
+ 
+    width: 100%; 
+ 
+    max-width: 1100px; 
+ 
+    margin: 60px auto 70px; 
+ 
+    overflow: visible; 
+} 
+ 
+ 
+/* ========================================================= 
+   HORIZONTAL SWIPE AREA 
+========================================================= */ 
+ 
+.episode-track { 
+    display: flex; 
+ 
+    width: 100%; 
+ 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+ 
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth; 
+ 
+    -webkit-overflow-scrolling: touch; 
+ 
+    scrollbar-width: none; 
+ 
+    cursor: grab; 
+ 
+    touch-action: pan-x; 
+ 
+    padding: 0 5px 12px; 
+ 
+    user-select: none; 
+    -webkit-user-select: none; 
+} 
+ 
+.episode-track:active { 
+    cursor: grabbing; 
+} 
+ 
+.episode-track::-webkit-scrollbar { 
+    display: none; 
+} 
+ 
+.episode-track.is-dragging { 
+    cursor: grabbing; 
+ 
+    scroll-behavior: auto; 
+ 
+    user-select: none; 
+    -webkit-user-select: none; 
+} 
+ 
+.episode-track.is-dragging iframe { 
+    pointer-events: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   EACH EPISODE = ONE CARD 
+========================================================= */ 
+ 
+.episode-track .episode-card { 
+    position: relative; 
+ 
+    flex: 0 0 100%; 
+ 
+    width: 100%; 
+    min-width: 100%; 
+ 
+    min-height: 430px; 
+ 
+    margin: 0; 
+ 
+    padding: 50px; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: 42% 58%; 
+ 
+    align-items: center; 
+ 
+    gap: 0; 
+ 
+    overflow: hidden; 
+ 
+    border: 2px solid var(--black); 
+ 
+    box-shadow: 10px 10px 0 var(--black); 
+ 
+    scroll-snap-align: start; 
+ 
+    scroll-snap-stop: always; 
+ 
+    color: white; 
+ 
+    box-sizing: border-box; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE COLORS 
+========================================================= */ 
+ 
+.episode-track .episode-blue { 
+    background: var(--blue) !important; 
+    color: white !important; 
+} 
+ 
+.episode-track .episode-yellow { 
+    background: var(--yellow) !important; 
+    color: var(--black) !important; 
+} 
+ 
+.episode-track .episode-red { 
+    background: var(--red) !important; 
+    color: white !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE INFORMATION 
+========================================================= */ 
+ 
+.episode-track .episode-info { 
+    width: 100%; 
+ 
+    min-width: 0; 
+ 
+    padding-right: 35px; 
+ 
+    z-index: 2; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE LABEL 
+========================================================= */ 
+ 
+.episode-track .episode-label { 
+    display: block; 
+ 
+    margin-bottom: 12px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 9px; 
+ 
+    font-weight: 400; 
+ 
+    letter-spacing: 1.5px; 
+ 
+    color: currentColor; 
+ 
+    opacity: .85; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE TITLE 
+========================================================= */ 
+ 
+.episode-track .episode-info h2 { 
+    margin: 0 0 25px; 
+ 
+    font-family: "Anton", sans-serif; 
+ 
+    font-size: clamp(45px, 5vw, 70px); 
+ 
+    font-weight: 400; 
+ 
+    line-height: .9; 
+ 
+    letter-spacing: .3px; 
+ 
+    color: currentColor; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE TOPIC TITLE 
+========================================================= */ 
+ 
+.episode-track .episode-info h3 { 
+    margin: 0 0 5px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 12px; 
+ 
+    font-weight: 400; 
+ 
+    letter-spacing: 1px; 
+ 
+    color: currentColor; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE TOPIC LIST 
+========================================================= */ 
+ 
+.episode-track .episode-info ul { 
+    margin: 0; 
+ 
+    padding-left: 18px; 
+ 
+    font-family: "Be Vietnam Pro", sans-serif; 
+ 
+    font-size: 12px; 
+ 
+    font-weight: 300; 
+ 
+    line-height: 1.5; 
+ 
+    color: currentColor; 
+} 
+ 
+.episode-track .episode-info li { 
+    margin-bottom: 2px; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE VIDEO AREA 
+========================================================= */ 
+ 
+.episode-track .episode-video { 
+    width: 100%; 
+ 
+    min-width: 0; 
+ 
+    z-index: 2; 
+} 
+ 
+ 
+/* ========================================================= 
+   EPISODE VIDEO 
+========================================================= */ 
+ 
+.episode-track .video-wrapper { 
+    position: relative; 
+ 
+    width: 100%; 
+ 
+    height: 0; 
+ 
+    padding-bottom: 56.25%; 
+ 
+    margin: 0; 
+ 
+    overflow: hidden; 
+ 
+    background: var(--black); 
+ 
+    border: 2px solid var(--black); 
+ 
+    border-radius: 0 75px 0 0; 
+} 
+ 
+.episode-track .video-wrapper iframe { 
+    position: absolute; 
+ 
+    top: 0; 
+    left: 0; 
+ 
+    width: 100%; 
+    height: 100%; 
+ 
+    border: 0; 
+ 
+    display: block; 
+} 
+ 
+ 
+/* ========================================================= 
+   SWIPE DOTS 
+========================================================= */ 
+ 
+.episode-dots { 
+    display: flex; 
+ 
+    align-items: center; 
+    justify-content: center; 
+ 
+    gap: 10px; 
+ 
+    margin-top: 28px; 
+} 
+ 
+.episode-dot { 
+    width: 12px; 
+    height: 12px; 
+ 
+    padding: 0; 
+ 
+    border: 2px solid var(--black); 
+ 
+    border-radius: 50%; 
+ 
+    background: var(--cream); 
+ 
+    cursor: pointer; 
+ 
+    transition: 
+        transform .2s ease, 
+        background .2s ease; 
+} 
+ 
+.episode-dot:hover { 
+    transform: scale(1.15); 
+} 
+ 
+.episode-dot.active { 
+    background: var(--black); 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCES BACK BUTTON 
+========================================================= */ 
+ 
+.resources-back { 
+    display: flex; 
+ 
+    justify-content: center; 
+ 
+    margin-top: 50px; 
+} 
+ 
+ 
+/* ========================================================= 
+   RESOURCES ACTIVE NAV 
+========================================================= */ 
+ 
+.nav-resources.active { 
+    color: white; 
+ 
+    transform: translateY(-1px); 
+} 
+ 
+ 
+/* ========================================================= 
+   TABLET 
+========================================================= */ 
+ 
+@media (max-width: 900px) { 
+ 
+    .site-header { 
+        height: 70px; 
+    } 
+ 
+    .brand-area { 
+        width: 230px; 
+        height: 70px; 
+ 
+        overflow: visible; 
+    } 
+ 
+    .brand-yellow { 
+        width: 125px; 
+        height: 70px; 
+    } 
+ 
+    .logo-link { 
+        left: 15px; 
+ 
+        width: 70px; 
+        height: 70px; 
+    } 
+ 
+    .logo { 
+        width: 52px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       TABLET TOP STRIPES 
+    ===================================================== */ 
+ 
+    .top-stripes { 
+        left: 110px; 
+ 
+        width: 140px; 
+        height: 70px; 
+ 
+        overflow: visible; 
+    } 
+ 
+    .top-stripes span { 
+        flex: 0 0 42px; 
+ 
+        width: 42px; 
+        height: 70px; 
+ 
+        transform: skewX(-20deg); 
+        transform-origin: top left; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       TABLET NAV 
+    ===================================================== */ 
+ 
+    .main-navigation { 
+        gap: 5px; 
+ 
+        margin-right: 15px; 
+    } 
+ 
+    .nav-btn { 
+        height: 29px; 
+ 
+        padding: 0 11px; 
+ 
+        font-size: 9px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       TABLET HERO 
+    ===================================================== */ 
+ 
+    .hero { 
+        height: calc(100vh - 70px); 
+ 
+        min-height: 600px; 
+    } 
+ 
+    .hero-copy { 
+        left: 6%; 
+        width: 43%; 
+    } 
+ 
+    .hero-copy h1 { 
+        font-size: clamp(65px, 10vw, 105px); 
+    } 
+ 
+    .hero-copy p { 
+        width: 100%; 
+        font-size: 13px; 
+    } 
+ 
+    .hero-photo { 
+        right: 5%; 
+        width: 44%; 
+        height: 60%; 
+ 
+        border-bottom-left-radius: 80px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       TABLET ABOUT 
+    ===================================================== */ 
+ 
+    .about-copy { 
+        left: 6%; 
+        width: 43%; 
+    } 
+ 
+    .about-copy h2 { 
+        font-size: 75px; 
+    } 
+ 
+    .about-copy p { 
+        width: 100%; 
+        font-size: 13px; 
+    } 
+ 
+    .about-photo { 
+        right: 5%; 
+        width: 44%; 
+        height: 60%; 
+ 
+        border-bottom-left-radius: 80px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       TABLET RESOURCES 
+    ===================================================== */ 
+ 
+    .resources-hero { 
+        min-height: 400px; 
+    } 
+ 
+    .resources-hero-inner { 
+        min-height: 400px; 
+ 
+        padding: 55px 6%; 
+    } 
+ 
+    .resources-title h1 { 
+        font-size: clamp(60px, 9vw, 100px); 
+    } 
+ 
+    .resources-intro { 
+        width: 480px; 
+        font-size: 13px; 
+    } 
+ 
+    .resources-section { 
+        padding: 55px 6%; 
+    } 
+ 
+    .resources-container { 
+        max-width: 900px; 
+    } 
+ 
+    .resource-card { 
+        padding: 30px; 
+ 
+        margin-bottom: 40px; 
+ 
+        box-shadow: 7px 7px 0 var(--black); 
+    } 
+ 
+    .resource-content h2 { 
+        font-size: 40px; 
+    } 
+ 
+    .resource-content p { 
+        font-size: 12px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       TABLET SWIPE EPISODES 
+    ===================================================== */ 
+ 
+    .episode-slider { 
+        width: 100%; 
+ 
+        margin: 50px auto 60px; 
+    } 
+ 
+    .episode-track { 
+        padding: 0 4px 10px; 
+    } 
+ 
+    .episode-track .episode-card { 
+        min-height: 380px; 
+ 
+        padding: 40px; 
+ 
+        grid-template-columns: 45% 55%; 
+    } 
+ 
+    .episode-track .episode-info { 
+        padding-right: 25px; 
+    } 
+ 
+    .episode-track .episode-info h2 { 
+        font-size: 45px; 
+    } 
+ 
+    .episode-track .episode-info ul { 
+        font-size: 11px; 
+    } 
+ 
+    .episode-track .video-wrapper { 
+        border-radius: 0 60px 0 0; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       TABLET GALLERY 
+    ===================================================== */ 
+ 
+    .gallery-hero { 
+        min-height: 400px; 
+    } 
+ 
+    .gallery-hero-inner { 
+        min-height: 400px; 
+ 
+        padding: 55px 6%; 
+    } 
+ 
+    .gallery-title h1 { 
+        font-size: clamp(60px, 9vw, 100px); 
+    } 
+ 
+    .gallery-intro { 
+        font-size: 13px; 
+    } 
+ 
+    .gallery-section { 
+        padding: 55px 6%; 
+    } 
+ 
+    .gallery-grid, 
+    .gallery-grid.gallery-grid-six { 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
+   MOBILE 
+========================================================= */ 
+ 
+@media (max-width: 600px) { 
+ 
+    /* ===================================================== 
+       HEADER 
+    ===================================================== */ 
+ 
+    .site-header { 
+        height: 62px; 
+ 
+        overflow: visible; 
+ 
+        z-index: 100; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       BRAND AREA 
+    ===================================================== */ 
+ 
+    .brand-area { 
+        position: relative; 
+ 
+        width: 210px; 
+        height: 62px; 
+ 
+        flex-shrink: 0; 
+ 
+        overflow: visible; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       BRAND BLOCK 
+    ===================================================== */ 
+ 
+    .brand-yellow { 
+        left: 0; 
+        top: 0; 
+ 
+        width: 165px; 
+        height: 62px; 
+ 
+        background: var(--yellow); 
+ 
+        transform: skewX(-20deg); 
+ 
+        transform-origin: top left; 
+ 
+        z-index: 1; 
+ 
+        pointer-events: none; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       LOGO 
+    ===================================================== */ 
+ 
+    .logo-link { 
+        left: 20px; 
+        top: 0; 
+ 
+        width: 85px; 
+        height: 62px; 
+ 
+        z-index: 5; 
+    } 
+ 
+    .logo { 
+        width: 48px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE TOP STRIPES 
+    ===================================================== */ 
+ 
+    .top-stripes { 
+        left: 145px; 
+        top: 0; 
+ 
+        width: 155px; 
+        height: 62px; 
+ 
+        display: flex; 
+ 
+        overflow: visible; 
+ 
+        z-index: 3; 
+ 
+        pointer-events: none; 
+    } 
+ 
+    .top-stripes span { 
+        flex: 0 0 52px; 
+ 
+        width: 52px; 
+        height: 62px; 
+ 
+        transform: skewX(-20deg); 
+ 
+        transform-origin: top left; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE NAVIGATION 
+    ===================================================== */ 
+ 
+    .main-navigation { 
+        position: absolute; 
+ 
+        top: 62px; 
+        right: 10px; 
+ 
+        width: 190px; 
+ 
+        display: none; 
+ 
+        flex-direction: column; 
+        align-items: stretch; 
+ 
+        gap: 5px; 
+ 
+        margin: 0; 
+        padding: 10px; 
+ 
+        background: var(--cream); 
+ 
+        border: 1px solid var(--black); 
+ 
+        box-shadow: 5px 5px 0 var(--black); 
+ 
+        z-index: 140; 
+    } 
+ 
+    .main-navigation.active { 
+        display: flex; 
+    } 
+ 
+    .nav-btn { 
+        width: 100%; 
+ 
+        height: 40px; 
+ 
+        padding: 0 15px; 
+ 
+        border-radius: 20px; 
+ 
+        font-size: 10px; 
+ 
+        justify-content: center; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       HAMBURGER BUTTON 
+    ===================================================== */ 
+ 
+    .menu-toggle { 
+        display: flex; 
+ 
+        position: relative; 
+ 
+        width: 38px; 
+        height: 38px; 
+ 
+        margin-right: 10px; 
+ 
+        flex-shrink: 0; 
+ 
+        z-index: 150; 
+ 
+        cursor: pointer; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE HERO 
+    ===================================================== */ 
+ 
+    .hero { 
+        height: calc(100vh - 62px); 
+ 
+        min-height: 620px; 
+    } 
+ 
+    .hero-inner { 
+        display: flex; 
+ 
+        flex-direction: column; 
+ 
+        width: 100%; 
+        height: 100%; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE HERO COPY 
+    ===================================================== */ 
+ 
+    .hero-copy { 
+        position: relative; 
+ 
+        left: auto; 
+        top: auto; 
+ 
+        transform: none; 
+ 
+        margin: 55px 25px 0; 
+ 
+        width: auto; 
+    } 
+ 
+    .hero-copy h1 { 
+        font-size: 54px; 
+ 
+        line-height: .92; 
+ 
+        letter-spacing: .3px; 
+    } 
+ 
+    .hero-copy p { 
+        width: 100%; 
+ 
+        margin: 10px 0 0 1px; 
+ 
+        font-size: 10px; 
+ 
+        line-height: 1.4; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE HERO BUTTONS 
+    ===================================================== */ 
+ 
+    .hero-buttons { 
+        gap: 10px; 
+ 
+        margin-top: 17px; 
+ 
+        margin-left: 0; 
+    } 
+ 
+    .hero-button { 
+        height: 42px; 
+ 
+        padding: 0 17px; 
+ 
+        border-radius: 23px; 
+ 
+        font-size: 11px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE HERO PHOTO 
+    ===================================================== */ 
+ 
+    .hero-photo { 
+        position: relative; 
+ 
+        top: auto; 
+        right: auto; 
+ 
+        transform: none; 
+ 
+        margin: 38px 25px 0; 
+ 
+        width: calc(100% - 50px); 
+ 
+        max-width: none; 
+ 
+        height: 235px; 
+ 
+        border-radius: 0 0 0 70px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE DIVIDER 
+    ===================================================== */ 
+ 
+    .divider { 
+        height: 50px; 
+    } 
+ 
+    .divider-left-stripes { 
+        left: 0; 
+ 
+        width: 230px; 
+ 
+        height: 50px; 
+    } 
+ 
+    .divider-left-stripes span { 
+        height: 50px; 
+    } 
+ 
+    .divider-left-stripes .stripe-yellow { 
+        width: 95px; 
+    } 
+ 
+    .divider-left-stripes .stripe-blue, 
+    .divider-left-stripes .stripe-red, 
+    .divider-left-stripes .stripe-black { 
+        width: 55px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE ABOUT 
+    ===================================================== */ 
+ 
+    .about-section { 
+        height: auto; 
+ 
+        min-height: 700px; 
+    } 
+ 
+    .about-inner { 
+        display: flex; 
+ 
+        flex-direction: column; 
+ 
+        width: 100%; 
+ 
+        height: auto; 
+    } 
+ 
+    .about-copy { 
+        position: relative; 
+ 
+        left: auto; 
+        top: auto; 
+ 
+        transform: none; 
+ 
+        padding: 55px 25px 0; 
+ 
+        width: auto; 
+    } 
+ 
+    .about-copy h2 { 
+        font-size: 55px; 
+ 
+        line-height: .95; 
+ 
+        margin-bottom: 12px; 
+    } 
+ 
+    .about-copy p { 
+        width: 100%; 
+ 
+        font-size: 13px; 
+ 
+        line-height: 1.5; 
+ 
+        letter-spacing: 0; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE ABOUT PHOTO 
+    ===================================================== */ 
+ 
+    .about-photo { 
+        position: relative; 
+ 
+        top: auto; 
+        right: auto; 
+ 
+        transform: none; 
+ 
+        margin: 35px 25px 40px; 
+ 
+        width: calc(100% - 50px); 
+ 
+        max-width: none; 
+ 
+        height: 300px; 
+ 
+        border-radius: 0 0 0 70px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE FOOTER 
+    ===================================================== */ 
+ 
+    .site-footer { 
+        padding: 15px 20px; 
+    } 
+ 
+    .site-footer p { 
+        font-size: 9px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE RESOURCES HERO 
+    ===================================================== */ 
+ 
+    .resources-hero { 
+        min-height: 350px; 
+    } 
+ 
+    .resources-hero-inner { 
+        min-height: 350px; 
+ 
+        padding: 55px 25px; 
+    } 
+ 
+    .section-label { 
+        font-size: 8px; 
+ 
+        letter-spacing: 1.5px; 
+    } 
+ 
+    .resources-title h1 { 
+        font-size: 54px; 
+ 
+        line-height: .9; 
+    } 
+ 
+    .resources-intro { 
+        width: 100%; 
+ 
+        margin-top: 18px; 
+ 
+        font-size: 10px; 
+ 
+        line-height: 1.5; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE RESOURCES CONTENT 
+    ===================================================== */ 
+ 
+    .resources-section { 
+        padding: 45px 25px; 
+    } 
+ 
+    .resources-container { 
+        max-width: none; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE NORMAL RESOURCE CARDS 
+    ===================================================== */ 
+ 
+    .resource-card { 
+        display: block; 
+ 
+        margin-bottom: 30px; 
+ 
+        padding: 25px 22px; 
+ 
+        box-shadow: 5px 5px 0 var(--black); 
+    } 
+ 
+    .resource-content h2 { 
+        font-size: 32px; 
+ 
+        line-height: .95; 
+    } 
+ 
+    .resource-content p { 
+        margin-top: 15px; 
+ 
+        font-size: 11px; 
+ 
+        line-height: 1.6; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE SWIPEABLE EPISODES 
+    ===================================================== */ 
+ 
+    .episode-slider { 
+        width: 100%; 
+ 
+        margin: 40px auto 55px; 
+    } 
+ 
+    .episode-track { 
+        width: 100%; 
+ 
+        padding: 0 3px 10px; 
+ 
+        overflow-x: auto; 
+        overflow-y: hidden; 
+ 
+        scroll-snap-type: x mandatory; 
+ 
+        -webkit-overflow-scrolling: touch; 
+ 
+        touch-action: pan-x; 
+ 
+        overscroll-behavior-x: contain; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE EPISODE CARD 
+    ===================================================== */ 
+ 
+    .episode-track .episode-card { 
+        flex: 0 0 100%; 
+ 
+        width: 100%; 
+        min-width: 100%; 
+ 
+        min-height: 0; 
+ 
+        padding: 30px 25px 30px; 
+ 
+        display: flex; 
+ 
+        flex-direction: column; 
+ 
+        align-items: stretch; 
+ 
+        justify-content: flex-start; 
+ 
+        gap: 25px; 
+ 
+        margin: 0; 
+ 
+        border: 2px solid var(--black); 
+ 
+        box-shadow: 6px 6px 0 var(--black); 
+ 
+        overflow: hidden; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE EPISODE INFORMATION 
+    ===================================================== */ 
+ 
+    .episode-track .episode-info { 
+        width: 100%; 
+ 
+        padding-right: 0; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE EPISODE LABEL 
+    ===================================================== */ 
+ 
+    .episode-track .episode-label { 
+        margin-bottom: 9px; 
+ 
+        font-size: 7px; 
+ 
+        letter-spacing: 1px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE EPISODE TITLE 
+    ===================================================== */ 
+ 
+    .episode-track .episode-info h2 { 
+        margin-bottom: 20px; 
+ 
+        font-size: 42px; 
+ 
+        line-height: .9; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE EPISODE TOPIC 
+    ===================================================== */ 
+ 
+    .episode-track .episode-info h3 { 
+        font-size: 10px; 
+ 
+        margin-bottom: 4px; 
+    } 
+ 
+    .episode-track .episode-info ul { 
+        padding-left: 18px; 
+ 
+        font-size: 10px; 
+ 
+        line-height: 1.45; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE EPISODE VIDEO 
+    ===================================================== */ 
+ 
+    .episode-track .episode-video { 
+        width: 100%; 
+ 
+        flex: none; 
+    } 
+ 
+    .episode-track .video-wrapper { 
+        width: 100%; 
+ 
+        padding-bottom: 56.25%; 
+ 
+        border-radius: 0 50px 0 0; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE DOTS 
+    ===================================================== */ 
+ 
+    .episode-dots { 
+        margin-top: 22px; 
+ 
+        gap: 8px; 
+    } 
+ 
+    .episode-dot { 
+        width: 10px; 
+        height: 10px; 
+    } 
+ 
+    .resources-back { 
+        margin-top: 45px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE GALLERY 
+    ===================================================== */ 
+ 
+    .gallery-hero { 
+        min-height: 350px; 
+    } 
+ 
+    .gallery-hero-inner { 
+        min-height: 350px; 
+ 
+        padding: 55px 25px; 
+    } 
+ 
+    .gallery-title h1 { 
+        font-size: 54px; 
+ 
+        line-height: .9; 
+    } 
+ 
+    .gallery-intro { 
+        width: 100%; 
+ 
+        margin-top: 18px; 
+ 
+        font-size: 10px; 
+ 
+        line-height: 1.5; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE GALLERY SECTION 
+    ===================================================== */ 
+ 
+    .gallery-section { 
+        padding: 45px 25px; 
+    } 
+ 
+    .gallery-section + .gallery-section { 
+        padding-top: 0; 
+    } 
+ 
+    .gallery-heading { 
+        font-size: 38px; 
+    } 
+ 
+    .gallery-description { 
+        margin-bottom: 28px; 
+ 
+        font-size: 11px; 
+ 
+        line-height: 1.6; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE GALLERY GRID 
+    ===================================================== */ 
+ 
+    .gallery-grid, 
+    .gallery-grid.gallery-grid-six { 
+        grid-template-columns: 1fr; 
+ 
+        gap: 18px; 
+    } 
+ 
+    .gallery-item { 
+        box-shadow: 5px 5px 0 var(--black); 
+    } 
+ 
+    .gallery-item:hover { 
+        transform: none; 
+ 
+        box-shadow: 5px 5px 0 var(--black); 
+    } 
+ 
+ 
+    /* ===================================================== 
+       MOBILE GALLERY LIGHTBOX 
+    ===================================================== */ 
+ 
+    .gallery-lightbox { 
+        padding: 20px; 
+    } 
+ 
+    .gallery-lightbox-close { 
+        top: 12px; 
+        right: 12px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       GALLERY MOBILE HAMBURGER 
+    ===================================================== */ 
+ 
+    .gallery-page .menu-toggle { 
+        display: flex; 
+ 
+        width: 38px; 
+        height: 38px; 
+ 
+        margin-right: 10px; 
+ 
+        padding: 0; 
+ 
+        border: 1px solid var(--black); 
+ 
+        border-radius: 50%; 
+ 
+        background: var(--cream); 
+ 
+        color: var(--black); 
+ 
+        font-size: 0; 
+ 
+        line-height: 1; 
+ 
+        align-items: center; 
+        justify-content: center; 
+ 
+        cursor: pointer; 
+ 
+        z-index: 150; 
+ 
+        flex-shrink: 0; 
+ 
+        appearance: none; 
+        -webkit-appearance: none; 
+    } 
+ 
+    .gallery-page .menu-toggle::before { 
+        content: ""; 
+ 
+        display: block; 
+ 
+        width: 16px; 
+        height: 2px; 
+ 
+        background: var(--black); 
+ 
+        border-radius: 2px; 
+ 
+        box-shadow: 
+            0 -5px 0 var(--black), 
+            0 5px 0 var(--black); 
+    } 
+ 
+    .gallery-page .menu-toggle:hover { 
+        background: var(--yellow); 
+    } 
+ 
+    .gallery-page .menu-toggle:focus { 
+        outline: none; 
+    } 
+ 
+    .gallery-page .menu-toggle:active { 
+        transform: scale(.96); 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
+   VERY SMALL PHONES 
+========================================================= */ 
+ 
+@media (max-width: 380px) { 
+ 
+    .site-header { 
+        height: 58px; 
+ 
+        overflow: visible; 
+ 
+        z-index: 100; 
+    } 
+ 
+    .brand-area { 
+        width: 190px; 
+        height: 58px; 
+ 
+        overflow: visible; 
+    } 
+ 
+    .brand-yellow { 
+        width: 165px; 
+        height: 58px; 
+ 
+        pointer-events: none; 
+    } 
+ 
+    .logo-link { 
+        left: 15px; 
+ 
+        width: 80px; 
+        height: 58px; 
+    } 
+ 
+    .logo { 
+        width: 43px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL TOP STRIPES 
+    ===================================================== */ 
+ 
+    .top-stripes { 
+        left: 145px; 
+ 
+        width: 145px; 
+ 
+        height: 58px; 
+ 
+        overflow: visible; 
+ 
+        pointer-events: none; 
+    } 
+ 
+    .top-stripes span { 
+        flex: 0 0 48px; 
+ 
+        width: 48px; 
+ 
+        height: 58px; 
+ 
+        transform: skewX(-20deg); 
+ 
+        transform-origin: top left; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL MENU 
+    ===================================================== */ 
+ 
+    .menu-toggle { 
+        display: flex; 
+ 
+        width: 32px; 
+        height: 32px; 
+ 
+        margin-right: 8px; 
+ 
+        font-size: 19px; 
+ 
+        z-index: 150; 
+ 
+        cursor: pointer; 
+    } 
+ 
+    .main-navigation { 
+        top: 58px; 
+ 
+        right: 8px; 
+ 
+        width: 175px; 
+ 
+        z-index: 140; 
+    } 
+ 
+    .nav-btn { 
+        height: 38px; 
+ 
+        font-size: 9px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL HERO 
+    ===================================================== */ 
+ 
+    .hero { 
+        height: calc(100vh - 58px); 
+ 
+        min-height: 600px; 
+    } 
+ 
+    .hero-copy { 
+        margin: 45px 20px 0; 
+    } 
+ 
+    .hero-copy h1 { 
+        font-size: 47px; 
+    } 
+ 
+    .hero-copy p { 
+        font-size: 9px; 
+ 
+        line-height: 1.4; 
+    } 
+ 
+    .hero-buttons { 
+        gap: 7px; 
+ 
+        margin-top: 14px; 
+    } 
+ 
+    .hero-button { 
+        height: 38px; 
+ 
+        padding: 0 14px; 
+ 
+        font-size: 9px; 
+    } 
+ 
+    .hero-photo { 
+        margin: 30px 20px 0; 
+ 
+        width: calc(100% - 40px); 
+ 
+        height: 215px; 
+ 
+        border-bottom-left-radius: 60px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL ABOUT 
+    ===================================================== */ 
+ 
+    .about-copy { 
+        padding: 45px 20px 0; 
+    } 
+ 
+    .about-copy h2 { 
+        font-size: 48px; 
+    } 
+ 
+    .about-copy p { 
+        font-size: 12px; 
+ 
+        line-height: 1.5; 
+    } 
+ 
+    .about-photo { 
+        margin: 30px 20px 35px; 
+ 
+        width: calc(100% - 40px); 
+ 
+        height: 270px; 
+ 
+        border-bottom-left-radius: 60px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL FOOTER 
+    ===================================================== */ 
+ 
+    .site-footer { 
+        padding: 13px 15px; 
+    } 
+ 
+    .site-footer p { 
+        font-size: 8px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL RESOURCES 
+    ===================================================== */ 
+ 
+    .resources-hero { 
+        min-height: 320px; 
+    } 
+ 
+    .resources-hero-inner { 
+        min-height: 320px; 
+ 
+        padding: 45px 20px; 
+    } 
+ 
+    .resources-title h1 { 
+        font-size: 46px; 
+    } 
+ 
+    .resources-intro { 
+        font-size: 9px; 
+    } 
+ 
+    .resources-section { 
+        padding: 35px 20px; 
+    } 
+ 
+    .resource-card { 
+        padding: 22px 18px; 
+ 
+        box-shadow: 4px 4px 0 var(--black); 
+    } 
+ 
+    .resource-content h2 { 
+        font-size: 27px; 
+    } 
+ 
+    .resource-content p { 
+        font-size: 10px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL EPISODE CARD 
+    ===================================================== */ 
+ 
+    .episode-slider { 
+        margin-top: 35px; 
+ 
+        margin-bottom: 45px; 
+    } 
+ 
+    .episode-track .episode-card { 
+        padding: 25px 20px 25px; 
+ 
+        gap: 20px; 
+ 
+        box-shadow: 5px 5px 0 var(--black); 
+    } 
+ 
+    .episode-track .episode-label { 
+        font-size: 6px; 
+ 
+        letter-spacing: .9px; 
+    } 
+ 
+    .episode-track .episode-info h2 { 
+        font-size: 36px; 
+ 
+        line-height: .9; 
+    } 
+ 
+    .episode-track .episode-info h3 { 
+        font-size: 9px; 
+    } 
+ 
+    .episode-track .episode-info ul { 
+        font-size: 9px; 
+ 
+        line-height: 1.4; 
+    } 
+ 
+    .episode-track .video-wrapper { 
+        border-radius: 0 42px 0 0; 
+    } 
+ 
+    .episode-dots { 
+        margin-top: 18px; 
+ 
+        gap: 7px; 
+    } 
+ 
+    .episode-dot { 
+        width: 9px; 
+        height: 9px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL GALLERY 
+    ===================================================== */ 
+ 
+    .gallery-hero { 
+        min-height: 320px; 
+    } 
+ 
+    .gallery-hero-inner { 
+        min-height: 320px; 
+ 
+        padding: 45px 20px; 
+    } 
+ 
+    .gallery-title h1 { 
+        font-size: 46px; 
+    } 
+ 
+    .gallery-intro { 
+        font-size: 9px; 
+    } 
+ 
+    .gallery-section { 
+        padding: 35px 20px; 
+    } 
+ 
+    .gallery-heading { 
+        font-size: 34px; 
+    } 
+ 
+    .gallery-description { 
+        font-size: 10px; 
+    } 
+ 
+ 
+    /* ===================================================== 
+       VERY SMALL GALLERY MENU 
+    ===================================================== */ 
+ 
+    .gallery-page .menu-toggle { 
+        display: flex; 
+ 
+        width: 32px; 
+        height: 32px; 
+ 
+        margin-right: 8px; 
+    } 
+ 
+    .gallery-page .menu-toggle::before { 
+        width: 14px; 
+        height: 2px; 
+ 
+        box-shadow: 
+            0 -4px 0 var(--black), 
+            0 4px 0 var(--black); 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
+   FINAL CLICK / STACKING SAFETY 
+========================================================= */ 
+ 
+.brand-yellow, 
+.top-stripes { 
+    pointer-events: none; 
+} 
+ 
+.menu-toggle { 
+    pointer-events: auto; 
+ 
+    position: relative; 
+ 
+    z-index: 150; 
+} 
+ 
+ 
+/* ========================================================= 
+   FINAL RESOURCES HEADER 
+   BLUE → YELLOW → RED → BLACK 
+========================================================= */ 
+ 
+.resources-page .brand-yellow { 
+    background: var(--blue) !important; 
+} 
+ 
+.resources-page .top-stripes .stripe-blue { 
+    background: var(--yellow) !important; 
+} 
+ 
+.resources-page .top-stripes .stripe-red { 
+    background: var(--red) !important; 
+} 
+ 
+.resources-page .top-stripes .stripe-black { 
+    background: var(--black) !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   FINAL EPISODE COLOR SAFETY 
+========================================================= */ 
+ 
+.resources-page .episode-blue { 
+    background: var(--blue) !important; 
+ 
+    color: white !important; 
+} 
+ 
+.resources-page .episode-yellow { 
+    background: var(--yellow) !important; 
+ 
+    color: var(--black) !important; 
+} 
+ 
+.resources-page .episode-red { 
+    background: var(--red) !important; 
+ 
+    color: white !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   KEEP DIVIDER COLORS UNCHANGED 
+   YELLOW → BLUE → RED → BLACK 
+========================================================= */ 
+ 
+.resources-page .divider-left-stripes .stripe-yellow { 
+    background: var(--yellow) !important; 
+} 
+ 
+.resources-page .divider-left-stripes .stripe-blue { 
+    background: var(--blue) !important; 
+} 
+ 
+.resources-page .divider-left-stripes .stripe-red { 
+    background: var(--red) !important; 
+} 
+ 
+.resources-page .divider-left-stripes .stripe-black { 
+    background: var(--black) !important; 
+} 
+ 
+ 
+/* ========================================================= 
    FINAL GALLERY HEADER
    RED → YELLOW → BLUE → BLACK
-========================================================= */
-
-/*
-   Gallery brand block = RED
-
-   Visible header sequence:
-   RED brand → YELLOW → BLUE → BLACK
-
-   The HTML can still contain:
-   stripe-red → stripe-yellow → stripe-blue → stripe-black
-
-   The stripe-red is hidden because the RED brand block
-   already provides the first RED section.
-*/
-
-.gallery-page .brand-yellow {
-    background: var(--red) !important;
-}
-
-
-/* =========================================================
+   SAME STRIPE SIZE AS HOME
+========================================================= */ 
+ 
+.gallery-page .brand-yellow { 
+    background: var(--red) !important; 
+} 
+ 
+ 
+/* ========================================================= 
    DESKTOP GALLERY HEADER
-========================================================= */
-
-.gallery-page .top-stripes {
-    position: absolute;
-
-    left: 145px;
-    top: 0;
-
-    width: 170px;
-    height: 80px;
-
-    display: flex;
-
-    overflow: visible;
-
-    z-index: 2;
-
-    pointer-events: none;
-}
-
-/* Hide duplicate red stripe */
-.gallery-page .top-stripes .stripe-red {
-    display: none !important;
-}
-
-/* Remaining 3 stripes */
-.gallery-page .top-stripes .stripe-yellow,
-.gallery-page .top-stripes .stripe-blue,
-.gallery-page .top-stripes .stripe-black {
-    display: block;
-
-    flex: 0 0 33.333333%;
-
-    width: 33.333333%;
-
-    height: 80px;
-
-    min-width: 0;
-
-    transform: skewX(-20deg);
-
-    transform-origin: top left;
-}
-
-.gallery-page .top-stripes .stripe-yellow {
-    background: var(--yellow) !important;
-}
-
-.gallery-page .top-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
-
-.gallery-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
+   SAME SIZE AS HOME
+========================================================= */ 
+ 
+.gallery-page .top-stripes { 
+    position: absolute; 
+ 
+    left: 145px; 
+    top: 0; 
+ 
+    width: 170px; 
+    height: 80px; 
+ 
+    display: flex; 
+ 
+    overflow: visible; 
+ 
+    z-index: 2; 
+ 
+    pointer-events: none; 
+} 
+ 
+ 
+/* Hide duplicate red stripe */ 
+ 
+.gallery-page .top-stripes .stripe-red { 
+    display: none !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   GALLERY VISIBLE STRIPES
+   YELLOW → BLUE → BLACK
+   52px × 80px
+========================================================= */ 
+ 
+.gallery-page .top-stripes .stripe-yellow, 
+.gallery-page .top-stripes .stripe-blue, 
+.gallery-page .top-stripes .stripe-black { 
+    display: block; 
+ 
+    flex: 0 0 52px; 
+ 
+    width: 52px; 
+    height: 80px; 
+ 
+    min-width: 0; 
+ 
+    transform: skewX(-20deg); 
+    transform-origin: top left; 
+} 
+ 
+.gallery-page .top-stripes .stripe-yellow { 
+    background: var(--yellow) !important; 
+} 
+ 
+.gallery-page .top-stripes .stripe-blue { 
+    background: var(--blue) !important; 
+} 
+ 
+.gallery-page .top-stripes .stripe-black { 
+    background: var(--black) !important; 
+} 
+ 
+ 
+/* ========================================================= 
    TABLET GALLERY HEADER
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .gallery-page .top-stripes {
-        left: 110px;
-
-        width: 140px;
-        height: 70px;
-    }
-
-    .gallery-page .top-stripes .stripe-yellow,
-    .gallery-page .top-stripes .stripe-blue,
-    .gallery-page .top-stripes .stripe-black {
-        flex: 0 0 33.333333%;
-
-        width: 33.333333%;
-
-        height: 70px;
-    }
-
-}
-
-
-/* =========================================================
+   SAME SIZE AS HOME
+   42px × 70px
+========================================================= */ 
+ 
+@media (max-width: 900px) { 
+ 
+    .gallery-page .top-stripes { 
+        left: 110px; 
+ 
+        width: 140px; 
+        height: 70px; 
+    } 
+ 
+    .gallery-page .top-stripes .stripe-yellow, 
+    .gallery-page .top-stripes .stripe-blue, 
+    .gallery-page .top-stripes .stripe-black { 
+        flex: 0 0 42px; 
+ 
+        width: 42px; 
+        height: 70px; 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
    MOBILE GALLERY HEADER
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .gallery-page .top-stripes {
-        left: 145px;
-        top: 0;
-
-        width: 155px;
-        height: 62px;
-
-        display: flex;
-
-        overflow: visible;
-
-        z-index: 3;
-
-        pointer-events: none;
-    }
-
-    .gallery-page .top-stripes .stripe-yellow,
-    .gallery-page .top-stripes .stripe-blue,
-    .gallery-page .top-stripes .stripe-black {
-        flex: 0 0 33.333333%;
-
-        width: 33.333333%;
-
-        height: 62px;
-
-        min-width: 0;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-    }
-
-}
-
-
-/* =========================================================
+   SAME SIZE AS HOME
+   52px × 62px
+========================================================= */ 
+ 
+@media (max-width: 600px) { 
+ 
+    .gallery-page .top-stripes { 
+        left: 145px; 
+        top: 0; 
+ 
+        width: 155px; 
+        height: 62px; 
+ 
+        display: flex; 
+ 
+        overflow: visible; 
+ 
+        z-index: 3; 
+ 
+        pointer-events: none; 
+    } 
+ 
+    .gallery-page .top-stripes .stripe-yellow, 
+    .gallery-page .top-stripes .stripe-blue, 
+    .gallery-page .top-stripes .stripe-black { 
+        flex: 0 0 52px; 
+ 
+        width: 52px; 
+        height: 62px; 
+ 
+        min-width: 0; 
+ 
+        transform: skewX(-20deg); 
+        transform-origin: top left; 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
    VERY SMALL GALLERY HEADER
-========================================================= */
-
-@media (max-width: 380px) {
-
-    .gallery-page .top-stripes {
-        left: 145px;
-
-        width: 145px;
-        height: 58px;
-    }
-
-    .gallery-page .top-stripes .stripe-yellow,
-    .gallery-page .top-stripes .stripe-blue,
-    .gallery-page .top-stripes .stripe-black {
-        flex: 0 0 33.333333%;
-
-        width: 33.333333%;
-
-        height: 58px;
-    }
-
-}
-
-
-/* =========================================================
+   SAME SIZE AS HOME
+   48px × 58px
+========================================================= */ 
+ 
+@media (max-width: 380px) { 
+ 
+    .gallery-page .top-stripes { 
+        left: 145px; 
+ 
+        width: 145px; 
+        height: 58px; 
+    } 
+ 
+    .gallery-page .top-stripes .stripe-yellow, 
+    .gallery-page .top-stripes .stripe-blue, 
+    .gallery-page .top-stripes .stripe-black { 
+        flex: 0 0 48px; 
+ 
+        width: 48px; 
+        height: 58px; 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
    FINAL GALLERY COLOR SAFETY
-========================================================= */
-
-.gallery-page .brand-yellow {
-    background: var(--red) !important;
-}
-
-.gallery-page .top-stripes .stripe-yellow {
-    background: var(--yellow) !important;
-}
-
-.gallery-page .top-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
-
-.gallery-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
+========================================================= */ 
+ 
+.gallery-page .brand-yellow { 
+    background: var(--red) !important; 
+} 
+ 
+.gallery-page .top-stripes .stripe-yellow { 
+    background: var(--yellow) !important; 
+} 
+ 
+.gallery-page .top-stripes .stripe-blue { 
+    background: var(--blue) !important; 
+} 
+ 
+.gallery-page .top-stripes .stripe-black { 
+    background: var(--black) !important; 
+} 
+ 
+ 
+/* ========================================================= 
    FINAL GALLERY DIVIDER
    YELLOW → BLUE → RED → BLACK
-========================================================= */
-
-.gallery-page .divider-left-stripes .stripe-yellow {
-    background: var(--yellow) !important;
-}
-
-.gallery-page .divider-left-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
-
-.gallery-page .divider-left-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.gallery-page .divider-left-stripes .stripe-black {
-    background: var(--black) !important;
+========================================================= */ 
+ 
+.gallery-page .divider-left-stripes .stripe-yellow { 
+    background: var(--yellow) !important; 
+} 
+ 
+.gallery-page .divider-left-stripes .stripe-blue { 
+    background: var(--blue) !important; 
+} 
+ 
+.gallery-page .divider-left-stripes .stripe-red { 
+    background: var(--red) !important; 
+} 
+ 
+.gallery-page .divider-left-stripes .stripe-black { 
+    background: var(--black) !important; 
 }
