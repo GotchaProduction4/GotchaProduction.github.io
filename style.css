@@ -2466,7 +2466,9 @@ a:hover {
     .resource-content p {
         font-size: 10px;
     }
-/* =====================================================
+
+
+    /* =====================================================
        VERY SMALL PHONE EPISODE CARD
     ===================================================== */
 
@@ -2482,7 +2484,8 @@ a:hover {
 
         box-shadow: 5px 5px 0 var(--black);
     }
-.episode-track .episode-label {
+
+    .episode-track .episode-label {
         font-size: 6px;
 
         letter-spacing: .9px;
@@ -2543,35 +2546,19 @@ a:hover {
 /* =========================================================
    FINAL RESOURCES HEADER
    BLUE → YELLOW → RED → BLACK
-
-   IMPORTANT:
-   These rules are AFTER all responsive media queries.
-   This keeps Windows/Desktop, Tablet and Mobile identical.
 ========================================================= */
-
-
-/* BLUE BRAND BLOCK */
 
 .resources-page .brand-yellow {
     background: var(--blue) !important;
 }
 
-
-/* FIRST TOP STRIPE = YELLOW */
-
 .resources-page .top-stripes .stripe-blue {
     background: var(--yellow) !important;
 }
 
-
-/* SECOND TOP STRIPE = RED */
-
 .resources-page .top-stripes .stripe-red {
     background: var(--red) !important;
 }
-
-
-/* THIRD TOP STRIPE = BLACK */
 
 .resources-page .top-stripes .stripe-black {
     background: var(--black) !important;
@@ -2604,8 +2591,6 @@ a:hover {
 /* =========================================================
    KEEP DIVIDER COLORS UNCHANGED
    YELLOW → BLUE → RED → BLACK
-
-   THESE RULES ONLY AFFECT THE DIVIDER.
 ========================================================= */
 
 .resources-page .divider-left-stripes .stripe-yellow {
@@ -2627,7 +2612,6 @@ a:hover {
 
 /* =========================================================
    FINAL MOBILE + WINDOWS DRAG FIX
-   TOUCH + MOUSE + TRACKPAD
 ========================================================= */
 
 .episode-track {
@@ -2648,7 +2632,6 @@ a:hover {
     -webkit-user-select: none;
 }
 
-/* Prevent YouTube iframe from stealing the drag */
 .episode-track.is-dragging iframe {
     pointer-events: none;
 }
@@ -2682,25 +2665,65 @@ a:hover {
     }
 }
 
+
 /* =========================================================
    GALLERY PAGE
    RED → YELLOW → BLUE → BLACK HEADER
+========================================================= */
+
+.gallery-page {
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   GALLERY RED BRAND
 ========================================================= */
 
 .gallery-page .brand-yellow {
     background: var(--red) !important;
 }
 
-/* Override the existing three-stripe setup so Gallery can use
-   RED → YELLOW → BLUE → BLACK when the HTML includes 4 spans. */
+
+/* =========================================================
+   GALLERY HEADER STRIPES
+   RED → YELLOW → BLUE → BLACK
+
+   SAME TOTAL LENGTH AS RESOURCES
+========================================================= */
+
+/* Desktop */
+
 .gallery-page .top-stripes {
+    position: absolute;
+
     left: 145px;
+    top: 0;
+
+    width: 170px;
+    height: 80px;
+
     display: flex;
+
     overflow: visible;
+
+    z-index: 2;
+
+    pointer-events: none;
 }
 
 .gallery-page .top-stripes span {
+    display: block;
+
+    flex: 0 0 42.5px;
+
+    width: 42.5px;
+    height: 80px;
+
+    min-width: 0;
+
     transform: skewX(-20deg);
+
     transform-origin: top left;
 }
 
@@ -2727,15 +2750,21 @@ a:hover {
 
 .gallery-hero {
     position: relative;
+
     width: 100%;
+
     min-height: 430px;
+
     overflow: hidden;
+
     background: var(--cream);
+
     border-bottom: 1px solid var(--black);
 }
 
 .gallery-bg {
     position: absolute;
+
     inset: 0;
 
     background-image:
@@ -2749,19 +2778,23 @@ a:hover {
     background-position: center;
 
     opacity: .45;
+
     z-index: 0;
 }
 
 .gallery-hero-inner {
     position: relative;
+
     min-height: 430px;
 
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
     padding: 60px 8%;
+
     text-align: center;
 
     z-index: 2;
@@ -2776,27 +2809,37 @@ a:hover {
     margin: 0;
 
     font-family: "Anton", sans-serif;
+
     font-size: clamp(70px, 9vw, 120px);
+
     font-weight: 400;
+
     line-height: .86;
+
     letter-spacing: .5px;
 
     color: var(--black);
+
     text-align: center;
 }
 
 .gallery-intro {
     width: 500px;
+
     max-width: 100%;
 
     margin: 22px auto 0;
 
     font-family: "Be Vietnam Pro", sans-serif;
+
     font-size: 14px;
+
     font-weight: 300;
+
     line-height: 1.6;
 
     color: var(--black);
+
     text-align: center;
 }
 
@@ -2807,7 +2850,9 @@ a:hover {
 
 .gallery-section {
     width: 100%;
+
     padding: 60px 8%;
+
     background: var(--cream);
 }
 
@@ -2817,7 +2862,9 @@ a:hover {
 
 .gallery-container {
     width: 100%;
+
     max-width: 1100px;
+
     margin: 0 auto;
 }
 
@@ -2825,11 +2872,15 @@ a:hover {
     margin: 0 0 14px;
 
     font-family: "Anton", sans-serif;
+
     font-size: clamp(38px, 5vw, 60px);
+
     font-weight: 400;
+
     line-height: .95;
 
     color: var(--black);
+
     text-align: center;
 }
 
@@ -2839,11 +2890,15 @@ a:hover {
     margin: 0 auto 35px;
 
     font-family: "Be Vietnam Pro", sans-serif;
+
     font-size: 13px;
+
     font-weight: 300;
+
     line-height: 1.65;
 
     color: var(--black);
+
     text-align: center;
 }
 
@@ -2883,7 +2938,9 @@ a:hover {
 
     cursor: pointer;
 
-    transition: transform .2s ease, box-shadow .2s ease;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
 }
 
 .gallery-item:hover {
@@ -2896,6 +2953,7 @@ a:hover {
     display: block;
 
     width: 100%;
+
     aspect-ratio: 4 / 3;
 
     object-fit: cover;
@@ -2917,9 +2975,11 @@ a:hover {
 
 .gallery-lightbox {
     position: fixed;
+
     inset: 0;
 
     display: none;
+
     align-items: center;
     justify-content: center;
 
@@ -2958,16 +3018,20 @@ a:hover {
     height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border: 1px solid var(--cream);
+
     border-radius: 50%;
 
     background: transparent;
+
     color: var(--cream);
 
     font-size: 28px;
+
     line-height: 1;
 
     cursor: pointer;
@@ -2980,12 +3044,38 @@ a:hover {
 
 @media (max-width: 900px) {
 
+    /* =====================================================
+       GALLERY HEADER STRIPES
+       RED → YELLOW → BLUE → BLACK
+       SAME TOTAL LENGTH AS RESOURCES
+    ===================================================== */
+
+    .gallery-page .top-stripes {
+        left: 110px;
+
+        width: 140px;
+        height: 70px;
+    }
+
+    .gallery-page .top-stripes span {
+        flex: 0 0 35px;
+
+        width: 35px;
+        height: 70px;
+    }
+
+
+    /* =====================================================
+       GALLERY HERO
+    ===================================================== */
+
     .gallery-hero {
         min-height: 400px;
     }
 
     .gallery-hero-inner {
         min-height: 400px;
+
         padding: 55px 6%;
     }
 
@@ -2997,9 +3087,19 @@ a:hover {
         font-size: 13px;
     }
 
+
+    /* =====================================================
+       GALLERY SECTION
+    ===================================================== */
+
     .gallery-section {
         padding: 55px 6%;
     }
+
+
+    /* =====================================================
+       GALLERY GRID
+    ===================================================== */
 
     .gallery-grid,
     .gallery-grid.gallery-grid-six {
@@ -3014,23 +3114,115 @@ a:hover {
 
 @media (max-width: 600px) {
 
+    /* =====================================================
+       GALLERY HEADER STRIPES
+       RED → YELLOW → BLUE → BLACK
+       SAME TOTAL LENGTH AS RESOURCES
+    ===================================================== */
+
     .gallery-page .top-stripes {
         left: 145px;
+
         top: 0;
 
-        width: 210px;
+        width: 155px;
         height: 62px;
 
         display: flex;
+
         overflow: visible;
+
+        z-index: 3;
+
+        pointer-events: none;
     }
 
     .gallery-page .top-stripes span {
-        flex: 0 0 52px;
+        flex: 0 0 38.75px;
 
-        width: 52px;
+        width: 38.75px;
         height: 62px;
+
+        transform: skewX(-20deg);
+
+        transform-origin: top left;
     }
+
+
+    /* =====================================================
+       GALLERY HAMBURGER
+    ===================================================== */
+
+    .gallery-page .menu-toggle {
+        display: flex;
+
+        position: relative;
+
+        width: 38px;
+        height: 38px;
+
+        margin-right: 10px;
+
+        padding: 0;
+
+        border: 1px solid var(--black);
+
+        border-radius: 50%;
+
+        background: var(--cream);
+
+        color: var(--black);
+
+        font-size: 0;
+
+        line-height: 1;
+
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        z-index: 150;
+
+        flex-shrink: 0;
+
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    .gallery-page .menu-toggle::before {
+        content: "";
+
+        display: block;
+
+        width: 16px;
+        height: 2px;
+
+        background: var(--black);
+
+        border-radius: 2px;
+
+        box-shadow:
+            0 -5px 0 var(--black),
+            0 5px 0 var(--black);
+    }
+
+    .gallery-page .menu-toggle:hover {
+        background: var(--yellow);
+    }
+
+    .gallery-page .menu-toggle:focus {
+        outline: none;
+    }
+
+    .gallery-page .menu-toggle:active {
+        transform: scale(.96);
+    }
+
+
+    /* =====================================================
+       GALLERY HERO
+    ===================================================== */
 
     .gallery-hero {
         min-height: 350px;
@@ -3038,11 +3230,13 @@ a:hover {
 
     .gallery-hero-inner {
         min-height: 350px;
+
         padding: 55px 25px;
     }
 
     .gallery-title h1 {
         font-size: 54px;
+
         line-height: .9;
     }
 
@@ -3052,8 +3246,14 @@ a:hover {
         margin-top: 18px;
 
         font-size: 10px;
+
         line-height: 1.5;
     }
+
+
+    /* =====================================================
+       GALLERY SECTION
+    ===================================================== */
 
     .gallery-section {
         padding: 45px 25px;
@@ -3071,8 +3271,14 @@ a:hover {
         margin-bottom: 28px;
 
         font-size: 11px;
+
         line-height: 1.6;
     }
+
+
+    /* =====================================================
+       GALLERY GRID
+    ===================================================== */
 
     .gallery-grid,
     .gallery-grid.gallery-grid-six {
@@ -3091,6 +3297,11 @@ a:hover {
         box-shadow: 5px 5px 0 var(--black);
     }
 
+
+    /* =====================================================
+       GALLERY LIGHTBOX
+    ===================================================== */
+
     .gallery-lightbox {
         padding: 20px;
     }
@@ -3108,19 +3319,61 @@ a:hover {
 
 @media (max-width: 380px) {
 
+    /* =====================================================
+       GALLERY HEADER STRIPES
+       RED → YELLOW → BLUE → BLACK
+       SAME TOTAL LENGTH AS RESOURCES
+    ===================================================== */
+
     .gallery-page .top-stripes {
         left: 145px;
 
-        width: 192px;
+        width: 145px;
         height: 58px;
+
+        display: flex;
+
+        overflow: visible;
     }
 
     .gallery-page .top-stripes span {
-        flex: 0 0 48px;
+        flex: 0 0 36.25px;
 
-        width: 48px;
+        width: 36.25px;
         height: 58px;
+
+        transform: skewX(-20deg);
+
+        transform-origin: top left;
     }
+
+
+    /* =====================================================
+       GALLERY HAMBURGER
+    ===================================================== */
+
+    .gallery-page .menu-toggle {
+        display: flex;
+
+        width: 32px;
+        height: 32px;
+
+        margin-right: 8px;
+    }
+
+    .gallery-page .menu-toggle::before {
+        width: 14px;
+        height: 2px;
+
+        box-shadow:
+            0 -4px 0 var(--black),
+            0 4px 0 var(--black);
+    }
+
+
+    /* =====================================================
+       GALLERY HERO
+    ===================================================== */
 
     .gallery-hero-inner {
         padding: 45px 20px;
@@ -3134,6 +3387,11 @@ a:hover {
         font-size: 9px;
     }
 
+
+    /* =====================================================
+       GALLERY SECTION
+    ===================================================== */
+
     .gallery-section {
         padding: 35px 20px;
     }
@@ -3144,219 +3402,5 @@ a:hover {
 
     .gallery-description {
         font-size: 10px;
-    }
-}
-
-
-/* =========================================================
-   FINAL GALLERY HEADER + MOBILE MENU FIX
-   Match the same stripe sizing used by the other pages.
-   Gallery header: RED → YELLOW → BLUE → BLACK
-   Divider remains: YELLOW → BLUE → RED → BLACK
-========================================================= */
-
-/* Desktop: same 52px stripe thickness as the main header */
-.gallery-page .top-stripes {
-    left: 145px;
-    width: 208px;
-    height: 80px;
-    display: flex;
-    overflow: visible;
-    z-index: 2;
-}
-
-.gallery-page .top-stripes span {
-    flex: 0 0 52px;
-    width: 52px;
-    height: 80px;
-    transform: skewX(-20deg);
-    transform-origin: top left;
-}
-
-.gallery-page .top-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.gallery-page .top-stripes .stripe-yellow {
-    background: var(--yellow) !important;
-}
-
-.gallery-page .top-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
-
-.gallery-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-/* Keep the Gallery hamburger above the decorative stripes */
-.gallery-page .menu-toggle {
-    display: none;
-    position: relative;
-    width: 38px;
-    height: 38px;
-    margin-right: 10px;
-    padding: 0;
-    border: 1px solid var(--black);
-    border-radius: 50%;
-    background: var(--cream);
-    color: var(--black);
-    font-size: 0;
-    line-height: 1;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 150;
-    flex-shrink: 0;
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-.gallery-page .menu-toggle::before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 2px;
-    background: var(--black);
-    border-radius: 2px;
-    box-shadow: 0 -5px 0 var(--black), 0 5px 0 var(--black);
-}
-
-.gallery-page .menu-toggle:hover {
-    background: var(--yellow);
-}
-
-.gallery-page .menu-toggle:focus {
-    outline: none;
-}
-
-.gallery-page .menu-toggle:active {
-    transform: scale(.96);
-}
-
-/* Tablet: same 42px stripe thickness as the other pages */
-@media (max-width: 900px) {
-    .gallery-page .top-stripes {
-        left: 110px;
-        width: 168px;
-        height: 70px;
-    }
-
-    .gallery-page .top-stripes span {
-        flex: 0 0 42px;
-        width: 42px;
-        height: 70px;
-    }
-}
-
-/* Mobile: same 52px stripe thickness as the existing pages */
-@media (max-width: 600px) {
-    .gallery-page .menu-toggle {
-        display: flex;
-        width: 38px;
-        height: 38px;
-        margin-right: 10px;
-    }
-
-    .gallery-page .top-stripes {
-        left: 145px;
-        width: 208px;
-        height: 62px;
-    }
-
-    .gallery-page .top-stripes span {
-        flex: 0 0 52px;
-        width: 52px;
-        height: 62px;
-    }
-}
-
-/* Very small phones: same 48px stripe thickness as the existing pages */
-@media (max-width: 380px) {
-    .gallery-page .menu-toggle {
-        display: flex;
-        width: 32px;
-        height: 32px;
-        margin-right: 8px;
-    }
-
-    .gallery-page .menu-toggle::before {
-        width: 14px;
-        height: 2px;
-        box-shadow: 0 -4px 0 var(--black), 0 4px 0 var(--black);
-    }
-
-    .gallery-page .top-stripes {
-        left: 145px;
-        width: 192px;
-        height: 58px;
-    }
-
-    .gallery-page .top-stripes span {
-        flex: 0 0 48px;
-        width: 48px;
-        height: 58px;
-    }
-}
-
-/* =========================================================
-   FINAL GALLERY HEADER STRIPES
-   RED → YELLOW → BLUE → BLACK
-   Same TOTAL length as Resources
-========================================================= */
-
-.gallery-page .top-stripes {
-    left: 145px;
-    width: 170px;
-    height: 80px;
-}
-
-.gallery-page .top-stripes span {
-    flex: 0 0 42.5px;
-    width: 42.5px;
-    height: 80px;
-    transform: skewX(-20deg);
-    transform-origin: top left;
-}
-
-@media (max-width: 900px) {
-    .gallery-page .top-stripes {
-        left: 110px;
-        width: 140px;
-        height: 70px;
-    }
-
-    .gallery-page .top-stripes span {
-        flex: 0 0 35px;
-        width: 35px;
-        height: 70px;
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery-page .top-stripes {
-        left: 145px;
-        width: 155px;
-        height: 62px;
-    }
-
-    .gallery-page .top-stripes span {
-        flex: 0 0 38.75px;
-        width: 38.75px;
-        height: 62px;
-    }
-}
-
-@media (max-width: 380px) {
-    .gallery-page .top-stripes {
-        left: 145px;
-        width: 145px;
-        height: 58px;
-    }
-
-    .gallery-page .top-stripes span {
-        flex: 0 0 36.25px;
-        width: 36.25px;
-        height: 58px;
     }
 }
