@@ -1700,10 +1700,6 @@ a:hover {
 
 @media (max-width: 600px) {
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
     .site-header {
         height: 62px;
 
@@ -1711,11 +1707,6 @@ a:hover {
 
         z-index: 100;
     }
-
-
-    /* =====================================================
-       BRAND AREA
-    ===================================================== */
 
     .brand-area {
         position: relative;
@@ -1727,11 +1718,6 @@ a:hover {
 
         overflow: visible;
     }
-
-
-    /* =====================================================
-       BRAND BLOCK
-    ===================================================== */
 
     .brand-yellow {
         left: 0;
@@ -1751,11 +1737,6 @@ a:hover {
         pointer-events: none;
     }
 
-
-    /* =====================================================
-       LOGO
-    ===================================================== */
-
     .logo-link {
         left: 20px;
         top: 0;
@@ -1769,11 +1750,6 @@ a:hover {
     .logo {
         width: 48px;
     }
-
-
-    /* =====================================================
-       MOBILE TOP STRIPES
-    ===================================================== */
 
     .top-stripes {
         left: 145px;
@@ -1801,11 +1777,6 @@ a:hover {
 
         transform-origin: top left;
     }
-
-
-    /* =====================================================
-       MOBILE NAVIGATION
-    ===================================================== */
 
     .main-navigation {
         position: absolute;
@@ -1852,11 +1823,6 @@ a:hover {
         justify-content: center;
     }
 
-
-    /* =====================================================
-       HAMBURGER BUTTON
-    ===================================================== */
-
     .menu-toggle {
         display: flex;
 
@@ -1874,11 +1840,6 @@ a:hover {
         cursor: pointer;
     }
 
-
-    /* =====================================================
-       MOBILE HERO
-    ===================================================== */
-
     .hero {
         height: calc(100vh - 62px);
 
@@ -1893,11 +1854,6 @@ a:hover {
         width: 100%;
         height: 100%;
     }
-
-
-    /* =====================================================
-       MOBILE HERO COPY
-    ===================================================== */
 
     .hero-copy {
         position: relative;
@@ -1930,11 +1886,6 @@ a:hover {
         line-height: 1.4;
     }
 
-
-    /* =====================================================
-       MOBILE HERO BUTTONS
-    ===================================================== */
-
     .hero-buttons {
         gap: 10px;
 
@@ -1953,34 +1904,9 @@ a:hover {
         font-size: 11px;
     }
 
-
-    /* =====================================================
-       MOBILE HERO PHOTO
-    ===================================================== */
-
     .hero-photo {
-        position: relative;
-
-        top: auto;
-        right: auto;
-
-        transform: none;
-
-        margin: 38px 25px 0;
-
-        width: calc(100% - 50px);
-
-        max-width: none;
-
-        height: 235px;
-
-        border-radius: 0 0 0 70px;
+        display: none !important;
     }
-
-
-    /* =====================================================
-       MOBILE DIVIDER
-    ===================================================== */
 
     .divider {
         height: 50px;
@@ -2007,11 +1933,6 @@ a:hover {
     .divider-left-stripes .stripe-black {
         width: 55px;
     }
-
-
-    /* =====================================================
-       MOBILE ABOUT
-    ===================================================== */
 
     .about-section {
         height: auto;
@@ -2060,11 +1981,6 @@ a:hover {
         letter-spacing: 0;
     }
 
-
-    /* =====================================================
-       MOBILE ABOUT PHOTO
-    ===================================================== */
-
     .about-photo {
         position: relative;
 
@@ -2084,11 +2000,6 @@ a:hover {
         border-radius: 0 0 0 70px;
     }
 
-
-    /* =====================================================
-       MOBILE FOOTER
-    ===================================================== */
-
     .site-footer {
         padding: 15px 20px;
     }
@@ -2096,11 +2007,6 @@ a:hover {
     .site-footer p {
         font-size: 9px;
     }
-
-
-    /* =====================================================
-       MOBILE RESOURCES HERO
-    ===================================================== */
 
     .resources-hero {
         min-height: 350px;
@@ -2134,11 +2040,6 @@ a:hover {
         line-height: 1.5;
     }
 
-
-    /* =====================================================
-       MOBILE RESOURCES CONTENT
-    ===================================================== */
-
     .resources-section {
         padding: 45px 25px;
     }
@@ -2146,11 +2047,6 @@ a:hover {
     .resources-container {
         max-width: none;
     }
-
-
-    /* =====================================================
-       MOBILE NORMAL RESOURCE CARDS
-    ===================================================== */
 
     .resource-card {
         display: block;
@@ -2182,11 +2078,6 @@ a:hover {
         line-height: 1.6;
     }
 
-
-    /* =====================================================
-       MOBILE SWIPEABLE EPISODES
-    ===================================================== */
-
     .episode-slider {
         width: 100%;
 
@@ -2202,11 +2093,6 @@ a:hover {
 
         scroll-snap-type: x mandatory;
     }
-
-
-    /* =====================================================
-       MOBILE EPISODE CARD
-    ===================================================== */
 
     .episode-track .episode-card {
         flex: 0 0 100%;
@@ -2237,32 +2123,17 @@ a:hover {
         overflow: hidden;
     }
 
-
-    /* =====================================================
-       MOBILE EPISODE INFORMATION
-    ===================================================== */
-
     .episode-track .episode-info {
         width: 100%;
 
         padding-right: 0;
     }
 
-
-    /* =====================================================
-       MOBILE EPISODE NUMBER
-    ===================================================== */
-
     .episode-track .episode-number {
         margin-bottom: 20px;
 
         font-size: 20px;
     }
-
-
-    /* =====================================================
-       MOBILE EPISODE LABEL
-    ===================================================== */
 
     .episode-track .episode-label {
         margin-bottom: 9px;
@@ -2272,11 +2143,6 @@ a:hover {
         letter-spacing: 1px;
     }
 
-
-    /* =====================================================
-       MOBILE EPISODE TITLE
-    ===================================================== */
-
     .episode-track .episode-info h2 {
         margin-bottom: 20px;
 
@@ -2284,11 +2150,6 @@ a:hover {
 
         line-height: .9;
     }
-
-
-    /* =====================================================
-       MOBILE EPISODE TOPIC
-    ===================================================== */
 
     .episode-track .episode-info h3 {
         font-size: 10px;
@@ -2304,11 +2165,6 @@ a:hover {
         line-height: 1.45;
     }
 
-
-    /* =====================================================
-       MOBILE EPISODE VIDEO
-    ===================================================== */
-
     .episode-track .episode-video {
         width: 100%;
 
@@ -2323,11 +2179,6 @@ a:hover {
         border-radius: 0 50px 0 0;
     }
 
-
-    /* =====================================================
-       MOBILE DOTS
-    ===================================================== */
-
     .episode-dots {
         margin-top: 22px;
 
@@ -2338,11 +2189,6 @@ a:hover {
         width: 10px;
         height: 10px;
     }
-
-
-    /* =====================================================
-       MOBILE LEARNING TOPICS
-    ===================================================== */
 
     .topic-grid {
         grid-template-columns: 1fr;
@@ -2361,7 +2207,6 @@ a:hover {
     .resources-back {
         margin-top: 45px;
     }
-
 }
 
 
@@ -2494,13 +2339,7 @@ a:hover {
     }
 
     .hero-photo {
-        margin: 30px 20px 0;
-
-        width: calc(100% - 40px);
-
-        height: 215px;
-
-        border-bottom-left-radius: 60px;
+        display: none !important;
     }
 
     .about-copy {
@@ -2579,11 +2418,6 @@ a:hover {
         font-size: 8px;
     }
 
-
-    /* =====================================================
-       VERY SMALL PHONE EPISODE CARD
-    ===================================================== */
-
     .episode-slider {
         margin-top: 35px;
         margin-bottom: 45px;
@@ -2639,7 +2473,6 @@ a:hover {
         width: 9px;
         height: 9px;
     }
-
 }
 
 
@@ -2664,35 +2497,19 @@ a:hover {
 /* =========================================================
    FINAL RESOURCES HEADER
    BLUE → YELLOW → RED → BLACK
-
-   IMPORTANT:
-   These rules are AFTER all responsive media queries.
-   This keeps Windows/Desktop, Tablet and Mobile identical.
 ========================================================= */
-
-
-/* BLUE BRAND BLOCK */
 
 .resources-page .brand-yellow {
     background: var(--blue) !important;
 }
 
-
-/* FIRST TOP STRIPE = YELLOW */
-
 .resources-page .top-stripes .stripe-blue {
     background: var(--yellow) !important;
 }
 
-
-/* SECOND TOP STRIPE = RED */
-
 .resources-page .top-stripes .stripe-red {
     background: var(--red) !important;
 }
-
-
-/* THIRD TOP STRIPE = BLACK */
 
 .resources-page .top-stripes .stripe-black {
     background: var(--black) !important;
@@ -2724,9 +2541,6 @@ a:hover {
 
 /* =========================================================
    KEEP DIVIDER COLORS UNCHANGED
-   YELLOW → BLUE → RED → BLACK
-
-   THESE RULES ONLY AFFECT THE DIVIDER.
 ========================================================= */
 
 .resources-page .divider-left-stripes .stripe-yellow {
@@ -2748,7 +2562,6 @@ a:hover {
 
 /* =========================================================
    FINAL SWIPE CARD OVERRIDES
-   THESE MUST STAY AT THE VERY BOTTOM
 ========================================================= */
 
 .episode-slider {
@@ -2761,11 +2574,6 @@ a:hover {
 
     overflow: visible;
 }
-
-
-/* =========================================================
-   SWIPE TRACK
-========================================================= */
 
 .episode-track {
     display: flex;
@@ -2796,11 +2604,6 @@ a:hover {
 .episode-track::-webkit-scrollbar {
     display: none;
 }
-
-
-/* =========================================================
-   CARD
-========================================================= */
 
 .episode-track .episode-card {
     position: relative;
@@ -2837,11 +2640,6 @@ a:hover {
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   CARD COLORS
-========================================================= */
-
 .episode-track .episode-blue {
     background: var(--blue) !important;
 
@@ -2860,11 +2658,6 @@ a:hover {
     color: white !important;
 }
 
-
-/* =========================================================
-   CARD INFORMATION
-========================================================= */
-
 .episode-track .episode-info {
     width: 100%;
 
@@ -2874,11 +2667,6 @@ a:hover {
 
     z-index: 2;
 }
-
-
-/* =========================================================
-   CARD NUMBER
-========================================================= */
 
 .episode-track .episode-number {
     display: block;
@@ -2893,11 +2681,6 @@ a:hover {
 
     color: currentColor;
 }
-
-
-/* =========================================================
-   CARD LABEL
-========================================================= */
 
 .episode-track .episode-label {
     display: block;
@@ -2917,11 +2700,6 @@ a:hover {
     opacity: .85;
 }
 
-
-/* =========================================================
-   CARD TITLE
-========================================================= */
-
 .episode-track .episode-info h2 {
     margin: 0 0 25px;
 
@@ -2937,11 +2715,6 @@ a:hover {
 
     color: currentColor;
 }
-
-
-/* =========================================================
-   CARD TOPIC
-========================================================= */
 
 .episode-track .episode-info h3 {
     margin: 0 0 5px;
@@ -2976,11 +2749,6 @@ a:hover {
 .episode-track .episode-info li {
     margin-bottom: 2px;
 }
-
-
-/* =========================================================
-   CARD VIDEO
-========================================================= */
 
 .episode-track .episode-video {
     width: 100%;
@@ -3023,11 +2791,6 @@ a:hover {
 
     display: block;
 }
-
-
-/* =========================================================
-   DOTS
-========================================================= */
 
 .episode-dots {
     display: flex;
@@ -3291,6 +3054,8 @@ a:hover {
         height: 9px;
     }
 }
+
+
 /* =========================================================
    FINAL MOBILE + WINDOWS DRAG FIX
    TOUCH + MOUSE + TRACKPAD
@@ -3314,7 +3079,6 @@ a:hover {
     -webkit-user-select: none;
 }
 
-/* Prevent YouTube iframe from stealing the drag */
 .episode-track.is-dragging iframe {
     pointer-events: none;
 }
@@ -3348,43 +3112,68 @@ a:hover {
     }
 }
 
+
 /* =========================================================
    FINAL HERO PHOTO TRANSPARENCY EFFECT
-   Cream background → faded photo on the left → clearer photo on the right
-   ========================================================= */
+   Cream background → faded photo on the left →
+   slightly more faded photo on the right
+========================================================= */
 
 .hero-bg {
     background-image:
         linear-gradient(
             90deg,
+
+            /* LEFT — keep strongly cream/faded */
             rgba(255, 244, 230, 0.98) 0%,
             rgba(255, 244, 230, 0.94) 22%,
-            rgba(255, 244, 230, 0.76) 45%,
-            rgba(255, 244, 230, 0.48) 68%,
-            rgba(255, 244, 230, 0.22) 100%
+
+            /* CENTER — gradual transition */
+            rgba(255, 244, 230, 0.80) 45%,
+
+            /* RIGHT — increased cream opacity */
+            rgba(255, 244, 230, 0.58) 68%,
+            rgba(255, 244, 230, 0.35) 100%
         ),
         url("images/photowalk.jpg");
 
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
 
     opacity: 1;
 }
 
-/* The hero image is now part of the full background. */
+
+/* =========================================================
+   HERO PHOTO DISABLED
+========================================================= */
+
 .hero-photo {
     display: none !important;
 }
 
-/* Keep the same full-background transparency effect on all screen sizes. */
+
+/* =========================================================
+   TABLET HERO BACKGROUND
+========================================================= */
+
 @media (max-width: 900px) {
+
     .hero-bg {
         background-position: 58% center;
     }
 }
 
+
+/* =========================================================
+   MOBILE HERO BACKGROUND
+========================================================= */
+
 @media (max-width: 600px) {
+
     .hero-bg {
         background-image:
             linear-gradient(
@@ -3396,6 +3185,10 @@ a:hover {
             url("images/photowalk.jpg");
 
         background-position: center;
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
     }
 
     .hero-photo {
@@ -3403,7 +3196,13 @@ a:hover {
     }
 }
 
+
+/* =========================================================
+   VERY SMALL PHONE HERO
+========================================================= */
+
 @media (max-width: 380px) {
+
     .hero-photo {
         display: none !important;
     }
