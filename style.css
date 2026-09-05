@@ -3380,7 +3380,7 @@ a:hover {
 /* Keep the same full-background transparency effect on all screen sizes. */
 @media (max-width: 900px) {
     .hero-bg {
-        background-position: 58% center;
+        background-position: 78% center;
     }
 }
 
@@ -3390,7 +3390,7 @@ a:hover {
             linear-gradient(
                 180deg,
                 rgba(255, 244, 230, 0.92) 0%,
-                rgba(255, 244, 230, 0.76) 78%,
+                rgba(255, 244, 230, 0.76) 48%,
                 rgba(255, 244, 230, 0.40) 100%
             ),
             url("images/photowalk.jpg");
