@@ -3129,10 +3129,10 @@ a:hover {
             rgba(255, 244, 230, 0.94) 20%,
 
             /* CENTER — gradual transition */
-            rgba(255, 244, 230, 0.80) 45%,
+            rgba(255, 244, 230, 0.80) 70%,
 
             /* RIGHT — increased cream opacity */
-            rgba(255, 244, 230, 0.58) 85%,
+            rgba(255, 244, 230, 0.58) 68%,
             rgba(255, 244, 230, 0.35) 100%
         ),
         url("images/photowalk.jpg");
