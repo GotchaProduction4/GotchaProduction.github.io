@@ -3126,7 +3126,7 @@ a:hover {
 
             /* LEFT — keep strongly cream/faded */
             rgba(255, 244, 230, 0.98) 0%,
-            rgba(255, 244, 230, 0.94) 22%,
+            rgba(255, 244, 230, 0.94) 40%,
 
             /* CENTER — gradual transition */
             rgba(255, 244, 230, 0.80) 45%,
