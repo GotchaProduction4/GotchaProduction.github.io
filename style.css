@@ -915,7 +915,12 @@ a:hover {
 
     font-weight: 400;
 
-    line-height: .86;
+    /*
+       FIX:
+       More vertical space between
+       PHOTOGRAPHY and RESOURCES
+    */
+    line-height: .96;
 
     letter-spacing: .5px;
 
@@ -927,7 +932,7 @@ a:hover {
 
     max-width: 100%;
 
-    margin: 22px 0 0 4px;
+    margin: 25px 0 0 4px;
 
     font-family: "Be Vietnam Pro", sans-serif;
 
@@ -1614,11 +1619,24 @@ a:hover {
     }
 
     .resources-title h1 {
+        /*
+           FIX:
+           Extra vertical spacing between
+           PHOTOGRAPHY and RESOURCES on tablet.
+        */
         font-size: clamp(60px, 9vw, 100px);
+
+        line-height: .98;
     }
 
     .resources-intro {
         width: 480px;
+
+        /*
+           Slightly more breathing room below heading.
+        */
+        margin-top: 27px;
+
         font-size: 13px;
     }
 
@@ -3124,14 +3142,11 @@ a:hover {
         linear-gradient(
             90deg,
 
-            /* LEFT — keep strongly cream/faded */
             rgba(255, 244, 230, 0.98) 0%,
             rgba(255, 244, 230, 0.94) 20%,
 
-            /* CENTER — gradual transition */
             rgba(255, 244, 230, 0.80) 45%,
 
-            /* RIGHT — increased cream opacity */
             rgba(255, 244, 230, 0.58) 68%,
             rgba(255, 244, 230, 0.35) 100%
         ),
