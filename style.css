@@ -3142,20 +3142,22 @@ a:hover {
         linear-gradient(
             90deg,
 
-            rgba(255, 244, 230, 0.98) 0%,
-            rgba(255, 244, 230, 0.94) 20%,
+            /* LEFT — very faded */
+            rgba(255, 244, 230, 0.99) 0%,
+            rgba(255, 244, 230, 0.96) 15%,
 
-            rgba(255, 244, 230, 0.80) 45%,
+            /* MIDDLE — gradual transition */
+            rgba(255, 244, 230, 0.82) 40%,
+            rgba(255, 244, 230, 0.60) 60%,
 
-            rgba(255, 244, 230, 0.58) 68%,
-            rgba(255, 244, 230, 0.05) 100%
+            /* RIGHT — much more visible */
+            rgba(255, 244, 230, 0.25) 80%,
+            rgba(255, 244, 230, 0.15) 100%
         ),
         url("images/photowalk.jpg");
 
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
 
     opacity: 1;
