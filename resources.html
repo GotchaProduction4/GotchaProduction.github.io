@@ -475,20 +475,26 @@
             <div class="episode-dots">
 
                 <button
+                    type="button"
                     class="episode-dot active"
-                    aria-label="Episode 1">
+                    aria-label="Episode 1"
+                    aria-current="true">
                 </button>
 
 
                 <button
+                    type="button"
                     class="episode-dot"
-                    aria-label="Episode 2">
+                    aria-label="Episode 2"
+                    aria-current="false">
                 </button>
 
 
                 <button
+                    type="button"
                     class="episode-dot"
-                    aria-label="Episode 3">
+                    aria-label="Episode 3"
+                    aria-current="false">
                 </button>
 
             </div>
@@ -912,6 +918,13 @@ if (episodeTrack) {
                     dot.classList.toggle(
                         "active",
                         index === episodeIndex
+                    );
+
+                    dot.setAttribute(
+                        "aria-current",
+                        index === episodeIndex
+                            ? "true"
+                            : "false"
                     );
 
                 }
