@@ -13,7 +13,7 @@
 
 
 /* =========================================================
-   LOCAL FONTS
+   FONTS
 ========================================================= */
 
 @font-face {
@@ -355,7 +355,7 @@ a:hover {
 
 
 /* =========================================================
-   HERO / LANDING PAGE
+ LANDING PAGE
 ========================================================= */
 
 .hero {
@@ -2495,7 +2495,7 @@ a:hover {
 
 
 /* =========================================================
-   FINAL CLICK / STACKING SAFETY
+   FINAL CLICK / STACKING
 ========================================================= */
 
 .brand-yellow,
@@ -2513,8 +2513,7 @@ a:hover {
 
 
 /* =========================================================
-   FINAL RESOURCES HEADER
-   BLUE → YELLOW → RED → BLACK
+   RESOURCES HEADER
 ========================================================= */
 
 .resources-page .brand-yellow {
@@ -2535,7 +2534,7 @@ a:hover {
 
 
 /* =========================================================
-   FINAL EPISODE COLOR SAFETY
+   FINAL EPISODE COLOR 
 ========================================================= */
 
 .resources-page .episode-blue {
@@ -2558,7 +2557,7 @@ a:hover {
 
 
 /* =========================================================
-   KEEP DIVIDER COLORS UNCHANGED
+  DIVIDER COLORS 
 ========================================================= */
 
 .resources-page .divider-left-stripes .stripe-yellow {
@@ -2850,7 +2849,7 @@ a:hover {
 
 
 /* =========================================================
-   FINAL TABLET SWIPE CARD
+   TABLET SWIPE CARD
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -3010,7 +3009,7 @@ a:hover {
 
 
 /* =========================================================
-   FINAL VERY SMALL PHONE SWIPE CARD
+  SMALL PHONE SWIPE CARD
 ========================================================= */
 
 @media (max-width: 380px) {
@@ -3075,8 +3074,7 @@ a:hover {
 
 
 /* =========================================================
-   FINAL MOBILE + WINDOWS DRAG FIX
-   TOUCH + MOUSE + TRACKPAD
+   FINAL MOBILE
 ========================================================= */
 
 .episode-track {
@@ -3132,9 +3130,7 @@ a:hover {
 
 
 /* =========================================================
-   FINAL HERO PHOTO TRANSPARENCY EFFECT
-   Cream background → faded photo on the left →
-   slightly more faded photo on the right
+   HERO PHOTO TRANSPARENCY EFFECT
 ========================================================= */
 
 .hero-bg {
