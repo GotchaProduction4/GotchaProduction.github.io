@@ -141,7 +141,6 @@
             class="hero-bg-video"
             autoplay
             muted
-            loop
             playsinline
             preload="auto"
             aria-hidden="true">
@@ -428,17 +427,12 @@ function toggleMobileMenu() {
     const menu = document.getElementById("mainNavigation");
     const button = document.getElementById("menuToggle");
 
-
-    /* Safety check */
-
     if (!menu || !button) {
         return;
     }
 
 
-    /* =====================================================
-       CLOSE MENU
-    ===================================================== */
+    /* OPEN / CLOSE MENU */
 
     if (menu.classList.contains("active")) {
 
@@ -456,15 +450,7 @@ function toggleMobileMenu() {
 
         button.innerHTML = "☰";
 
-
-    }
-
-
-    /* =====================================================
-       OPEN MENU
-    ===================================================== */
-
-    else {
+    } else {
 
         menu.classList.add("active");
 
@@ -487,17 +473,15 @@ function toggleMobileMenu() {
 
 
 /* =========================================================
-   HERO VIDEO LOOP
+   HERO VIDEO
+   CONTINUOUS LOOP
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const heroVideo = document.querySelector(".hero-bg-video");
+    const video = document.querySelector(".hero-bg-video");
 
-
-    /* Safety check */
-
-    if (!heroVideo) {
+    if (!video) {
         return;
     }
 
@@ -506,64 +490,97 @@ document.addEventListener("DOMContentLoaded", function () {
        VIDEO SETTINGS
     ===================================================== */
 
-    heroVideo.loop = true;
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = false;
+    video.playsInline = true;
 
-    heroVideo.muted = true;
 
-    heroVideo.playsInline = true;
+    /* =====================================================
+       PLAY VIDEO
+    ===================================================== */
+
+    function playVideo() {
+
+        const promise = video.play();
+
+        if (promise !== undefined) {
+
+            promise.catch(function () {
+
+                console.log(
+                    "Hero video autoplay was blocked."
+                );
+
+            });
+
+        }
+
+    }
 
 
     /* =====================================================
        START VIDEO
     ===================================================== */
 
-    const playHeroVideo = function () {
-
-        heroVideo.play().catch(function () {
-
-            console.log(
-                "Hero video autoplay was blocked by the browser."
-            );
-
-        });
-
-    };
-
-
-    playHeroVideo();
+    playVideo();
 
 
     /* =====================================================
-       FORCE LOOP
+       FORCE VIDEO TO RESTART
+       
+       Instead of depending on the HTML "loop"
+       attribute, JavaScript detects when the
+       video reaches the end and starts it again.
     ===================================================== */
 
-    heroVideo.addEventListener("ended", function () {
+    video.addEventListener("ended", function () {
 
-        heroVideo.currentTime = 0;
+        video.currentTime = 0;
 
-        playHeroVideo();
+        playVideo();
 
     });
 
 
     /* =====================================================
-       EXTRA LOOP CHECK
+       BACKUP LOOP CHECK
        
-       Some browsers may stop the video unexpectedly.
-       This checks whether the video has ended and
-       starts it again.
+       This checks the video every 250 milliseconds.
+       If the video reaches the end, it is restarted.
     ===================================================== */
 
-    heroVideo.addEventListener("pause", function () {
+    setInterval(function () {
 
         if (
-            heroVideo.ended ||
-            heroVideo.currentTime >= heroVideo.duration - 0.1
+            video.readyState >= 2 &&
+            video.duration &&
+            video.currentTime >= video.duration - 0.15
         ) {
 
-            heroVideo.currentTime = 0;
+            video.currentTime = 0;
 
-            playHeroVideo();
+            playVideo();
+
+        }
+
+    }, 250);
+
+
+    /* =====================================================
+       IF VIDEO IS PAUSED AT THE END
+    ===================================================== */
+
+    video.addEventListener("pause", function () {
+
+        if (
+            video.duration &&
+            video.currentTime >= video.duration - 0.15
+        ) {
+
+            video.currentTime = 0;
+
+            playVideo();
 
         }
 
