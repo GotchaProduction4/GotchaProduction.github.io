@@ -416,6 +416,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
+
 <!-- =========================================================
      MOBILE MENU SCRIPT
 ========================================================= -->
@@ -435,7 +436,9 @@ function toggleMobileMenu() {
     }
 
 
-    /* Open / close menu */
+    /* =====================================================
+       CLOSE MENU
+    ===================================================== */
 
     if (menu.classList.contains("active")) {
 
@@ -453,7 +456,15 @@ function toggleMobileMenu() {
 
         button.innerHTML = "☰";
 
-    } else {
+
+    }
+
+
+    /* =====================================================
+       OPEN MENU
+    ===================================================== */
+
+    else {
 
         menu.classList.add("active");
 
@@ -472,6 +483,93 @@ function toggleMobileMenu() {
     }
 
 }
+
+
+
+/* =========================================================
+   HERO VIDEO LOOP
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const heroVideo = document.querySelector(".hero-bg-video");
+
+
+    /* Safety check */
+
+    if (!heroVideo) {
+        return;
+    }
+
+
+    /* =====================================================
+       VIDEO SETTINGS
+    ===================================================== */
+
+    heroVideo.loop = true;
+
+    heroVideo.muted = true;
+
+    heroVideo.playsInline = true;
+
+
+    /* =====================================================
+       START VIDEO
+    ===================================================== */
+
+    const playHeroVideo = function () {
+
+        heroVideo.play().catch(function () {
+
+            console.log(
+                "Hero video autoplay was blocked by the browser."
+            );
+
+        });
+
+    };
+
+
+    playHeroVideo();
+
+
+    /* =====================================================
+       FORCE LOOP
+    ===================================================== */
+
+    heroVideo.addEventListener("ended", function () {
+
+        heroVideo.currentTime = 0;
+
+        playHeroVideo();
+
+    });
+
+
+    /* =====================================================
+       EXTRA LOOP CHECK
+       
+       Some browsers may stop the video unexpectedly.
+       This checks whether the video has ended and
+       starts it again.
+    ===================================================== */
+
+    heroVideo.addEventListener("pause", function () {
+
+        if (
+            heroVideo.ended ||
+            heroVideo.currentTime >= heroVideo.duration - 0.1
+        ) {
+
+            heroVideo.currentTime = 0;
+
+            playHeroVideo();
+
+        }
+
+    });
+
+});
 
 </script>
 
