@@ -1169,8 +1169,8 @@ a:hover {
    EPISODE COLORS
 ========================================================= */
 
-.episode-track .episode-blue {
-    background: var(--blue) !important;
+.episode-track .episode-red {
+    background: var(--red) !important;
 
     color: white !important;
 }
@@ -1181,8 +1181,8 @@ a:hover {
     color: var(--black) !important;
 }
 
-.episode-track .episode-red {
-    background: var(--red) !important;
+.episode-track .episode-blue {
+    background: var(--blue) !important;
 
     color: white !important;
 }
