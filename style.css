@@ -374,7 +374,7 @@ a:hover {
 
 
 /* =========================================================
-   HERO BACKGROUND VIDEO
+   HERO BACKGROUND
 ========================================================= */
 
 .hero-bg {
@@ -382,64 +382,19 @@ a:hover {
 
     inset: 0;
 
-    width: 100%;
-    height: 100%;
-
-    overflow: hidden;
-
-    background: var(--cream);
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   HERO VIDEO
-========================================================= */
-
-.hero-bg-video {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-
-    opacity: 1;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   HERO VIDEO CREAM OVERLAY
-========================================================= */
-
-.hero-bg::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-
-    pointer-events: none;
-
-    background:
+    background-image:
         linear-gradient(
-            90deg,
-            rgba(255, 244, 230, 0.98) 0%,
-            rgba(255, 244, 230, 0.94) 22%,
-            rgba(255, 244, 230, 0.76) 45%,
-            rgba(255, 244, 230, 0.48) 68%,
-            rgba(255, 244, 230, 0.22) 100%
-        );
+            rgba(255, 244, 230, .78),
+            rgba(255, 244, 230, .78)
+        ),
+        url("images/photowalk.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: .42;
+
+    z-index: 0;
 }
 
 
@@ -556,6 +511,38 @@ a:hover {
 .red-button:hover {
     color: white;
     transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO PHOTO
+========================================================= */
+
+.hero-photo {
+    position: absolute;
+
+    right: 6%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 43%;
+    max-width: 650px;
+
+    height: 65%;
+
+    overflow: hidden;
+
+    border-radius: 0 0 0 105px;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
 }
 
 
@@ -928,7 +915,7 @@ a:hover {
 
     font-weight: 400;
 
-    line-height: .92;
+    line-height: .86;
 
     letter-spacing: .5px;
 
@@ -1091,6 +1078,11 @@ a:hover {
 
     overflow: visible;
 }
+
+
+/* =========================================================
+   HORIZONTAL SWIPE AREA
+========================================================= */
 
 .episode-track {
     display: flex;
@@ -1506,7 +1498,9 @@ a:hover {
     }
 
 
-    /* TABLET TOP STRIPES */
+    /* =====================================================
+       TABLET TOP STRIPES
+    ===================================================== */
 
     .top-stripes {
         left: 110px;
@@ -1528,7 +1522,9 @@ a:hover {
     }
 
 
-    /* TABLET NAV */
+    /* =====================================================
+       TABLET NAV
+    ===================================================== */
 
     .main-navigation {
         gap: 5px;
@@ -1545,7 +1541,9 @@ a:hover {
     }
 
 
-    /* TABLET HERO */
+    /* =====================================================
+       TABLET HERO
+    ===================================================== */
 
     .hero {
         height: calc(100vh - 70px);
@@ -1567,12 +1565,17 @@ a:hover {
         font-size: 13px;
     }
 
-    .hero-bg-video {
-        object-position: 58% center;
+    .hero-photo {
+        right: 5%;
+        width: 44%;
+        height: 60%;
+        border-bottom-left-radius: 80px;
     }
 
 
-    /* TABLET ABOUT */
+    /* =====================================================
+       TABLET ABOUT
+    ===================================================== */
 
     .about-copy {
         left: 6%;
@@ -1596,7 +1599,9 @@ a:hover {
     }
 
 
-    /* TABLET RESOURCES */
+    /* =====================================================
+       TABLET RESOURCES
+    ===================================================== */
 
     .resources-hero {
         min-height: 400px;
@@ -1610,7 +1615,6 @@ a:hover {
 
     .resources-title h1 {
         font-size: clamp(60px, 9vw, 100px);
-        line-height: .92;
     }
 
     .resources-intro {
@@ -1649,7 +1653,9 @@ a:hover {
     }
 
 
-    /* TABLET SWIPE EPISODES */
+    /* =====================================================
+       TABLET SWIPE EPISODES
+    ===================================================== */
 
     .episode-slider {
         width: 100%;
@@ -1694,7 +1700,9 @@ a:hover {
 
 @media (max-width: 600px) {
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     .site-header {
         height: 62px;
@@ -1705,7 +1713,9 @@ a:hover {
     }
 
 
-    /* BRAND AREA */
+    /* =====================================================
+       BRAND AREA
+    ===================================================== */
 
     .brand-area {
         position: relative;
@@ -1719,7 +1729,9 @@ a:hover {
     }
 
 
-    /* BRAND BLOCK */
+    /* =====================================================
+       BRAND BLOCK
+    ===================================================== */
 
     .brand-yellow {
         left: 0;
@@ -1740,7 +1752,9 @@ a:hover {
     }
 
 
-    /* LOGO */
+    /* =====================================================
+       LOGO
+    ===================================================== */
 
     .logo-link {
         left: 20px;
@@ -1757,7 +1771,9 @@ a:hover {
     }
 
 
-    /* MOBILE TOP STRIPES */
+    /* =====================================================
+       MOBILE TOP STRIPES
+    ===================================================== */
 
     .top-stripes {
         left: 145px;
@@ -1787,7 +1803,9 @@ a:hover {
     }
 
 
-    /* MOBILE NAVIGATION */
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
 
     .main-navigation {
         position: absolute;
@@ -1835,7 +1853,9 @@ a:hover {
     }
 
 
-    /* HAMBURGER */
+    /* =====================================================
+       HAMBURGER BUTTON
+    ===================================================== */
 
     .menu-toggle {
         display: flex;
@@ -1855,7 +1875,9 @@ a:hover {
     }
 
 
-    /* MOBILE HERO */
+    /* =====================================================
+       MOBILE HERO
+    ===================================================== */
 
     .hero {
         height: calc(100vh - 62px);
@@ -1873,7 +1895,9 @@ a:hover {
     }
 
 
-    /* MOBILE HERO COPY */
+    /* =====================================================
+       MOBILE HERO COPY
+    ===================================================== */
 
     .hero-copy {
         position: relative;
@@ -1907,7 +1931,9 @@ a:hover {
     }
 
 
-    /* MOBILE HERO BUTTONS */
+    /* =====================================================
+       MOBILE HERO BUTTONS
+    ===================================================== */
 
     .hero-buttons {
         gap: 10px;
@@ -1928,24 +1954,33 @@ a:hover {
     }
 
 
-    /* MOBILE HERO VIDEO */
+    /* =====================================================
+       MOBILE HERO PHOTO
+    ===================================================== */
 
-    .hero-bg-video {
-        object-position: center;
+    .hero-photo {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        margin: 38px 25px 0;
+
+        width: calc(100% - 50px);
+
+        max-width: none;
+
+        height: 235px;
+
+        border-radius: 0 0 0 70px;
     }
 
-    .hero-bg::after {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(255, 244, 230, 0.92) 0%,
-                rgba(255, 244, 230, 0.76) 48%,
-                rgba(255, 244, 230, 0.40) 100%
-            );
-    }
 
-
-    /* MOBILE DIVIDER */
+    /* =====================================================
+       MOBILE DIVIDER
+    ===================================================== */
 
     .divider {
         height: 50px;
@@ -1974,7 +2009,9 @@ a:hover {
     }
 
 
-    /* MOBILE ABOUT */
+    /* =====================================================
+       MOBILE ABOUT
+    ===================================================== */
 
     .about-section {
         height: auto;
@@ -2024,7 +2061,9 @@ a:hover {
     }
 
 
-    /* MOBILE ABOUT PHOTO */
+    /* =====================================================
+       MOBILE ABOUT PHOTO
+    ===================================================== */
 
     .about-photo {
         position: relative;
@@ -2046,7 +2085,9 @@ a:hover {
     }
 
 
-    /* MOBILE FOOTER */
+    /* =====================================================
+       MOBILE FOOTER
+    ===================================================== */
 
     .site-footer {
         padding: 15px 20px;
@@ -2057,7 +2098,9 @@ a:hover {
     }
 
 
-    /* MOBILE RESOURCES HERO */
+    /* =====================================================
+       MOBILE RESOURCES HERO
+    ===================================================== */
 
     .resources-hero {
         min-height: 350px;
@@ -2092,7 +2135,9 @@ a:hover {
     }
 
 
-    /* MOBILE RESOURCES CONTENT */
+    /* =====================================================
+       MOBILE RESOURCES CONTENT
+    ===================================================== */
 
     .resources-section {
         padding: 45px 25px;
@@ -2103,7 +2148,9 @@ a:hover {
     }
 
 
-    /* MOBILE NORMAL RESOURCE CARDS */
+    /* =====================================================
+       MOBILE NORMAL RESOURCE CARDS
+    ===================================================== */
 
     .resource-card {
         display: block;
@@ -2136,7 +2183,9 @@ a:hover {
     }
 
 
-    /* MOBILE SWIPEABLE EPISODES */
+    /* =====================================================
+       MOBILE SWIPEABLE EPISODES
+    ===================================================== */
 
     .episode-slider {
         width: 100%;
@@ -2155,7 +2204,9 @@ a:hover {
     }
 
 
-    /* MOBILE EPISODE CARD */
+    /* =====================================================
+       MOBILE EPISODE CARD
+    ===================================================== */
 
     .episode-track .episode-card {
         flex: 0 0 100%;
@@ -2187,7 +2238,9 @@ a:hover {
     }
 
 
-    /* MOBILE EPISODE INFORMATION */
+    /* =====================================================
+       MOBILE EPISODE INFORMATION
+    ===================================================== */
 
     .episode-track .episode-info {
         width: 100%;
@@ -2196,7 +2249,9 @@ a:hover {
     }
 
 
-    /* MOBILE EPISODE NUMBER */
+    /* =====================================================
+       MOBILE EPISODE NUMBER
+    ===================================================== */
 
     .episode-track .episode-number {
         margin-bottom: 20px;
@@ -2205,7 +2260,9 @@ a:hover {
     }
 
 
-    /* MOBILE EPISODE LABEL */
+    /* =====================================================
+       MOBILE EPISODE LABEL
+    ===================================================== */
 
     .episode-track .episode-label {
         margin-bottom: 9px;
@@ -2216,7 +2273,9 @@ a:hover {
     }
 
 
-    /* MOBILE EPISODE TITLE */
+    /* =====================================================
+       MOBILE EPISODE TITLE
+    ===================================================== */
 
     .episode-track .episode-info h2 {
         margin-bottom: 20px;
@@ -2227,7 +2286,9 @@ a:hover {
     }
 
 
-    /* MOBILE EPISODE TOPIC */
+    /* =====================================================
+       MOBILE EPISODE TOPIC
+    ===================================================== */
 
     .episode-track .episode-info h3 {
         font-size: 10px;
@@ -2244,7 +2305,9 @@ a:hover {
     }
 
 
-    /* MOBILE EPISODE VIDEO */
+    /* =====================================================
+       MOBILE EPISODE VIDEO
+    ===================================================== */
 
     .episode-track .episode-video {
         width: 100%;
@@ -2261,7 +2324,9 @@ a:hover {
     }
 
 
-    /* MOBILE DOTS */
+    /* =====================================================
+       MOBILE DOTS
+    ===================================================== */
 
     .episode-dots {
         margin-top: 22px;
@@ -2275,7 +2340,9 @@ a:hover {
     }
 
 
-    /* MOBILE LEARNING TOPICS */
+    /* =====================================================
+       MOBILE LEARNING TOPICS
+    ===================================================== */
 
     .topic-grid {
         grid-template-columns: 1fr;
@@ -2426,13 +2493,15 @@ a:hover {
         font-size: 9px;
     }
 
+    .hero-photo {
+        margin: 30px 20px 0;
 
-    /* VERY SMALL HERO VIDEO */
+        width: calc(100% - 40px);
 
-    .hero-bg-video {
-        object-position: center;
+        height: 215px;
+
+        border-bottom-left-radius: 60px;
     }
-
 
     .about-copy {
         padding: 45px 20px 0;
@@ -2511,7 +2580,9 @@ a:hover {
     }
 
 
-    /* VERY SMALL PHONE EPISODE CARD */
+    /* =====================================================
+       VERY SMALL PHONE EPISODE CARD
+    ===================================================== */
 
     .episode-slider {
         margin-top: 35px;
@@ -2593,19 +2664,35 @@ a:hover {
 /* =========================================================
    FINAL RESOURCES HEADER
    BLUE → YELLOW → RED → BLACK
+
+   IMPORTANT:
+   These rules are AFTER all responsive media queries.
+   This keeps Windows/Desktop, Tablet and Mobile identical.
 ========================================================= */
+
+
+/* BLUE BRAND BLOCK */
 
 .resources-page .brand-yellow {
     background: var(--blue) !important;
 }
 
+
+/* FIRST TOP STRIPE = YELLOW */
+
 .resources-page .top-stripes .stripe-blue {
     background: var(--yellow) !important;
 }
 
+
+/* SECOND TOP STRIPE = RED */
+
 .resources-page .top-stripes .stripe-red {
     background: var(--red) !important;
 }
+
+
+/* THIRD TOP STRIPE = BLACK */
 
 .resources-page .top-stripes .stripe-black {
     background: var(--black) !important;
@@ -2614,22 +2701,27 @@ a:hover {
 
 /* =========================================================
    FINAL EPISODE COLOR SAFETY
+   EPISODE ORDER:
+   RED → YELLOW → BLUE
 ========================================================= */
 
+/* EPISODE 1 = RED */
 .resources-page .episode-blue {
-    background: var(--blue) !important;
+    background: var(--red) !important;
 
     color: white !important;
 }
 
+/* EPISODE 2 = YELLOW */
 .resources-page .episode-yellow {
     background: var(--yellow) !important;
 
     color: var(--black) !important;
 }
 
+/* EPISODE 3 = BLUE */
 .resources-page .episode-red {
-    background: var(--red) !important;
+    background: var(--blue) !important;
 
     color: white !important;
 }
@@ -2637,6 +2729,9 @@ a:hover {
 
 /* =========================================================
    KEEP DIVIDER COLORS UNCHANGED
+   YELLOW → BLUE → RED → BLACK
+
+   THESE RULES ONLY AFFECT THE DIVIDER.
 ========================================================= */
 
 .resources-page .divider-left-stripes .stripe-yellow {
@@ -2657,7 +2752,553 @@ a:hover {
 
 
 /* =========================================================
-   FINAL EPISODE DRAG FIX
+   FINAL SWIPE CARD OVERRIDES
+   THESE MUST STAY AT THE VERY BOTTOM
+========================================================= */
+
+.episode-slider {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 60px auto 70px;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   SWIPE TRACK
+========================================================= */
+
+.episode-track {
+    display: flex;
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+    cursor: grab;
+
+    touch-action: pan-x;
+
+    padding: 0 5px 12px;
+}
+
+.episode-track:active {
+    cursor: grabbing;
+}
+
+.episode-track::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.episode-track .episode-card {
+    position: relative;
+
+    flex: 0 0 100%;
+
+    width: 100%;
+    min-width: 100%;
+
+    min-height: 430px;
+
+    margin: 0;
+
+    padding: 50px;
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    align-items: center;
+
+    gap: 0;
+
+    overflow: hidden;
+
+    border: 2px solid var(--black);
+
+    box-shadow: 10px 10px 0 var(--black);
+
+    scroll-snap-align: start;
+
+    scroll-snap-stop: always;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD COLORS
+========================================================= */
+
+.episode-track .episode-blue {
+    background: var(--blue) !important;
+
+    color: white !important;
+}
+
+.episode-track .episode-yellow {
+    background: var(--yellow) !important;
+
+    color: var(--black) !important;
+}
+
+.episode-track .episode-red {
+    background: var(--red) !important;
+
+    color: white !important;
+}
+
+
+/* =========================================================
+   CARD INFORMATION
+========================================================= */
+
+.episode-track .episode-info {
+    width: 100%;
+
+    min-width: 0;
+
+    padding-right: 35px;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.episode-track .episode-number {
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    color: currentColor;
+}
+
+
+/* =========================================================
+   CARD LABEL
+========================================================= */
+
+.episode-track .episode-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    color: currentColor;
+
+    opacity: .85;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.episode-track .episode-info h2 {
+    margin: 0 0 25px;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    letter-spacing: .3px;
+
+    color: currentColor;
+}
+
+
+/* =========================================================
+   CARD TOPIC
+========================================================= */
+
+.episode-track .episode-info h3 {
+    margin: 0 0 5px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: currentColor;
+}
+
+.episode-track .episode-info ul {
+    margin: 0;
+
+    padding-left: 18px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    color: currentColor;
+}
+
+.episode-track .episode-info li {
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   CARD VIDEO
+========================================================= */
+
+.episode-track .episode-video {
+    width: 100%;
+
+    min-width: 0;
+
+    z-index: 2;
+}
+
+.episode-track .video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    height: 0;
+
+    padding-bottom: 56.25%;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    background: var(--black);
+
+    border: 2px solid var(--black);
+
+    border-radius: 0 75px 0 0;
+}
+
+.episode-track .video-wrapper iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    display: block;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.episode-dots {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+.episode-dot {
+    width: 12px;
+    height: 12px;
+
+    padding: 0;
+
+    border: 2px solid var(--black);
+
+    border-radius: 50%;
+
+    background: var(--cream);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.episode-dot:hover {
+    transform: scale(1.15);
+}
+
+.episode-dot.active {
+    background: var(--black);
+}
+
+
+/* =========================================================
+   FINAL TABLET SWIPE CARD
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .episode-slider {
+        width: 100%;
+
+        margin: 50px auto 60px;
+    }
+
+    .episode-track {
+        padding: 0 4px 10px;
+    }
+
+    .episode-track .episode-card {
+        min-height: 380px;
+
+        padding: 40px;
+
+        grid-template-columns: 45% 55%;
+    }
+
+    .episode-track .episode-info {
+        padding-right: 25px;
+    }
+
+    .episode-track .episode-info h2 {
+        font-size: 45px;
+    }
+
+    .episode-track .episode-info ul {
+        font-size: 11px;
+    }
+
+    .episode-track .video-wrapper {
+        border-radius: 0 60px 0 0;
+    }
+}
+
+
+/* =========================================================
+   FINAL MOBILE SWIPE CARD
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .episode-slider {
+        width: 100%;
+
+        margin: 40px auto 55px;
+    }
+
+    .episode-track {
+        width: 100%;
+
+        padding: 0 3px 10px;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .episode-track .episode-card {
+        flex: 0 0 100%;
+
+        width: 100%;
+        min-width: 100%;
+
+        min-height: 0;
+
+        padding: 30px 25px 30px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 25px;
+
+        margin: 0;
+
+        border: 2px solid var(--black);
+
+        box-shadow: 6px 6px 0 var(--black);
+    }
+
+    .episode-track .episode-info {
+        width: 100%;
+
+        padding-right: 0;
+    }
+
+    .episode-track .episode-number {
+        margin-bottom: 20px;
+
+        font-size: 20px;
+    }
+
+    .episode-track .episode-label {
+        margin-bottom: 9px;
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+    .episode-track .episode-info h2 {
+        margin-bottom: 20px;
+
+        font-size: 42px;
+
+        line-height: .9;
+    }
+
+    .episode-track .episode-info h3 {
+        font-size: 10px;
+
+        margin-bottom: 4px;
+    }
+
+    .episode-track .episode-info ul {
+        padding-left: 18px;
+
+        font-size: 10px;
+
+        line-height: 1.45;
+    }
+
+    .episode-track .episode-video {
+        width: 100%;
+
+        flex: none;
+    }
+
+    .episode-track .video-wrapper {
+        width: 100%;
+
+        padding-bottom: 56.25%;
+
+        border-radius: 0 50px 0 0;
+    }
+
+    .episode-dots {
+        margin-top: 22px;
+
+        gap: 8px;
+    }
+
+    .episode-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+/* =========================================================
+   FINAL VERY SMALL PHONE SWIPE CARD
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .episode-slider {
+        margin-top: 35px;
+
+        margin-bottom: 45px;
+    }
+
+    .episode-track .episode-card {
+        padding: 25px 20px 25px;
+
+        gap: 20px;
+
+        box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .episode-track .episode-number {
+        font-size: 18px;
+
+        margin-bottom: 16px;
+    }
+
+    .episode-track .episode-label {
+        font-size: 6px;
+
+        letter-spacing: .9px;
+    }
+
+    .episode-track .episode-info h2 {
+        font-size: 36px;
+
+        line-height: .9;
+    }
+
+    .episode-track .episode-info h3 {
+        font-size: 9px;
+    }
+
+    .episode-track .episode-info ul {
+        font-size: 9px;
+
+        line-height: 1.4;
+    }
+
+    .episode-track .video-wrapper {
+        border-radius: 0 42px 0 0;
+    }
+
+    .episode-dots {
+        margin-top: 18px;
+
+        gap: 7px;
+    }
+
+    .episode-dot {
+        width: 9px;
+        height: 9px;
+    }
+}
+/* =========================================================
+   FINAL MOBILE + WINDOWS DRAG FIX
+   TOUCH + MOUSE + TRACKPAD
 ========================================================= */
 
 .episode-track {
@@ -2678,13 +3319,14 @@ a:hover {
     -webkit-user-select: none;
 }
 
+/* Prevent YouTube iframe from stealing the drag */
 .episode-track.is-dragging iframe {
     pointer-events: none;
 }
 
 
 /* =========================================================
-   MOBILE EPISODE DRAG FIX
+   MOBILE DRAG FIX
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -2709,10 +3351,4 @@ a:hover {
         user-select: none;
         -webkit-user-select: none;
     }
-
 }
-
-
-/* =========================================================
-   END
-========================================================= */
