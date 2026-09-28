@@ -51,12 +51,6 @@
 
     /* =========================================================
        GALLERY HEADER
-
-       BRAND:
-       RED
-
-       TOP STRIPES:
-       YELLOW → BLUE → BLACK
        ========================================================= */
 
     .gallery-page .brand-yellow {
@@ -619,7 +613,6 @@
 
     /* =========================================================
        GALLERY GRID
-       3 IMAGES PER ROW
        ========================================================= */
 
     .gallery-grid {
@@ -872,7 +865,6 @@
 
     /* =========================================================
        GALLERY DIVIDER
-       YELLOW → BLUE → RED → BLACK
        ========================================================= */
 
     .gallery-divider {
@@ -1088,10 +1080,6 @@
        ========================================================= */
 
     @media (max-width: 600px) {
-
-        /* =====================================================
-           HEADER STRIPES
-           ===================================================== */
 
         .gallery-page .top-stripes {
             height: 100%;
@@ -1444,8 +1432,6 @@
 
         <!-- =================================================
              TOP STRIPES
-
-             YELLOW → BLUE → BLACK
              ================================================= -->
 
         <div class="top-stripes">
@@ -1587,6 +1573,7 @@
 
         <!-- =================================================
              SAMPLE WORKS
+             IMAGES 1–20
              ================================================= -->
 
         <section class="gallery-section">
@@ -1620,72 +1607,8 @@
             </div>
 
 
-            <!-- =================================================
-                 3 IMAGES PER ROW
-                 ================================================= -->
-
-            <div class="gallery-grid">
-
-
-                <article class="gallery-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise side view.png"
-                         alt="Gallery Sample 1"
-                         loading="lazy">
-
-                </article>
-
-
-                <article class="gallery-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise top view.png"
-                         alt="Gallery Sample 2"
-                         loading="lazy">
-
-                </article>
-
-
-                <article class="gallery-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise.png"
-                         alt="Gallery Sample 3"
-                         loading="lazy">
-
-                </article>
-
-
-                <article class="gallery-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise side view.png"
-                         alt="Gallery Sample 4"
-                         loading="lazy">
-
-                </article>
-
-
-                <article class="gallery-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise top view.png"
-                         alt="Gallery Sample 5"
-                         loading="lazy">
-
-                </article>
-
-
-                <article class="gallery-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise.png"
-                         alt="Gallery Sample 6"
-                         loading="lazy">
-
-                </article>
-
+            <div class="gallery-grid"
+                 id="featuredGallery">
 
             </div>
 
@@ -1696,6 +1619,7 @@
 
         <!-- =================================================
              PHOTO DOCUMENTATION
+             IMAGES 21–65
              ================================================= -->
 
         <section class="gallery-section">
@@ -1730,104 +1654,8 @@
             </div>
 
 
-            <div class="documentation-grid">
-
-
-                <article class="documentation-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise side view.png"
-                         alt="Photo Documentation 1"
-                         loading="lazy">
-
-                    <div class="documentation-caption">
-
-                        Photowalk Documentation 01
-
-                    </div>
-
-                </article>
-
-
-                <article class="documentation-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise top view.png"
-                         alt="Photo Documentation 2"
-                         loading="lazy">
-
-                    <div class="documentation-caption">
-
-                        Photowalk Documentation 02
-
-                    </div>
-
-                </article>
-
-
-                <article class="documentation-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise.png"
-                         alt="Photo Documentation 3"
-                         loading="lazy">
-
-                    <div class="documentation-caption">
-
-                        Photowalk Documentation 03
-
-                    </div>
-
-                </article>
-
-
-                <article class="documentation-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise side view.png"
-                         alt="Photo Documentation 4"
-                         loading="lazy">
-
-                    <div class="documentation-caption">
-
-                        Photowalk Documentation 04
-
-                    </div>
-
-                </article>
-
-
-                <article class="documentation-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise top view.png"
-                         alt="Photo Documentation 5"
-                         loading="lazy">
-
-                    <div class="documentation-caption">
-
-                        Photowalk Documentation 05
-
-                    </div>
-
-                </article>
-
-
-                <article class="documentation-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise.png"
-                         alt="Photo Documentation 6"
-                         loading="lazy">
-
-                    <div class="documentation-caption">
-
-                        Photowalk Documentation 06
-
-                    </div>
-
-                </article>
-
+            <div class="documentation-grid"
+                 id="documentationGallery">
 
             </div>
 
@@ -1838,6 +1666,7 @@
 
         <!-- =================================================
              BTS DOCUMENTATION
+             IMAGES 66–110
              ================================================= -->
 
         <section class="gallery-section">
@@ -1872,104 +1701,8 @@
             </div>
 
 
-            <div class="bts-grid">
-
-
-                <article class="bts-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise side view.png"
-                         alt="Behind the Scenes Documentation 1"
-                         loading="lazy">
-
-                    <div class="bts-caption">
-
-                        BTS Documentation 01
-
-                    </div>
-
-                </article>
-
-
-                <article class="bts-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise top view.png"
-                         alt="Behind the Scenes Documentation 2"
-                         loading="lazy">
-
-                    <div class="bts-caption">
-
-                        BTS Documentation 02
-
-                    </div>
-
-                </article>
-
-
-                <article class="bts-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise.png"
-                         alt="Behind the Scenes Documentation 3"
-                         loading="lazy">
-
-                    <div class="bts-caption">
-
-                        BTS Documentation 03
-
-                    </div>
-
-                </article>
-
-
-                <article class="bts-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise side view.png"
-                         alt="Behind the Scenes Documentation 4"
-                         loading="lazy">
-
-                    <div class="bts-caption">
-
-                        BTS Documentation 04
-
-                    </div>
-
-                </article>
-
-
-                <article class="bts-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise top view.png"
-                         alt="Behind the Scenes Documentation 5"
-                         loading="lazy">
-
-                    <div class="bts-caption">
-
-                        BTS Documentation 05
-
-                    </div>
-
-                </article>
-
-
-                <article class="bts-item"
-                         onclick="openGalleryImage(this)">
-
-                    <img src="images/dungeon revise.png"
-                         alt="Behind the Scenes Documentation 6"
-                         loading="lazy">
-
-                    <div class="bts-caption">
-
-                        BTS Documentation 06
-
-                    </div>
-
-                </article>
-
+            <div class="bts-grid"
+                 id="btsGallery">
 
             </div>
 
@@ -1985,8 +1718,6 @@
 
 <!-- =========================================================
      DIVIDER
-
-     YELLOW → BLUE → RED → BLACK
      ========================================================= -->
 
 <section class="gallery-divider">
@@ -2016,7 +1747,9 @@
 <footer class="site-footer">
 
     <p>
+
         © 2026 Gotcha! Productions. All Rights Reserved.
+
     </p>
 
 </footer>
@@ -2114,9 +1847,7 @@
 
         </div>
 
-
     </div>
-
 
 </div>
 
@@ -2171,15 +1902,22 @@
 
 <script>
 
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
 function toggleMobileMenu() {
 
-    const menu = document.getElementById("mainNavigation");
+    const menu =
+        document.getElementById("mainNavigation");
 
-    const button = document.getElementById("menuToggle");
+    const button =
+        document.getElementById("menuToggle");
 
     if (!menu || !button) return;
 
-    const open = menu.classList.toggle("mobile-open");
+    const open =
+        menu.classList.toggle("mobile-open");
 
     button.setAttribute(
         "aria-expanded",
@@ -2189,50 +1927,315 @@ function toggleMobileMenu() {
 }
 
 
-function openGalleryImage(item) {
 
-    const img = item &&
-                item.querySelector("img");
+/* =========================================================
+   IMAGE FOLDER
+   ========================================================= */
 
-    const box =
-        document.getElementById("galleryLightbox");
+/*
+    IMAGE FILES:
 
-    const out =
-        document.getElementById("lightboxImage");
+    gallery/BTS/edit 1.jpg
+    gallery/BTS/edit 2.jpg
+    gallery/BTS/edit 3.jpg
+    ...
+    gallery/BTS/edit 110.jpg
+*/
 
-    const sound =
-        document.getElementById("clickSound");
+const galleryFolder = "gallery/BTS/";
 
-
-    if (!img || !box || !out) return;
-
-
-    out.src = img.src;
-
-    out.alt =
-        img.alt || "Expanded gallery image";
+/* IMAGE FORMAT IS JPG */
+const imageExtension = ".jpg";
 
 
-    box.classList.add("active");
 
-    document.body.style.overflow = "hidden";
+/* =========================================================
+   CREATE FEATURED GALLERY
+   IMAGES 1–20
+   ========================================================= */
+
+function createFeaturedGallery() {
+
+    const container =
+        document.getElementById("featuredGallery");
+
+    if (!container) return;
 
 
-    if (sound) {
+    for (let i = 1; i <= 20; i++) {
 
-        sound.currentTime = 0;
+        const article =
+            document.createElement("article");
 
-        sound.play().catch(() => {});
+        article.className =
+            "gallery-item";
+
+
+        article.onclick = function() {
+
+            openGalleryImage(this);
+
+        };
+
+
+        const img =
+            document.createElement("img");
+
+
+        img.src =
+            galleryFolder +
+            "edit " +
+            i +
+            imageExtension;
+
+
+        img.alt =
+            "Talakbay Gallery Image " + i;
+
+
+        img.loading =
+            "lazy";
+
+
+        article.appendChild(img);
+
+        container.appendChild(article);
 
     }
 
 }
 
 
+
+/* =========================================================
+   CREATE PHOTO DOCUMENTATION
+   IMAGES 21–65
+   ========================================================= */
+
+function createDocumentationGallery() {
+
+    const container =
+        document.getElementById(
+            "documentationGallery"
+        );
+
+
+    if (!container) return;
+
+
+    for (let i = 21; i <= 65; i++) {
+
+        const article =
+            document.createElement("article");
+
+
+        article.className =
+            "documentation-item";
+
+
+        article.onclick = function() {
+
+            openGalleryImage(this);
+
+        };
+
+
+        const img =
+            document.createElement("img");
+
+
+        img.src =
+            galleryFolder +
+            "edit " +
+            i +
+            imageExtension;
+
+
+        img.alt =
+            "Talakbay Photo Documentation " + i;
+
+
+        img.loading =
+            "lazy";
+
+
+        const caption =
+            document.createElement("div");
+
+
+        caption.className =
+            "documentation-caption";
+
+
+        caption.textContent =
+            "Photowalk Documentation " +
+            String(i - 20).padStart(2, "0");
+
+
+        article.appendChild(img);
+
+        article.appendChild(caption);
+
+        container.appendChild(article);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CREATE BTS DOCUMENTATION
+   IMAGES 66–110
+   ========================================================= */
+
+function createBTSGallery() {
+
+    const container =
+        document.getElementById(
+            "btsGallery"
+        );
+
+
+    if (!container) return;
+
+
+    for (let i = 66; i <= 110; i++) {
+
+        const article =
+            document.createElement("article");
+
+
+        article.className =
+            "bts-item";
+
+
+        article.onclick = function() {
+
+            openGalleryImage(this);
+
+        };
+
+
+        const img =
+            document.createElement("img");
+
+
+        img.src =
+            galleryFolder +
+            "edit " +
+            i +
+            imageExtension;
+
+
+        img.alt =
+            "Talakbay Behind the Scenes " + i;
+
+
+        img.loading =
+            "lazy";
+
+
+        const caption =
+            document.createElement("div");
+
+
+        caption.className =
+            "bts-caption";
+
+
+        caption.textContent =
+            "BTS Documentation " +
+            String(i - 65).padStart(2, "0");
+
+
+        article.appendChild(img);
+
+        article.appendChild(caption);
+
+        container.appendChild(article);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   OPEN GALLERY IMAGE
+   ========================================================= */
+
+function openGalleryImage(item) {
+
+    const img =
+        item &&
+        item.querySelector("img");
+
+
+    const box =
+        document.getElementById(
+            "galleryLightbox"
+        );
+
+
+    const out =
+        document.getElementById(
+            "lightboxImage"
+        );
+
+
+    const sound =
+        document.getElementById(
+            "clickSound"
+        );
+
+
+    if (!img || !box || !out) return;
+
+
+    out.src =
+        img.src;
+
+
+    out.alt =
+        img.alt ||
+        "Expanded gallery image";
+
+
+    box.classList.add("active");
+
+
+    document.body.style.overflow =
+        "hidden";
+
+
+    if (sound) {
+
+        sound.currentTime =
+            0;
+
+
+        sound.play().catch(
+            () => {}
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CLOSE GALLERY IMAGE
+   ========================================================= */
+
 function closeGalleryImage(event) {
 
     const box =
-        document.getElementById("galleryLightbox");
+        document.getElementById(
+            "galleryLightbox"
+        );
+
 
     if (!box) return;
 
@@ -2251,7 +2254,9 @@ function closeGalleryImage(event) {
     if (
         event &&
         event.target !== box &&
-        !event.target.closest(".lightbox-close")
+        !event.target.closest(
+            ".lightbox-close"
+        )
     ) {
 
         return;
@@ -2259,70 +2264,130 @@ function closeGalleryImage(event) {
     }
 
 
-    box.classList.remove("active");
+    box.classList.remove(
+        "active"
+    );
 
-    document.getElementById("lightboxImage").src = "";
 
-    document.body.style.overflow = "";
+    document.getElementById(
+        "lightboxImage"
+    ).src = "";
+
+
+    document.body.style.overflow =
+        "";
 
 }
 
 
-document.addEventListener("click", function(e) {
 
-    const menu =
-        document.getElementById("mainNavigation");
+/* =========================================================
+   CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+   ========================================================= */
 
-    const button =
-        document.getElementById("menuToggle");
+document.addEventListener(
+    "click",
+    function(e) {
 
-
-    if (
-        menu &&
-        button &&
-        window.innerWidth <= 600 &&
-        !menu.contains(e.target) &&
-        !button.contains(e.target)
-    ) {
-
-        menu.classList.remove("mobile-open");
-
-        button.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
-
-});
+        const menu =
+            document.getElementById(
+                "mainNavigation"
+            );
 
 
-document.addEventListener("keydown", function(e) {
-
-    if (e.key === "Escape") {
-
-        const box =
-            document.getElementById("galleryLightbox");
+        const button =
+            document.getElementById(
+                "menuToggle"
+            );
 
 
         if (
-            box &&
-            box.classList.contains("active")
+            menu &&
+            button &&
+            window.innerWidth <= 600 &&
+            !menu.contains(e.target) &&
+            !button.contains(e.target)
         ) {
 
-            box.classList.remove("active");
+            menu.classList.remove(
+                "mobile-open"
+            );
 
-            document.getElementById(
-                "lightboxImage"
-            ).src = "";
 
-            document.body.style.overflow = "";
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
         }
 
     }
+);
 
-});
+
+
+/* =========================================================
+   ESC KEY
+   CLOSE LIGHTBOX
+   ========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(e) {
+
+        if (e.key === "Escape") {
+
+            const box =
+                document.getElementById(
+                    "galleryLightbox"
+                );
+
+
+            if (
+                box &&
+                box.classList.contains(
+                    "active"
+                )
+            ) {
+
+                box.classList.remove(
+                    "active"
+                );
+
+
+                document.getElementById(
+                    "lightboxImage"
+                ).src = "";
+
+
+                document.body.style.overflow =
+                    "";
+
+            }
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   GENERATE ALL 110 IMAGES
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        createFeaturedGallery();
+
+        createDocumentationGallery();
+
+        createBTSGallery();
+
+    }
+);
 
 </script>
 
