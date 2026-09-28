@@ -1564,6 +1564,289 @@ a:hover {
 
 
 /* =========================================================
+   =========================================================
+   GALLERY DOCUMENTATION
+   =========================================================
+========================================================= */
+
+
+/* =========================================================
+   DOCUMENTATION SECTION
+========================================================= */
+
+.documentation-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 75px 8% 85px;
+
+    background: var(--cream);
+
+    border-top: 2px solid var(--black);
+}
+
+
+/* =========================================================
+   DOCUMENTATION HEADER
+========================================================= */
+
+.documentation-header {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 45px;
+}
+
+
+/* =========================================================
+   DOCUMENTATION LABEL
+========================================================= */
+
+.documentation-label {
+    display: block;
+
+    margin: 0 0 12px 3px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    line-height: 1.2;
+
+    color: var(--red);
+}
+
+
+/* =========================================================
+   DOCUMENTATION TITLE
+========================================================= */
+
+.documentation-title {
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    letter-spacing: .5px;
+
+    color: var(--black);
+}
+
+
+/* =========================================================
+   DOCUMENTATION DESCRIPTION
+========================================================= */
+
+.documentation-intro {
+    width: 550px;
+
+    max-width: 100%;
+
+    margin: 20px 0 0 3px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 300;
+
+    line-height: 1.65;
+
+    color: var(--black);
+}
+
+
+/* =========================================================
+   DOCUMENTATION GRID
+========================================================= */
+
+.documentation-grid {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   DOCUMENTATION ITEM
+========================================================= */
+
+.documentation-item {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: var(--cream);
+
+    border: 1px solid var(--black);
+
+    box-shadow: 7px 7px 0 var(--black);
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   DOCUMENTATION IMAGE
+========================================================= */
+
+.documentation-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+
+/* =========================================================
+   DOCUMENTATION HOVER
+========================================================= */
+
+.documentation-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   DOCUMENTATION OVERLAY
+========================================================= */
+
+.documentation-item::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(34, 34, 34, .35),
+        rgba(34, 34, 34, 0)
+    );
+
+    opacity: 0;
+
+    transition: opacity .25s ease;
+
+    pointer-events: none;
+}
+
+.documentation-item:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   PHOTO DOCUMENTATION
+========================================================= */
+
+.photo-documentation {
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   BTS DOCUMENTATION
+========================================================= */
+
+.bts-documentation {
+    background: var(--cream);
+
+    border-top: 0;
+}
+
+
+/* =========================================================
+   DOCUMENTATION COLOR ACCENTS
+========================================================= */
+
+.photo-documentation .documentation-label {
+    color: var(--blue);
+}
+
+.bts-documentation .documentation-label {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   DOCUMENTATION NUMBER / INDEX
+========================================================= */
+
+.documentation-number {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 3;
+
+    min-width: 30px;
+    height: 30px;
+
+    padding: 0 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--cream);
+
+    border: 1px solid var(--black);
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    color: var(--black);
+}
+
+
+/* =========================================================
+   DOCUMENTATION LIGHTBOX IMAGE SUPPORT
+========================================================= */
+
+.documentation-lightbox img {
+    max-width: 100%;
+    max-height: 90vh;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
    TABLET
 ========================================================= */
 
@@ -1722,6 +2005,41 @@ a:hover {
         height: 60%;
 
         border-bottom-left-radius: 80px;
+    }
+
+
+    /* =====================================================
+       TABLET DOCUMENTATION
+    ===================================================== */
+
+    .documentation-section {
+        padding: 60px 6% 70px;
+    }
+
+    .documentation-header {
+        margin-bottom: 38px;
+    }
+
+    .documentation-title {
+        font-size: clamp(50px, 7vw, 75px);
+    }
+
+    .documentation-intro {
+        width: 480px;
+
+        font-size: 12px;
+    }
+
+    .documentation-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+        max-width: 900px;
+    }
+
+    .documentation-item {
+        box-shadow: 6px 6px 0 var(--black);
     }
 
 
@@ -2222,6 +2540,67 @@ a:hover {
     }
 
 
+    /* =====================================================
+       MOBILE DOCUMENTATION
+    ===================================================== */
+
+    .documentation-section {
+        padding: 50px 25px 60px;
+    }
+
+    .documentation-header {
+        margin-bottom: 30px;
+    }
+
+    .documentation-label {
+        margin: 0 0 10px 1px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .documentation-title {
+        font-size: 48px;
+
+        line-height: .92;
+    }
+
+    .documentation-intro {
+        width: 100%;
+
+        margin: 17px 0 0 1px;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+    .documentation-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        max-width: none;
+    }
+
+    .documentation-item {
+        aspect-ratio: 4 / 3;
+
+        box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .documentation-number {
+        top: 9px;
+        left: 9px;
+
+        min-width: 27px;
+        height: 27px;
+
+        font-size: 11px;
+    }
+
+
     /* MOBILE FOOTER */
 
     .site-footer {
@@ -2673,6 +3052,57 @@ a:hover {
         height: 270px;
 
         border-bottom-left-radius: 60px;
+    }
+
+
+    /* =====================================================
+       VERY SMALL DOCUMENTATION
+    ===================================================== */
+
+    .documentation-section {
+        padding: 42px 20px 50px;
+    }
+
+    .documentation-header {
+        margin-bottom: 25px;
+    }
+
+    .documentation-label {
+        font-size: 7px;
+
+        letter-spacing: 1.1px;
+    }
+
+    .documentation-title {
+        font-size: 42px;
+
+        line-height: .92;
+    }
+
+    .documentation-intro {
+        margin-top: 14px;
+
+        font-size: 9px;
+
+        line-height: 1.5;
+    }
+
+    .documentation-grid {
+        gap: 12px;
+    }
+
+    .documentation-item {
+        box-shadow: 4px 4px 0 var(--black);
+    }
+
+    .documentation-number {
+        top: 7px;
+        left: 7px;
+
+        min-width: 24px;
+        height: 24px;
+
+        font-size: 9px;
     }
 
 
