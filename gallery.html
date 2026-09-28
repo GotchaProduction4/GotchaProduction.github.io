@@ -13,7 +13,7 @@
 
 <!-- =========================================================
      WEBSITE ICON
-     ========================================================= -->
+========================================================= -->
 
 <link rel="icon"
       type="image/png"
@@ -22,7 +22,7 @@
 
 <!-- =========================================================
      BOOTSTRAP
-     ========================================================= -->
+========================================================= -->
 
 <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -30,7 +30,7 @@
 
 <!-- =========================================================
      MAIN CSS
-     ========================================================= -->
+========================================================= -->
 
 <link rel="stylesheet"
       href="style.css">
@@ -40,7 +40,7 @@
 
 /* =========================================================
    GALLERY PAGE
-   ========================================================= */
+========================================================= */
 
 .gallery-page {
     background: var(--cream);
@@ -54,7 +54,7 @@
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
 .gallery-page .site-header {
     height: 80px;
@@ -101,7 +101,7 @@
 
 /* =========================================================
    TOP STRIPES
-   ========================================================= */
+========================================================= */
 
 .gallery-page .top-stripes {
 
@@ -157,7 +157,7 @@
 
 /* =========================================================
    HEADER — TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -199,7 +199,7 @@
 
 /* =========================================================
    HEADER — MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -272,7 +272,7 @@
 
 /* =========================================================
    HEADER — SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
@@ -316,7 +316,7 @@
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 .gallery-page .site-footer {
 
@@ -373,7 +373,7 @@
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .gallery-hero {
 
@@ -520,7 +520,7 @@
 
 /* =========================================================
    GALLERY CONTENT
-   ========================================================= */
+========================================================= */
 
 .gallery-content {
 
@@ -556,7 +556,7 @@
 
 /* =========================================================
    SECTION HEADINGS
-   ========================================================= */
+========================================================= */
 
 .gallery-section-heading {
 
@@ -634,7 +634,7 @@
 
 /* =========================================================
    ALL GALLERY GRIDS
-   ========================================================= */
+========================================================= */
 
 .gallery-grid,
 .documentation-grid,
@@ -653,7 +653,7 @@
 
 /* =========================================================
    ALL GALLERY ITEMS
-   ========================================================= */
+========================================================= */
 
 .gallery-item,
 .documentation-item,
@@ -679,7 +679,7 @@
 
 /* =========================================================
    IMAGES
-   ========================================================= */
+========================================================= */
 
 .gallery-item img,
 .documentation-item img,
@@ -701,7 +701,7 @@
 
 /* =========================================================
    HOVER
-   ========================================================= */
+========================================================= */
 
 .gallery-item:hover img,
 .documentation-item:hover img,
@@ -713,7 +713,7 @@
 
 /* =========================================================
    PLUS BUTTON
-   ========================================================= */
+========================================================= */
 
 .gallery-item::after,
 .documentation-item::after,
@@ -769,7 +769,7 @@
 
 /* =========================================================
    CAPTIONS
-   ========================================================= */
+========================================================= */
 
 .documentation-caption,
 .bts-caption {
@@ -800,7 +800,7 @@
 
 /* =========================================================
    DIVIDER
-   ========================================================= */
+========================================================= */
 
 .gallery-divider {
 
@@ -878,7 +878,7 @@
 
 /* =========================================================
    LIGHTBOX
-   ========================================================= */
+========================================================= */
 
 .gallery-lightbox {
 
@@ -958,7 +958,7 @@
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -1015,7 +1015,7 @@
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -1144,7 +1144,7 @@
 
     /* =====================================================
        ALL THREE GRIDS = 2 COLUMNS ON MOBILE
-       ===================================================== */
+    ===================================================== */
 
     .gallery-grid,
     .documentation-grid,
@@ -1287,7 +1287,7 @@
 
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
@@ -1361,6 +1361,8 @@
         letter-spacing: .5px;
     }
 
+}
+
 </style>
 
 </head>
@@ -1371,7 +1373,7 @@
 
 <!-- =========================================================
      HEADER
-     ========================================================= -->
+========================================================= -->
 
 <header class="site-header">
 
@@ -1382,9 +1384,10 @@
         <a href="index.html"
            class="logo-link">
 
-            <img src="images/whitelogo.png"
-                 alt="Talakbay Logo"
-                 class="logo">
+            <img
+                src="images/logoblack.png"
+                alt="Gotcha Productions Logo"
+                class="logo">
 
         </a>
 
@@ -1403,44 +1406,61 @@
     </div>
 
 
-    <!-- NAVIGATION -->
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
 
     <nav class="main-navigation"
          id="mainNavigation">
 
-        <a href="index.html"
-           class="nav-btn nav-home">
+        <a
+            href="index.html"
+            class="nav-btn nav-home">
+
             HOME
+
         </a>
 
-        <a href="resources.html"
-           class="nav-btn nav-resources">
+        <a
+            href="resources.html"
+            class="nav-btn nav-resources">
+
             LESSONS
+
         </a>
 
-        <a href="gallery.html"
-           class="nav-btn nav-gallery active">
+        <a
+            href="gallery.html"
+            class="nav-btn nav-gallery active">
+
             GALLERY
+
         </a>
 
-        <a href="#"
-           class="nav-btn nav-contact"
-           data-toggle="modal"
-           data-target="#contactModal">
+        <a
+            href="#"
+            class="nav-btn nav-contact"
+            data-toggle="modal"
+            data-target="#contactModal">
+
             CONTACT
+
         </a>
 
     </nav>
 
 
-    <!-- MOBILE MENU -->
+    <!-- =====================================================
+         MOBILE MENU
+    ===================================================== -->
 
-    <button class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            onclick="toggleMobileMenu()">
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        onclick="toggleMobileMenu()">
 
         ☰
 
@@ -1449,9 +1469,10 @@
 </header>
 
 
+
 <!-- =========================================================
      HERO
-     ========================================================= -->
+========================================================= -->
 
 <section class="gallery-hero">
 
@@ -1462,11 +1483,15 @@
         <div class="gallery-title">
 
             <p class="gallery-label">
+
                 TALAKBAY PROJECT ARCHIVE
+
             </p>
 
             <h1>
+
                 GALLERY
+
             </h1>
 
             <p class="gallery-intro">
@@ -1484,9 +1509,10 @@
 </section>
 
 
+
 <!-- =========================================================
      MAIN CONTENT
-     ========================================================= -->
+========================================================= -->
 
 <main class="gallery-content">
 
@@ -1496,95 +1522,121 @@
         <!-- =================================================
              FEATURED GALLERY
              images/BTS/edit 1.jpg - edit 20.jpg
-             ================================================= -->
+        ================================================= -->
 
         <section class="gallery-section">
 
             <div class="gallery-section-heading">
 
                 <span class="gallery-section-label">
+
                     FEATURED WORKS
+
                 </span>
 
                 <h2>
+
                     GALLERY
+
                 </h2>
 
                 <p>
+
                     Explore sample works and photographs from
                     the Talakbay project.
+
                 </p>
 
             </div>
 
-            <div class="gallery-grid"
-                 id="featuredGallery">
+
+            <div
+                class="gallery-grid"
+                id="featuredGallery">
 
             </div>
 
         </section>
+
 
 
         <!-- =================================================
              PHOTO DOCUMENTATION
              images/BTS/edit 21.jpg - edit 65.jpg
-             ================================================= -->
+        ================================================= -->
 
         <section class="gallery-section">
 
             <div class="gallery-section-heading">
 
                 <span class="gallery-section-label">
+
                     PROJECT RECORD
+
                 </span>
 
                 <h2>
+
                     PHOTO DOCUMENTATION
+
                 </h2>
 
                 <p>
+
                     Photos documenting the activities,
                     participants, and experiences during
                     the Structured Photowalk Program.
+
                 </p>
 
             </div>
 
-            <div class="documentation-grid"
-                 id="documentationGallery">
+
+            <div
+                class="documentation-grid"
+                id="documentationGallery">
 
             </div>
 
         </section>
 
 
+
         <!-- =================================================
              BTS DOCUMENTATION
              images/BTS/edit 66.jpg - edit 110.jpg
-             ================================================= -->
+        ================================================= -->
 
         <section class="gallery-section">
 
             <div class="gallery-section-heading">
 
                 <span class="gallery-section-label">
+
                     BEHIND THE PROJECT
+
                 </span>
 
                 <h2>
+
                     BTS DOCUMENTATION
+
                 </h2>
 
                 <p>
+
                     Behind-the-scenes moments showing the
                     preparation, production, and development
                     of the Talakbay project.
+
                 </p>
 
             </div>
 
-            <div class="bts-grid"
-                 id="btsGallery">
+
+            <div
+                class="bts-grid"
+                id="btsGallery">
 
             </div>
 
@@ -1596,9 +1648,10 @@
 </main>
 
 
+
 <!-- =========================================================
      DIVIDER
-     ========================================================= -->
+========================================================= -->
 
 <section class="gallery-divider">
 
@@ -1617,27 +1670,33 @@
 </section>
 
 
+
 <!-- =========================================================
      FOOTER
-     ========================================================= -->
+========================================================= -->
 
 <footer class="site-footer">
 
     <p>
-        © 2026 Gotcha! Productions. All Rights Reserved.
+
+        © 2026 Gotcha! Productions.
+        All Rights Reserved.
+
     </p>
 
 </footer>
 
 
+
 <!-- =========================================================
      CONTACT MODAL
-     ========================================================= -->
+========================================================= -->
 
-<div class="modal fade"
-     id="contactModal"
-     tabindex="-1"
-     aria-hidden="true">
+<div
+    class="modal fade"
+    id="contactModal"
+    tabindex="-1"
+    aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered">
 
@@ -1646,45 +1705,61 @@
             <div class="modal-header">
 
                 <h5 class="modal-title">
+
                     Contact Us
+
                 </h5>
 
-                <button type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close">
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close">
 
                     <span>
+
                         &times;
+
                     </span>
 
                 </button>
 
             </div>
 
+
             <div class="modal-body">
 
                 <p>
+
                     <strong>
+
                         Gotcha! Productions
+
                     </strong>
+
                 </p>
 
                 <p>
+
                     📧 gotchaproductions@gmail.com
+
                 </p>
 
                 <p>
+
                     📱 +63 916 426 0418
+
                 </p>
 
             </div>
 
+
             <div class="modal-footer">
 
-                <button type="button"
-                        class="btn btn-secondary"
-                        data-dismiss="modal">
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal">
 
                     Close
 
@@ -1699,55 +1774,66 @@
 </div>
 
 
+
 <!-- =========================================================
      LIGHTBOX
-     ========================================================= -->
+========================================================= -->
 
-<div class="gallery-lightbox"
-     id="galleryLightbox"
-     onclick="closeGalleryImage(event)">
+<div
+    class="gallery-lightbox"
+    id="galleryLightbox"
+    onclick="closeGalleryImage(event)">
 
-    <button class="lightbox-close"
-            type="button"
-            aria-label="Close image">
+    <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Close image">
 
         &times;
 
     </button>
 
-    <img id="lightboxImage"
-         src=""
-         alt="Expanded gallery image">
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Expanded gallery image">
 
 </div>
 
 
+
 <!-- =========================================================
      CLICK SOUND
-     ========================================================= -->
+========================================================= -->
 
-<audio id="clickSound"
-        src="sounds/click1.mp3"
-        preload="auto">
+<audio
+    id="clickSound"
+    src="sounds/click1.mp3"
+    preload="auto">
+
 </audio>
+
 
 
 <!-- =========================================================
      BOOTSTRAP JS
-     ========================================================= -->
+========================================================= -->
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+<script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
 </script>
+
 
 
 <script>
 
 /* =========================================================
    MOBILE MENU
-   ========================================================= */
+========================================================= */
 
 function toggleMobileMenu() {
 
@@ -1778,9 +1864,9 @@ function toggleMobileMenu() {
 }
 
 
+
 /* =========================================================
    IMAGE FOLDER
-   =========================================================
 
    ALL GALLERY IMAGES ARE INSIDE:
 
@@ -1795,15 +1881,16 @@ function toggleMobileMenu() {
    BTS Documentation:
    edit 66.jpg - edit 110.jpg
 
-   ========================================================= */
+========================================================= */
 
 const galleryFolder =
     "images/BTS/";
 
 
+
 /* =========================================================
    GET IMAGE PATH
-   ========================================================= */
+========================================================= */
 
 function getGalleryImage(number) {
 
@@ -1815,10 +1902,11 @@ function getGalleryImage(number) {
 }
 
 
+
 /* =========================================================
    FEATURED GALLERY
    EDIT 1 - 20
-   ========================================================= */
+========================================================= */
 
 function createFeaturedGallery() {
 
@@ -1889,10 +1977,11 @@ function createFeaturedGallery() {
 }
 
 
+
 /* =========================================================
    PHOTO DOCUMENTATION
    EDIT 21 - 65
-   ========================================================= */
+========================================================= */
 
 function createDocumentationGallery() {
 
@@ -1988,10 +2077,11 @@ function createDocumentationGallery() {
 }
 
 
+
 /* =========================================================
    BTS DOCUMENTATION
    EDIT 66 - 110
-   ========================================================= */
+========================================================= */
 
 function createBTSGallery() {
 
@@ -2087,9 +2177,10 @@ function createBTSGallery() {
 }
 
 
+
 /* =========================================================
    OPEN LIGHTBOX
-   ========================================================= */
+========================================================= */
 
 function openGalleryImage(item) {
 
@@ -2158,9 +2249,10 @@ function openGalleryImage(item) {
 }
 
 
+
 /* =========================================================
    CLOSE LIGHTBOX
-   ========================================================= */
+========================================================= */
 
 function closeGalleryImage(event) {
 
@@ -2214,9 +2306,10 @@ function closeGalleryImage(event) {
 }
 
 
+
 /* =========================================================
    CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
-   ========================================================= */
+========================================================= */
 
 document.addEventListener(
     "click",
@@ -2258,9 +2351,10 @@ document.addEventListener(
 );
 
 
+
 /* =========================================================
    ESC KEY
-   ========================================================= */
+========================================================= */
 
 document.addEventListener(
     "keydown",
@@ -2304,9 +2398,10 @@ document.addEventListener(
 );
 
 
+
 /* =========================================================
    CREATE ALL GALLERIES
-   ========================================================= */
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
