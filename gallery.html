@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -30,7 +29,7 @@
 
 
 <!-- =========================================================
-     MAIN WEBSITE CSS
+     MAIN CSS
      ========================================================= -->
 
 <link rel="stylesheet"
@@ -40,7 +39,7 @@
 <style>
 
 /* =========================================================
-   TALAKBAY GALLERY PAGE
+   GALLERY PAGE
    ========================================================= */
 
 .gallery-page {
@@ -48,20 +47,18 @@
     color: var(--black);
 }
 
-
-/* =========================================================
-   GALLERY HEADER
-   ========================================================= */
-
 .gallery-page .brand-yellow {
     background: var(--red) !important;
 }
 
 
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 .gallery-page .site-header {
     height: 80px;
 }
-
 
 .gallery-page .brand-area {
     width: 300px;
@@ -70,76 +67,88 @@
     flex-shrink: 0;
 }
 
-
 .gallery-page .brand-yellow {
     width: 145px;
     height: 80px;
+
     position: absolute;
     left: 0;
     top: 0;
+
     background: var(--red) !important;
+
     z-index: 1;
 }
 
-
 .gallery-page .logo-link {
     position: absolute;
+
     left: 20px;
     top: 50%;
+
     transform: translateY(-50%);
+
     z-index: 5;
 }
 
-
 .gallery-page .logo {
     display: block;
+
     width: 62px;
     height: auto;
 }
 
 
+/* =========================================================
+   TOP STRIPES
+   ========================================================= */
+
 .gallery-page .top-stripes {
+
     position: absolute;
+
     left: 145px;
     top: 0;
+
     width: 156px;
     height: 80px;
+
     display: flex;
+
     overflow: visible;
+
     z-index: 2;
+
     pointer-events: none;
 }
 
-
 .gallery-page .top-stripes span {
+
     display: block;
+
     flex: 0 0 52px;
+
     width: 52px;
     height: 80px;
+
     transform: skewX(-20deg);
+
     transform-origin: top left;
+
     min-width: 0;
 }
-
-
-/* =========================================================
-   HEADER STRIPE COLORS
-   ========================================================= */
 
 .gallery-page .top-stripes .stripe-red {
     display: none !important;
 }
 
-
 .gallery-page .top-stripes .stripe-yellow {
     background: var(--yellow) !important;
 }
 
-
 .gallery-page .top-stripes .stripe-blue {
     background: var(--blue) !important;
 }
-
 
 .gallery-page .top-stripes .stripe-black {
     background: var(--black) !important;
@@ -147,7 +156,7 @@
 
 
 /* =========================================================
-   TABLET HEADER
+   HEADER — TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -156,28 +165,23 @@
         height: 70px;
     }
 
-
     .gallery-page .brand-area {
         width: 230px;
         height: 70px;
     }
-
 
     .gallery-page .brand-yellow {
         width: 110px;
         height: 70px;
     }
 
-
     .gallery-page .logo-link {
         left: 15px;
     }
 
-
     .gallery-page .logo {
         width: 52px;
     }
-
 
     .gallery-page .top-stripes {
         left: 110px;
@@ -185,18 +189,16 @@
         height: 70px;
     }
 
-
     .gallery-page .top-stripes span {
         flex-basis: 42px;
         width: 42px;
         height: 70px;
     }
-
 }
 
 
 /* =========================================================
-   MOBILE HEADER
+   HEADER — MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -205,28 +207,23 @@
         height: 62px;
     }
 
-
     .gallery-page .brand-area {
         width: 210px;
         height: 62px;
     }
-
 
     .gallery-page .brand-yellow {
         width: 145px;
         height: 62px;
     }
 
-
     .gallery-page .logo-link {
         left: 12px;
     }
 
-
     .gallery-page .logo {
         width: 48px;
     }
-
 
     .gallery-page .top-stripes {
         left: 145px;
@@ -234,46 +231,47 @@
         height: 62px;
     }
 
-
     .gallery-page .top-stripes span {
         flex-basis: 52px;
         width: 52px;
         height: 62px;
     }
 
-
-    /* =====================================================
-       MOBILE NAVIGATION
-       ===================================================== */
-
     .gallery-page .main-navigation {
+
         position: absolute;
+
         top: 62px;
         right: 10px;
+
         width: 190px;
+
         display: none;
+
         flex-direction: column;
+
         background: var(--cream);
+
         border: 1px solid var(--black);
-        box-shadow: 5px 5px 0 var(--black);
+
+        box-shadow:
+            5px 5px 0 var(--black);
+
         z-index: 140;
     }
-
 
     .gallery-page .main-navigation.mobile-open {
         display: flex !important;
     }
 
-
     .gallery-page .main-navigation .nav-btn {
         width: 100%;
     }
-
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES HEADER
+   HEADER — SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 380px) {
@@ -282,23 +280,19 @@
         height: 58px;
     }
 
-
     .gallery-page .brand-area {
         width: 190px;
         height: 58px;
     }
-
 
     .gallery-page .brand-yellow {
         width: 145px;
         height: 58px;
     }
 
-
     .gallery-page .logo {
         width: 43px;
     }
-
 
     .gallery-page .top-stripes {
         left: 145px;
@@ -306,20 +300,17 @@
         height: 58px;
     }
 
-
     .gallery-page .top-stripes span {
         flex-basis: 48px;
         width: 48px;
         height: 58px;
     }
 
-
     .gallery-page .main-navigation {
         top: 58px;
         right: 8px;
         width: 175px;
     }
-
 }
 
 
@@ -328,23 +319,34 @@
    ========================================================= */
 
 .gallery-page .site-footer {
+
     width: 100%;
+
     padding: 18px 20px;
+
     background: var(--black);
+
     border-top: 1px solid var(--black);
+
     text-align: center;
 }
 
-
 .gallery-page .site-footer p {
+
     margin: 0;
+
     color: white;
-    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-family:
+        "Be Vietnam Pro",
+        sans-serif;
+
     font-size: 11px;
+
     font-weight: 300;
+
     letter-spacing: .2px;
 }
-
 
 @media (max-width: 600px) {
 
@@ -352,13 +354,10 @@
         padding: 15px 20px;
     }
 
-
     .gallery-page .site-footer p {
         font-size: 9px;
     }
-
 }
-
 
 @media (max-width: 380px) {
 
@@ -366,51 +365,56 @@
         padding: 13px 15px;
     }
 
-
     .gallery-page .site-footer p {
         font-size: 8px;
     }
-
 }
 
 
 /* =========================================================
-   GALLERY HERO
+   HERO
    ========================================================= */
 
 .gallery-hero {
+
     position: relative;
 
     width: 100%;
+
     min-height: 400px;
 
     overflow: hidden;
 
     background: var(--cream);
 
-    border-bottom: 1px solid var(--black);
+    border-bottom:
+        1px solid var(--black);
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     text-align: center;
 }
 
-
 .gallery-hero-bg {
+
     position: absolute;
 
     inset: 0;
 
     background-image:
+
         linear-gradient(
             rgba(255, 244, 230, .88),
             rgba(255, 244, 230, .88)
         ),
+
         url("images/photowalk.jpg");
 
     background-size: cover;
+
     background-position: center;
 
     opacity: .42;
@@ -418,11 +422,12 @@
     z-index: 0;
 }
 
-
 .gallery-hero-inner {
+
     position: relative;
 
     width: 100%;
+
     min-height: 400px;
 
     display: flex;
@@ -437,9 +442,10 @@
     text-align: center;
 }
 
-
 .gallery-title {
+
     width: 100%;
+
     max-width: 900px;
 
     margin: 0 auto;
@@ -447,11 +453,13 @@
     text-align: center;
 }
 
-
 .gallery-label {
+
     margin: 0 0 14px;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family:
+        "Be Vietnam Pro",
+        sans-serif;
 
     font-size: 10px;
 
@@ -464,13 +472,16 @@
     text-align: center;
 }
 
-
 .gallery-title h1 {
+
     margin: 0;
 
-    font-family: "Anton", sans-serif;
+    font-family:
+        "Anton",
+        sans-serif;
 
-    font-size: clamp(70px, 9vw, 120px);
+    font-size:
+        clamp(70px, 9vw, 120px);
 
     font-weight: 400;
 
@@ -483,15 +494,17 @@
     text-align: center;
 }
 
-
 .gallery-intro {
+
     width: 500px;
 
     max-width: 100%;
 
     margin: 22px auto 0;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family:
+        "Be Vietnam Pro",
+        sans-serif;
 
     font-size: 14px;
 
@@ -510,6 +523,7 @@
    ========================================================= */
 
 .gallery-content {
+
     position: relative;
 
     width: 100%;
@@ -519,8 +533,8 @@
     background: var(--cream);
 }
 
-
 .gallery-container {
+
     width: 100%;
 
     max-width: 1100px;
@@ -528,24 +542,24 @@
     margin: 0 auto;
 }
 
-
-/* =========================================================
-   GALLERY SECTION
-   ========================================================= */
-
 .gallery-section {
+
     margin-bottom: 85px;
 
     text-align: center;
 }
-
 
 .gallery-section:last-child {
     margin-bottom: 20px;
 }
 
 
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
 .gallery-section-heading {
+
     width: 100%;
 
     margin: 0 auto 30px;
@@ -553,13 +567,15 @@
     text-align: center;
 }
 
-
 .gallery-section-label {
+
     display: block;
 
     margin-bottom: 8px;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family:
+        "Be Vietnam Pro",
+        sans-serif;
 
     font-size: 9px;
 
@@ -572,13 +588,16 @@
     text-align: center;
 }
 
-
 .gallery-section-heading h2 {
+
     margin: 0;
 
-    font-family: "Anton", sans-serif;
+    font-family:
+        "Anton",
+        sans-serif;
 
-    font-size: clamp(42px, 5vw, 65px);
+    font-size:
+        clamp(42px, 5vw, 65px);
 
     font-weight: 400;
 
@@ -589,15 +608,17 @@
     text-align: center;
 }
 
-
 .gallery-section-heading p {
+
     width: 650px;
 
     max-width: 100%;
 
     margin: 16px auto 0;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family:
+        "Be Vietnam Pro",
+        sans-serif;
 
     font-size: 13px;
 
@@ -612,7 +633,7 @@
 
 
 /* =========================================================
-   SAME IMAGE GRID FOR ALL SECTIONS
+   ALL GALLERY GRIDS
    ========================================================= */
 
 .gallery-grid,
@@ -621,7 +642,8 @@
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 12px;
 
@@ -630,7 +652,7 @@
 
 
 /* =========================================================
-   SAME IMAGE ITEM STYLE
+   ALL GALLERY ITEMS
    ========================================================= */
 
 .gallery-item,
@@ -645,16 +667,18 @@
 
     background: var(--black);
 
-    border: 2px solid var(--black);
+    border:
+        2px solid var(--black);
 
-    box-shadow: 6px 6px 0 var(--black);
+    box-shadow:
+        6px 6px 0 var(--black);
 
     cursor: pointer;
 }
 
 
 /* =========================================================
-   SAME IMAGE STYLE
+   IMAGES
    ========================================================= */
 
 .gallery-item img,
@@ -676,7 +700,7 @@
 
 
 /* =========================================================
-   IMAGE HOVER
+   HOVER
    ========================================================= */
 
 .gallery-item:hover img,
@@ -688,7 +712,7 @@
 
 
 /* =========================================================
-   PLUS ICON
+   PLUS BUTTON
    ========================================================= */
 
 .gallery-item::after,
@@ -700,9 +724,11 @@
     position: absolute;
 
     right: 12px;
+
     bottom: 10px;
 
     width: 30px;
+
     height: 30px;
 
     display: flex;
@@ -716,7 +742,9 @@
 
     color: white;
 
-    font-family: "Anton", sans-serif;
+    font-family:
+        "Anton",
+        sans-serif;
 
     font-size: 18px;
 
@@ -729,7 +757,6 @@
     transition: .2s ease;
 }
 
-
 .gallery-item:hover::after,
 .documentation-item:hover::after,
 .bts-item:hover::after {
@@ -741,7 +768,7 @@
 
 
 /* =========================================================
-   DOCUMENTATION CAPTIONS
+   CAPTIONS
    ========================================================= */
 
 .documentation-caption,
@@ -750,6 +777,7 @@
     position: absolute;
 
     left: 0;
+
     bottom: 0;
 
     padding: 10px 14px;
@@ -758,7 +786,9 @@
 
     color: white;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family:
+        "Be Vietnam Pro",
+        sans-serif;
 
     font-size: 9px;
 
@@ -769,31 +799,38 @@
 
 
 /* =========================================================
-   GALLERY DIVIDER
+   DIVIDER
    ========================================================= */
 
 .gallery-divider {
+
     position: relative;
 
     width: 100%;
+
     height: 55px;
 
     background: var(--cream);
 
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
+    border-top:
+        2px solid var(--black);
+
+    border-bottom:
+        2px solid var(--black);
 
     overflow: hidden;
 }
 
-
 .gallery-divider-stripes {
+
     position: absolute;
 
     left: 0;
+
     top: 0;
 
     width: 330px;
+
     height: 55px;
 
     display: flex;
@@ -801,8 +838,8 @@
     overflow: hidden;
 }
 
-
 .gallery-divider-stripes span {
+
     display: block;
 
     height: 55px;
@@ -812,13 +849,12 @@
     transform-origin: top;
 }
 
-
 .gallery-divider-stripes .stripe-yellow {
+
     width: 135px;
 
     background: var(--yellow);
 }
-
 
 .gallery-divider-stripes .stripe-blue,
 .gallery-divider-stripes .stripe-red,
@@ -827,16 +863,13 @@
     width: 75px;
 }
 
-
 .gallery-divider-stripes .stripe-blue {
     background: var(--blue);
 }
 
-
 .gallery-divider-stripes .stripe-red {
     background: var(--red);
 }
-
 
 .gallery-divider-stripes .stripe-black {
     background: var(--black);
@@ -860,42 +893,45 @@
 
     padding: 30px;
 
-    background: rgba(34, 34, 34, .94);
+    background:
+        rgba(34, 34, 34, .94);
 
     z-index: 9999;
 
     cursor: pointer;
 }
 
-
 .gallery-lightbox.active {
     display: flex;
 }
 
-
 .gallery-lightbox img {
 
     max-width: 92vw;
+
     max-height: 88vh;
 
     object-fit: contain;
 
-    border: 2px solid white;
+    border:
+        2px solid white;
 
-    box-shadow: 10px 10px 0 var(--red);
+    box-shadow:
+        10px 10px 0 var(--red);
 
     cursor: default;
 }
-
 
 .lightbox-close {
 
     position: absolute;
 
     top: 20px;
+
     right: 25px;
 
     width: 42px;
+
     height: 42px;
 
     display: flex;
@@ -903,7 +939,8 @@
     align-items: center;
     justify-content: center;
 
-    border: 2px solid white;
+    border:
+        2px solid white;
 
     border-radius: 50%;
 
@@ -929,35 +966,35 @@
         min-height: 380px;
     }
 
-
     .gallery-hero-inner {
+
         min-height: 380px;
 
         padding: 55px 6%;
     }
 
-
     .gallery-title h1 {
-        font-size: clamp(60px, 9vw, 100px);
+
+        font-size:
+            clamp(60px, 9vw, 100px);
     }
 
-
     .gallery-intro {
+
         width: 480px;
 
         font-size: 13px;
     }
 
-
     .gallery-content {
+
         padding: 55px 6%;
     }
 
-
     .gallery-section {
+
         margin-bottom: 70px;
     }
-
 
     .gallery-grid,
     .documentation-grid,
@@ -966,15 +1003,13 @@
         gap: 10px;
     }
 
-
     .gallery-item,
     .documentation-item,
     .bts-item {
 
-        box-shadow: 5px 5px 0 var(--black);
-
+        box-shadow:
+            5px 5px 0 var(--black);
     }
-
 }
 
 
@@ -985,28 +1020,29 @@
 @media (max-width: 600px) {
 
     .gallery-page .top-stripes {
+
         height: 100%;
     }
 
-
     .gallery-page .top-stripes span {
+
         flex: 0 0 52px;
+
         width: 52px;
     }
 
 
-    /* =====================================================
-       HERO
-       ===================================================== */
+    /* HERO */
 
     .gallery-hero {
+
         min-height: 350px;
 
         text-align: center;
     }
 
-
     .gallery-hero-inner {
+
         min-height: 350px;
 
         padding: 55px 25px;
@@ -1017,13 +1053,12 @@
         text-align: center;
     }
 
-
     .gallery-title {
         text-align: center;
     }
 
-
     .gallery-label {
+
         font-size: 8px;
 
         letter-spacing: 1.5px;
@@ -1031,8 +1066,8 @@
         text-align: center;
     }
 
-
     .gallery-title h1 {
+
         font-size: 54px;
 
         line-height: .9;
@@ -1040,8 +1075,8 @@
         text-align: center;
     }
 
-
     .gallery-intro {
+
         width: 100%;
 
         margin-top: 18px;
@@ -1054,30 +1089,29 @@
     }
 
 
-    /* =====================================================
-       CONTENT
-       ===================================================== */
+    /* CONTENT */
 
     .gallery-content {
+
         padding: 45px 25px;
     }
 
-
     .gallery-section {
+
         margin-bottom: 65px;
 
         text-align: center;
     }
 
-
     .gallery-section-heading {
+
         margin-bottom: 25px;
 
         text-align: center;
     }
 
-
     .gallery-section-label {
+
         font-size: 8px;
 
         letter-spacing: 1.5px;
@@ -1085,8 +1119,8 @@
         text-align: center;
     }
 
-
     .gallery-section-heading h2 {
+
         font-size: 42px;
 
         line-height: .92;
@@ -1094,8 +1128,8 @@
         text-align: center;
     }
 
-
     .gallery-section-heading p {
+
         width: 100%;
 
         margin-top: 13px;
@@ -1109,23 +1143,21 @@
 
 
     /* =====================================================
-       ALL GALLERY SECTIONS = 2 COLUMNS
+       ALL THREE GRIDS = 2 COLUMNS ON MOBILE
        ===================================================== */
 
     .gallery-grid,
     .documentation-grid,
     .bts-grid {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            repeat(2, 1fr);
 
         gap: 9px;
-
     }
 
 
-    /* =====================================================
-       SAME ITEM SIZE
-       ===================================================== */
+    /* ITEMS */
 
     .gallery-item,
     .documentation-item,
@@ -1133,41 +1165,39 @@
 
         aspect-ratio: 4 / 3;
 
-        box-shadow: 4px 4px 0 var(--black);
+        box-shadow:
+            4px 4px 0 var(--black);
 
         border-width: 1px;
-
     }
 
 
-    /* =====================================================
-       SAME IMAGE SIZE
-       ===================================================== */
+    /* IMAGES */
 
     .gallery-item img,
     .documentation-item img,
     .bts-item img {
 
         width: 100%;
+
         height: 100%;
 
         object-fit: cover;
-
     }
 
 
-    /* =====================================================
-       PLUS ICON ON MOBILE
-       ===================================================== */
+    /* PLUS */
 
     .gallery-item::after,
     .documentation-item::after,
     .bts-item::after {
 
         width: 24px;
+
         height: 24px;
 
         right: 7px;
+
         bottom: 7px;
 
         font-size: 15px;
@@ -1175,13 +1205,10 @@
         opacity: 1;
 
         transform: scale(.9);
-
     }
 
 
-    /* =====================================================
-       MOBILE CAPTION
-       ===================================================== */
+    /* CAPTIONS */
 
     .documentation-caption,
     .bts-caption {
@@ -1191,136 +1218,128 @@
         font-size: 7px;
 
         letter-spacing: .7px;
-
     }
 
 
-    /* =====================================================
-       DIVIDER
-       ===================================================== */
+    /* DIVIDER */
 
     .gallery-divider {
+
         height: 50px;
     }
 
-
     .gallery-divider-stripes {
+
         width: 230px;
 
         height: 50px;
     }
 
-
     .gallery-divider-stripes span {
+
         height: 50px;
     }
 
-
     .gallery-divider-stripes .stripe-yellow {
+
         width: 95px;
     }
-
 
     .gallery-divider-stripes .stripe-blue,
     .gallery-divider-stripes .stripe-red,
     .gallery-divider-stripes .stripe-black {
 
         width: 55px;
-
     }
 
 
-    /* =====================================================
-       LIGHTBOX
-       ===================================================== */
+    /* LIGHTBOX */
 
     .gallery-lightbox {
+
         padding: 18px;
     }
-
 
     .gallery-lightbox img {
 
         max-width: 94vw;
+
         max-height: 80vh;
 
-        box-shadow: 6px 6px 0 var(--red);
-
+        box-shadow:
+            6px 6px 0 var(--red);
     }
-
 
     .lightbox-close {
 
         top: 12px;
+
         right: 14px;
 
         width: 36px;
+
         height: 36px;
 
         font-size: 21px;
-
     }
-
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 380px) {
 
     .gallery-hero {
+
         min-height: 320px;
     }
 
-
     .gallery-hero-inner {
+
         min-height: 320px;
 
         padding: 45px 20px;
     }
 
-
     .gallery-title h1 {
+
         font-size: 46px;
     }
 
-
     .gallery-intro {
+
         font-size: 9px;
     }
 
-
     .gallery-content {
+
         padding: 35px 20px;
     }
 
-
     .gallery-section-heading h2 {
+
         font-size: 36px;
     }
 
-
     .gallery-section-heading p {
+
         font-size: 9px;
     }
 
 
-    /* =====================================================
-       KEEP TWO COLUMNS EVEN ON VERY SMALL PHONES
-       ===================================================== */
+    /* KEEP 2 COLUMNS */
 
     .gallery-grid,
     .documentation-grid,
     .bts-grid {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            repeat(2, 1fr);
 
         gap: 7px;
-
     }
-
 
     .gallery-item,
     .documentation-item,
@@ -1328,10 +1347,9 @@
 
         aspect-ratio: 4 / 3;
 
-        box-shadow: 3px 3px 0 var(--black);
-
+        box-shadow:
+            3px 3px 0 var(--black);
     }
-
 
     .documentation-caption,
     .bts-caption {
@@ -1341,10 +1359,7 @@
         font-size: 6px;
 
         letter-spacing: .5px;
-
     }
-
-}
 
 </style>
 
@@ -1362,13 +1377,7 @@
 
     <div class="brand-area">
 
-
-        <!-- RED BRAND BLOCK -->
-
         <div class="brand-yellow"></div>
-
-
-        <!-- WHITE LOGO -->
 
         <a href="index.html"
            class="logo-link">
@@ -1378,11 +1387,6 @@
                  class="logo">
 
         </a>
-
-
-        <!-- =================================================
-             TOP STRIPES
-             ================================================= -->
 
         <div class="top-stripes">
 
@@ -1396,58 +1400,40 @@
 
         </div>
 
-
     </div>
 
 
-    <!-- =====================================================
-         DESKTOP NAVIGATION
-         ===================================================== -->
+    <!-- NAVIGATION -->
 
     <nav class="main-navigation"
          id="mainNavigation">
 
-
         <a href="index.html"
            class="nav-btn nav-home">
-
             HOME
-
         </a>
-
 
         <a href="resources.html"
            class="nav-btn nav-resources">
-
             LESSONS
-
         </a>
-
 
         <a href="gallery.html"
            class="nav-btn nav-gallery active">
-
             GALLERY
-
         </a>
-
 
         <a href="#"
            class="nav-btn nav-contact"
            data-toggle="modal"
            data-target="#contactModal">
-
             CONTACT
-
         </a>
-
 
     </nav>
 
 
-    <!-- =====================================================
-         MOBILE MENU
-         ===================================================== -->
+    <!-- MOBILE MENU -->
 
     <button class="menu-toggle"
             id="menuToggle"
@@ -1460,39 +1446,28 @@
 
     </button>
 
-
 </header>
 
 
-
 <!-- =========================================================
-     GALLERY HERO
+     HERO
      ========================================================= -->
 
 <section class="gallery-hero">
 
-
     <div class="gallery-hero-bg"></div>
-
 
     <div class="gallery-hero-inner">
 
         <div class="gallery-title">
 
-
             <p class="gallery-label">
-
                 TALAKBAY PROJECT ARCHIVE
-
             </p>
 
-
             <h1>
-
                 GALLERY
-
             </h1>
-
 
             <p class="gallery-intro">
 
@@ -1502,18 +1477,15 @@
 
             </p>
 
-
         </div>
 
     </div>
 
-
 </section>
 
 
-
 <!-- =========================================================
-     GALLERY CONTENT
+     MAIN CONTENT
      ========================================================= -->
 
 <main class="gallery-content">
@@ -1522,140 +1494,99 @@
 
 
         <!-- =================================================
-             SAMPLE WORKS
-             IMAGES 1–20
+             FEATURED GALLERY
+             images/BTS/edit 1.jpg - edit 20.jpg
              ================================================= -->
 
         <section class="gallery-section">
 
-
             <div class="gallery-section-heading">
 
-
                 <span class="gallery-section-label">
-
                     FEATURED WORKS
-
                 </span>
 
-
                 <h2>
-
                     GALLERY
-
                 </h2>
 
-
                 <p>
-
                     Explore sample works and photographs from
                     the Talakbay project.
-
                 </p>
 
-
             </div>
-
 
             <div class="gallery-grid"
                  id="featuredGallery">
 
             </div>
 
-
         </section>
-
 
 
         <!-- =================================================
              PHOTO DOCUMENTATION
-             IMAGES 21–65
+             images/BTS/edit 21.jpg - edit 65.jpg
              ================================================= -->
 
         <section class="gallery-section">
 
-
             <div class="gallery-section-heading">
 
-
                 <span class="gallery-section-label">
-
                     PROJECT RECORD
-
                 </span>
 
-
                 <h2>
-
                     PHOTO DOCUMENTATION
-
                 </h2>
 
-
                 <p>
-
-                    Photos documenting the activities, participants,
-                    and experiences during the Structured Photowalk
-                    Program.
-
+                    Photos documenting the activities,
+                    participants, and experiences during
+                    the Structured Photowalk Program.
                 </p>
 
-
             </div>
-
 
             <div class="documentation-grid"
                  id="documentationGallery">
 
             </div>
 
-
         </section>
-
 
 
         <!-- =================================================
              BTS DOCUMENTATION
-             IMAGES 66–110
+             images/BTS/edit 66.jpg - edit 110.jpg
              ================================================= -->
 
         <section class="gallery-section">
 
-
             <div class="gallery-section-heading">
 
-
                 <span class="gallery-section-label">
-
                     BEHIND THE PROJECT
-
                 </span>
 
-
                 <h2>
-
                     BTS DOCUMENTATION
-
                 </h2>
 
-
                 <p>
-
                     Behind-the-scenes moments showing the
                     preparation, production, and development
                     of the Talakbay project.
-
                 </p>
 
-
             </div>
-
 
             <div class="bts-grid"
                  id="btsGallery">
 
             </div>
-
 
         </section>
 
@@ -1665,13 +1596,11 @@
 </main>
 
 
-
 <!-- =========================================================
      DIVIDER
      ========================================================= -->
 
 <section class="gallery-divider">
-
 
     <div class="gallery-divider-stripes">
 
@@ -1685,9 +1614,7 @@
 
     </div>
 
-
 </section>
-
 
 
 <!-- =========================================================
@@ -1697,13 +1624,10 @@
 <footer class="site-footer">
 
     <p>
-
         © 2026 Gotcha! Productions. All Rights Reserved.
-
     </p>
 
 </footer>
-
 
 
 <!-- =========================================================
@@ -1715,22 +1639,15 @@
      tabindex="-1"
      aria-hidden="true">
 
-
     <div class="modal-dialog modal-dialog-centered">
-
 
         <div class="modal-content">
 
-
             <div class="modal-header">
 
-
                 <h5 class="modal-title">
-
                     Contact Us
-
                 </h5>
-
 
                 <button type="button"
                         class="close"
@@ -1738,50 +1655,32 @@
                         aria-label="Close">
 
                     <span>
-
                         &times;
-
                     </span>
 
                 </button>
 
-
             </div>
-
 
             <div class="modal-body">
 
-
                 <p>
-
                     <strong>
-
                         Gotcha! Productions
-
                     </strong>
-
                 </p>
 
-
                 <p>
-
                     📧 gotchaproductions@gmail.com
-
                 </p>
-
 
                 <p>
-
                     📱 +63 916 426 0418
-
                 </p>
-
 
             </div>
 
-
             <div class="modal-footer">
-
 
                 <button type="button"
                         class="btn btn-secondary"
@@ -1791,16 +1690,13 @@
 
                 </button>
 
-
             </div>
-
 
         </div>
 
     </div>
 
 </div>
-
 
 
 <!-- =========================================================
@@ -1811,7 +1707,6 @@
      id="galleryLightbox"
      onclick="closeGalleryImage(event)">
 
-
     <button class="lightbox-close"
             type="button"
             aria-label="Close image">
@@ -1820,18 +1715,15 @@
 
     </button>
 
-
     <img id="lightboxImage"
          src=""
          alt="Expanded gallery image">
 
-
 </div>
 
 
-
 <!-- =========================================================
-     AUDIO
+     CLICK SOUND
      ========================================================= -->
 
 <audio id="clickSound"
@@ -1840,14 +1732,15 @@
 </audio>
 
 
-
 <!-- =========================================================
-     BOOTSTRAP JAVASCRIPT
+     BOOTSTRAP JS
      ========================================================= -->
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+</script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+</script>
 
 
 <script>
@@ -1859,15 +1752,23 @@
 function toggleMobileMenu() {
 
     const menu =
-        document.getElementById("mainNavigation");
+        document.getElementById(
+            "mainNavigation"
+        );
 
     const button =
-        document.getElementById("menuToggle");
+        document.getElementById(
+            "menuToggle"
+        );
 
     if (!menu || !button) return;
 
+
     const open =
-        menu.classList.toggle("mobile-open");
+        menu.classList.toggle(
+            "mobile-open"
+        );
+
 
     button.setAttribute(
         "aria-expanded",
@@ -1877,34 +1778,32 @@ function toggleMobileMenu() {
 }
 
 
-
 /* =========================================================
    IMAGE FOLDER
+   =========================================================
+
+   ALL GALLERY IMAGES ARE INSIDE:
+
+   images/BTS/
+
+   Gallery:
+   edit 1.jpg - edit 20.jpg
+
+   Photo Documentation:
+   edit 21.jpg - edit 65.jpg
+
+   BTS Documentation:
+   edit 66.jpg - edit 110.jpg
+
    ========================================================= */
 
-/*
-    IMAGE FILE STRUCTURE:
-
-    images/edit 1.jpg
-    images/edit 2.jpg
-    images/edit 3.jpg
-    ...
-    images/edit 110.jpg
-*/
-
-const galleryFolder = "images/";
+const galleryFolder =
+    "images/BTS/";
 
 
-/*
-    %20 represents the space between
-    "edit" and the image number.
-
-    Example:
-
-    images/edit%201.jpg
-    images/edit%202.jpg
-    images/edit%20110.jpg
-*/
+/* =========================================================
+   GET IMAGE PATH
+   ========================================================= */
 
 function getGalleryImage(number) {
 
@@ -1916,38 +1815,51 @@ function getGalleryImage(number) {
 }
 
 
-
 /* =========================================================
-   CREATE FEATURED GALLERY
-   IMAGES 1–20
+   FEATURED GALLERY
+   EDIT 1 - 20
    ========================================================= */
 
 function createFeaturedGallery() {
 
     const container =
-        document.getElementById("featuredGallery");
+        document.getElementById(
+            "featuredGallery"
+        );
 
     if (!container) return;
 
 
-    for (let i = 1; i <= 20; i++) {
+    for (
+        let i = 1;
+        i <= 20;
+        i++
+    ) {
 
         const article =
-            document.createElement("article");
+            document.createElement(
+                "article"
+            );
+
 
         article.className =
             "gallery-item";
 
 
-        article.onclick = function() {
+        article.onclick =
+            function() {
 
-            openGalleryImage(this);
+                openGalleryImage(
+                    this
+                );
 
-        };
+            };
 
 
         const img =
-            document.createElement("img");
+            document.createElement(
+                "img"
+            );
 
 
         img.src =
@@ -1955,26 +1867,31 @@ function createFeaturedGallery() {
 
 
         img.alt =
-            "Talakbay Gallery Image " + i;
+            "Talakbay Gallery Image " +
+            i;
 
 
         img.loading =
             "lazy";
 
 
-        article.appendChild(img);
+        article.appendChild(
+            img
+        );
 
-        container.appendChild(article);
+
+        container.appendChild(
+            article
+        );
 
     }
 
 }
 
 
-
 /* =========================================================
-   CREATE PHOTO DOCUMENTATION
-   IMAGES 21–65
+   PHOTO DOCUMENTATION
+   EDIT 21 - 65
    ========================================================= */
 
 function createDocumentationGallery() {
@@ -1984,29 +1901,39 @@ function createDocumentationGallery() {
             "documentationGallery"
         );
 
-
     if (!container) return;
 
 
-    for (let i = 21; i <= 65; i++) {
+    for (
+        let i = 21;
+        i <= 65;
+        i++
+    ) {
 
         const article =
-            document.createElement("article");
+            document.createElement(
+                "article"
+            );
 
 
         article.className =
             "documentation-item";
 
 
-        article.onclick = function() {
+        article.onclick =
+            function() {
 
-            openGalleryImage(this);
+                openGalleryImage(
+                    this
+                );
 
-        };
+            };
 
 
         const img =
-            document.createElement("img");
+            document.createElement(
+                "img"
+            );
 
 
         img.src =
@@ -2014,7 +1941,8 @@ function createDocumentationGallery() {
 
 
         img.alt =
-            "Talakbay Photo Documentation " + i;
+            "Talakbay Photo Documentation " +
+            i;
 
 
         img.loading =
@@ -2022,7 +1950,9 @@ function createDocumentationGallery() {
 
 
         const caption =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
         caption.className =
@@ -2031,24 +1961,36 @@ function createDocumentationGallery() {
 
         caption.textContent =
             "Photowalk Documentation " +
-            String(i - 20).padStart(2, "0");
+            String(
+                i - 20
+            ).padStart(
+                2,
+                "0"
+            );
 
 
-        article.appendChild(img);
+        article.appendChild(
+            img
+        );
 
-        article.appendChild(caption);
 
-        container.appendChild(article);
+        article.appendChild(
+            caption
+        );
+
+
+        container.appendChild(
+            article
+        );
 
     }
 
 }
 
 
-
 /* =========================================================
-   CREATE BTS DOCUMENTATION
-   IMAGES 66–110
+   BTS DOCUMENTATION
+   EDIT 66 - 110
    ========================================================= */
 
 function createBTSGallery() {
@@ -2058,29 +2000,39 @@ function createBTSGallery() {
             "btsGallery"
         );
 
-
     if (!container) return;
 
 
-    for (let i = 66; i <= 110; i++) {
+    for (
+        let i = 66;
+        i <= 110;
+        i++
+    ) {
 
         const article =
-            document.createElement("article");
+            document.createElement(
+                "article"
+            );
 
 
         article.className =
             "bts-item";
 
 
-        article.onclick = function() {
+        article.onclick =
+            function() {
 
-            openGalleryImage(this);
+                openGalleryImage(
+                    this
+                );
 
-        };
+            };
 
 
         const img =
-            document.createElement("img");
+            document.createElement(
+                "img"
+            );
 
 
         img.src =
@@ -2088,7 +2040,8 @@ function createBTSGallery() {
 
 
         img.alt =
-            "Talakbay Behind the Scenes " + i;
+            "Talakbay Behind the Scenes " +
+            i;
 
 
         img.loading =
@@ -2096,7 +2049,9 @@ function createBTSGallery() {
 
 
         const caption =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
         caption.className =
@@ -2105,30 +2060,44 @@ function createBTSGallery() {
 
         caption.textContent =
             "BTS Documentation " +
-            String(i - 65).padStart(2, "0");
+            String(
+                i - 65
+            ).padStart(
+                2,
+                "0"
+            );
 
 
-        article.appendChild(img);
+        article.appendChild(
+            img
+        );
 
-        article.appendChild(caption);
 
-        container.appendChild(article);
+        article.appendChild(
+            caption
+        );
+
+
+        container.appendChild(
+            article
+        );
 
     }
 
 }
 
 
-
 /* =========================================================
-   OPEN GALLERY IMAGE
+   OPEN LIGHTBOX
    ========================================================= */
 
 function openGalleryImage(item) {
 
     const img =
         item &&
-        item.querySelector("img");
+        item.querySelector(
+            "img"
+        );
 
 
     const box =
@@ -2149,7 +2118,11 @@ function openGalleryImage(item) {
         );
 
 
-    if (!img || !box || !out) return;
+    if (
+        !img ||
+        !box ||
+        !out
+    ) return;
 
 
     out.src =
@@ -2161,7 +2134,9 @@ function openGalleryImage(item) {
         "Expanded gallery image";
 
 
-    box.classList.add("active");
+    box.classList.add(
+        "active"
+    );
 
 
     document.body.style.overflow =
@@ -2183,9 +2158,8 @@ function openGalleryImage(item) {
 }
 
 
-
 /* =========================================================
-   CLOSE GALLERY IMAGE
+   CLOSE LIGHTBOX
    ========================================================= */
 
 function closeGalleryImage(event) {
@@ -2202,7 +2176,8 @@ function closeGalleryImage(event) {
     if (
         event &&
         event.target &&
-        event.target.id === "lightboxImage"
+        event.target.id ===
+            "lightboxImage"
     ) {
 
         return;
@@ -2237,7 +2212,6 @@ function closeGalleryImage(event) {
         "";
 
 }
-
 
 
 /* =========================================================
@@ -2284,17 +2258,17 @@ document.addEventListener(
 );
 
 
-
 /* =========================================================
    ESC KEY
-   CLOSE LIGHTBOX
    ========================================================= */
 
 document.addEventListener(
     "keydown",
     function(e) {
 
-        if (e.key === "Escape") {
+        if (
+            e.key === "Escape"
+        ) {
 
             const box =
                 document.getElementById(
@@ -2330,9 +2304,8 @@ document.addEventListener(
 );
 
 
-
 /* =========================================================
-   GENERATE ALL 110 IMAGES
+   CREATE ALL GALLERIES
    ========================================================= */
 
 document.addEventListener(
