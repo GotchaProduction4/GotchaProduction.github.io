@@ -877,6 +877,141 @@
 
 
 /* =========================================================
+   GALLERY SWITCHER
+   ========================================================= */
+
+.gallery-switcher {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0 auto 55px;
+
+    width: 100%;
+}
+
+.gallery-switch-btn {
+
+    padding: 12px 22px;
+
+    border: 2px solid var(--black);
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    font-family:
+        "Be Vietnam Pro",
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.gallery-switch-btn:hover {
+
+    transform: translate(-2px, -2px);
+
+    box-shadow:
+        4px 4px 0 var(--black);
+}
+
+.gallery-switch-btn.active {
+
+    background: var(--black);
+
+    color: white;
+
+    box-shadow:
+        4px 4px 0 var(--black);
+}
+
+.gallery-switch-btn[data-gallery="featured"].active {
+
+    background: var(--yellow);
+
+    color: var(--black);
+}
+
+.gallery-switch-btn[data-gallery="documentation"].active {
+
+    background: var(--blue);
+
+    color: white;
+}
+
+.gallery-switch-btn[data-gallery="bts"].active {
+
+    background: var(--red);
+
+    color: white;
+}
+
+.gallery-section.gallery-hidden {
+
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .gallery-switcher {
+
+        gap: 6px;
+
+        margin-bottom: 40px;
+    }
+
+    .gallery-switch-btn {
+
+        padding: 10px 13px;
+
+        font-size: 8px;
+
+        letter-spacing: .7px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .gallery-switcher {
+
+        gap: 5px;
+
+        margin-bottom: 35px;
+    }
+
+    .gallery-switch-btn {
+
+        padding: 9px 10px;
+
+        font-size: 7px;
+
+        letter-spacing: .5px;
+    }
+}
+
+
+/* =========================================================
    LIGHTBOX
    ========================================================= */
 
@@ -1494,11 +1629,53 @@
 
 
         <!-- =================================================
+             GALLERY SWITCHER
+             ================================================= -->
+
+        <div class="gallery-switcher">
+
+            <button
+                type="button"
+                class="gallery-switch-btn active"
+                data-gallery="featured"
+                onclick="switchGallery('featured', this)">
+
+                GALLERY
+
+            </button>
+
+
+            <button
+                type="button"
+                class="gallery-switch-btn"
+                data-gallery="documentation"
+                onclick="switchGallery('documentation', this)">
+
+                PHOTO DOCUMENTATION
+
+            </button>
+
+
+            <button
+                type="button"
+                class="gallery-switch-btn"
+                data-gallery="bts"
+                onclick="switchGallery('bts', this)">
+
+                BTS DOCUMENTATION
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
              FEATURED GALLERY
              images/BTS/edit 1.jpg - edit 20.jpg
              ================================================= -->
 
-        <section class="gallery-section">
+        <section class="gallery-section"
+                 id="gallerySectionFeatured">
 
             <div class="gallery-section-heading">
 
@@ -1530,7 +1707,8 @@
              images/BTS/edit 21.jpg - edit 65.jpg
              ================================================= -->
 
-        <section class="gallery-section">
+        <section class="gallery-section"
+                 id="gallerySectionDocumentation">
 
             <div class="gallery-section-heading">
 
@@ -1563,7 +1741,8 @@
              images/BTS/edit 66.jpg - edit 110.jpg
              ================================================= -->
 
-        <section class="gallery-section">
+        <section class="gallery-section"
+                 id="gallerySectionBTS">
 
             <div class="gallery-section-heading">
 
@@ -2302,6 +2481,101 @@ document.addEventListener(
 
     }
 );
+
+
+/* =========================================================
+   GALLERY SWITCHER
+   ========================================================= */
+
+function switchGallery(type, button) {
+
+    const featured =
+        document.getElementById(
+            "gallerySectionFeatured"
+        );
+
+    const documentation =
+        document.getElementById(
+            "gallerySectionDocumentation"
+        );
+
+    const bts =
+        document.getElementById(
+            "gallerySectionBTS"
+        );
+
+
+    if (
+        !featured ||
+        !documentation ||
+        !bts
+    ) return;
+
+
+    featured.classList.add(
+        "gallery-hidden"
+    );
+
+    documentation.classList.add(
+        "gallery-hidden"
+    );
+
+    bts.classList.add(
+        "gallery-hidden"
+    );
+
+
+    if (type === "featured") {
+
+        featured.classList.remove(
+            "gallery-hidden"
+        );
+
+    }
+
+    else if (type === "documentation") {
+
+        documentation.classList.remove(
+            "gallery-hidden"
+        );
+
+    }
+
+    else if (type === "bts") {
+
+        bts.classList.remove(
+            "gallery-hidden"
+        );
+
+    }
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".gallery-switch-btn"
+        );
+
+
+    buttons.forEach(
+        function(btn) {
+
+            btn.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    if (button) {
+
+        button.classList.add(
+            "active"
+        );
+
+    }
+
+}
 
 
 /* =========================================================
