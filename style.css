@@ -1,6 +1,10 @@
 /* =========================================================
-   TALAKBAY WEBSITE
-   STYLE.CSS
+   TALAKBAY WEBSITE — MAIN STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   ROOT COLORS
 ========================================================= */
 
 :root {
@@ -39,11 +43,13 @@
 
 
 /* =========================================================
-   GENERAL
+   GLOBAL RESET
 ========================================================= */
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -51,23 +57,26 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-
     background: var(--cream);
     color: var(--black);
-
     font-family: "Be Vietnam Pro", sans-serif;
-
+    font-weight: 300;
     overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -76,88 +85,53 @@ a:hover {
 ========================================================= */
 
 .site-header {
-    position: relative;
-
     width: 100%;
     height: 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     background: var(--cream);
-
+    border-top: 2px solid var(--black);
     border-bottom: 1px solid var(--black);
-
-    z-index: 20;
+    display: flex;
+    position: relative;
+    z-index: 1000;
 }
 
 
 /* =========================================================
-   LOGO AREA
+   BRAND AREA
 ========================================================= */
 
 .brand-area {
+    width: 325px;
+    height: 78px;
     position: relative;
-
-    width: 300px;
-    height: 80px;
-
+    overflow: hidden;
     flex-shrink: 0;
-
-    overflow: visible;
 }
-
-
-/* =========================================================
-   YELLOW BRAND BLOCK
-========================================================= */
 
 .brand-yellow {
     position: absolute;
-
     left: 0;
     top: 0;
-
-    width: 165px;
-    height: 80px;
-
+    width: 100%;
+    height: 100%;
     background: var(--yellow);
-
-    transform: skewX(-20deg);
-    transform-origin: top left;
-
     z-index: 1;
-
-    pointer-events: none;
 }
 
-
-/* =========================================================
-   LOGO
-========================================================= */
-
 .logo-link {
-    position: absolute;
-
-    left: 20px;
-    top: 0;
-
-    width: 85px;
-    height: 80px;
-
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    z-index: 5;
+    padding-left: 28px;
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
-    display: block;
-
-    width: 62px;
+    width: 155px;
     height: auto;
+    object-fit: contain;
 }
 
 
@@ -167,40 +141,31 @@ a:hover {
 
 .top-stripes {
     position: absolute;
-
-    left: 145px;
-    top: 0;
-
-    width: 170px;
-    height: 80px;
-
+    right: -35px;
+    top: -45px;
+    width: 112px;
+    height: 175px;
+    transform: skewX(35deg);
     display: flex;
-
-    overflow: visible;
-
-    z-index: 2;
-
-    pointer-events: none;
+    z-index: 5;
 }
 
 .top-stripes span {
+    width: 25%;
+    height: 100%;
     display: block;
-
-    flex: 0 0 52px;
-
-    width: 52px;
-    height: 80px;
-
-    transform: skewX(-20deg);
-    transform-origin: top left;
-}
-
-.stripe-blue {
-    background: var(--blue);
 }
 
 .stripe-red {
     background: var(--red);
+}
+
+.stripe-yellow {
+    background: var(--yellow);
+}
+
+.stripe-blue {
+    background: var(--blue);
 }
 
 .stripe-black {
@@ -209,96 +174,70 @@ a:hover {
 
 
 /* =========================================================
-   NAVIGATION
+   MAIN NAVIGATION
 ========================================================= */
 
 .main-navigation {
+    flex: 1;
+    height: 78px;
     display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    margin-right: 30px;
+    align-items: stretch;
+    justify-content: flex-end;
 }
 
 .nav-btn {
-    height: 32px;
-
+    min-width: 105px;
+    height: 78px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 0 15px;
-
-    border-radius: 18px;
-
+    padding: 0 20px;
     font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 400;
+    letter-spacing: 1px;
+    border-left: 1px solid var(--black);
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
 
-    letter-spacing: .4px;
-
-    color: var(--black);
-
-    transition: .2s ease;
+.nav-btn:hover {
+    text-decoration: none;
 }
 
 
 /* =========================================================
-   HOME
+   NAV COLORS
 ========================================================= */
 
 .nav-home {
     background: var(--yellow);
-}
-
-.nav-home:hover,
-.nav-home.active {
     color: var(--black);
 }
-
-
-/* =========================================================
-   RESOURCES
-========================================================= */
 
 .nav-resources {
     background: var(--blue);
     color: white;
 }
 
-.nav-resources:hover,
-.nav-resources.active {
-    color: white;
-}
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
-
 .nav-gallery {
     background: var(--red);
     color: white;
 }
-
-.nav-gallery:hover,
-.nav-gallery.active {
-    color: white;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
 
 .nav-contact {
     background: var(--black);
     color: white;
 }
 
-.nav-contact:hover {
-    color: white;
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+.nav-btn.active {
+    font-weight: 400;
 }
 
 
@@ -308,322 +247,63 @@ a:hover {
 
 .menu-toggle {
     display: none;
-
-    position: relative;
-
-    width: 38px;
-    height: 38px;
-
-    margin-right: 10px;
-
-    padding: 0;
-
-    border: 1px solid var(--black);
-    border-radius: 50%;
-
-    background: var(--cream);
-    color: var(--black);
-
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    line-height: 1;
-
-    align-items: center;
-    justify-content: center;
-
+    border: 0;
+    background: var(--black);
+    color: white;
+    width: 58px;
+    height: 58px;
+    font-size: 20px;
     cursor: pointer;
-
-    z-index: 150;
-
-    flex-shrink: 0;
-
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-.menu-toggle:hover {
-    background: var(--yellow);
-}
-
-.menu-toggle:focus {
-    outline: none;
-}
-
-.menu-toggle:active {
-    transform: scale(.96);
+    font-family: Arial, sans-serif;
 }
 
 
 /* =========================================================
-   HERO / LANDING PAGE
+   HERO
 ========================================================= */
 
 .hero {
+    width: 100%;
+    height: 600px;
     position: relative;
-
-    width: 100%;
-
-    height: calc(100vh - 80px);
-
-    min-height: 600px;
-
-    overflow: hidden;
-
-    background: var(--cream);
-}
-
-
-/* =========================================================
-   HERO BACKGROUND VIDEO
-========================================================= */
-
-.hero-bg {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    overflow: hidden;
-
-    background: var(--cream);
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   HERO VIDEO
-========================================================= */
-
-.hero-bg-video {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-
-    opacity: 1;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   HERO VIDEO CREAM OVERLAY
-========================================================= */
-
-.hero-bg::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 244, 230, 0.98) 0%,
-            rgba(255, 244, 230, 0.94) 22%,
-            rgba(255, 244, 230, 0.76) 45%,
-            rgba(255, 244, 230, 0.48) 68%,
-            rgba(255, 244, 230, 0.22) 100%
-        );
-}
-
-
-/* =========================================================
-   HERO INNER
-========================================================= */
-
-.hero-inner {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   HERO COPY
-========================================================= */
-
-.hero-copy {
-    position: absolute;
-
-    left: 8%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 42%;
-}
-
-.hero-copy h1 {
-    margin: 0;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: clamp(75px, 10vw, 150px);
-
-    font-weight: 400;
-
-    line-height: .85;
-
-    letter-spacing: .5px;
-
-    color: var(--black);
-}
-
-.hero-copy p {
-    width: 430px;
-
-    margin: 25px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 15px;
-    font-weight: 300;
-
-    line-height: 1.55;
-
-    color: var(--black);
-}
-
-
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
-
-.hero-buttons {
+    background-size: cover;
+    background-position: center;
     display: flex;
-
-    gap: 12px;
-
-    margin-top: 25px;
-    margin-left: 2px;
-}
-
-.hero-button {
-    height: 45px;
-
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-
-    padding: 0 23px;
-
-    border-radius: 25px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 11px;
-    font-weight: 400;
-
-    letter-spacing: .4px;
-
-    transition: .2s ease;
-}
-
-.blue-button {
-    background: var(--blue);
-    color: white;
-}
-
-.blue-button:hover {
-    color: white;
-    transform: translateY(-2px);
-}
-
-.red-button {
-    background: var(--red);
-    color: white;
-}
-
-.red-button:hover {
-    color: white;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   DIVIDER
-========================================================= */
-
-.divider {
-    position: relative;
-
-    width: 100%;
-    height: 55px;
-
-    background: var(--cream);
-
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
-
     overflow: hidden;
 }
 
-
-/* =========================================================
-   DIVIDER LEFT STRIPES
-   YELLOW → BLUE → RED → BLACK
-========================================================= */
-
-.divider-left-stripes {
+.hero::before {
+    content: "";
     position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 330px;
-    height: 55px;
-
-    display: flex;
-
-    overflow: hidden;
+    inset: 0;
+    background: rgba(0, 0, 0, .89);
+    z-index: 1;
 }
 
-.divider-left-stripes span {
-    display: block;
-
-    height: 55px;
-
-    transform: skewX(-20deg);
-    transform-origin: top;
+.hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 40px 7%;
 }
 
-.divider-left-stripes .stripe-yellow {
-    width: 135px;
-    background: var(--yellow);
+.hero h1 {
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: clamp(65px, 9vw, 120px);
+    font-weight: 400;
+    line-height: .88;
+    color: white;
+    letter-spacing: -1px;
 }
 
-.divider-left-stripes .stripe-blue {
-    width: 75px;
-    background: var(--blue);
-}
-
-.divider-left-stripes .stripe-red {
-    width: 75px;
-    background: var(--red);
-}
-
-.divider-left-stripes .stripe-black {
-    width: 75px;
-    background: var(--black);
+.hero p {
+    max-width: 560px;
+    margin-top: 24px;
+    color: white;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 
@@ -632,209 +312,52 @@ a:hover {
 ========================================================= */
 
 .about-section {
-    position: relative;
-
     width: 100%;
-    height: 650px;
-
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-
-    background: var(--cream);
-}
-
-
-/* =========================================================
-   ABOUT BACKGROUND
-========================================================= */
-
-.about-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .86),
-            rgba(255, 244, 230, .86)
-        ),
-        url("images/photowalk.jpg");
-
     background-size: cover;
     background-position: center;
-
-    opacity: .35;
-
-    z-index: 0;
 }
 
-
-/* =========================================================
-   ABOUT INNER
-========================================================= */
-
-.about-inner {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   ABOUT COPY
-========================================================= */
-
-.about-copy {
+.about-section::before {
+    content: "";
     position: absolute;
-
-    left: 8%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 40%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    inset: 0;
+    background: rgba(255, 244, 230, .90);
 }
 
+.about-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 70px 7%;
+}
 
-/* =========================================================
-   GOTCHA PRODUCTIONS PROJECT LABEL
-========================================================= */
-
-.project-label {
-    margin: 0 0 16px 3px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 12px;
-
+.about-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 9px;
     font-weight: 400;
-
     letter-spacing: 2px;
-
-    line-height: 1.2;
-
     color: var(--red);
 }
 
-
-/* =========================================================
-   TALAKBAY PROJECT LOGO
-========================================================= */
-
-.talakbay-project-logo {
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-
-    margin: 0 0 30px 2px;
-}
-
-
-/* =========================================================
-   TALAKBAY ICON
-========================================================= */
-
-.talakbay-icon {
-    display: block;
-
-    width: 65px;
-    height: auto;
-
-    flex-shrink: 0;
-}
-
-
-/* =========================================================
-   TALAKBAY WORDMARK
-========================================================= */
-
-.talakbay-wordmark {
-    display: block;
-
-    width: 185px;
-    height: auto;
-
-    flex-shrink: 0;
-}
-
-
-/* =========================================================
-   ABOUT THE PROGRAM TITLE
-========================================================= */
-
-.about-copy h2 {
-    margin: 0;
-
+.about-section h2 {
     font-family: "Anton", sans-serif;
-
-    font-size: 78px;
-
+    font-size: 86px;
     font-weight: 400;
-
     line-height: .9;
-
     color: var(--black);
 }
 
-
-/* =========================================================
-   ABOUT PROGRAM DESCRIPTION
-========================================================= */
-
-.about-copy p {
-    width: 450px;
-
-    margin: 25px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 15px;
-
-    font-weight: 300;
-
-    line-height: 1.65;
-
-    color: var(--black);
-}
-
-
-/* =========================================================
-   ABOUT PHOTO
-========================================================= */
-
-.about-photo {
-    position: absolute;
-
-    right: 6%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 43%;
-    max-width: 650px;
-
-    height: 65%;
-
-    overflow: hidden;
-
-    border-radius: 0 0 0 105px;
-}
-
-.about-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
+.about-section p {
+    max-width: 620px;
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 
@@ -844,28 +367,62 @@ a:hover {
 
 .site-footer {
     width: 100%;
-
-    padding: 18px 20px;
-
     background: var(--black);
-
-    border-top: 1px solid var(--black);
-
-    text-align: center;
+    color: white;
+    padding: 55px 7%;
 }
 
-.site-footer p {
-    margin: 0;
+.footer-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
 
-    color: white;
+.footer-brand {
+    max-width: 300px;
+}
 
-    font-family: "Be Vietnam Pro", sans-serif;
+.footer-brand img {
+    width: 150px;
+    margin-bottom: 20px;
+}
 
-    font-size: 11px;
+.footer-brand p {
+    font-size: 10px;
+    line-height: 1.6;
+    opacity: .8;
+}
 
-    font-weight: 300;
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
 
-    letter-spacing: .2px;
+.footer-column span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--yellow);
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 10px;
+}
+
+.footer-column a:hover {
+    color: var(--yellow);
+}
+
+.footer-bottom {
+    margin-top: 45px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.25);
+    font-size: 8px;
+    opacity: .6;
 }
 
 
@@ -874,621 +431,281 @@ a:hover {
 ========================================================= */
 
 .modal-content {
-    border: 0;
-
+    border: 1px solid var(--black);
     border-radius: 0;
-
     background: var(--cream);
 }
 
 .modal-header {
-    background: var(--yellow);
-
-    border-bottom: 1px solid var(--black);
+    background: var(--black);
+    color: white;
+    border-radius: 0;
 }
 
 .modal-title {
     font-family: "Anton", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
 
-    font-size: 25px;
-
-    letter-spacing: .5px;
+.modal-header .close {
+    color: white;
+    opacity: 1;
 }
 
 .modal-body {
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 13px;
+    padding: 30px;
 }
 
-.modal-body h4 {
-    font-family: "Anton", sans-serif;
-
-    font-size: 25px;
+.modal-body p {
+    font-size: 11px;
+    line-height: 1.7;
 }
 
-.modal-footer {
-    border-top: 1px solid var(--black);
-}
-
-.modal-footer .btn {
-    border-radius: 20px;
-
-    font-size: 10px;
+.modal-body a {
+    color: var(--red);
 }
 
 
 /* =========================================================
-   RESOURCES PAGE
+   RESOURCES / LESSONS PAGE
 ========================================================= */
 
 .resources-page {
     background: var(--cream);
 }
 
-
-/* =========================================================
-   RESOURCES BLUE BRAND
-========================================================= */
-
-.resources-page .brand-yellow {
-    background: var(--blue);
-}
-
-
-/* =========================================================
-   RESOURCES HERO
-========================================================= */
-
 .resources-hero {
-    position: relative;
-
+    min-height: 480px;
     width: 100%;
-
-    min-height: 430px;
-
-    overflow: hidden;
-
-    background: var(--cream);
-
-    border-bottom: 1px solid var(--black);
-}
-
-.resources-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
-        ),
-        url("images/photowalk.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-
-    opacity: .45;
-
-    z-index: 0;
-}
-
-.resources-hero-inner {
     position: relative;
-
-    min-height: 430px;
-
     display: flex;
-
     align-items: center;
-
-    padding: 60px 8%;
-
-    z-index: 2;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
-.resources-title {
+.resources-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(43, 78, 141, .88);
+}
+
+.resources-hero-content {
     width: 100%;
-
-    max-width: 900px;
+    position: relative;
+    z-index: 2;
+    padding: 60px 7%;
+    color: white;
 }
 
-.section-label {
-    margin: 0 0 14px 3px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 10px;
-
-    font-weight: 400;
-
+.resources-hero-content span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 9px;
     letter-spacing: 2px;
-
-    color: var(--red);
 }
 
-.resources-title h1 {
-    margin: 0;
-
+.resources-hero h1 {
     font-family: "Anton", sans-serif;
-
-    font-size: clamp(70px, 9vw, 120px);
-
+    font-size: clamp(70px, 10vw, 125px);
+    line-height: .85;
     font-weight: 400;
-
-    line-height: .92;
-
-    letter-spacing: .5px;
-
-    color: var(--black);
 }
 
-.resources-intro {
-    width: 500px;
-
-    max-width: 100%;
-
-    margin: 22px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 300;
-
-    line-height: 1.6;
-
-    color: var(--black);
+.resources-hero p {
+    max-width: 580px;
+    margin-top: 25px;
+    font-size: 12px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   RESOURCES CONTENT
+   RESOURCES SECTION
 ========================================================= */
 
 .resources-section {
-    position: relative;
-
     width: 100%;
-
-    padding: 60px 8%;
-
-    background: var(--cream);
+    padding: 80px 7%;
 }
 
-.resources-container {
-    width: 100%;
+.resource-heading {
+    margin-bottom: 45px;
+}
 
-    max-width: 1000px;
+.resource-heading span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--red);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
 
-    margin: 0 auto;
+.resource-heading h2 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(50px, 7vw, 85px);
+    line-height: .9;
+    font-weight: 400;
+}
+
+.resource-heading p {
+    max-width: 600px;
+    margin-top: 18px;
+    font-size: 12px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   RESOURCE CARD
+   RESOURCE CARDS
 ========================================================= */
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 .resource-card {
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-
-    margin-bottom: 45px;
-
-    padding: 35px;
-
-    background: var(--cream);
-
+    min-height: 300px;
     border: 1px solid var(--black);
-
-    box-shadow: 8px 8px 0 var(--black);
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
 }
 
-
-/* =========================================================
-   RESOURCE NUMBER
-========================================================= */
-
-.resource-number {
-    margin-bottom: 15px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 40px;
-
-    line-height: 1;
-
-    color: var(--red);
+.resource-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 7px 7px 0 var(--black);
 }
 
-
-/* =========================================================
-   RESOURCE CONTENT
-========================================================= */
-
-.resource-content {
-    width: 100%;
+.resource-card:nth-child(1) {
+    background: var(--yellow);
 }
 
-.resource-content h2 {
-    margin: 0;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 45px;
-
-    font-weight: 400;
-
-    line-height: .95;
-
-    color: var(--black);
+.resource-card:nth-child(2) {
+    background: var(--blue);
+    color: white;
 }
 
-.resource-content p {
-    max-width: 800px;
-
-    margin: 18px 0 0;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 300;
-
-    line-height: 1.7;
-
-    color: var(--black);
+.resource-card:nth-child(3) {
+    background: var(--red);
+    color: white;
 }
 
+.resource-card:nth-child(4) {
+    background: var(--cream);
+}
 
-/* =========================================================
-   EPISODE LABEL
-========================================================= */
-
-.episode-label {
+.resource-card span {
     display: block;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
 
-    margin-bottom: 8px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 9px;
-
+.resource-card h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 48px;
+    line-height: .9;
     font-weight: 400;
+}
 
-    letter-spacing: 1.5px;
-
-    color: var(--blue);
+.resource-card p {
+    max-width: 430px;
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   SWIPEABLE EPISODE CARDS
+   EPISODE SLIDER
 ========================================================= */
 
 .episode-slider {
-    position: relative;
-
     width: 100%;
-    max-width: 1100px;
-
-    margin: 60px auto 70px;
-
-    overflow: visible;
+    overflow: hidden;
+    position: relative;
 }
 
 .episode-track {
     display: flex;
-
-    width: 100%;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-
-    scroll-behavior: smooth;
-
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
-
+    gap: 18px;
+    width: max-content;
     cursor: grab;
-
-    touch-action: pan-x;
-
-    padding: 0 5px 12px;
+    user-select: none;
 }
 
 .episode-track:active {
     cursor: grabbing;
 }
 
-.episode-track::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* =========================================================
-   EACH EPISODE = ONE CARD
-========================================================= */
-
-.episode-track .episode-card {
-    position: relative;
-
-    flex: 0 0 100%;
-
-    width: 100%;
-    min-width: 100%;
-
-    min-height: 430px;
-
-    margin: 0;
-
-    padding: 50px;
-
-    display: grid;
-
-    grid-template-columns: 42% 58%;
-
-    align-items: center;
-
-    gap: 0;
-
+.episode-card {
+    width: 300px;
+    min-width: 300px;
+    border: 1px solid var(--black);
+    background: var(--cream);
     overflow: hidden;
-
-    border: 2px solid var(--black);
-
-    box-shadow: 10px 10px 0 var(--black);
-
-    scroll-snap-align: start;
-
-    scroll-snap-stop: always;
-
-    color: white;
-
-    box-sizing: border-box;
 }
 
-
-/* =========================================================
-   EPISODE COLORS
-========================================================= */
-
-.episode-track .episode-red {
-    background: var(--red) !important;
-
-    color: white !important;
-}
-
-.episode-track .episode-yellow {
-    background: var(--yellow) !important;
-
-    color: var(--black) !important;
-}
-
-.episode-track .episode-blue {
-    background: var(--blue) !important;
-
-    color: white !important;
-}
-
-
-/* =========================================================
-   EPISODE INFORMATION
-========================================================= */
-
-.episode-track .episode-info {
+.episode-card img {
     width: 100%;
-
-    min-width: 0;
-
-    padding-right: 35px;
-
-    z-index: 2;
+    height: 210px;
+    object-fit: cover;
 }
 
+.episode-card-content {
+    padding: 20px;
+}
 
-/* =========================================================
-   EPISODE NUMBER
-========================================================= */
-
-.episode-track .episode-number {
+.episode-card-content span {
     display: block;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--red);
+    margin-bottom: 7px;
+}
 
-    margin-bottom: 25px;
-
+.episode-card-content h3 {
     font-family: "Anton", sans-serif;
-
-    font-size: 22px;
-
-    line-height: 1;
-
-    color: currentColor;
+    font-size: 30px;
+    line-height: .95;
 }
 
-
-/* =========================================================
-   EPISODE LABEL
-========================================================= */
-
-.episode-track .episode-label {
-    display: block;
-
-    margin-bottom: 12px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 9px;
-
-    font-weight: 400;
-
-    letter-spacing: 1.5px;
-
-    color: currentColor;
-
-    opacity: .85;
-}
-
-
-/* =========================================================
-   EPISODE TITLE
-========================================================= */
-
-.episode-track .episode-info h2 {
-    margin: 0 0 25px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: clamp(45px, 5vw, 70px);
-
-    font-weight: 400;
-
-    line-height: .9;
-
-    letter-spacing: .3px;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
-   EPISODE TOPIC TITLE
-========================================================= */
-
-.episode-track .episode-info h3 {
-    margin: 0 0 5px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 400;
-
-    letter-spacing: 1px;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
-   EPISODE TOPIC LIST
-========================================================= */
-
-.episode-track .episode-info ul {
-    margin: 0;
-
-    padding-left: 18px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 300;
-
+.episode-card-content p {
+    margin-top: 12px;
+    font-size: 10px;
     line-height: 1.5;
-
-    color: currentColor;
-}
-
-.episode-track .episode-info li {
-    margin-bottom: 2px;
 }
 
 
 /* =========================================================
-   EPISODE VIDEO AREA
-========================================================= */
-
-.episode-track .episode-video {
-    width: 100%;
-
-    min-width: 0;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   EPISODE VIDEO
-========================================================= */
-
-.episode-track .video-wrapper {
-    position: relative;
-
-    width: 100%;
-
-    height: 0;
-
-    padding-bottom: 56.25%;
-
-    margin: 0;
-
-    overflow: hidden;
-
-    background: var(--black);
-
-    border: 2px solid var(--black);
-
-    border-radius: 0 75px 0 0;
-}
-
-.episode-track .video-wrapper iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-
-    display: block;
-}
-
-
-/* =========================================================
-   SWIPE DOTS
+   EPISODE DOTS
 ========================================================= */
 
 .episode-dots {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    gap: 10px;
-
-    margin-top: 28px;
+    gap: 7px;
+    margin-top: 25px;
 }
 
 .episode-dot {
-    width: 12px;
-    height: 12px;
-
-    padding: 0;
-
-    border: 2px solid var(--black);
-
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--black);
     border-radius: 50%;
-
-    background: var(--cream);
-
+    background: transparent;
     cursor: pointer;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-.episode-dot:hover {
-    transform: scale(1.15);
+    transition: background .2s ease;
 }
 
 .episode-dot.active {
@@ -1497,69 +714,418 @@ a:hover {
 
 
 /* =========================================================
-   LEARNING TOPICS
+   GALLERY PAGE
 ========================================================= */
 
-.learning-card {
-    background: var(--yellow);
-}
-
-.topic-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
-
-    margin-top: 25px;
-}
-
-.topic-item {
-    min-height: 55px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 12px 18px;
-
+.gallery-page {
     background: var(--cream);
+}
 
-    border: 1px solid var(--black);
+.gallery-hero {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("images/photowalk.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
-    font-family: "Be Vietnam Pro", sans-serif;
+.gallery-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(137, 25, 23, .88);
+}
 
-    font-size: 11px;
+.gallery-hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 60px 7%;
+    color: white;
+}
 
+.gallery-hero-content span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.gallery-hero h1 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(70px, 10vw, 125px);
     font-weight: 400;
+    line-height: .85;
+}
 
-    letter-spacing: .3px;
+.gallery-hero p {
+    max-width: 580px;
+    margin-top: 25px;
+    font-size: 12px;
+    line-height: 1.7;
+}
 
+
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
+
+.gallery-section {
+    width: 100%;
+    padding: 80px 7%;
+}
+
+.gallery-section-heading {
+    width: 100%;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.gallery-section-heading span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--red);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.gallery-section-heading h2 {
+    font-family: "Anton", sans-serif;
+    font-size: clamp(50px, 7vw, 85px);
+    font-weight: 400;
+    line-height: .9;
+}
+
+.gallery-section-heading p {
+    max-width: 620px;
+    margin: 18px auto 0;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GALLERY PHOTO CATEGORY SWITCHER
+========================================================= */
+
+.gallery-switcher-section {
+    margin-bottom: 20px;
+}
+
+.gallery-tabs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 35px auto 45px;
+}
+
+.gallery-tab {
+    min-height: 38px;
+    padding: 0 20px;
+    border: 1px solid var(--black);
+    border-radius: 22px;
+    background: var(--cream);
+    color: var(--black);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.gallery-tab:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 var(--black);
+}
+
+.gallery-tab.active {
+    background: var(--red);
+    color: white;
+    border-color: var(--black);
+    box-shadow: 4px 4px 0 var(--black);
+}
+
+.gallery-tab:focus {
+    outline: none;
+}
+
+.gallery-tab:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   GALLERY PANELS
+========================================================= */
+
+.gallery-panel {
+    display: none;
+    width: 100%;
+}
+
+.gallery-panel.active {
+    display: block;
+    animation: galleryPanelFade .25s ease;
+}
+
+@keyframes galleryPanelFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   GALLERY PANEL HEADING
+========================================================= */
+
+.gallery-panel-heading {
+    width: 100%;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.gallery-panel-heading span {
+    display: block;
+    margin-bottom: 7px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--red);
+}
+
+.gallery-panel-heading h3 {
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: clamp(38px, 4.5vw, 58px);
+    font-weight: 400;
+    line-height: .9;
+    color: var(--black);
+}
+
+.gallery-panel-heading p {
+    width: 600px;
+    max-width: 100%;
+    margin: 14px auto 0;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.6;
     color: var(--black);
 }
 
 
 /* =========================================================
-   RESOURCES BACK BUTTON
+   FEATURED GALLERY GRID
 ========================================================= */
 
-.resources-back {
-    display: flex;
+.gallery-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
 
-    justify-content: center;
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background: var(--black);
+    cursor: pointer;
+}
 
-    margin-top: 50px;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 
 /* =========================================================
-   RESOURCES ACTIVE NAV
+   GALLERY ITEM OVERLAY
 ========================================================= */
 
-.nav-resources.active {
-    color: white;
+.gallery-item::after {
+    content: "VIEW";
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 6px 9px;
+    background: var(--yellow);
+    color: var(--black);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 7px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+}
 
-    transform: translateY(-1px);
+.gallery-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   PHOTO DOCUMENTATION GRID
+========================================================= */
+
+.documentation-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.documentation-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--black);
+    cursor: pointer;
+}
+
+.documentation-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.documentation-item:hover img {
+    transform: scale(1.04);
+}
+
+.documentation-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 13px 15px;
+    background: rgba(34, 34, 34, .85);
+    color: white;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   BTS GRID
+========================================================= */
+
+.bts-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.bts-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--black);
+    cursor: pointer;
+}
+
+.bts-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.bts-item:hover img {
+    transform: scale(1.04);
+}
+
+.bts-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 13px 15px;
+    background: rgba(34, 34, 34, .85);
+    color: white;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   GALLERY LIGHTBOX
+========================================================= */
+
+.gallery-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .94);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.gallery-lightbox.active {
+    display: flex;
+}
+
+.gallery-lightbox-image {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.gallery-lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.gallery-lightbox-close:hover {
+    background: white;
+    color: var(--black);
 }
 
 
@@ -1569,251 +1135,206 @@ a:hover {
 
 @media (max-width: 900px) {
 
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
     .site-header {
         height: 70px;
     }
 
     .brand-area {
-        width: 230px;
-        height: 70px;
-
-        overflow: visible;
-    }
-
-    .brand-yellow {
-        width: 125px;
-        height: 70px;
+        width: 270px;
+        height: 68px;
     }
 
     .logo-link {
-        left: 15px;
-
-        width: 70px;
-        height: 70px;
+        padding-left: 22px;
     }
 
     .logo {
-        width: 52px;
+        width: 135px;
     }
-
-
-    /* TABLET TOP STRIPES */
-
-    .top-stripes {
-        left: 110px;
-
-        width: 140px;
-        height: 70px;
-
-        overflow: visible;
-    }
-
-    .top-stripes span {
-        flex: 0 0 42px;
-
-        width: 42px;
-        height: 70px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-    }
-
-
-    /* TABLET NAV */
 
     .main-navigation {
-        gap: 5px;
-
-        margin-right: 15px;
+        height: 68px;
     }
 
     .nav-btn {
-        height: 29px;
-
-        padding: 0 11px;
-
+        min-width: 85px;
+        height: 68px;
+        padding: 0 12px;
         font-size: 9px;
     }
 
 
-    /* TABLET HERO */
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
 
     .hero {
-        height: calc(100vh - 70px);
-
-        min-height: 600px;
+        height: 520px;
     }
 
-    .hero-copy {
-        left: 6%;
-
-        width: 43%;
-    }
-
-    .hero-copy h1 {
-        font-size: clamp(65px, 10vw, 105px);
-    }
-
-    .hero-copy p {
-        width: 100%;
-
-        font-size: 13px;
-    }
-
-    .hero-bg-video {
-        object-position: 58% center;
+    .hero-content {
+        padding: 40px 6%;
     }
 
 
-    /* =====================================================
-       TABLET ABOUT
-    ===================================================== */
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
 
     .about-section {
-        height: 620px;
+        min-height: 520px;
     }
 
-    .about-copy {
-        left: 6%;
-
-        width: 43%;
+    .about-content {
+        padding: 60px 6%;
     }
 
-    .project-label {
-        font-size: 10px;
-
-        letter-spacing: 1.5px;
-
-        margin-bottom: 13px;
-    }
-
-    .talakbay-project-logo {
-        gap: 10px;
-
-        margin-bottom: 24px;
-    }
-
-    .talakbay-icon {
-        width: 52px;
-    }
-
-    .talakbay-wordmark {
-        width: 145px;
-    }
-
-    .about-copy h2 {
-        font-size: 62px;
-
-        line-height: .9;
-    }
-
-    .about-copy p {
-        width: 100%;
-
-        font-size: 13px;
-    }
-
-    .about-photo {
-        right: 5%;
-
-        width: 44%;
-
-        height: 60%;
-
-        border-bottom-left-radius: 80px;
+    .about-section h2 {
+        font-size: 68px;
     }
 
 
-    /* TABLET RESOURCES */
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
 
-    .resources-hero {
-        min-height: 400px;
+    .site-footer {
+        padding: 50px 6%;
     }
 
-    .resources-hero-inner {
-        min-height: 400px;
 
-        padding: 55px 6%;
-    }
-
-    .resources-title h1 {
-        font-size: clamp(60px, 9vw, 100px);
-
-        line-height: .92;
-    }
-
-    .resources-intro {
-        width: 480px;
-
-        font-size: 13px;
-    }
+    /* -----------------------------------------------------
+       RESOURCES
+    ----------------------------------------------------- */
 
     .resources-section {
-        padding: 55px 6%;
+        padding: 65px 6%;
     }
 
-    .resources-container {
-        max-width: 900px;
+    .resource-grid {
+        gap: 15px;
     }
 
     .resource-card {
-        padding: 30px;
-
-        margin-bottom: 40px;
-
-        box-shadow: 7px 7px 0 var(--black);
+        padding: 28px;
     }
 
-    .resource-number {
-        font-size: 36px;
-
-        margin-bottom: 14px;
-    }
-
-    .resource-content h2 {
+    .resource-card h3 {
         font-size: 40px;
     }
 
-    .resource-content p {
-        font-size: 12px;
+
+    /* -----------------------------------------------------
+       EPISODE
+    ----------------------------------------------------- */
+
+    .episode-card {
+        width: 270px;
+        min-width: 270px;
     }
 
 
-    /* TABLET SWIPE EPISODES */
+    /* -----------------------------------------------------
+       GALLERY HERO
+    ----------------------------------------------------- */
 
-    .episode-slider {
-        width: 100%;
-
-        margin: 50px auto 60px;
+    .gallery-hero {
+        min-height: 440px;
     }
 
-    .episode-track {
-        padding: 0 4px 10px;
+    .gallery-hero-content {
+        padding: 50px 6%;
     }
 
-    .episode-track .episode-card {
-        min-height: 380px;
 
-        padding: 40px;
+    /* -----------------------------------------------------
+       GALLERY SECTION
+    ----------------------------------------------------- */
 
-        grid-template-columns: 45% 55%;
+    .gallery-section {
+        padding: 65px 6%;
     }
 
-    .episode-track .episode-info {
-        padding-right: 25px;
+
+    /* -----------------------------------------------------
+       TABLET GALLERY SWITCHER
+    ----------------------------------------------------- */
+
+    .gallery-tabs {
+        gap: 7px;
+        margin-top: 30px;
+        margin-bottom: 40px;
     }
 
-    .episode-track .episode-info h2 {
-        font-size: 45px;
+    .gallery-tab {
+        min-height: 36px;
+        padding: 0 16px;
+        font-size: 9px;
     }
 
-    .episode-track .episode-info ul {
+    .gallery-panel-heading h3 {
+        font-size: clamp(36px, 5vw, 50px);
+    }
+
+    .gallery-panel-heading p {
+        width: 500px;
         font-size: 11px;
     }
 
-    .episode-track .video-wrapper {
-        border-radius: 0 60px 0 0;
+
+    /* -----------------------------------------------------
+       GALLERY GRIDS
+    ----------------------------------------------------- */
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .documentation-grid,
+    .bts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU COMPATIBILITY
+    ----------------------------------------------------- */
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-navigation {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background: var(--cream);
+        border-bottom: 1px solid var(--black);
+        z-index: 999;
+    }
+
+    .main-navigation.active,
+    .main-navigation.mobile-open {
+        display: flex;
+    }
+
+    .nav-btn {
+        width: 100%;
+        height: 55px;
+        min-width: 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--black);
     }
 
 }
@@ -1825,651 +1346,310 @@ a:hover {
 
 @media (max-width: 600px) {
 
-    /* HEADER */
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
 
     .site-header {
         height: 62px;
-
-        overflow: visible;
-
-        z-index: 100;
     }
-
-
-    /* BRAND AREA */
 
     .brand-area {
-        position: relative;
-
         width: 210px;
-
-        height: 62px;
-
-        flex-shrink: 0;
-
-        overflow: visible;
+        height: 60px;
     }
-
-
-    /* BRAND BLOCK */
-
-    .brand-yellow {
-        left: 0;
-        top: 0;
-
-        width: 165px;
-        height: 62px;
-
-        background: var(--yellow);
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-
-        z-index: 1;
-
-        pointer-events: none;
-    }
-
-
-    /* LOGO */
 
     .logo-link {
-        left: 20px;
-        top: 0;
-
-        width: 85px;
-        height: 62px;
-
-        z-index: 5;
+        padding-left: 15px;
     }
 
     .logo {
-        width: 48px;
+        width: 115px;
     }
-
-
-    /* MOBILE TOP STRIPES */
 
     .top-stripes {
-        left: 145px;
-        top: 0;
-
-        width: 155px;
-        height: 62px;
-
-        display: flex;
-
-        overflow: visible;
-
-        z-index: 3;
-
-        pointer-events: none;
+        right: -38px;
+        top: -47px;
+        width: 100px;
+        height: 155px;
     }
 
-    .top-stripes span {
-        flex: 0 0 52px;
-
-        width: 52px;
-        height: 62px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
+    .menu-toggle {
+        width: 60px;
+        height: 60px;
     }
-
-
-    /* MOBILE NAVIGATION */
 
     .main-navigation {
-        position: absolute;
-
         top: 62px;
-        right: 10px;
-
-        width: 190px;
-
-        display: none;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 5px;
-
-        margin: 0;
-        padding: 10px;
-
-        background: var(--cream);
-
-        border: 1px solid var(--black);
-
-        box-shadow: 5px 5px 0 var(--black);
-
-        z-index: 140;
-    }
-
-    .main-navigation.active {
-        display: flex;
     }
 
     .nav-btn {
-        width: 100%;
-
-        height: 40px;
-
-        padding: 0 15px;
-
-        border-radius: 20px;
-
-        font-size: 10px;
-
-        justify-content: center;
+        height: 50px;
+        font-size: 8px;
     }
 
 
-    /* HAMBURGER */
-
-    .menu-toggle {
-        display: flex;
-
-        position: relative;
-
-        width: 38px;
-        height: 38px;
-
-        margin-right: 10px;
-
-        flex-shrink: 0;
-
-        z-index: 150;
-
-        cursor: pointer;
-    }
-
-
-    /* MOBILE HERO */
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
 
     .hero {
-        height: calc(100vh - 62px);
-
-        min-height: 620px;
+        height: 470px;
     }
 
-    .hero-inner {
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-        height: 100%;
+    .hero-content {
+        padding: 35px 7%;
     }
 
-
-    /* MOBILE HERO COPY */
-
-    .hero-copy {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        transform: none;
-
-        margin: 55px 25px 0;
-
-        width: auto;
+    .hero h1 {
+        font-size: clamp(55px, 17vw, 90px);
     }
 
-    .hero-copy h1 {
-        font-size: 54px;
-
-        line-height: .92;
-
-        letter-spacing: .3px;
-    }
-
-    .hero-copy p {
-        width: 100%;
-
-        margin: 10px 0 0 1px;
-
+    .hero p {
+        max-width: 100%;
+        margin-top: 20px;
         font-size: 10px;
-
-        line-height: 1.4;
-    }
-
-
-    /* MOBILE HERO BUTTONS */
-
-    .hero-buttons {
-        gap: 10px;
-
-        margin-top: 17px;
-
-        margin-left: 0;
-    }
-
-    .hero-button {
-        height: 42px;
-
-        padding: 0 17px;
-
-        border-radius: 23px;
-
-        font-size: 11px;
-    }
-
-
-    /* MOBILE HERO VIDEO */
-
-    .hero-bg-video {
-        object-position: center;
-    }
-
-    .hero-bg::after {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(255, 244, 230, 0.92) 0%,
-                rgba(255, 244, 230, 0.76) 48%,
-                rgba(255, 244, 230, 0.40) 100%
-            );
-    }
-
-
-    /* MOBILE DIVIDER */
-
-    .divider {
-        height: 50px;
-    }
-
-    .divider-left-stripes {
-        left: 0;
-
-        width: 230px;
-
-        height: 50px;
-    }
-
-    .divider-left-stripes span {
-        height: 50px;
-    }
-
-    .divider-left-stripes .stripe-yellow {
-        width: 95px;
-    }
-
-    .divider-left-stripes .stripe-blue,
-    .divider-left-stripes .stripe-red,
-    .divider-left-stripes .stripe-black {
-        width: 55px;
-    }
-
-
-    /* =====================================================
-       MOBILE ABOUT
-    ===================================================== */
-
-    .about-section {
-        height: auto;
-
-        min-height: 780px;
-    }
-
-    .about-inner {
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-
-        height: auto;
-    }
-
-    .about-copy {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        transform: none;
-
-        padding: 55px 25px 0;
-
-        width: auto;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-
-    /* MOBILE PROJECT LABEL */
-
-    .project-label {
-        margin: 0 0 13px 1px;
-
-        font-size: 9px;
-
-        letter-spacing: 1.3px;
-
-        line-height: 1.3;
-    }
-
-
-    /* MOBILE TALAKBAY LOGO */
-
-    .talakbay-project-logo {
-        gap: 9px;
-
-        margin: 0 0 25px 1px;
-    }
-
-    .talakbay-icon {
-        width: 50px;
-    }
-
-    .talakbay-wordmark {
-        width: 145px;
-    }
-
-
-    /* MOBILE ABOUT TITLE */
-
-    .about-copy h2 {
-        font-size: 48px;
-
-        line-height: .95;
-
-        margin-bottom: 12px;
-    }
-
-
-    /* MOBILE ABOUT DESCRIPTION */
-
-    .about-copy p {
-        width: 100%;
-
-        font-size: 13px;
-
-        line-height: 1.5;
-
-        letter-spacing: 0;
-    }
-
-
-    /* MOBILE ABOUT PHOTO */
-
-    .about-photo {
-        position: relative;
-
-        top: auto;
-        right: auto;
-
-        transform: none;
-
-        margin: 35px 25px 40px;
-
-        width: calc(100% - 50px);
-
-        max-width: none;
-
-        height: 300px;
-
-        border-radius: 0 0 0 70px;
-    }
-
-
-    /* MOBILE FOOTER */
-
-    .site-footer {
-        padding: 15px 20px;
-    }
-
-    .site-footer p {
-        font-size: 9px;
-    }
-
-
-    /* MOBILE RESOURCES HERO */
-
-    .resources-hero {
-        min-height: 350px;
-    }
-
-    .resources-hero-inner {
-        min-height: 350px;
-
-        padding: 55px 25px;
-    }
-
-    .section-label {
-        font-size: 8px;
-
-        letter-spacing: 1.5px;
-    }
-
-    .resources-title h1 {
-        font-size: 54px;
-
-        line-height: .9;
-    }
-
-    .resources-intro {
-        width: 100%;
-
-        margin-top: 18px;
-
-        font-size: 10px;
-
-        line-height: 1.5;
-    }
-
-
-    /* MOBILE RESOURCES CONTENT */
-
-    .resources-section {
-        padding: 45px 25px;
-    }
-
-    .resources-container {
-        max-width: none;
-    }
-
-
-    /* MOBILE NORMAL RESOURCE CARDS */
-
-    .resource-card {
-        display: block;
-
-        margin-bottom: 30px;
-
-        padding: 25px 22px;
-
-        box-shadow: 5px 5px 0 var(--black);
-    }
-
-    .resource-number {
-        margin-bottom: 12px;
-
-        font-size: 30px;
-    }
-
-    .resource-content h2 {
-        font-size: 32px;
-
-        line-height: .95;
-    }
-
-    .resource-content p {
-        margin-top: 15px;
-
-        font-size: 11px;
-
         line-height: 1.6;
     }
 
 
-    /* MOBILE SWIPEABLE EPISODES */
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
 
-    .episode-slider {
-        width: 100%;
-
-        margin: 40px auto 55px;
+    .about-section {
+        min-height: 470px;
     }
 
-    .episode-track {
-        width: 100%;
+    .about-content {
+        padding: 50px 7%;
+    }
 
-        padding: 0 3px 10px;
+    .about-section h2 {
+        font-size: 54px;
+    }
 
-        overflow-x: auto;
-
-        scroll-snap-type: x mandatory;
+    .about-section p {
+        font-size: 10px;
+        line-height: 1.6;
     }
 
 
-    /* MOBILE EPISODE CARD */
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
 
-    .episode-track .episode-card {
-        flex: 0 0 100%;
+    .site-footer {
+        padding: 40px 7%;
+    }
 
-        width: 100%;
-
-        min-width: 100%;
-
-        min-height: 0;
-
-        padding: 30px 25px 30px;
-
-        display: flex;
-
+    .footer-inner {
         flex-direction: column;
-
-        align-items: stretch;
-
-        justify-content: flex-start;
-
-        gap: 25px;
-
-        margin: 0;
-
-        border: 2px solid var(--black);
-
-        box-shadow: 6px 6px 0 var(--black);
-
-        overflow: hidden;
+        gap: 35px;
     }
 
-
-    /* MOBILE EPISODE INFORMATION */
-
-    .episode-track .episode-info {
+    .footer-links {
         width: 100%;
-
-        padding-right: 0;
+        gap: 30px;
     }
 
 
-    /* MOBILE EPISODE NUMBER */
+    /* -----------------------------------------------------
+       RESOURCES HERO
+    ----------------------------------------------------- */
 
-    .episode-track .episode-number {
-        margin-bottom: 20px;
-
-        font-size: 20px;
+    .resources-hero {
+        min-height: 400px;
     }
 
-
-    /* MOBILE EPISODE LABEL */
-
-    .episode-track .episode-label {
-        margin-bottom: 9px;
-
-        font-size: 7px;
-
-        letter-spacing: 1px;
+    .resources-hero-content {
+        padding: 45px 7%;
     }
 
-
-    /* MOBILE EPISODE TITLE */
-
-    .episode-track .episode-info h2 {
-        margin-bottom: 20px;
-
-        font-size: 42px;
-
-        line-height: .9;
+    .resources-hero h1 {
+        font-size: 65px;
     }
 
-
-    /* MOBILE EPISODE TOPIC */
-
-    .episode-track .episode-info h3 {
+    .resources-hero p {
         font-size: 10px;
-
-        margin-bottom: 4px;
-    }
-
-    .episode-track .episode-info ul {
-        padding-left: 18px;
-
-        font-size: 10px;
-
-        line-height: 1.45;
     }
 
 
-    /* MOBILE EPISODE VIDEO */
+    /* -----------------------------------------------------
+       RESOURCES
+    ----------------------------------------------------- */
 
-    .episode-track .episode-video {
-        width: 100%;
-
-        flex: none;
+    .resources-section {
+        padding: 50px 7%;
     }
 
-    .episode-track .video-wrapper {
-        width: 100%;
-
-        padding-bottom: 56.25%;
-
-        border-radius: 0 50px 0 0;
-    }
-
-
-    /* MOBILE DOTS */
-
-    .episode-dots {
-        margin-top: 22px;
-
-        gap: 8px;
-    }
-
-    .episode-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-
-    /* MOBILE LEARNING TOPICS */
-
-    .topic-grid {
+    .resource-grid {
         grid-template-columns: 1fr;
-
-        gap: 8px;
-
-        margin-top: 20px;
     }
 
-    .topic-item {
-        min-height: 48px;
+    .resource-card {
+        min-height: 260px;
+        padding: 25px;
+    }
 
+    .resource-card h3 {
+        font-size: 38px;
+    }
+
+
+    /* -----------------------------------------------------
+       EPISODES
+    ----------------------------------------------------- */
+
+    .episode-card {
+        width: 245px;
+        min-width: 245px;
+    }
+
+    .episode-card img {
+        height: 175px;
+    }
+
+
+    /* -----------------------------------------------------
+       GALLERY HERO
+    ----------------------------------------------------- */
+
+    .gallery-hero {
+        min-height: 400px;
+    }
+
+    .gallery-hero-content {
+        padding: 45px 7%;
+    }
+
+    .gallery-hero h1 {
+        font-size: 65px;
+    }
+
+    .gallery-hero p {
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       GALLERY SECTION
+    ----------------------------------------------------- */
+
+    .gallery-section {
+        padding: 50px 7%;
+    }
+
+    .gallery-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .gallery-section-heading h2 {
+        font-size: 55px;
+    }
+
+    .gallery-section-heading p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE GALLERY SWITCHER
+    ----------------------------------------------------- */
+
+    .gallery-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+        margin: 25px auto 35px;
+    }
+
+    .gallery-tab:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .gallery-tab {
+        width: 100%;
+        min-height: 38px;
+        padding: 0 8px;
+        border-radius: 20px;
+        font-size: 8px;
+        letter-spacing: .5px;
+    }
+
+    .gallery-tab.active {
+        box-shadow: 3px 3px 0 var(--black);
+    }
+
+    .gallery-tab:hover {
+        box-shadow: 3px 3px 0 var(--black);
+    }
+
+    .gallery-panel-heading {
+        margin-bottom: 23px;
+    }
+
+    .gallery-panel-heading span {
+        margin-bottom: 6px;
+        font-size: 7px;
+        letter-spacing: 1.4px;
+    }
+
+    .gallery-panel-heading h3 {
+        font-size: 34px;
+        line-height: .92;
+    }
+
+    .gallery-panel-heading p {
+        width: 100%;
+        margin-top: 11px;
         font-size: 9px;
+        line-height: 1.5;
     }
 
-    .resources-back {
-        margin-top: 45px;
+
+    /* -----------------------------------------------------
+       GALLERY GRID
+    ----------------------------------------------------- */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    .documentation-grid,
+    .bts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    .documentation-caption,
+    .bts-caption {
+        padding: 8px;
+        font-size: 6px;
+    }
+
+
+    /* -----------------------------------------------------
+       LIGHTBOX
+    ----------------------------------------------------- */
+
+    .gallery-lightbox {
+        padding: 20px;
+    }
+
+    .gallery-lightbox-image {
+        max-width: 94vw;
+        max-height: 80vh;
+    }
+
+    .gallery-lightbox-close {
+        top: 15px;
+        right: 15px;
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
     }
 
 }
@@ -2481,466 +1661,168 @@ a:hover {
 
 @media (max-width: 380px) {
 
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
     .site-header {
         height: 58px;
-
-        overflow: visible;
-
-        z-index: 100;
     }
 
     .brand-area {
-        width: 190px;
-
-        height: 58px;
-
-        overflow: visible;
-    }
-
-    .brand-yellow {
-        width: 165px;
-
-        height: 58px;
-
-        pointer-events: none;
+        width: 185px;
+        height: 56px;
     }
 
     .logo-link {
-        left: 15px;
-
-        width: 80px;
-
-        height: 58px;
+        padding-left: 12px;
     }
 
     .logo {
-        width: 43px;
-    }
-
-    .top-stripes {
-        left: 145px;
-
-        width: 145px;
-
-        height: 58px;
-
-        overflow: visible;
-
-        pointer-events: none;
-    }
-
-    .top-stripes span {
-        flex: 0 0 48px;
-
-        width: 48px;
-
-        height: 58px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
+        width: 100px;
     }
 
     .menu-toggle {
-        display: flex;
-
-        width: 32px;
-        height: 32px;
-
-        margin-right: 8px;
-
-        font-size: 19px;
-
-        z-index: 150;
-
-        cursor: pointer;
+        width: 56px;
+        height: 56px;
+        font-size: 18px;
     }
 
     .main-navigation {
         top: 58px;
-
-        right: 8px;
-
-        width: 175px;
-
-        z-index: 140;
     }
 
-    .nav-btn {
-        height: 38px;
 
-        font-size: 9px;
-    }
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
 
     .hero {
-        height: calc(100vh - 58px);
-
-        min-height: 600px;
+        height: 430px;
     }
 
-    .hero-copy {
-        margin: 45px 20px 0;
+    .hero h1 {
+        font-size: 52px;
     }
 
-    .hero-copy h1 {
-        font-size: 47px;
-    }
-
-    .hero-copy p {
-        font-size: 9px;
-
-        line-height: 1.4;
-    }
-
-    .hero-buttons {
-        gap: 7px;
-
-        margin-top: 14px;
-    }
-
-    .hero-button {
-        height: 38px;
-
-        padding: 0 14px;
-
+    .hero p {
         font-size: 9px;
     }
 
 
-    /* VERY SMALL HERO VIDEO */
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
 
-    .hero-bg-video {
-        object-position: center;
+    .about-section {
+        min-height: 430px;
     }
 
-
-    /* =====================================================
-       VERY SMALL PHONE ABOUT
-    ===================================================== */
-
-    .about-copy {
-        padding: 45px 20px 0;
-    }
-
-
-    /* VERY SMALL PROJECT LABEL */
-
-    .project-label {
-        font-size: 8px;
-
-        letter-spacing: 1px;
-
-        margin-bottom: 11px;
-    }
-
-
-    /* VERY SMALL TALAKBAY LOGO */
-
-    .talakbay-project-logo {
-        gap: 7px;
-
-        margin-bottom: 22px;
-    }
-
-    .talakbay-icon {
-        width: 43px;
-    }
-
-    .talakbay-wordmark {
-        width: 125px;
-    }
-
-
-    /* VERY SMALL ABOUT TITLE */
-
-    .about-copy h2 {
-        font-size: 42px;
-
-        line-height: .95;
-    }
-
-    .about-copy p {
-        font-size: 12px;
-
-        line-height: 1.5;
-    }
-
-    .about-photo {
-        margin: 30px 20px 35px;
-
-        width: calc(100% - 40px);
-
-        height: 270px;
-
-        border-bottom-left-radius: 60px;
-    }
-
-
-    /* FOOTER */
-
-    .site-footer {
-        padding: 13px 15px;
-    }
-
-    .site-footer p {
-        font-size: 8px;
-    }
-
-
-    /* RESOURCES */
-
-    .resources-hero {
-        min-height: 320px;
-    }
-
-    .resources-hero-inner {
-        min-height: 320px;
-
-        padding: 45px 20px;
-    }
-
-    .resources-title h1 {
+    .about-section h2 {
         font-size: 46px;
     }
 
-    .resources-intro {
-        font-size: 9px;
+
+    /* -----------------------------------------------------
+       RESOURCES
+    ----------------------------------------------------- */
+
+    .resources-hero {
+        min-height: 360px;
+    }
+
+    .resources-hero h1 {
+        font-size: 56px;
     }
 
     .resources-section {
-        padding: 35px 20px;
-    }
-
-    .resource-card {
-        padding: 22px 18px;
-
-        box-shadow: 4px 4px 0 var(--black);
-    }
-
-    .resource-number {
-        font-size: 27px;
-    }
-
-    .resource-content h2 {
-        font-size: 27px;
-    }
-
-    .resource-content p {
-        font-size: 10px;
-    }
-
-    .topic-item {
-        font-size: 8px;
+        padding: 45px 7%;
     }
 
 
-    /* VERY SMALL PHONE EPISODE CARD */
+    /* -----------------------------------------------------
+       GALLERY
+    ----------------------------------------------------- */
 
-    .episode-slider {
-        margin-top: 35px;
-
-        margin-bottom: 45px;
+    .gallery-hero {
+        min-height: 360px;
     }
 
-    .episode-track .episode-card {
-        padding: 25px 20px 25px;
-
-        gap: 20px;
-
-        box-shadow: 5px 5px 0 var(--black);
+    .gallery-hero h1 {
+        font-size: 56px;
     }
 
-    .episode-track .episode-number {
-        font-size: 18px;
-
-        margin-bottom: 16px;
+    .gallery-section {
+        padding: 45px 7%;
     }
 
-    .episode-track .episode-label {
+
+    /* -----------------------------------------------------
+       VERY SMALL PHONE GALLERY SWITCHER
+    ----------------------------------------------------- */
+
+    .gallery-tabs {
+        gap: 6px;
+        margin: 22px auto 30px;
+    }
+
+    .gallery-tab {
+        min-height: 35px;
+        padding: 0 6px;
+        font-size: 7px;
+        letter-spacing: .3px;
+    }
+
+    .gallery-panel-heading {
+        margin-bottom: 20px;
+    }
+
+    .gallery-panel-heading span {
         font-size: 6px;
-
-        letter-spacing: .9px;
+        letter-spacing: 1.2px;
     }
 
-    .episode-track .episode-info h2 {
-        font-size: 36px;
-
-        line-height: .9;
+    .gallery-panel-heading h3 {
+        font-size: 30px;
     }
 
-    .episode-track .episode-info h3 {
-        font-size: 9px;
+    .gallery-panel-heading p {
+        font-size: 8px;
+        line-height: 1.45;
     }
 
-    .episode-track .episode-info ul {
-        font-size: 9px;
 
-        line-height: 1.4;
+    /* -----------------------------------------------------
+       GALLERY GRID
+    ----------------------------------------------------- */
+
+    .gallery-grid {
+        gap: 5px;
     }
 
-    .episode-track .video-wrapper {
-        border-radius: 0 42px 0 0;
-    }
-
-    .episode-dots {
-        margin-top: 18px;
-
-        gap: 7px;
-    }
-
-    .episode-dot {
-        width: 9px;
-
-        height: 9px;
+    .documentation-grid,
+    .bts-grid {
+        gap: 5px;
     }
 
 }
 
 
 /* =========================================================
-   FINAL CLICK / STACKING SAFETY
+   FINAL STACKING SAFETY
 ========================================================= */
 
-.brand-yellow,
-.top-stripes {
-    pointer-events: none;
+.site-header,
+.main-navigation,
+.menu-toggle,
+.gallery-lightbox {
+    isolation: isolate;
 }
 
-.menu-toggle {
-    pointer-events: auto;
-
-    position: relative;
-
-    z-index: 150;
+.gallery-lightbox {
+    z-index: 9999;
 }
 
-
-/* =========================================================
-   FINAL RESOURCES HEADER
-   BLUE → YELLOW → RED → BLACK
-========================================================= */
-
-.resources-page .brand-yellow {
-    background: var(--blue) !important;
+.site-header {
+    z-index: 1000;
 }
-
-.resources-page .top-stripes .stripe-blue {
-    background: var(--yellow) !important;
-}
-
-.resources-page .top-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.resources-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
-   FINAL EPISODE COLOR SAFETY
-========================================================= */
-
-.resources-page .episode-blue {
-    background: var(--blue) !important;
-
-    color: white !important;
-}
-
-.resources-page .episode-yellow {
-    background: var(--yellow) !important;
-
-    color: var(--black) !important;
-}
-
-.resources-page .episode-red {
-    background: var(--red) !important;
-
-    color: white !important;
-}
-
-
-/* =========================================================
-   KEEP DIVIDER COLORS UNCHANGED
-========================================================= */
-
-.resources-page .divider-left-stripes .stripe-yellow {
-    background: var(--yellow) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
-   FINAL EPISODE DRAG FIX
-========================================================= */
-
-.episode-track {
-    cursor: grab;
-
-    user-select: none;
-    -webkit-user-select: none;
-
-    touch-action: pan-x;
-}
-
-.episode-track.is-dragging {
-    cursor: grabbing;
-
-    scroll-behavior: auto;
-
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.episode-track.is-dragging iframe {
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   MOBILE EPISODE DRAG FIX
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .episode-track {
-        overflow-x: auto;
-
-        overflow-y: hidden;
-
-        scroll-snap-type: x mandatory;
-
-        -webkit-overflow-scrolling: touch;
-
-        touch-action: pan-x;
-
-        overscroll-behavior-x: contain;
-    }
-
-    .episode-track .episode-card {
-        flex: 0 0 100%;
-
-        min-width: 100%;
-
-        user-select: none;
-
-        -webkit-user-select: none;
-    }
-
-}
-
-
-/* =========================================================
-   END
-========================================================= */
