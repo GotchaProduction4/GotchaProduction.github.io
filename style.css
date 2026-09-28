@@ -635,7 +635,7 @@ a:hover {
     position: relative;
 
     width: 100%;
-    height: 600px;
+    height: 650px;
 
     overflow: hidden;
 
@@ -695,14 +695,87 @@ a:hover {
     transform: translateY(-50%);
 
     width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+
+/* =========================================================
+   GOTCHA PRODUCTIONS PROJECT LABEL
+========================================================= */
+
+.project-label {
+    margin: 0 0 16px 3px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    line-height: 1.2;
+
+    color: var(--red);
+}
+
+
+/* =========================================================
+   TALAKBAY PROJECT LOGO
+========================================================= */
+
+.talakbay-project-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 0 0 30px 2px;
+}
+
+
+/* =========================================================
+   TALAKBAY ICON
+========================================================= */
+
+.talakbay-icon {
+    display: block;
+
+    width: 65px;
+    height: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TALAKBAY WORDMARK
+========================================================= */
+
+.talakbay-wordmark {
+    display: block;
+
+    width: 185px;
+    height: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ABOUT THE PROGRAM TITLE
+========================================================= */
 
 .about-copy h2 {
     margin: 0;
 
     font-family: "Anton", sans-serif;
 
-    font-size: 100px;
+    font-size: 78px;
 
     font-weight: 400;
 
@@ -710,6 +783,11 @@ a:hover {
 
     color: var(--black);
 }
+
+
+/* =========================================================
+   ABOUT PROGRAM DESCRIPTION
+========================================================= */
 
 .about-copy p {
     width: 450px;
@@ -719,6 +797,7 @@ a:hover {
     font-family: "Be Vietnam Pro", sans-serif;
 
     font-size: 15px;
+
     font-weight: 300;
 
     line-height: 1.65;
@@ -783,6 +862,7 @@ a:hover {
     font-family: "Be Vietnam Pro", sans-serif;
 
     font-size: 11px;
+
     font-weight: 300;
 
     letter-spacing: .2px;
@@ -795,28 +875,35 @@ a:hover {
 
 .modal-content {
     border: 0;
+
     border-radius: 0;
+
     background: var(--cream);
 }
 
 .modal-header {
     background: var(--yellow);
+
     border-bottom: 1px solid var(--black);
 }
 
 .modal-title {
     font-family: "Anton", sans-serif;
+
     font-size: 25px;
+
     letter-spacing: .5px;
 }
 
 .modal-body {
     font-family: "Be Vietnam Pro", sans-serif;
+
     font-size: 13px;
 }
 
 .modal-body h4 {
     font-family: "Anton", sans-serif;
+
     font-size: 25px;
 }
 
@@ -826,6 +913,7 @@ a:hover {
 
 .modal-footer .btn {
     border-radius: 20px;
+
     font-size: 10px;
 }
 
@@ -879,6 +967,7 @@ a:hover {
         url("images/photowalk.jpg");
 
     background-size: cover;
+
     background-position: center;
 
     opacity: .45;
@@ -902,6 +991,7 @@ a:hover {
 
 .resources-title {
     width: 100%;
+
     max-width: 900px;
 }
 
@@ -1101,6 +1191,7 @@ a:hover {
     overflow-y: hidden;
 
     scroll-snap-type: x mandatory;
+
     scroll-behavior: smooth;
 
     -webkit-overflow-scrolling: touch;
@@ -1524,6 +1615,7 @@ a:hover {
         height: 70px;
 
         transform: skewX(-20deg);
+
         transform-origin: top left;
     }
 
@@ -1555,6 +1647,7 @@ a:hover {
 
     .hero-copy {
         left: 6%;
+
         width: 43%;
     }
 
@@ -1564,6 +1657,7 @@ a:hover {
 
     .hero-copy p {
         width: 100%;
+
         font-size: 13px;
     }
 
@@ -1572,26 +1666,61 @@ a:hover {
     }
 
 
-    /* TABLET ABOUT */
+    /* =====================================================
+       TABLET ABOUT
+    ===================================================== */
+
+    .about-section {
+        height: 620px;
+    }
 
     .about-copy {
         left: 6%;
+
         width: 43%;
     }
 
+    .project-label {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 13px;
+    }
+
+    .talakbay-project-logo {
+        gap: 10px;
+
+        margin-bottom: 24px;
+    }
+
+    .talakbay-icon {
+        width: 52px;
+    }
+
+    .talakbay-wordmark {
+        width: 145px;
+    }
+
     .about-copy h2 {
-        font-size: 75px;
+        font-size: 62px;
+
+        line-height: .9;
     }
 
     .about-copy p {
         width: 100%;
+
         font-size: 13px;
     }
 
     .about-photo {
         right: 5%;
+
         width: 44%;
+
         height: 60%;
+
         border-bottom-left-radius: 80px;
     }
 
@@ -1610,11 +1739,13 @@ a:hover {
 
     .resources-title h1 {
         font-size: clamp(60px, 9vw, 100px);
+
         line-height: .92;
     }
 
     .resources-intro {
         width: 480px;
+
         font-size: 13px;
     }
 
@@ -1711,6 +1842,7 @@ a:hover {
         position: relative;
 
         width: 210px;
+
         height: 62px;
 
         flex-shrink: 0;
@@ -1974,12 +2106,14 @@ a:hover {
     }
 
 
-    /* MOBILE ABOUT */
+    /* =====================================================
+       MOBILE ABOUT
+    ===================================================== */
 
     .about-section {
         height: auto;
 
-        min-height: 700px;
+        min-height: 780px;
     }
 
     .about-inner {
@@ -2003,15 +2137,57 @@ a:hover {
         padding: 55px 25px 0;
 
         width: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
     }
 
+
+    /* MOBILE PROJECT LABEL */
+
+    .project-label {
+        margin: 0 0 13px 1px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.3px;
+
+        line-height: 1.3;
+    }
+
+
+    /* MOBILE TALAKBAY LOGO */
+
+    .talakbay-project-logo {
+        gap: 9px;
+
+        margin: 0 0 25px 1px;
+    }
+
+    .talakbay-icon {
+        width: 50px;
+    }
+
+    .talakbay-wordmark {
+        width: 145px;
+    }
+
+
+    /* MOBILE ABOUT TITLE */
+
     .about-copy h2 {
-        font-size: 55px;
+        font-size: 48px;
 
         line-height: .95;
 
         margin-bottom: 12px;
     }
+
+
+    /* MOBILE ABOUT DESCRIPTION */
 
     .about-copy p {
         width: 100%;
@@ -2161,6 +2337,7 @@ a:hover {
         flex: 0 0 100%;
 
         width: 100%;
+
         min-width: 100%;
 
         min-height: 0;
@@ -2314,6 +2491,7 @@ a:hover {
 
     .brand-area {
         width: 190px;
+
         height: 58px;
 
         overflow: visible;
@@ -2321,6 +2499,7 @@ a:hover {
 
     .brand-yellow {
         width: 165px;
+
         height: 58px;
 
         pointer-events: none;
@@ -2330,6 +2509,7 @@ a:hover {
         left: 15px;
 
         width: 80px;
+
         height: 58px;
     }
 
@@ -2434,12 +2614,49 @@ a:hover {
     }
 
 
+    /* =====================================================
+       VERY SMALL PHONE ABOUT
+    ===================================================== */
+
     .about-copy {
         padding: 45px 20px 0;
     }
 
+
+    /* VERY SMALL PROJECT LABEL */
+
+    .project-label {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 11px;
+    }
+
+
+    /* VERY SMALL TALAKBAY LOGO */
+
+    .talakbay-project-logo {
+        gap: 7px;
+
+        margin-bottom: 22px;
+    }
+
+    .talakbay-icon {
+        width: 43px;
+    }
+
+    .talakbay-wordmark {
+        width: 125px;
+    }
+
+
+    /* VERY SMALL ABOUT TITLE */
+
     .about-copy h2 {
-        font-size: 48px;
+        font-size: 42px;
+
+        line-height: .95;
     }
 
     .about-copy p {
@@ -2458,6 +2675,9 @@ a:hover {
         border-bottom-left-radius: 60px;
     }
 
+
+    /* FOOTER */
+
     .site-footer {
         padding: 13px 15px;
     }
@@ -2465,6 +2685,9 @@ a:hover {
     .site-footer p {
         font-size: 8px;
     }
+
+
+    /* RESOURCES */
 
     .resources-hero {
         min-height: 320px;
@@ -2515,6 +2738,7 @@ a:hover {
 
     .episode-slider {
         margin-top: 35px;
+
         margin-bottom: 45px;
     }
 
@@ -2566,6 +2790,7 @@ a:hover {
 
     .episode-dot {
         width: 9px;
+
         height: 9px;
     }
 
@@ -2691,6 +2916,7 @@ a:hover {
 
     .episode-track {
         overflow-x: auto;
+
         overflow-y: hidden;
 
         scroll-snap-type: x mandatory;
@@ -2704,9 +2930,11 @@ a:hover {
 
     .episode-track .episode-card {
         flex: 0 0 100%;
+
         min-width: 100%;
 
         user-select: none;
+
         -webkit-user-select: none;
     }
 
