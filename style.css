@@ -39,12 +39,8 @@
 
 
 /* =========================================================
-   GENERAL
+   GLOBAL
 ========================================================= */
-
-* {
-    box-sizing: border-box;
-}
 
 html {
     scroll-behavior: smooth;
@@ -52,22 +48,32 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
 
     background: var(--cream);
+
     color: var(--black);
 
     font-family: "Be Vietnam Pro", sans-serif;
 
+    font-weight: 300;
+
     overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
+
+    color: inherit;
 }
 
-a:hover {
-    text-decoration: none;
+img {
+    max-width: 100%;
+
+    display: block;
 }
 
 
@@ -79,85 +85,87 @@ a:hover {
     position: relative;
 
     width: 100%;
-    height: 80px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 80px;
 
     background: var(--cream);
 
+    border-top: 2px solid var(--black);
+
     border-bottom: 1px solid var(--black);
 
-    z-index: 20;
+    z-index: 1000;
 }
 
 
 /* =========================================================
-   LOGO AREA
+   HEADER INNER
+========================================================= */
+
+.header-inner {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+
+/* =========================================================
+   BRAND AREA
 ========================================================= */
 
 .brand-area {
-    position: relative;
+    width: 325px;
 
-    width: 300px;
-    height: 80px;
-
-    flex-shrink: 0;
-
-    overflow: visible;
-}
-
-
-/* =========================================================
-   YELLOW BRAND BLOCK
-========================================================= */
-
-.brand-yellow {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 165px;
-    height: 80px;
-
-    background: var(--yellow);
-
-    transform: skewX(-20deg);
-    transform-origin: top left;
-
-    z-index: 1;
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo-link {
-    position: absolute;
-
-    left: 20px;
-    top: 0;
-
-    width: 85px;
-    height: 80px;
+    height: 78px;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
 
-    z-index: 5;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
-.logo {
-    display: block;
 
-    width: 62px;
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.brand-logo {
+    width: 40px;
+
     height: auto;
+}
+
+.brand-name {
+    font-family: "Anton", sans-serif;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    color: var(--black);
 }
 
 
@@ -168,43 +176,46 @@ a:hover {
 .top-stripes {
     position: absolute;
 
-    left: 145px;
+    top: -45px;
+
+    left: 0;
+
+    width: 112px;
+
+    height: 175px;
+
+    transform: skewX(35deg);
+
+    z-index: 1;
+}
+
+.top-stripes::before,
+.top-stripes::after {
+    content: "";
+
+    position: absolute;
+
     top: 0;
 
-    width: 170px;
-    height: 80px;
-
-    display: flex;
-
-    overflow: visible;
-
-    z-index: 2;
-
-    pointer-events: none;
+    height: 100%;
 }
 
-.top-stripes span {
-    display: block;
+.top-stripes::before {
+    left: 0;
 
-    flex: 0 0 52px;
+    width: 36px;
 
-    width: 52px;
-    height: 80px;
-
-    transform: skewX(-20deg);
-    transform-origin: top left;
+    background: var(--yellow);
 }
 
-.stripe-blue {
+.top-stripes::after {
+    left: 36px;
+
+    width: 36px;
+
     background: var(--blue);
-}
 
-.stripe-red {
-    background: var(--red);
-}
-
-.stripe-black {
-    background: var(--black);
+    box-shadow: 36px 0 0 var(--black);
 }
 
 
@@ -212,93 +223,87 @@ a:hover {
    NAVIGATION
 ========================================================= */
 
-.main-navigation {
+.main-nav {
+    height: 100%;
+
     display: flex;
+
     align-items: center;
-
-    gap: 8px;
-
-    margin-right: 30px;
 }
 
-.nav-btn {
-    height: 32px;
+.main-nav ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
 
     display: flex;
+
     align-items: center;
+
+    gap: 0;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    display: flex;
+
+    align-items: center;
+
     justify-content: center;
 
-    padding: 0 15px;
+    height: 80px;
 
-    border-radius: 18px;
+    padding: 0 25px;
 
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 11px;
+    font-size: 14px;
+
     font-weight: 400;
 
-    letter-spacing: .4px;
+    letter-spacing: .3px;
 
-    color: var(--black);
+    transition: .25s ease;
+}
 
-    transition: .2s ease;
+.main-nav a:hover {
+    opacity: .75;
 }
 
 
 /* =========================================================
-   HOME
+   NAV COLORS
 ========================================================= */
 
 .nav-home {
-    background: var(--yellow);
+    color: var(--yellow);
 }
 
-.nav-home:hover,
-.nav-home.active {
+.nav-resources {
+    color: var(--blue);
+}
+
+.nav-gallery {
+    color: var(--red);
+}
+
+.nav-contact {
     color: var(--black);
 }
 
 
 /* =========================================================
-   RESOURCES
+   ACTIVE NAV
 ========================================================= */
 
-.nav-resources {
-    background: var(--blue);
-    color: white;
-}
-
-.nav-resources:hover,
-.nav-resources.active {
-    color: white;
-}
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
-
-.nav-gallery {
-    background: var(--red);
-    color: white;
-}
-
-.nav-gallery:hover,
-.nav-gallery.active {
-    color: white;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.nav-contact {
-    background: var(--black);
-    color: white;
-}
-
-.nav-contact:hover {
-    color: white;
+body.home-page .nav-home,
+body.resources-page .nav-resources,
+body.gallery-page .nav-gallery,
+body.contact-page .nav-contact {
+    font-weight: 400;
 }
 
 
@@ -306,56 +311,23 @@ a:hover {
    MOBILE MENU BUTTON
 ========================================================= */
 
-.menu-toggle {
+.mobile-menu-button {
     display: none;
 
-    position: relative;
+    border: 0;
 
-    width: 38px;
-    height: 38px;
+    background: transparent;
 
-    margin-right: 10px;
+    padding: 8px;
 
-    padding: 0;
+    font-size: 28px;
 
-    border: 1px solid var(--black);
-    border-radius: 50%;
-
-    background: var(--cream);
     color: var(--black);
-
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    line-height: 1;
-
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    z-index: 150;
-
-    flex-shrink: 0;
-
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-.menu-toggle:hover {
-    background: var(--yellow);
-}
-
-.menu-toggle:focus {
-    outline: none;
-}
-
-.menu-toggle:active {
-    transform: scale(.96);
 }
 
 
 /* =========================================================
-   HERO / LANDING PAGE
+   HERO
 ========================================================= */
 
 .hero {
@@ -363,363 +335,176 @@ a:hover {
 
     width: 100%;
 
-    height: calc(100vh - 80px);
-
     min-height: 600px;
 
-    overflow: hidden;
+    display: flex;
 
-    background: var(--cream);
+    align-items: center;
+
+    overflow: hidden;
 }
 
-
-/* =========================================================
-   HERO BACKGROUND VIDEO
-========================================================= */
-
-.hero-bg {
+.hero-image {
     position: absolute;
 
     inset: 0;
 
     width: 100%;
-    height: 100%;
 
-    overflow: hidden;
-
-    background: var(--cream);
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   HERO VIDEO
-========================================================= */
-
-.hero-bg-video {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
     height: 100%;
 
     object-fit: cover;
-    object-position: center;
-
-    display: block;
-
-    opacity: 1;
-
-    z-index: 0;
 }
 
-
-/* =========================================================
-   HERO VIDEO CREAM OVERLAY
-========================================================= */
-
-.hero-bg::after {
-    content: "";
-
+.hero-overlay {
     position: absolute;
 
     inset: 0;
 
-    z-index: 1;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 244, 230, 0.98) 0%,
-            rgba(255, 244, 230, 0.94) 22%,
-            rgba(255, 244, 230, 0.76) 45%,
-            rgba(255, 244, 230, 0.48) 68%,
-            rgba(255, 244, 230, 0.22) 100%
-        );
+    background: rgba(255, 244, 230, .89);
 }
 
-
-/* =========================================================
-   HERO INNER
-========================================================= */
-
-.hero-inner {
+.hero-content {
     position: relative;
 
-    width: 100%;
-    height: 100%;
-
     z-index: 2;
+
+    width: 100%;
+
+    padding: 80px;
 }
 
-
-/* =========================================================
-   HERO COPY
-========================================================= */
-
-.hero-copy {
-    position: absolute;
-
-    left: 8%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 42%;
-}
-
-.hero-copy h1 {
+.hero h1 {
     margin: 0;
 
     font-family: "Anton", sans-serif;
 
-    font-size: clamp(75px, 10vw, 150px);
+    font-size: 96px;
 
     font-weight: 400;
 
-    line-height: .85;
-
-    letter-spacing: .5px;
+    line-height: .9;
 
     color: var(--black);
+
+    max-width: 850px;
 }
 
-.hero-copy p {
-    width: 430px;
+.hero p {
+    margin-top: 30px;
 
-    margin: 25px 0 0 4px;
+    max-width: 650px;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 16px;
 
-    font-size: 15px;
-    font-weight: 300;
-
-    line-height: 1.55;
-
-    color: var(--black);
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   HERO BUTTONS
+   HOME HERO
 ========================================================= */
 
-.hero-buttons {
-    display: flex;
-
-    gap: 12px;
-
-    margin-top: 25px;
-    margin-left: 2px;
+.home-hero {
+    min-height: 600px;
 }
 
-.hero-button {
-    height: 45px;
+.home-hero .hero-content {
+    padding-top: 100px;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0 23px;
-
-    border-radius: 25px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 11px;
-    font-weight: 400;
-
-    letter-spacing: .4px;
-
-    transition: .2s ease;
-}
-
-.blue-button {
-    background: var(--blue);
-    color: white;
-}
-
-.blue-button:hover {
-    color: white;
-    transform: translateY(-2px);
-}
-
-.red-button {
-    background: var(--red);
-    color: white;
-}
-
-.red-button:hover {
-    color: white;
-    transform: translateY(-2px);
+    padding-bottom: 100px;
 }
 
 
 /* =========================================================
-   DIVIDER
+   ABOUT HERO
 ========================================================= */
 
-.divider {
+.about-hero {
     position: relative;
 
-    width: 100%;
-    height: 55px;
-
-    background: var(--cream);
-
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
+    min-height: 600px;
 
     overflow: hidden;
 }
-
-
-/* =========================================================
-   DIVIDER LEFT STRIPES
-   YELLOW → BLUE → RED → BLACK
-========================================================= */
-
-.divider-left-stripes {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 330px;
-    height: 55px;
-
-    display: flex;
-
-    overflow: hidden;
-}
-
-.divider-left-stripes span {
-    display: block;
-
-    height: 55px;
-
-    transform: skewX(-20deg);
-    transform-origin: top;
-}
-
-.divider-left-stripes .stripe-yellow {
-    width: 135px;
-    background: var(--yellow);
-}
-
-.divider-left-stripes .stripe-blue {
-    width: 75px;
-    background: var(--blue);
-}
-
-.divider-left-stripes .stripe-red {
-    width: 75px;
-    background: var(--red);
-}
-
-.divider-left-stripes .stripe-black {
-    width: 75px;
-    background: var(--black);
-}
-
-
-/* =========================================================
-   ABOUT SECTION
-========================================================= */
-
-.about-section {
-    position: relative;
-
-    width: 100%;
-    height: 650px;
-
-    overflow: hidden;
-
-    background: var(--cream);
-}
-
-
-/* =========================================================
-   ABOUT BACKGROUND
-========================================================= */
-
-.about-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .86),
-            rgba(255, 244, 230, .86)
-        ),
-        url("images/photowalk.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    opacity: .35;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   ABOUT INNER
-========================================================= */
-
-.about-inner {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   ABOUT COPY
-========================================================= */
 
 .about-copy {
+    position: relative;
+
+    z-index: 5;
+
+    width: 52%;
+
+    padding: 90px 0 90px 80px;
+}
+
+.about-copy h2 {
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 78px;
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    color: var(--black);
+}
+
+.about-copy p {
+    width: 90%;
+
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+.about-photo {
     position: absolute;
 
-    left: 8%;
-    top: 50%;
+    top: 12%;
 
-    transform: translateY(-50%);
+    right: 7%;
 
-    width: 40%;
+    width: 42%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    height: 70%;
+
+    overflow: hidden;
+
+    border-bottom-left-radius: 100px;
+}
+
+.about-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
 }
 
 
 /* =========================================================
-   GOTCHA PRODUCTIONS PROJECT LABEL
+   ABOUT PROGRAM
 ========================================================= */
 
-.project-label {
-    margin: 0 0 16px 3px;
+.about-program {
+    position: relative;
 
-    font-family: "Be Vietnam Pro", sans-serif;
+    width: 100%;
 
-    font-size: 12px;
+    padding: 80px;
 
-    font-weight: 400;
+    background: var(--cream);
+}
 
-    letter-spacing: 2px;
+.about-program-inner {
+    max-width: 1200px;
 
-    line-height: 1.2;
-
-    color: var(--red);
+    margin: auto;
 }
 
 
@@ -735,9 +520,11 @@ a:hover {
     gap: 16px;
 
     /*
-       INCREASED SPACING FOR BALANCE
+       REDUCED FROM 30px
+       This removes the large empty space
+       below the Talakbay logo.
     */
-    margin: 0 0 22px 2px;
+    margin: 0 0 16px 2px;
 }
 
 
@@ -749,9 +536,9 @@ a:hover {
     display: block;
 
     /*
-       INCREASED FROM 82px
+       INCREASED FROM 65px
     */
-    width: 95px;
+    width: 85px;
 
     height: auto;
 
@@ -767,9 +554,9 @@ a:hover {
     display: block;
 
     /*
-       INCREASED FROM 330px
+       INCREASED FROM 270px
     */
-    width: 380px;
+    width: 300px;
 
     height: auto;
 
@@ -801,51 +588,360 @@ a:hover {
 ========================================================= */
 
 .about-copy p {
-    width: 450px;
+    width: 90%;
 
-    margin: 25px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
+    margin-top: 25px;
 
     font-size: 15px;
 
-    font-weight: 300;
-
-    line-height: 1.65;
-
-    color: var(--black);
+    line-height: 1.6;
 }
 
 
 /* =========================================================
-   ABOUT PHOTO
+   RESOURCES
 ========================================================= */
 
-.about-photo {
-    position: absolute;
+.resources-hero {
+    position: relative;
 
-    right: 6%;
-    top: 50%;
+    min-height: 500px;
 
-    transform: translateY(-50%);
+    padding: 80px;
 
-    width: 43%;
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.resources-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+}
+
+.resources-content h1 {
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 86px;
+
+    line-height: .9;
+
+    font-weight: 400;
+}
+
+.resources-content p {
     max-width: 650px;
 
-    height: 65%;
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESOURCE CARDS
+========================================================= */
+
+.resources-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    padding: 70px 80px;
+}
+
+.resource-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 40px;
+
+    border: 1px solid var(--black);
 
     overflow: hidden;
 
-    border-radius: 0 0 0 105px;
+    transition: transform .3s ease;
 }
 
-.about-photo img {
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h2 {
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 52px;
+
+    line-height: .95;
+}
+
+.resource-card p {
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.resource-card-yellow {
+    background: var(--yellow);
+}
+
+.resource-card-blue {
+    background: var(--blue);
+
+    color: var(--cream);
+}
+
+.resource-card-red {
+    background: var(--red);
+
+    color: var(--cream);
+}
+
+.resource-card-black {
+    background: var(--black);
+
+    color: var(--cream);
+}
+
+
+/* =========================================================
+   GALLERY HERO
+========================================================= */
+
+.gallery-hero {
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+}
+
+.gallery-hero-image {
+    position: absolute;
+
+    inset: 0;
+
     width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.gallery-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(255, 244, 230, .9);
+}
+
+.gallery-hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    padding: 90px 80px;
+}
+
+.gallery-hero-content h1 {
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 96px;
+
+    line-height: .9;
+}
+
+
+/* =========================================================
+   GALLERY SWITCHER
+========================================================= */
+
+.gallery-switcher {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0;
+
+    margin: 40px auto;
+
+    border: 1px solid var(--black);
+
+    width: fit-content;
+}
+
+.gallery-switcher button {
+    border: 0;
+
+    background: transparent;
+
+    padding: 14px 28px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.gallery-switcher button:hover {
+    opacity: .7;
+}
+
+.gallery-switcher button.active {
+    background: var(--black);
+
+    color: var(--cream);
+}
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 0 80px 80px;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 1 / 1;
+
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
-    display: block;
+    transition: transform .4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   DOCUMENTATION GRID
+========================================================= */
+
+.documentation-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    padding: 0 80px 80px;
+}
+
+.documentation-item {
+    overflow: hidden;
+
+    aspect-ratio: 1 / 1;
+
+    cursor: pointer;
+}
+
+.documentation-item img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+.documentation-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, .9);
+
+    padding: 40px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: var(--cream);
+
+    font-size: 40px;
+
+    cursor: pointer;
 }
 
 
@@ -856,721 +952,53 @@ a:hover {
 .site-footer {
     width: 100%;
 
-    padding: 18px 20px;
+    padding: 60px 80px;
 
     background: var(--black);
 
-    border-top: 1px solid var(--black);
-
-    text-align: center;
+    color: var(--cream);
 }
 
-.site-footer p {
-    margin: 0;
-
-    color: white;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 11px;
-
-    font-weight: 300;
-
-    letter-spacing: .2px;
-}
-
-
-/* =========================================================
-   CONTACT MODAL
-========================================================= */
-
-.modal-content {
-    border: 0;
-
-    border-radius: 0;
-
-    background: var(--cream);
-}
-
-.modal-header {
-    background: var(--yellow);
-
-    border-bottom: 1px solid var(--black);
-}
-
-.modal-title {
-    font-family: "Anton", sans-serif;
-
-    font-size: 25px;
-
-    letter-spacing: .5px;
-}
-
-.modal-body {
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 13px;
-}
-
-.modal-body h4 {
-    font-family: "Anton", sans-serif;
-
-    font-size: 25px;
-}
-
-.modal-footer {
-    border-top: 1px solid var(--black);
-}
-
-.modal-footer .btn {
-    border-radius: 20px;
-
-    font-size: 10px;
-}
-
-
-/* =========================================================
-   RESOURCES PAGE
-========================================================= */
-
-.resources-page {
-    background: var(--cream);
-}
-
-
-/* =========================================================
-   RESOURCES BLUE BRAND
-========================================================= */
-
-.resources-page .brand-yellow {
-    background: var(--blue);
-}
-
-
-/* =========================================================
-   RESOURCES HERO
-========================================================= */
-
-.resources-hero {
-    position: relative;
-
-    width: 100%;
-
-    min-height: 430px;
-
-    overflow: hidden;
-
-    background: var(--cream);
-
-    border-bottom: 1px solid var(--black);
-}
-
-.resources-bg {
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
-        ),
-        url("images/photowalk.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-
-    opacity: .45;
-
-    z-index: 0;
-}
-
-.resources-hero-inner {
-    position: relative;
-
-    min-height: 430px;
-
+.footer-inner {
     display: flex;
 
-    align-items: center;
+    justify-content: space-between;
 
-    padding: 60px 8%;
+    align-items: flex-start;
 
-    z-index: 2;
+    gap: 40px;
 }
 
-.resources-title {
-    width: 100%;
-
-    max-width: 900px;
-}
-
-.section-label {
-    margin: 0 0 14px 3px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 10px;
-
-    font-weight: 400;
-
-    letter-spacing: 2px;
-
-    color: var(--red);
-}
-
-.resources-title h1 {
-    margin: 0;
-
+.footer-brand {
     font-family: "Anton", sans-serif;
 
-    font-size: clamp(70px, 9vw, 120px);
+    font-size: 42px;
 
-    font-weight: 400;
-
-    line-height: .92;
-
-    letter-spacing: .5px;
-
-    color: var(--black);
+    line-height: 1;
 }
 
-.resources-intro {
-    width: 500px;
+.footer-text {
+    max-width: 450px;
 
-    max-width: 100%;
-
-    margin: 22px 0 0 4px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 300;
+    font-size: 13px;
 
     line-height: 1.6;
-
-    color: var(--black);
 }
 
+.footer-links {
+    display: flex;
 
-/* =========================================================
-   RESOURCES CONTENT
-========================================================= */
-
-.resources-section {
-    position: relative;
-
-    width: 100%;
-
-    padding: 60px 8%;
-
-    background: var(--cream);
+    gap: 30px;
 }
 
-.resources-container {
-    width: 100%;
-
-    max-width: 1000px;
-
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   RESOURCE CARD
-========================================================= */
-
-.resource-card {
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-
-    margin-bottom: 45px;
-
-    padding: 35px;
-
-    background: var(--cream);
-
-    border: 1px solid var(--black);
-
-    box-shadow: 8px 8px 0 var(--black);
-}
-
-
-/* =========================================================
-   RESOURCE NUMBER
-========================================================= */
-
-.resource-number {
-    margin-bottom: 15px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 40px;
-
-    line-height: 1;
-
-    color: var(--red);
-}
-
-
-/* =========================================================
-   RESOURCE CONTENT
-========================================================= */
-
-.resource-content {
-    width: 100%;
-}
-
-.resource-content h2 {
-    margin: 0;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 45px;
-
-    font-weight: 400;
-
-    line-height: .95;
-
-    color: var(--black);
-}
-
-.resource-content p {
-    max-width: 800px;
-
-    margin: 18px 0 0;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
+.footer-links a {
     font-size: 13px;
 
-    font-weight: 300;
-
-    line-height: 1.7;
-
-    color: var(--black);
+    transition: opacity .25s ease;
 }
 
-
-/* =========================================================
-   EPISODE LABEL
-========================================================= */
-
-.episode-label {
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 9px;
-
-    font-weight: 400;
-
-    letter-spacing: 1.5px;
-
-    color: var(--blue);
-}
-
-
-/* =========================================================
-   SWIPEABLE EPISODE CARDS
-========================================================= */
-
-.episode-slider {
-    position: relative;
-
-    width: 100%;
-    max-width: 1100px;
-
-    margin: 60px auto 70px;
-
-    overflow: visible;
-}
-
-.episode-track {
-    display: flex;
-
-    width: 100%;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-
-    scroll-behavior: smooth;
-
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
-
-    cursor: grab;
-
-    touch-action: pan-x;
-
-    padding: 0 5px 12px;
-}
-
-.episode-track:active {
-    cursor: grabbing;
-}
-
-.episode-track::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* =========================================================
-   EACH EPISODE = ONE CARD
-========================================================= */
-
-.episode-track .episode-card {
-    position: relative;
-
-    flex: 0 0 100%;
-
-    width: 100%;
-    min-width: 100%;
-
-    min-height: 430px;
-
-    margin: 0;
-
-    padding: 50px;
-
-    display: grid;
-
-    grid-template-columns: 42% 58%;
-
-    align-items: center;
-
-    gap: 0;
-
-    overflow: hidden;
-
-    border: 2px solid var(--black);
-
-    box-shadow: 10px 10px 0 var(--black);
-
-    scroll-snap-align: start;
-
-    scroll-snap-stop: always;
-
-    color: white;
-
-    box-sizing: border-box;
-}
-
-
-/* =========================================================
-   EPISODE COLORS
-========================================================= */
-
-.episode-track .episode-red {
-    background: var(--red) !important;
-
-    color: white !important;
-}
-
-.episode-track .episode-yellow {
-    background: var(--yellow) !important;
-
-    color: var(--black) !important;
-}
-
-.episode-track .episode-blue {
-    background: var(--blue) !important;
-
-    color: white !important;
-}
-
-
-/* =========================================================
-   EPISODE INFORMATION
-========================================================= */
-
-.episode-track .episode-info {
-    width: 100%;
-
-    min-width: 0;
-
-    padding-right: 35px;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   EPISODE NUMBER
-========================================================= */
-
-.episode-track .episode-number {
-    display: block;
-
-    margin-bottom: 25px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: 22px;
-
-    line-height: 1;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
-   EPISODE LABEL
-========================================================= */
-
-.episode-track .episode-label {
-    display: block;
-
-    margin-bottom: 12px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 9px;
-
-    font-weight: 400;
-
-    letter-spacing: 1.5px;
-
-    color: currentColor;
-
-    opacity: .85;
-}
-
-
-/* =========================================================
-   EPISODE TITLE
-========================================================= */
-
-.episode-track .episode-info h2 {
-    margin: 0 0 25px;
-
-    font-family: "Anton", sans-serif;
-
-    font-size: clamp(45px, 5vw, 70px);
-
-    font-weight: 400;
-
-    line-height: .9;
-
-    letter-spacing: .3px;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
-   EPISODE TOPIC TITLE
-========================================================= */
-
-.episode-track .episode-info h3 {
-    margin: 0 0 5px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 400;
-
-    letter-spacing: 1px;
-
-    color: currentColor;
-}
-
-
-/* =========================================================
-   EPISODE TOPIC LIST
-========================================================= */
-
-.episode-track .episode-info ul {
-    margin: 0;
-
-    padding-left: 18px;
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 12px;
-
-    font-weight: 300;
-
-    line-height: 1.5;
-
-    color: currentColor;
-}
-
-.episode-track .episode-info li {
-    margin-bottom: 2px;
-}
-
-
-/* =========================================================
-   EPISODE VIDEO AREA
-========================================================= */
-
-.episode-track .episode-video {
-    width: 100%;
-
-    min-width: 0;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   EPISODE VIDEO
-========================================================= */
-
-.episode-track .video-wrapper {
-    position: relative;
-
-    width: 100%;
-
-    height: 0;
-
-    padding-bottom: 56.25%;
-
-    margin: 0;
-
-    overflow: hidden;
-
-    background: var(--black);
-
-    border: 2px solid var(--black);
-
-    border-radius: 0 75px 0 0;
-}
-
-.episode-track .video-wrapper iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-
-    display: block;
-}
-
-
-/* =========================================================
-   SWIPE DOTS
-========================================================= */
-
-.episode-dots {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    margin-top: 28px;
-}
-
-.episode-dot {
-    width: 12px;
-    height: 12px;
-
-    padding: 0;
-
-    border: 2px solid var(--black);
-
-    border-radius: 50%;
-
-    background: var(--cream);
-
-    cursor: pointer;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-.episode-dot:hover {
-    transform: scale(1.15);
-}
-
-.episode-dot.active {
-    background: var(--black);
-}
-
-
-/* =========================================================
-   LEARNING TOPICS
-========================================================= */
-
-.learning-card {
-    background: var(--yellow);
-}
-
-.topic-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
-
-    margin-top: 25px;
-}
-
-.topic-item {
-    min-height: 55px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 12px 18px;
-
-    background: var(--cream);
-
-    border: 1px solid var(--black);
-
-    font-family: "Be Vietnam Pro", sans-serif;
-
-    font-size: 11px;
-
-    font-weight: 400;
-
-    letter-spacing: .3px;
-
-    color: var(--black);
-}
-
-
-/* =========================================================
-   RESOURCES BACK BUTTON
-========================================================= */
-
-.resources-back {
-    display: flex;
-
-    justify-content: center;
-
-    margin-top: 50px;
-}
-
-
-/* =========================================================
-   RESOURCES ACTIVE NAV
-========================================================= */
-
-.nav-resources.active {
-    color: white;
-
-    transform: translateY(-1px);
+.footer-links a:hover {
+    opacity: .6;
 }
 
 
@@ -1578,148 +1006,56 @@ a:hover {
    TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
 
     .site-header {
         height: 70px;
     }
 
+    .header-inner {
+        padding: 0 25px;
+    }
+
     .brand-area {
-        width: 230px;
+        width: 250px;
+
+        height: 68px;
+    }
+
+    .brand-name {
+        font-size: 30px;
+    }
+
+    .main-nav a {
         height: 70px;
 
-        overflow: visible;
-    }
+        padding: 0 15px;
 
-    .brand-yellow {
-        width: 125px;
-        height: 70px;
-    }
-
-    .logo-link {
-        left: 15px;
-
-        width: 70px;
-        height: 70px;
-    }
-
-    .logo {
-        width: 52px;
-    }
-
-
-    /* TABLET TOP STRIPES */
-
-    .top-stripes {
-        left: 110px;
-
-        width: 140px;
-        height: 70px;
-
-        overflow: visible;
-    }
-
-    .top-stripes span {
-        flex: 0 0 42px;
-
-        width: 42px;
-        height: 70px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-    }
-
-
-    /* TABLET NAV */
-
-    .main-navigation {
-        gap: 5px;
-
-        margin-right: 15px;
-    }
-
-    .nav-btn {
-        height: 29px;
-
-        padding: 0 11px;
-
-        font-size: 9px;
+        font-size: 13px;
     }
 
 
     /* TABLET HERO */
 
     .hero {
-        height: calc(100vh - 70px);
-
-        min-height: 600px;
+        min-height: 500px;
     }
 
-    .hero-copy {
-        left: 6%;
-
-        width: 43%;
+    .hero-content {
+        padding: 60px 50px;
     }
 
-    .hero-copy h1 {
-        font-size: clamp(65px, 10vw, 105px);
-    }
-
-    .hero-copy p {
-        width: 100%;
-
-        font-size: 13px;
-    }
-
-    .hero-bg-video {
-        object-position: 58% center;
+    .hero h1 {
+        font-size: 76px;
     }
 
 
-    /* =====================================================
-       TABLET ABOUT
-    ===================================================== */
-
-    .about-section {
-        height: 620px;
-    }
+    /* TABLET ABOUT */
 
     .about-copy {
-        left: 6%;
+        width: 52%;
 
-        width: 43%;
-    }
-
-    .project-label {
-        font-size: 10px;
-
-        letter-spacing: 1.5px;
-
-        margin-bottom: 13px;
-    }
-
-    .talakbay-project-logo {
-        gap: 12px;
-
-        /*
-           INCREASED SPACING
-        */
-        margin-bottom: 18px;
-    }
-
-    .logocolor1 {
-        /*
-           INCREASED FROM 64px
-        */
-        width: 72px;
-    }
-
-    .wordmarkcolor {
-        /*
-           INCREASED FROM 255px
-        */
-        width: 285px;
+        padding: 70px 0 70px 50px;
     }
 
     .about-copy h2 {
@@ -1749,91 +1085,81 @@ a:hover {
 
     .resources-hero {
         min-height: 400px;
+
+        padding: 60px 50px;
     }
 
-    .resources-hero-inner {
-        min-height: 400px;
-
-        padding: 55px 6%;
+    .resources-content h1 {
+        font-size: 72px;
     }
 
-    .resources-title h1 {
-        font-size: clamp(60px, 9vw, 100px);
+    .resources-grid {
+        padding: 50px;
 
-        line-height: .92;
-    }
-
-    .resources-intro {
-        width: 480px;
-
-        font-size: 13px;
-    }
-
-    .resources-section {
-        padding: 55px 6%;
-    }
-
-    .resources-container {
-        max-width: 900px;
-    }
-
-    .resource-card {
-        padding: 30px;
-
-        margin-bottom: 40px;
-
-        box-shadow: 7px 7px 0 var(--black);
-    }
-
-    .resource-number {
-        font-size: 36px;
-
-        margin-bottom: 14px;
-    }
-
-    .resource-content h2 {
-        font-size: 40px;
-    }
-
-    .resource-content p {
-        font-size: 12px;
+        gap: 20px;
     }
 
 
-    /* TABLET SWIPE EPISODES */
+    /* TABLET GALLERY */
 
-    .episode-slider {
-        width: 100%;
-
-        margin: 50px auto 60px;
+    .gallery-hero-content {
+        padding: 70px 50px;
     }
 
-    .episode-track {
-        padding: 0 4px 10px;
+    .gallery-hero-content h1 {
+        font-size: 76px;
     }
 
-    .episode-track .episode-card {
-        min-height: 380px;
-
-        padding: 40px;
-
-        grid-template-columns: 45% 55%;
+    .gallery-grid {
+        padding: 0 50px 60px;
     }
 
-    .episode-track .episode-info {
-        padding-right: 25px;
+    .documentation-grid {
+        padding: 0 50px 60px;
+
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .episode-track .episode-info h2 {
-        font-size: 45px;
+
+    /* TABLET TALAKBAY LOGO */
+
+    .talakbay-project-logo {
+        gap: 12px;
+
+        /*
+           REDUCED FROM 24px
+        */
+        margin-bottom: 12px;
     }
 
-    .episode-track .episode-info ul {
-        font-size: 11px;
+    .logocolor1 {
+        /*
+           INCREASED FROM 52px
+        */
+        width: 60px;
     }
 
-    .episode-track .video-wrapper {
-        border-radius: 0 60px 0 0;
+    .wordmarkcolor {
+        /*
+           INCREASED FROM 215px
+        */
+        width: 235px;
+    }
+
+
+    /* TABLET ABOUT TITLE */
+
+    .about-copy h2 {
+        font-size: 62px;
+
+        line-height: .9;
+    }
+
+
+    /* TABLET FOOTER */
+
+    .site-footer {
+        padding: 50px;
     }
 
 }
@@ -1843,339 +1169,152 @@ a:hover {
    MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
-
-    /* HEADER */
+@media (max-width: 767px) {
 
     .site-header {
-        height: 62px;
-
-        overflow: visible;
-
-        z-index: 100;
+        height: 65px;
     }
 
-
-    /* BRAND AREA */
+    .header-inner {
+        padding: 0 18px;
+    }
 
     .brand-area {
-        position: relative;
+        width: 220px;
 
-        width: 210px;
+        height: 63px;
+    }
 
-        height: 62px;
+    .brand-name {
+        font-size: 27px;
+    }
 
-        flex-shrink: 0;
-
-        overflow: visible;
+    .brand-logo {
+        width: 34px;
     }
 
 
-    /* BRAND BLOCK */
+    /* MOBILE NAV */
 
-    .brand-yellow {
-        left: 0;
-        top: 0;
-
-        width: 165px;
-        height: 62px;
-
-        background: var(--yellow);
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-
-        z-index: 1;
-
-        pointer-events: none;
+    .mobile-menu-button {
+        display: block;
     }
 
-
-    /* LOGO */
-
-    .logo-link {
-        left: 20px;
-        top: 0;
-
-        width: 85px;
-        height: 62px;
-
-        z-index: 5;
-    }
-
-    .logo {
-        width: 48px;
-    }
-
-
-    /* MOBILE TOP STRIPES */
-
-    .top-stripes {
-        left: 145px;
-        top: 0;
-
-        width: 155px;
-        height: 62px;
-
-        display: flex;
-
-        overflow: visible;
-
-        z-index: 3;
-
-        pointer-events: none;
-    }
-
-    .top-stripes span {
-        flex: 0 0 52px;
-
-        width: 52px;
-        height: 62px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-    }
-
-
-    /* MOBILE NAVIGATION */
-
-    .main-navigation {
-        position: absolute;
-
-        top: 62px;
-        right: 10px;
-
-        width: 190px;
-
+    .main-nav {
         display: none;
 
-        flex-direction: column;
-        align-items: stretch;
+        position: absolute;
 
-        gap: 5px;
+        top: 65px;
 
-        margin: 0;
-        padding: 10px;
+        left: 0;
+
+        width: 100%;
+
+        height: auto;
 
         background: var(--cream);
 
-        border: 1px solid var(--black);
-
-        box-shadow: 5px 5px 0 var(--black);
-
-        z-index: 140;
+        border-bottom: 1px solid var(--black);
     }
 
-    .main-navigation.active {
-        display: flex;
+    .main-nav.show {
+        display: block;
     }
 
-    .nav-btn {
+    .main-nav ul {
         width: 100%;
 
-        height: 40px;
-
-        padding: 0 15px;
-
-        border-radius: 20px;
-
-        font-size: 10px;
-
-        justify-content: center;
-    }
-
-
-    /* HAMBURGER */
-
-    .menu-toggle {
         display: flex;
 
-        position: relative;
+        flex-direction: column;
 
-        width: 38px;
-        height: 38px;
+        align-items: stretch;
+    }
 
-        margin-right: 10px;
+    .main-nav a {
+        width: 100%;
 
-        flex-shrink: 0;
+        height: 55px;
 
-        z-index: 150;
+        justify-content: flex-start;
 
-        cursor: pointer;
+        padding: 0 25px;
+
+        border-top: 1px solid rgba(34, 34, 34, .15);
     }
 
 
     /* MOBILE HERO */
 
     .hero {
-        height: calc(100vh - 62px);
-
-        min-height: 620px;
+        min-height: 450px;
     }
 
-    .hero-inner {
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-        height: 100%;
+    .hero-content {
+        padding: 50px 25px;
     }
 
-
-    /* MOBILE HERO COPY */
-
-    .hero-copy {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        transform: none;
-
-        margin: 55px 25px 0;
-
-        width: auto;
+    .hero h1 {
+        font-size: 58px;
     }
 
-    .hero-copy h1 {
-        font-size: 54px;
+    .hero p {
+        font-size: 13px;
 
-        line-height: .92;
-
-        letter-spacing: .3px;
-    }
-
-    .hero-copy p {
-        width: 100%;
-
-        margin: 10px 0 0 1px;
-
-        font-size: 10px;
-
-        line-height: 1.4;
+        margin-top: 20px;
     }
 
 
-    /* MOBILE HERO BUTTONS */
+    /* MOBILE ABOUT */
 
-    .hero-buttons {
-        gap: 10px;
-
-        margin-top: 17px;
-
-        margin-left: 0;
-    }
-
-    .hero-button {
-        height: 42px;
-
-        padding: 0 17px;
-
-        border-radius: 23px;
-
-        font-size: 11px;
-    }
-
-
-    /* MOBILE HERO VIDEO */
-
-    .hero-bg-video {
-        object-position: center;
-    }
-
-    .hero-bg::after {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(255, 244, 230, 0.92) 0%,
-                rgba(255, 244, 230, 0.76) 48%,
-                rgba(255, 244, 230, 0.40) 100%
-            );
-    }
-
-
-    /* MOBILE DIVIDER */
-
-    .divider {
-        height: 50px;
-    }
-
-    .divider-left-stripes {
-        left: 0;
-
-        width: 230px;
-
-        height: 50px;
-    }
-
-    .divider-left-stripes span {
-        height: 50px;
-    }
-
-    .divider-left-stripes .stripe-yellow {
-        width: 95px;
-    }
-
-    .divider-left-stripes .stripe-blue,
-    .divider-left-stripes .stripe-red,
-    .divider-left-stripes .stripe-black {
-        width: 55px;
-    }
-
-
-    /* =====================================================
-       MOBILE ABOUT
-    ===================================================== */
-
-    .about-section {
-        height: auto;
-
-        min-height: 780px;
-    }
-
-    .about-inner {
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-
-        height: auto;
+    .about-hero {
+        min-height: auto;
     }
 
     .about-copy {
+        width: 100%;
+
+        padding: 50px 25px 30px;
+    }
+
+    .about-copy h2 {
+        font-size: 48px;
+
+        line-height: .95;
+
+        margin-bottom: 12px;
+    }
+
+    .about-copy p {
+        width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+    .about-photo {
         position: relative;
 
-        left: auto;
         top: auto;
 
-        transform: none;
+        right: auto;
 
-        padding: 55px 25px 0;
+        width: calc(100% - 50px);
 
-        width: auto;
+        height: 300px;
 
-        display: flex;
+        margin: 25px;
 
-        flex-direction: column;
-
-        align-items: flex-start;
+        border-bottom-left-radius: 60px;
     }
 
 
-    /* MOBILE PROJECT LABEL */
+    /* MOBILE PROGRAM */
 
-    .project-label {
-        margin: 0 0 13px 1px;
-
-        font-size: 9px;
-
-        letter-spacing: 1.3px;
-
-        line-height: 1.3;
+    .about-program {
+        padding: 50px 25px;
     }
 
 
@@ -2185,23 +1324,23 @@ a:hover {
         gap: 9px;
 
         /*
-           INCREASED SPACING
+           REDUCED FROM 25px
         */
-        margin: 0 0 14px 1px;
+        margin: 0 0 10px 1px;
     }
 
     .logocolor1 {
         /*
-           INCREASED FROM 58px
+           INCREASED FROM 50px
         */
-        width: 65px;
+        width: 54px;
     }
 
     .wordmarkcolor {
         /*
-           INCREASED FROM 245px
+           INCREASED FROM 215px
         */
-        width: 270px;
+        width: 220px;
     }
 
 
@@ -2224,281 +1363,109 @@ a:hover {
         font-size: 13px;
 
         line-height: 1.5;
-
-        letter-spacing: 0;
     }
 
 
-    /* MOBILE ABOUT PHOTO */
+    /* MOBILE RESOURCES */
 
-    .about-photo {
-        position: relative;
+    .resources-hero {
+        min-height: 350px;
 
-        top: auto;
-        right: auto;
+        padding: 50px 25px;
+    }
 
-        transform: none;
+    .resources-content h1 {
+        font-size: 58px;
+    }
 
-        margin: 35px 25px 40px;
+    .resources-content p {
+        font-size: 13px;
+    }
 
+    .resources-grid {
+        grid-template-columns: 1fr;
+
+        padding: 40px 25px;
+
+        gap: 20px;
+    }
+
+    .resource-card {
+        min-height: 280px;
+
+        padding: 30px;
+    }
+
+    .resource-card h2 {
+        font-size: 44px;
+    }
+
+
+    /* MOBILE GALLERY */
+
+    .gallery-hero {
+        min-height: 450px;
+    }
+
+    .gallery-hero-content {
+        padding: 60px 25px;
+    }
+
+    .gallery-hero-content h1 {
+        font-size: 58px;
+    }
+
+    .gallery-switcher {
         width: calc(100% - 50px);
 
-        max-width: none;
+        margin: 30px 25px;
+    }
 
-        height: 300px;
+    .gallery-switcher button {
+        flex: 1;
 
-        border-radius: 0 0 0 70px;
+        padding: 12px 10px;
+
+        font-size: 11px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+
+        padding: 0 25px 50px;
+    }
+
+    .documentation-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+
+        padding: 0 25px 50px;
     }
 
 
     /* MOBILE FOOTER */
 
     .site-footer {
-        padding: 15px 20px;
-    }
-
-    .site-footer p {
-        font-size: 9px;
-    }
-
-
-    /* MOBILE RESOURCES HERO */
-
-    .resources-hero {
-        min-height: 350px;
-    }
-
-    .resources-hero-inner {
-        min-height: 350px;
-
-        padding: 55px 25px;
-    }
-
-    .section-label {
-        font-size: 8px;
-
-        letter-spacing: 1.5px;
-    }
-
-    .resources-title h1 {
-        font-size: 54px;
-
-        line-height: .9;
-    }
-
-    .resources-intro {
-        width: 100%;
-
-        margin-top: 18px;
-
-        font-size: 10px;
-
-        line-height: 1.5;
-    }
-
-
-    /* MOBILE RESOURCES CONTENT */
-
-    .resources-section {
         padding: 45px 25px;
     }
 
-    .resources-container {
-        max-width: none;
-    }
-
-
-    /* MOBILE NORMAL RESOURCE CARDS */
-
-    .resource-card {
-        display: block;
-
-        margin-bottom: 30px;
-
-        padding: 25px 22px;
-
-        box-shadow: 5px 5px 0 var(--black);
-    }
-
-    .resource-number {
-        margin-bottom: 12px;
-
-        font-size: 30px;
-    }
-
-    .resource-content h2 {
-        font-size: 32px;
-
-        line-height: .95;
-    }
-
-    .resource-content p {
-        margin-top: 15px;
-
-        font-size: 11px;
-
-        line-height: 1.6;
-    }
-
-
-    /* MOBILE SWIPEABLE EPISODES */
-
-    .episode-slider {
-        width: 100%;
-
-        margin: 40px auto 55px;
-    }
-
-    .episode-track {
-        width: 100%;
-
-        padding: 0 3px 10px;
-
-        overflow-x: auto;
-
-        scroll-snap-type: x mandatory;
-    }
-
-
-    /* MOBILE EPISODE CARD */
-
-    .episode-track .episode-card {
-        flex: 0 0 100%;
-
-        width: 100%;
-
-        min-width: 100%;
-
-        min-height: 0;
-
-        padding: 30px 25px 30px;
-
-        display: flex;
-
+    .footer-inner {
         flex-direction: column;
 
-        align-items: stretch;
-
-        justify-content: flex-start;
-
-        gap: 25px;
-
-        margin: 0;
-
-        border: 2px solid var(--black);
-
-        box-shadow: 6px 6px 0 var(--black);
-
-        overflow: hidden;
+        gap: 30px;
     }
 
-
-    /* MOBILE EPISODE INFORMATION */
-
-    .episode-track .episode-info {
-        width: 100%;
-
-        padding-right: 0;
+    .footer-brand {
+        font-size: 36px;
     }
 
+    .footer-links {
+        flex-wrap: wrap;
 
-    /* MOBILE EPISODE NUMBER */
-
-    .episode-track .episode-number {
-        margin-bottom: 20px;
-
-        font-size: 20px;
-    }
-
-
-    /* MOBILE EPISODE LABEL */
-
-    .episode-track .episode-label {
-        margin-bottom: 9px;
-
-        font-size: 7px;
-
-        letter-spacing: 1px;
-    }
-
-
-    /* MOBILE EPISODE TITLE */
-
-    .episode-track .episode-info h2 {
-        margin-bottom: 20px;
-
-        font-size: 42px;
-
-        line-height: .9;
-    }
-
-
-    /* MOBILE EPISODE TOPIC */
-
-    .episode-track .episode-info h3 {
-        font-size: 10px;
-
-        margin-bottom: 4px;
-    }
-
-    .episode-track .episode-info ul {
-        padding-left: 18px;
-
-        font-size: 10px;
-
-        line-height: 1.45;
-    }
-
-
-    /* MOBILE EPISODE VIDEO */
-
-    .episode-track .episode-video {
-        width: 100%;
-
-        flex: none;
-    }
-
-    .episode-track .video-wrapper {
-        width: 100%;
-
-        padding-bottom: 56.25%;
-
-        border-radius: 0 50px 0 0;
-    }
-
-
-    /* MOBILE DOTS */
-
-    .episode-dots {
-        margin-top: 22px;
-
-        gap: 8px;
-    }
-
-    .episode-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-
-    /* MOBILE LEARNING TOPICS */
-
-    .topic-grid {
-        grid-template-columns: 1fr;
-
-        gap: 8px;
-
-        margin-top: 20px;
-    }
-
-    .topic-item {
-        min-height: 48px;
-
-        font-size: 9px;
-    }
-
-    .resources-back {
-        margin-top: 45px;
+        gap: 20px;
     }
 
 }
@@ -2508,158 +1475,64 @@ a:hover {
    VERY SMALL PHONES
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 
     .site-header {
-        height: 58px;
+        height: 60px;
+    }
 
-        overflow: visible;
-
-        z-index: 100;
+    .header-inner {
+        padding: 0 15px;
     }
 
     .brand-area {
         width: 190px;
 
         height: 58px;
-
-        overflow: visible;
     }
 
-    .brand-yellow {
-        width: 165px;
-
-        height: 58px;
-
-        pointer-events: none;
+    .brand-name {
+        font-size: 24px;
     }
 
-    .logo-link {
-        left: 15px;
-
-        width: 80px;
-
-        height: 58px;
+    .brand-logo {
+        width: 30px;
     }
 
-    .logo {
-        width: 43px;
-    }
 
-    .top-stripes {
-        left: 145px;
-
-        width: 145px;
-
-        height: 58px;
-
-        overflow: visible;
-
-        pointer-events: none;
-    }
-
-    .top-stripes span {
-        flex: 0 0 48px;
-
-        width: 48px;
-
-        height: 58px;
-
-        transform: skewX(-20deg);
-
-        transform-origin: top left;
-    }
-
-    .menu-toggle {
-        display: flex;
-
-        width: 32px;
-        height: 32px;
-
-        margin-right: 8px;
-
-        font-size: 19px;
-
-        z-index: 150;
-
-        cursor: pointer;
-    }
-
-    .main-navigation {
-        top: 58px;
-
-        right: 8px;
-
-        width: 175px;
-
-        z-index: 140;
-    }
-
-    .nav-btn {
-        height: 38px;
-
-        font-size: 9px;
-    }
+    /* VERY SMALL HERO */
 
     .hero {
-        height: calc(100vh - 58px);
-
-        min-height: 600px;
+        min-height: 400px;
     }
 
-    .hero-copy {
-        margin: 45px 20px 0;
+    .hero-content {
+        padding: 45px 20px;
     }
 
-    .hero-copy h1 {
-        font-size: 47px;
-    }
-
-    .hero-copy p {
-        font-size: 9px;
-
-        line-height: 1.4;
-    }
-
-    .hero-buttons {
-        gap: 7px;
-
-        margin-top: 14px;
-    }
-
-    .hero-button {
-        height: 38px;
-
-        padding: 0 14px;
-
-        font-size: 9px;
+    .hero h1 {
+        font-size: 48px;
     }
 
 
-    /* VERY SMALL HERO VIDEO */
-
-    .hero-bg-video {
-        object-position: center;
-    }
-
-
-    /* =====================================================
-       VERY SMALL PHONE ABOUT
-    ===================================================== */
+    /* VERY SMALL ABOUT */
 
     .about-copy {
-        padding: 45px 20px 0;
+        padding: 40px 20px 25px;
     }
 
+    .about-copy h2 {
+        font-size: 42px;
 
-    /* VERY SMALL PROJECT LABEL */
+        line-height: .95;
+    }
 
-    .project-label {
-        font-size: 8px;
+    .about-photo {
+        margin: 20px;
 
-        letter-spacing: 1px;
+        width: calc(100% - 40px);
 
-        margin-bottom: 11px;
+        height: 250px;
     }
 
 
@@ -2669,23 +1542,23 @@ a:hover {
         gap: 7px;
 
         /*
-           INCREASED SPACING
+           REDUCED FROM 22px
         */
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
 
     .logocolor1 {
         /*
-           INCREASED FROM 50px
+           INCREASED FROM 43px
         */
-        width: 55px;
+        width: 48px;
     }
 
     .wordmarkcolor {
         /*
-           INCREASED FROM 205px
+           INCREASED FROM 185px
         */
-        width: 225px;
+        width: 195px;
     }
 
 
@@ -2708,277 +1581,78 @@ a:hover {
 
         width: calc(100% - 40px);
 
-        height: 270px;
-
-        border-bottom-left-radius: 60px;
+        height: 250px;
     }
 
 
-    /* FOOTER */
-
-    .site-footer {
-        padding: 13px 15px;
-    }
-
-    .site-footer p {
-        font-size: 8px;
-    }
-
-
-    /* RESOURCES */
+    /* VERY SMALL RESOURCES */
 
     .resources-hero {
-        min-height: 320px;
-    }
-
-    .resources-hero-inner {
-        min-height: 320px;
-
         padding: 45px 20px;
     }
 
-    .resources-title h1 {
-        font-size: 46px;
+    .resources-content h1 {
+        font-size: 48px;
     }
 
-    .resources-intro {
-        font-size: 9px;
-    }
-
-    .resources-section {
+    .resources-grid {
         padding: 35px 20px;
     }
 
     .resource-card {
-        padding: 22px 18px;
+        padding: 25px;
 
-        box-shadow: 4px 4px 0 var(--black);
+        min-height: 250px;
     }
 
-    .resource-number {
-        font-size: 27px;
+    .resource-card h2 {
+        font-size: 38px;
     }
 
-    .resource-content h2 {
-        font-size: 27px;
+
+    /* VERY SMALL GALLERY */
+
+    .gallery-hero {
+        min-height: 400px;
     }
 
-    .resource-content p {
+    .gallery-hero-content {
+        padding: 50px 20px;
+    }
+
+    .gallery-hero-content h1 {
+        font-size: 48px;
+    }
+
+    .gallery-switcher {
+        width: calc(100% - 40px);
+
+        margin: 25px 20px;
+    }
+
+    .gallery-switcher button {
+        padding: 10px 6px;
+
         font-size: 10px;
     }
 
-    .topic-item {
-        font-size: 8px;
+    .gallery-grid {
+        padding: 0 20px 40px;
+    }
+
+    .documentation-grid {
+        padding: 0 20px 40px;
     }
 
 
-    /* VERY SMALL PHONE EPISODE CARD */
+    /* VERY SMALL FOOTER */
 
-    .episode-slider {
-        margin-top: 35px;
-
-        margin-bottom: 45px;
+    .site-footer {
+        padding: 40px 20px;
     }
 
-    .episode-track .episode-card {
-        padding: 25px 20px 25px;
-
-        gap: 20px;
-
-        box-shadow: 5px 5px 0 var(--black);
-    }
-
-    .episode-track .episode-number {
-        font-size: 18px;
-
-        margin-bottom: 16px;
-    }
-
-    .episode-track .episode-label {
-        font-size: 6px;
-
-        letter-spacing: .9px;
-    }
-
-    .episode-track .episode-info h2 {
-        font-size: 36px;
-
-        line-height: .9;
-    }
-
-    .episode-track .episode-info h3 {
-        font-size: 9px;
-    }
-
-    .episode-track .episode-info ul {
-        font-size: 9px;
-
-        line-height: 1.4;
-    }
-
-    .episode-track .video-wrapper {
-        border-radius: 0 42px 0 0;
-    }
-
-    .episode-dots {
-        margin-top: 18px;
-
-        gap: 7px;
-    }
-
-    .episode-dot {
-        width: 9px;
-
-        height: 9px;
+    .footer-brand {
+        font-size: 32px;
     }
 
 }
-
-
-/* =========================================================
-   FINAL CLICK / STACKING SAFETY
-========================================================= */
-
-.brand-yellow,
-.top-stripes {
-    pointer-events: none;
-}
-
-.menu-toggle {
-    pointer-events: auto;
-
-    position: relative;
-
-    z-index: 150;
-}
-
-
-/* =========================================================
-   FINAL RESOURCES HEADER
-   BLUE → YELLOW → RED → BLACK
-========================================================= */
-
-.resources-page .brand-yellow {
-    background: var(--blue) !important;
-}
-
-.resources-page .top-stripes .stripe-blue {
-    background: var(--yellow) !important;
-}
-
-.resources-page .top-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.resources-page .top-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
-   FINAL EPISODE COLOR SAFETY
-========================================================= */
-
-.resources-page .episode-blue {
-    background: var(--blue) !important;
-
-    color: white !important;
-}
-
-.resources-page .episode-yellow {
-    background: var(--yellow) !important;
-
-    color: var(--black) !important;
-}
-
-.resources-page .episode-red {
-    background: var(--red) !important;
-
-    color: white !important;
-}
-
-
-/* =========================================================
-   KEEP DIVIDER COLORS UNCHANGED
-========================================================= */
-
-.resources-page .divider-left-stripes .stripe-yellow {
-    background: var(--yellow) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-blue {
-    background: var(--blue) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-red {
-    background: var(--red) !important;
-}
-
-.resources-page .divider-left-stripes .stripe-black {
-    background: var(--black) !important;
-}
-
-
-/* =========================================================
-   FINAL EPISODE DRAG FIX
-========================================================= */
-
-.episode-track {
-    cursor: grab;
-
-    user-select: none;
-    -webkit-user-select: none;
-
-    touch-action: pan-x;
-}
-
-.episode-track.is-dragging {
-    cursor: grabbing;
-
-    scroll-behavior: auto;
-
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.episode-track.is-dragging iframe {
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   MOBILE EPISODE DRAG FIX
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .episode-track {
-        overflow-x: auto;
-
-        overflow-y: hidden;
-
-        scroll-snap-type: x mandatory;
-
-        -webkit-overflow-scrolling: touch;
-
-        touch-action: pan-x;
-
-        overscroll-behavior-x: contain;
-    }
-
-    .episode-track .episode-card {
-        flex: 0 0 100%;
-
-        min-width: 100%;
-
-        user-select: none;
-
-        -webkit-user-select: none;
-    }
-
-}
-
-
-/* =========================================================
-   END
-========================================================= */
