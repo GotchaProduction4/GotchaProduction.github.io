@@ -719,17 +719,20 @@ a:hover {
 
 
 /* =========================================================
-   TALAKBAY PROJECT LOGO
+   TALAKBAY PROJECT LOGO — CENTERED
 ========================================================= */
 
 .talakbay-project-logo {
     display: flex;
 
     align-items: center;
+    justify-content: center;
 
     gap: 7px;
 
-    margin: 0 0 18px 2px;
+    width: 100%;
+
+    margin: 0 0 18px 0;
 
     padding: 0;
 
@@ -1691,10 +1694,17 @@ a:hover {
         margin-bottom: 8px;
     }
 
+
+    /* TABLET TALAKBAY LOGO — CENTERED */
+
     .talakbay-project-logo {
+        width: 100%;
+
+        justify-content: center;
+
         gap: 5px;
 
-        margin: 0 0 15px 2px;
+        margin: 0 0 15px 0;
 
         padding: 0;
 
@@ -2170,12 +2180,16 @@ a:hover {
     }
 
 
-    /* MOBILE TALAKBAY LOGO */
+    /* MOBILE TALAKBAY LOGO — CENTERED */
 
     .talakbay-project-logo {
+        width: 100%;
+
+        justify-content: center;
+
         gap: 5px;
 
-        margin: 0 0 16px 1px;
+        margin: 0 0 16px 0;
 
         padding: 0;
 
@@ -2653,12 +2667,16 @@ a:hover {
     }
 
 
-    /* VERY SMALL TALAKBAY LOGO */
+    /* VERY SMALL TALAKBAY LOGO — CENTERED */
 
     .talakbay-project-logo {
+        width: 100%;
+
+        justify-content: center;
+
         gap: 4px;
 
-        margin: 0 0 14px 1px;
+        margin: 0 0 14px 0;
 
         padding: 0;
 
