@@ -732,9 +732,14 @@ a:hover {
 
     align-items: center;
 
-    gap: 14px;
+    gap: 16px;
 
-    margin: 0 0 30px 2px;
+    /*
+       REDUCED FROM 30px
+       This removes the large empty space
+       below the Talakbay logo.
+    */
+    margin: 0 0 12px 2px;
 }
 
 
@@ -745,7 +750,11 @@ a:hover {
 .talakbay-icon {
     display: block;
 
-    width: 65px;
+    /*
+       INCREASED FROM 65px
+    */
+    width: 82px;
+
     height: auto;
 
     flex-shrink: 0;
@@ -759,7 +768,11 @@ a:hover {
 .talakbay-wordmark {
     display: block;
 
-    width: 270px;
+    /*
+       INCREASED FROM 270px
+    */
+    width: 330px;
+
     height: auto;
 
     flex-shrink: 0;
@@ -1689,17 +1702,26 @@ a:hover {
     }
 
     .talakbay-project-logo {
-        gap: 10px;
+        gap: 12px;
 
-        margin-bottom: 24px;
+        /*
+           REDUCED FROM 24px
+        */
+        margin-bottom: 10px;
     }
 
     .talakbay-icon {
-        width: 52px;
+        /*
+           INCREASED FROM 52px
+        */
+        width: 64px;
     }
 
     .talakbay-wordmark {
-        width: 215px;
+        /*
+           INCREASED FROM 215px
+        */
+        width: 255px;
     }
 
     .about-copy h2 {
@@ -2164,15 +2186,24 @@ a:hover {
     .talakbay-project-logo {
         gap: 9px;
 
-        margin: 0 0 25px 1px;
+        /*
+           REDUCED FROM 25px
+        */
+        margin: 0 0 9px 1px;
     }
 
     .talakbay-icon {
-        width: 50px;
+        /*
+           INCREASED FROM 50px
+        */
+        width: 58px;
     }
 
     .talakbay-wordmark {
-        width: 215px;
+        /*
+           INCREASED FROM 215px
+        */
+        width: 245px;
     }
 
 
@@ -2639,15 +2670,24 @@ a:hover {
     .talakbay-project-logo {
         gap: 7px;
 
-        margin-bottom: 22px;
+        /*
+           REDUCED FROM 22px
+        */
+        margin-bottom: 8px;
     }
 
     .talakbay-icon {
-        width: 43px;
+        /*
+           INCREASED FROM 43px
+        */
+        width: 50px;
     }
 
     .talakbay-wordmark {
-        width: 185px;
+        /*
+           INCREASED FROM 185px
+        */
+        width: 205px;
     }
 
 
