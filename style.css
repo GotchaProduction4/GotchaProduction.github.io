@@ -735,11 +735,9 @@ a:hover {
     gap: 16px;
 
     /*
-       REDUCED FROM 30px
-       This removes the large empty space
-       below the Talakbay logo.
+       INCREASED SPACING FOR BALANCE
     */
-    margin: 0 0 12px 2px;
+    margin: 0 0 22px 2px;
 }
 
 
@@ -747,13 +745,13 @@ a:hover {
    TALAKBAY ICON
 ========================================================= */
 
-.talakbay-icon {
+.logocolor1 {
     display: block;
 
     /*
-       INCREASED FROM 65px
+       INCREASED FROM 82px
     */
-    width: 82px;
+    width: 95px;
 
     height: auto;
 
@@ -765,13 +763,13 @@ a:hover {
    TALAKBAY WORDMARK
 ========================================================= */
 
-.talakbay-wordmark {
+.wordmarkcolor {
     display: block;
 
     /*
-       INCREASED FROM 270px
+       INCREASED FROM 330px
     */
-    width: 330px;
+    width: 380px;
 
     height: auto;
 
@@ -1705,23 +1703,23 @@ a:hover {
         gap: 12px;
 
         /*
-           REDUCED FROM 24px
+           INCREASED SPACING
         */
-        margin-bottom: 10px;
+        margin-bottom: 18px;
     }
 
-    .talakbay-icon {
+    .logocolor1 {
         /*
-           INCREASED FROM 52px
+           INCREASED FROM 64px
         */
-        width: 64px;
+        width: 72px;
     }
 
-    .talakbay-wordmark {
+    .wordmarkcolor {
         /*
-           INCREASED FROM 215px
+           INCREASED FROM 255px
         */
-        width: 255px;
+        width: 285px;
     }
 
     .about-copy h2 {
@@ -2187,23 +2185,23 @@ a:hover {
         gap: 9px;
 
         /*
-           REDUCED FROM 25px
+           INCREASED SPACING
         */
-        margin: 0 0 9px 1px;
+        margin: 0 0 14px 1px;
     }
 
-    .talakbay-icon {
+    .logocolor1 {
         /*
-           INCREASED FROM 50px
+           INCREASED FROM 58px
         */
-        width: 58px;
+        width: 65px;
     }
 
-    .talakbay-wordmark {
+    .wordmarkcolor {
         /*
-           INCREASED FROM 215px
+           INCREASED FROM 245px
         */
-        width: 245px;
+        width: 270px;
     }
 
 
@@ -2671,23 +2669,23 @@ a:hover {
         gap: 7px;
 
         /*
-           REDUCED FROM 22px
+           INCREASED SPACING
         */
-        margin-bottom: 8px;
+        margin-bottom: 12px;
     }
 
-    .talakbay-icon {
+    .logocolor1 {
         /*
-           INCREASED FROM 43px
+           INCREASED FROM 50px
         */
-        width: 50px;
+        width: 55px;
     }
 
-    .talakbay-wordmark {
+    .wordmarkcolor {
         /*
-           INCREASED FROM 185px
+           INCREASED FROM 205px
         */
-        width: 205px;
+        width: 225px;
     }
 
 
