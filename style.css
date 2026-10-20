@@ -2951,3 +2951,102 @@ a:hover {
 /* =========================================================
    END
 ========================================================= */
+
+/* =========================================================
+   GALLERY PAGE — ARTWORK OUTPUTS
+   Each output contains a title, short description, and 3 images.
+   Add 21 .artwork-output cards in gallery.html.
+========================================================= */
+
+.gallery .artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery .artwork-output {
+    min-width: 0;
+    padding: 22px;
+    background: var(--cream);
+    border: 1px solid var(--black);
+    box-shadow: 7px 7px 0 var(--black);
+}
+
+.gallery .artwork-output h2 {
+    margin: 0 0 9px;
+    color: var(--black);
+    font-family: "Anton", sans-serif;
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.gallery .artwork-output p {
+    margin: 0 0 18px;
+    color: var(--black);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.gallery .artwork-images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.gallery .artwork-images img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--black);
+    background: #e8dccb;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .gallery .artwork-grid {
+        gap: 22px;
+    }
+
+    .gallery .artwork-output {
+        padding: 18px;
+        box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .gallery .artwork-images {
+        gap: 6px;
+    }
+}
+
+/* Mobile: one output card per row, while keeping 3 images per output */
+@media (max-width: 600px) {
+    .gallery .artwork-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .gallery .artwork-output {
+        padding: 17px;
+        box-shadow: 4px 4px 0 var(--black);
+    }
+
+    .gallery .artwork-output h2 {
+        font-size: 25px;
+    }
+
+    .gallery .artwork-output p {
+        font-size: 11px;
+        margin-bottom: 14px;
+    }
+
+    .gallery .artwork-images {
+        gap: 5px;
+    }
+}
+
