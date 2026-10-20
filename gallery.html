@@ -1496,6 +1496,143 @@
         letter-spacing: .5px;
     }
 
+
+
+/* =========================================================
+   ARTWORK OUTPUT CARDS — 21 OUTPUTS, 3 IMAGES EACH
+   ========================================================= */
+
+#featuredGallery.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+.artwork-output {
+    min-width: 0;
+    padding: 18px;
+    text-align: left;
+    background: var(--cream);
+    border: 2px solid var(--black);
+    box-shadow: 6px 6px 0 var(--black);
+}
+
+.artwork-output-header {
+    margin-bottom: 14px;
+}
+
+.artwork-output h3 {
+    margin: 0 0 8px;
+    color: var(--black);
+    font-family: "Anton", sans-serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 400;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.artwork-output p {
+    margin: 0;
+    color: var(--black);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.artwork-output-images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.artwork-output-image {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--black);
+    border: 1px solid var(--black);
+    cursor: pointer;
+}
+
+.artwork-output-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.artwork-output-image:hover img {
+    transform: scale(1.06);
+}
+
+.artwork-output-image::after {
+    content: "+";
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--red);
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.artwork-output-image:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    #featuredGallery.artwork-grid {
+        gap: 20px;
+    }
+
+    .artwork-output {
+        padding: 13px;
+        box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .artwork-output-images {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    #featuredGallery.artwork-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .artwork-output {
+        padding: 14px;
+    }
+
+    .artwork-output h3 {
+        font-size: 25px;
+    }
+
+    .artwork-output p {
+        font-size: 10px;
+    }
+
+    .artwork-output-images {
+        gap: 7px;
+    }
+
+    .artwork-output-image::after {
+        opacity: 1;
+    }
+}
+
 </style>
 
 </head>
@@ -1671,7 +1808,7 @@
 
         <!-- =================================================
              FEATURED GALLERY
-             images/BTS/edit 1.jpg - edit 20.jpg
+             images/BTS/edit 1.jpg - edit 63.jpg (21 outputs × 3 images)
              ================================================= -->
 
         <section class="gallery-section"
@@ -1688,13 +1825,12 @@
                 </h2>
 
                 <p>
-                    Explore sample works and photographs from
-                    the Talakbay project.
+                    Explore 21 artwork outputs, each presented with three photographs and a short description.
                 </p>
 
             </div>
 
-            <div class="gallery-grid"
+            <div class="artwork-grid"
                  id="featuredGallery">
 
             </div>
@@ -1704,7 +1840,7 @@
 
         <!-- =================================================
              PHOTO DOCUMENTATION
-             images/BTS/edit 21.jpg - edit 65.jpg
+             images/BTS/edit 64.jpg - edit 85.jpg
              ================================================= -->
 
         <section class="gallery-section"
@@ -1738,7 +1874,7 @@
 
         <!-- =================================================
              BTS DOCUMENTATION
-             images/BTS/edit 66.jpg - edit 110.jpg
+             images/BTS/edit 86.jpg - edit 110.jpg
              ================================================= -->
 
         <section class="gallery-section"
@@ -1966,13 +2102,13 @@ function toggleMobileMenu() {
    images/BTS/
 
    Gallery:
-   edit 1.jpg - edit 20.jpg
+   edit 1.jpg - edit 63.jpg (artwork outputs)
 
    Photo Documentation:
-   edit 21.jpg - edit 65.jpg
+   edit 64.jpg - edit 85.jpg
 
    BTS Documentation:
-   edit 66.jpg - edit 110.jpg
+   edit 86.jpg - edit 110.jpg
 
    ========================================================= */
 
@@ -2001,76 +2137,160 @@ function getGalleryImage(number) {
 
 function createFeaturedGallery() {
 
-    const container =
-        document.getElementById(
-            "featuredGallery"
-        );
-
+    const container = document.getElementById("featuredGallery");
     if (!container) return;
 
+    /*
+      Replace these sample names and descriptions with the actual
+      titles/descriptions for each student output when available.
+      Each output uses three consecutive images from images/BTS/.
+    */
+    const artworkOutputs = [
+        {
+            title: "Artwork Output 01",
+            description: "A photographic study focused on framing, subject placement, and visual emphasis."
+        },
+        {
+            title: "Artwork Output 02",
+            description: "A composition study exploring how the arrangement of elements guides the viewer’s attention."
+        },
+        {
+            title: "Artwork Output 03",
+            description: "A visual exploration of space, balance, and the relationship between the subject and its surroundings."
+        },
+        {
+            title: "Artwork Output 04",
+            description: "A photographic exercise using perspective and framing to make the main subject stand out."
+        },
+        {
+            title: "Artwork Output 05",
+            description: "A study of visual hierarchy through subject placement and the use of surrounding space."
+        },
+        {
+            title: "Artwork Output 06",
+            description: "A composition that explores how foreground and background elements work together."
+        },
+        {
+            title: "Artwork Output 07",
+            description: "A lighting study observing the way light shapes the subject and creates visual emphasis."
+        },
+        {
+            title: "Artwork Output 08",
+            description: "A photographic exploration of highlights, shadows, and changes in tonal value."
+        },
+        {
+            title: "Artwork Output 09",
+            description: "A study of contrast that uses differences in brightness to strengthen the composition."
+        },
+        {
+            title: "Artwork Output 10",
+            description: "An exploration of how light direction affects form, depth, and mood in a photograph."
+        },
+        {
+            title: "Artwork Output 11",
+            description: "A visual study of shadow patterns and their role in directing attention."
+        },
+        {
+            title: "Artwork Output 12",
+            description: "A photographic exercise exploring the balance between illuminated and darker areas."
+        },
+        {
+            title: "Artwork Output 13",
+            description: "A storytelling study that connects visual details to communicate a clear idea."
+        },
+        {
+            title: "Artwork Output 14",
+            description: "A sequence of images arranged to create a sense of continuity and visual connection."
+        },
+        {
+            title: "Artwork Output 15",
+            description: "A visual narrative exploring how individual photographs can work together as a whole."
+        },
+        {
+            title: "Artwork Output 16",
+            description: "A study of unity through repeated visual elements and consistent composition."
+        },
+        {
+            title: "Artwork Output 17",
+            description: "A photographic sequence that encourages the viewer to follow a subject or moment."
+        },
+        {
+            title: "Artwork Output 18",
+            description: "An exploration of how image order and visual details can suggest a simple story."
+        },
+        {
+            title: "Artwork Output 19",
+            description: "A composition study bringing together framing, contrast, and a clear focal point."
+        },
+        {
+            title: "Artwork Output 20",
+            description: "A photographic exploration of visual organization and the connection between details."
+        },
+        {
+            title: "Artwork Output 21",
+            description: "A final visual study combining selected elements and principles of organization in photography."
+        }
+    ];
 
-    for (
-        let i = 1;
-        i <= 20;
-        i++
-    ) {
+    artworkOutputs.forEach(function(output, index) {
+        const firstImageNumber = index * 3 + 1;
 
-        const article =
-            document.createElement(
-                "article"
-            );
+        const article = document.createElement("article");
+        article.className = "artwork-output";
 
+        const header = document.createElement("div");
+        header.className = "artwork-output-header";
 
-        article.className =
-            "gallery-item";
+        const title = document.createElement("h3");
+        title.textContent = output.title;
 
+        const description = document.createElement("p");
+        description.textContent = output.description;
 
-        article.onclick =
-            function() {
+        header.appendChild(title);
+        header.appendChild(description);
+        article.appendChild(header);
 
-                openGalleryImage(
-                    this
-                );
+        const images = document.createElement("div");
+        images.className = "artwork-output-images";
 
-            };
+        for (let imageIndex = 0; imageIndex < 3; imageIndex++) {
+            const imageNumber = firstImageNumber + imageIndex;
 
+            const imageButton = document.createElement("div");
+            imageButton.className = "artwork-output-image";
+            imageButton.setAttribute("role", "button");
+            imageButton.setAttribute("tabindex", "0");
+            imageButton.setAttribute("aria-label", "Open image " + imageNumber);
 
-        const img =
-            document.createElement(
-                "img"
-            );
+            const img = document.createElement("img");
+            img.src = getGalleryImage(imageNumber);
+            img.alt = output.title + " — image " + (imageIndex + 1);
+            img.loading = "lazy";
 
+            imageButton.appendChild(img);
+            imageButton.addEventListener("click", function() {
+                openGalleryImage(imageButton);
+            });
+            imageButton.addEventListener("keydown", function(event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openGalleryImage(imageButton);
+                }
+            });
 
-        img.src =
-            getGalleryImage(i);
+            images.appendChild(imageButton);
+        }
 
-
-        img.alt =
-            "Talakbay Gallery Image " +
-            i;
-
-
-        img.loading =
-            "lazy";
-
-
-        article.appendChild(
-            img
-        );
-
-
-        container.appendChild(
-            article
-        );
-
-    }
-
+        article.appendChild(images);
+        container.appendChild(article);
+    });
 }
 
 
 /* =========================================================
    PHOTO DOCUMENTATION
-   EDIT 21 - 65
+   EDIT 64 - 85
    ========================================================= */
 
 function createDocumentationGallery() {
@@ -2084,8 +2304,8 @@ function createDocumentationGallery() {
 
 
     for (
-        let i = 21;
-        i <= 65;
+        let i = 64;
+        i <= 85;
         i++
     ) {
 
@@ -2141,7 +2361,7 @@ function createDocumentationGallery() {
         caption.textContent =
             "Photowalk Documentation " +
             String(
-                i - 20
+                i - 63
             ).padStart(
                 2,
                 "0"
@@ -2169,7 +2389,7 @@ function createDocumentationGallery() {
 
 /* =========================================================
    BTS DOCUMENTATION
-   EDIT 66 - 110
+   EDIT 86 - 110
    ========================================================= */
 
 function createBTSGallery() {
@@ -2183,7 +2403,7 @@ function createBTSGallery() {
 
 
     for (
-        let i = 66;
+        let i = 86;
         i <= 110;
         i++
     ) {
@@ -2240,7 +2460,7 @@ function createBTSGallery() {
         caption.textContent =
             "BTS Documentation " +
             String(
-                i - 65
+                i - 85
             ).padStart(
                 2,
                 "0"
