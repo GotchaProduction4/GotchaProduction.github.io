@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -193,6 +194,7 @@
             class="hero-bg-video"
             autoplay
             muted
+            loop
             playsinline
             preload="auto"
             aria-hidden="true">
@@ -633,168 +635,6 @@ function toggleMobileMenu() {
 
 }
 
-
-
-/* =========================================================
-   HERO VIDEO
-   CONTINUOUS LOOP
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-
-        const video =
-            document.querySelector(".hero-bg-video");
-
-
-        if (!video) {
-
-            return;
-
-        }
-
-
-
-        /* =================================================
-           VIDEO SETTINGS
-        ================================================= */
-
-        video.autoplay = true;
-
-        video.muted = true;
-
-        video.loop = false;
-
-        video.playsInline = true;
-
-
-
-        /* =================================================
-           PLAY VIDEO
-        ================================================= */
-
-        function playVideo() {
-
-
-            const promise =
-                video.play();
-
-
-            if (promise !== undefined) {
-
-
-                promise.catch(
-                    function () {
-
-                        console.log(
-                            "Hero video autoplay was blocked."
-                        );
-
-                    }
-                );
-
-            }
-
-        }
-
-
-
-        /* =================================================
-           START VIDEO
-        ================================================= */
-
-        playVideo();
-
-
-
-        /* =================================================
-           FORCE VIDEO TO RESTART
-           
-           JavaScript detects when the video reaches
-           the end and starts it again.
-        ================================================= */
-
-        video.addEventListener(
-            "ended",
-            function () {
-
-
-                video.currentTime = 0;
-
-                playVideo();
-
-            }
-        );
-
-
-
-        /* =================================================
-           BACKUP LOOP CHECK
-
-           Checks the video every 250 milliseconds.
-        ================================================= */
-
-        setInterval(
-            function () {
-
-
-                if (
-
-                    video.readyState >= 2 &&
-
-                    video.duration &&
-
-                    video.currentTime >=
-                    video.duration - 0.15
-
-                ) {
-
-
-                    video.currentTime = 0;
-
-                    playVideo();
-
-                }
-
-            },
-            250
-        );
-
-
-
-        /* =================================================
-           IF VIDEO IS PAUSED AT THE END
-        ================================================= */
-
-        video.addEventListener(
-            "pause",
-            function () {
-
-
-                if (
-
-                    video.duration &&
-
-                    video.currentTime >=
-                    video.duration - 0.15
-
-                ) {
-
-
-                    video.currentTime = 0;
-
-                    playVideo();
-
-                }
-
-            }
-        );
-
-    }
-);
-
 </script>
 
 
@@ -802,3 +642,4 @@ document.addEventListener(
 </body>
 
 </html>
+```
