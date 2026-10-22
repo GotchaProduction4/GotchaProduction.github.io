@@ -3053,42 +3053,43 @@ a:hover {
 
 /* =========================================================
    BACKGROUND UPDATE — BG 1.png
-   Shared fixed background for every page.
-   The image keeps its original proportions; cover may crop
-   the edges to fill the screen, but it will not stretch.
+   Background ends at the footer.
 ========================================================= */
 
-/* Keep the body itself transparent so the fixed image can show through. */
-html,
-body {
+html {
     min-height: 100%;
-    background: transparent !important;
+    background: var(--cream);
 }
 
 body {
     position: relative;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    background: transparent !important;
 }
 
-/* Fixed viewport layer: the background stays still while the page scrolls. */
+/* Background covers the full document, not the viewport only. */
 body::before {
     content: "";
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
     background-image: url("images/BG 1.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    opacity: 0.45; /* BG 1.png is displayed at 45% opacity */
+
+    opacity: 0.45;
     pointer-events: none;
     z-index: -1;
 }
 
-/* Make the page-level sections transparent so BG 1.png is visible throughout
-   Home, About, Resources, and Gallery. Intentionally colored cards remain unchanged. */
+/* Show BG 1.png through the main page sections. */
 .site-header,
 .hero,
 .hero-bg,
@@ -3105,9 +3106,13 @@ body::before {
     background-color: transparent !important;
 }
 
-/* Remove the old faded decorative background photos. */
+/* Remove the old decorative background photos. */
 .about-bg,
 .resources-bg,
 .gallery-hero-bg {
     display: none !important;
 }
+
+/* =========================================================
+   END BACKGROUND UPDATE
+========================================================= */
