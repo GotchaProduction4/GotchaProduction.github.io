@@ -1200,7 +1200,7 @@
 
 const artworkFolder = "images/BTS/";
 const documentationFolder = "images/Program Documentation/";
-const btsFolder = "images/BTS/";
+const btsFolder = "images/BTS Documentation/";
 
 /* Encode spaces in paths for browser compatibility. */
 function getArtworkImage(number) {
@@ -1212,7 +1212,7 @@ function getDocumentationImage(number) {
 }
 
 function getBTSImage(number) {
-    return btsFolder + "edit%20" + number + ".jpg";
+    return btsFolder + number + "edit.jpg";
 }
 
 /* MOBILE MENU */
@@ -1472,12 +1472,12 @@ function createBTSGallery() {
     const container = document.getElementById("btsGallery");
     if (!container) return;
 
-    for (let i = 86; i <= 110; i++) {
+    for (let i = 1; i <= 51; i++) {
         const item = createGalleryItem(
             getBTSImage(i),
             "Talakbay Behind the Scenes " + i,
             "bts-item",
-            "BTS Documentation " + String(i - 85).padStart(2, "0")
+            "BTS Documentation " + String(i).padStart(2, "0")
         );
 
         container.appendChild(item);
