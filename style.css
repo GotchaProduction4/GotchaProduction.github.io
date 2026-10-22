@@ -3111,3 +3111,137 @@ body::before {
 .gallery-hero-bg {
     display: none !important;
 }
+
+/* =========================================================
+   HERO COPY — REDUCED SPACING
+========================================================= */
+
+.hero-copy h1 {
+    margin: 0;
+    font-family: "Boxpot1", sans-serif;
+    font-size: clamp(75px, 10vw, 150px);
+    font-weight: 400;
+    line-height: .85;
+    letter-spacing: .5px;
+    color: var(--black);
+}
+
+.hero-copy p {
+    width: 430px;
+    margin: 15px 0 0 4px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--black);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    margin-left: 2px;
+}
+
+
+/* =========================================================
+   ABOUT SECTION — TALAKBAY WORDMARK SPACING
+========================================================= */
+
+.talakbay-project-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px 2px;
+}
+
+.talakbay-icon {
+    display: block;
+    width: 65px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.talakbay-wordmark {
+    display: block;
+    width: 270px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ABOUT TITLE — REDUCED DESCRIPTION GAP
+========================================================= */
+
+.about-copy h2 {
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: 78px;
+    font-weight: 400;
+    line-height: .9;
+    color: var(--black);
+}
+
+.about-copy p {
+    width: 450px;
+    margin: 15px 0 0 4px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--black);
+}
+
+
+/* =========================================================
+   MOBILE — TIGHTER TALAKBAY SPACING
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-copy p {
+        margin-top: 8px;
+    }
+
+    .hero-buttons {
+        margin-top: 13px;
+    }
+
+    .talakbay-project-logo {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .about-copy h2 {
+        margin-bottom: 6px;
+    }
+
+    .about-copy p {
+        margin-top: 8px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-copy p {
+        margin-top: 7px;
+    }
+
+    .hero-buttons {
+        margin-top: 11px;
+    }
+
+    .talakbay-project-logo {
+        margin-bottom: 16px;
+    }
+
+    .about-copy p {
+        margin-top: 7px;
+    }
+}
