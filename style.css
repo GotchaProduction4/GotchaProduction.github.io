@@ -3144,48 +3144,53 @@ body::before {
 }
 
 
-/* =========================================================
-   ABOUT SECTION — TALAKBAY WORDMARK SPACING
+ ABOUT SECTION — TIGHTER TALAKBAY WORDMARK SPACING
 ========================================================= */
 
-.talakbay-project-logo {
+.about-copy {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 0 10px 2px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.talakbay-icon {
+/* Reduce the gap between the project label and the logo */
+.about-copy .project-label {
+    margin-bottom: 8px;
+}
+
+/* Keep the symbol and wordmark close together */
+.about-copy .talakbay-project-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 4px 2px;
+    padding: 0;
+}
+
+/* Logo symbol */
+.about-copy .talakbay-icon {
     display: block;
     width: 65px;
     height: auto;
     flex-shrink: 0;
+    margin: 0;
 }
 
-.talakbay-wordmark {
+/* Talakbay wordmark image */
+.about-copy .talakbay-wordmark {
     display: block;
     width: 270px;
     height: auto;
     flex-shrink: 0;
-}
-
-
-/* =========================================================
-   ABOUT TITLE — REDUCED DESCRIPTION GAP
-========================================================= */
-
-.about-copy h2 {
     margin: 0;
-    font-family: "Anton", sans-serif;
-    font-size: 78px;
-    font-weight: 400;
-    line-height: .9;
-    color: var(--black);
 }
 
+/* Remove unnecessary spacing before the description */
 .about-copy p {
     width: 450px;
-    margin: 15px 0 0 4px;
+    max-width: 100%;
+    margin: 4px 0 0 4px;
+    padding: 0;
     font-family: "Be Vietnam Pro", sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -3195,30 +3200,62 @@ body::before {
 
 
 /* =========================================================
-   MOBILE — TIGHTER TALAKBAY SPACING
+   TABLET — TALAKBAY SPACING
 ========================================================= */
 
-@media (max-width: 600px) {
-
-    .hero-copy p {
-        margin-top: 8px;
+@media (max-width: 900px) {
+    .about-copy .project-label {
+        margin-bottom: 7px;
     }
 
-    .hero-buttons {
-        margin-top: 13px;
+    .about-copy .talakbay-project-logo {
+        gap: 7px;
+        margin-bottom: 4px;
     }
 
-    .talakbay-project-logo {
-        gap: 8px;
-        margin-bottom: 18px;
+    .about-copy .talakbay-icon {
+        width: 52px;
     }
 
-    .about-copy h2 {
-        margin-bottom: 6px;
+    .about-copy .talakbay-wordmark {
+        width: 215px;
     }
 
     .about-copy p {
-        margin-top: 8px;
+        margin-top: 4px;
+        width: 100%;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — TALAKBAY SPACING
+========================================================= */
+
+@media (max-width: 600px) {
+    .about-copy .project-label {
+        margin-bottom: 7px;
+    }
+
+    .about-copy .talakbay-project-logo {
+        gap: 7px;
+        margin: 0 0 4px 1px;
+    }
+
+    .about-copy .talakbay-icon {
+        width: 50px;
+    }
+
+    .about-copy .talakbay-wordmark {
+        width: 215px;
+    }
+
+    .about-copy p {
+        width: 100%;
+        margin: 4px 0 0 1px;
+        font-size: 13px;
+        line-height: 1.5;
     }
 }
 
@@ -3228,20 +3265,26 @@ body::before {
 ========================================================= */
 
 @media (max-width: 380px) {
-
-    .hero-copy p {
-        margin-top: 7px;
+    .about-copy .project-label {
+        margin-bottom: 6px;
     }
 
-    .hero-buttons {
-        margin-top: 11px;
+    .about-copy .talakbay-project-logo {
+        gap: 6px;
+        margin-bottom: 3px;
     }
 
-    .talakbay-project-logo {
-        margin-bottom: 16px;
+    .about-copy .talakbay-icon {
+        width: 43px;
+    }
+
+    .about-copy .talakbay-wordmark {
+        width: 185px;
     }
 
     .about-copy p {
-        margin-top: 7px;
+        margin-top: 3px;
+        font-size: 12px;
+        line-height: 1.5;
     }
 }
