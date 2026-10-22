@@ -3053,25 +3053,50 @@ a:hover {
 
 /* =========================================================
    BACKGROUND UPDATE — BG 1.png
-   Replaces the cream page background and removes faded
-   decorative photos from section backgrounds.
-   All other styles remain unchanged.
+   Shared fixed background for every page.
+   The image keeps its original proportions; cover may crop
+   the edges to fill the screen, but it will not stretch.
 ========================================================= */
 
+/* Keep the body itself transparent so the fixed image can show through. */
+html,
 body {
-    background-image: url("images/BG 1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    min-height: 100%;
+    background: transparent !important;
 }
 
-/* Let the new page background show through the main sections. */
+body {
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Fixed viewport layer: the background stays still while the page scrolls. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/BG 1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Make the page-level sections transparent so BG 1.png is visible throughout
+   Home, About, Resources, and Gallery. Intentionally colored cards remain unchanged. */
 .site-header,
+.hero,
+.hero-bg,
 .divider,
 .about-section,
 .resources-page,
 .resources-hero,
+.resources-section,
+.gallery,
 .gallery-page,
 .gallery-hero,
 .gallery-content,
@@ -3079,7 +3104,7 @@ body {
     background-color: transparent !important;
 }
 
-/* Remove the faded/transparent decorative background photos. */
+/* Remove the old faded decorative background photos. */
 .about-bg,
 .resources-bg,
 .gallery-hero-bg {
