@@ -3050,3 +3050,38 @@ a:hover {
     }
 }
 
+
+/* =========================================================
+   BACKGROUND UPDATE — BG 1.png
+   Replaces the cream page background and removes faded
+   decorative photos from section backgrounds.
+   All other styles remain unchanged.
+========================================================= */
+
+body {
+    background-image: url("images/BG 1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Let the new page background show through the main sections. */
+.site-header,
+.divider,
+.about-section,
+.resources-page,
+.resources-hero,
+.gallery-page,
+.gallery-hero,
+.gallery-content,
+.gallery-divider {
+    background-color: transparent !important;
+}
+
+/* Remove the faded/transparent decorative background photos. */
+.about-bg,
+.resources-bg,
+.gallery-hero-bg {
+    display: none !important;
+}
