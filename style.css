@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "Anton";
-    src: url("font/vultemsqor.ttf") format("truetype");
+    src: url("font/CutoutPaper.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
@@ -39,7 +39,7 @@
 
 @font-face {
     font-family: "Boxpot1";
-    src: url("font/boxpot1.ttf") format("truetype");
+    src: url("font/CutoutPaper.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
