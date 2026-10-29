@@ -36,6 +36,122 @@
         rel="stylesheet"
         href="style.css">
 
+
+    <!-- =========================================================
+         COLLABORATING ORGANIZATIONS SECTION
+    ========================================================= -->
+    <style>
+        .collaborators-section {
+            position: relative;
+            padding: 80px 6%;
+            background: #fff4e6;
+            color: #222222;
+            overflow: hidden;
+        }
+
+        .collaborators-inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .collaborators-heading {
+            margin: 0 0 14px;
+            color: #891917;
+            font-family: "Anton", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .collaborators-intro {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            color: #222222;
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .collaborators-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .collaborator-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 34px 30px;
+            background: #fffcf6;
+            border: 3px solid #222222;
+            border-radius: 14px;
+            box-shadow: 8px 8px 0 #f4d35e;
+            text-align: center;
+        }
+
+        .collaborator-logo-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 170px;
+            margin-bottom: 22px;
+        }
+
+        .collaborator-logo {
+            display: block;
+            width: 100%;
+            max-width: 220px;
+            max-height: 170px;
+            object-fit: contain;
+        }
+
+        .collaborator-card h3 {
+            margin: 0 0 14px;
+            color: #2b4e8d;
+            font-family: "Anton", sans-serif;
+            font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+            line-height: 1.25;
+        }
+
+        .collaborator-card p {
+            max-width: 470px;
+            margin: 0;
+            color: #222222;
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-size: 0.97rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 767px) {
+            .collaborators-section {
+                padding: 58px 6%;
+            }
+
+            .collaborators-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .collaborator-card {
+                padding: 28px 22px;
+            }
+
+            .collaborator-logo-wrap {
+                min-height: 140px;
+            }
+
+            .collaborator-logo {
+                max-height: 140px;
+            }
+        }
+    </style>
+
 </head>
 
 
@@ -405,6 +521,69 @@
 </section>
 
 
+
+<!-- =========================================================
+     COLLABORATING ORGANIZATIONS
+========================================================= -->
+
+<section class="collaborators-section" id="collaborators">
+    <div class="collaborators-inner">
+
+        <h2 class="collaborators-heading">Our Collaborators</h2>
+
+        <p class="collaborators-intro">
+            TaLakbay is developed with the collaboration of organizations
+            that support its educational and creative context.
+        </p>
+
+        <div class="collaborators-grid">
+
+            <!-- MULTIMEDIA ARTS COUNCIL OF THE PHILIPPINES -->
+            <article class="collaborator-card">
+                <div class="collaborator-logo-wrap">
+                    <img
+                        src="images/mmacp.png"
+                        class="collaborator-logo"
+                        alt="Multimedia Arts Council of the Philippines (MMACP) logo">
+                </div>
+
+                <h3>Multimedia Arts Council of the Philippines (MMACP)</h3>
+
+                <p>
+                    The Multimedia Arts Council of the Philippines is a
+                    collaborating organization for TaLakbay. Its involvement
+                    connects the project with the wider multimedia arts
+                    community and supports creative collaboration in the
+                    field of multimedia arts.
+                </p>
+            </article>
+
+            <!-- FRANCISCO E. BARZAGA INTEGRATED HIGH SCHOOL -->
+            <article class="collaborator-card">
+                <div class="collaborator-logo-wrap">
+                    <img
+                        src="images/febis.png"
+                        class="collaborator-logo"
+                        alt="Francisco E. Barzaga Integrated High School (FEBIHS) logo">
+                </div>
+
+                <h3>Francisco E. Barzaga Integrated High School (FEBIHS)</h3>
+
+                <p>
+                    Francisco E. Barzaga Integrated High School is TaLakbay's
+                    school collaborator. The project is designed for Grade 12
+                    Arts and Design Track students, placing the program within
+                    a school-based learning context for photography and the
+                    application of selected elements and principles of
+                    organization in the arts.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
 </main>
 
 
@@ -642,4 +821,3 @@ function toggleMobileMenu() {
 </body>
 
 </html>
-```
