@@ -3288,3 +3288,164 @@ body::before {
         line-height: 1.5;
     }
 }
+
+
+
+/* =========================================================
+   MOBILE TYPOGRAPHY FIX — COMFORTABLE, RESPONSIVE SIZES
+   Added overrides: keeps desktop styling and scales text down
+   more naturally on phones.
+========================================================= */
+
+@media (max-width: 600px) {
+    /* Home hero */
+    .hero-copy h1 {
+        font-size: clamp(38px, 11vw, 52px);
+        line-height: .95;
+    }
+
+    .hero-copy p {
+        font-size: 12px;
+        line-height: 1.55;
+        max-width: 100%;
+    }
+
+    .hero-button {
+        font-size: 10px;
+        height: 38px;
+        padding: 0 14px;
+    }
+
+    /* About section */
+    .about-copy h2 {
+        font-size: clamp(34px, 9vw, 44px);
+        line-height: .98;
+    }
+
+    .about-copy p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* Resources page headings and descriptions */
+    .resources-title h1 {
+        font-size: clamp(38px, 10vw, 50px);
+        line-height: .98;
+        overflow-wrap: anywhere;
+    }
+
+    .resources-intro {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .resource-number {
+        font-size: 25px;
+    }
+
+    .resource-content h2 {
+        font-size: clamp(24px, 7vw, 30px);
+        line-height: 1;
+        overflow-wrap: anywhere;
+    }
+
+    .resource-content p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .episode-track .episode-number {
+        font-size: 17px;
+    }
+
+    .episode-track .episode-label {
+        font-size: 8px;
+        line-height: 1.4;
+    }
+
+    .episode-track .episode-info h2 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: .98;
+        overflow-wrap: anywhere;
+    }
+
+    .episode-track .episode-info h3 {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .episode-track .episode-info ul {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .topic-item {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    /* Gallery cards */
+    .gallery .artwork-output h2 {
+        font-size: clamp(21px, 6vw, 26px);
+        line-height: 1.1;
+        overflow-wrap: anywhere;
+    }
+
+    .gallery .artwork-output p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* Footer and modal text */
+    .site-footer p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .modal-title,
+    .modal-body h4 {
+        font-size: 22px;
+    }
+
+    .modal-body {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+    .hero-copy h1 {
+        font-size: clamp(34px, 10.5vw, 42px);
+    }
+
+    .hero-copy p,
+    .about-copy p,
+    .resources-intro,
+    .resource-content p,
+    .episode-track .episode-info ul,
+    .gallery .artwork-output p {
+        font-size: 11px;
+    }
+
+    .about-copy h2 {
+        font-size: 36px;
+    }
+
+    .resources-title h1 {
+        font-size: 40px;
+    }
+
+    .resource-content h2 {
+        font-size: 25px;
+    }
+
+    .episode-track .episode-info h2 {
+        font-size: 32px;
+    }
+
+    .hero-button {
+        font-size: 9px;
+        padding: 0 11px;
+    }
+}
