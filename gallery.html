@@ -461,6 +461,7 @@
 
 .artwork-output-header {
     margin-bottom: 14px;
+    text-align: center;
 }
 
 .artwork-output h3 {
@@ -1383,11 +1384,7 @@ function createFeaturedGallery() {
         const title = document.createElement("h3");
         title.textContent = folderName;
 
-        const description = document.createElement("p");
-        description.textContent = "Photographic artwork exploring visual organization and composition.";
-
         header.appendChild(title);
-        header.appendChild(description);
         article.appendChild(header);
 
         const images = document.createElement("div");
