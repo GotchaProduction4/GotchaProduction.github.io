@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,18 +48,32 @@
         .collaborators-section {
             position: relative;
             padding: 80px 6%;
+            background: #fff4e6;
+            color: #222222;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        /* BG 1 WITH LOW OPACITY */
+
+        .collaborators-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
             background-image: url("images/BG 1.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            color: #222222;
-            overflow: hidden;
+            opacity: 0.2;
+            z-index: -1;
+            pointer-events: none;
         }
 
         .collaborators-inner {
+            position: relative;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -82,9 +97,11 @@
             text-align: center;
         }
 
+        /* THREE CARDS IN ONE ROW */
+
         .collaborators-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 28px;
             align-items: stretch;
         }
@@ -135,10 +152,26 @@
             line-height: 1.8;
         }
 
+        /* TABLET */
+
+        @media (max-width: 991px) {
+
+            .collaborators-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 24px;
+            }
+
+        }
+
+        /* MOBILE */
+
         @media (max-width: 767px) {
 
             .collaborators-section {
                 padding: 58px 6%;
+            }
+
+            .collaborators-section::before {
                 background-attachment: scroll;
             }
 
@@ -838,15 +871,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-
-    // Ensure continuous playback settings
-
     video.loop = true;
     video.muted = true;
     video.playsInline = true;
-
-
-    // Restart video when playback ends
 
     video.addEventListener("ended", function () {
 
@@ -866,9 +893,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
-    // Attempt autoplay when video metadata is loaded
-
     video.addEventListener("loadedmetadata", function () {
 
         const playPromise = video.play();
@@ -884,9 +908,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
-
-
-    // Initial playback attempt
 
     const playPromise = video.play();
 
@@ -928,52 +949,36 @@ function toggleMobileMenu() {
     }
 
 
-    /* =====================================================
-       OPEN / CLOSE MENU
-    ===================================================== */
-
     if (menu.classList.contains("active")) {
 
-
-        /* CLOSE MENU */
-
         menu.classList.remove("active");
-
 
         button.setAttribute(
             "aria-expanded",
             "false"
         );
 
-
         button.setAttribute(
             "aria-label",
             "Open navigation menu"
         );
-
 
         button.innerHTML = "☰";
 
 
     } else {
 
-
-        /* OPEN MENU */
-
         menu.classList.add("active");
-
 
         button.setAttribute(
             "aria-expanded",
             "true"
         );
 
-
         button.setAttribute(
             "aria-label",
             "Close navigation menu"
         );
-
 
         button.innerHTML = "✕";
 
