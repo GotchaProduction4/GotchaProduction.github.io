@@ -3449,3 +3449,24 @@ body::before {
         padding: 0 11px;
     }
 }
+/* =========================================================
+   COLLABORATORS SECTION — ONE UNIFORM BACKGROUND COLOR
+========================================================= */
+
+.collaborators-section {
+    position: relative;
+    background: #fffcf6 !important;
+    background-color: #fffcf6 !important;
+    overflow: hidden;
+}
+
+/* Remove the separate background image and color overlay */
+.collaborators-section::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Keep the collaborator cards consistent */
+.collaborators-section .collaborator-card {
+    background: #fffcf6;
+}
