@@ -1134,8 +1134,8 @@
                 <span class="gallery-section-label">FEATURED WORKS</span>
                 <h2>ARTWORKS</h2>
                 <p>
-                    Explore 21 artwork outputs, each presented with three
-                    photographs and a short description.
+                    Explore 18 photographic artworks, each presented with up to three
+                    images and a short description.
                 </p>
             </div>
 
@@ -1240,22 +1240,22 @@
    IMAGE PATHS
 
    ARTWORKS:
-   images/BTS/edit 1.webp through edit 63.webp
+   images/Artwork/<Artwork Folder>/1.webp through 1-3.webp
 
    PROGRAM DOCUMENTATION:
    images/Program Documentation/1edit.webp through 141edit.webp
 
    BTS DOCUMENTATION:
-   images/BTS/edit 86.webp through edit 110.webp
+   images/BTS Documentation/1edit.webp through 99edit.webp
    ========================================================= */
 
-const artworkFolder = "images/BTS/";
+const artworkFolder = "images/Artwork/";
 const documentationFolder = "images/Program Documentation/";
 const btsFolder = "images/BTS Documentation/";
 
-/* Encode spaces in paths for browser compatibility. */
-function getArtworkImage(number) {
-    return artworkFolder + "edit%20" + number + ".webp";
+/* Encode folder names and filenames for browser compatibility. */
+function getArtworkImage(folderName, imageNumber) {
+    return artworkFolder + encodeURIComponent(folderName) + "/" + imageNumber + ".webp";
 }
 
 function getDocumentationImage(number) {
@@ -1345,102 +1345,35 @@ function createGalleryItem(imagePath, altText, className, captionText) {
 }
 
 /* =========================================================
-   ARTWORK GALLERY — 21 OUTPUTS, 3 IMAGES EACH
+   ARTWORK GALLERY — FOLDER-BASED ARTWORKS
+   Each artwork folder contains 1.webp, 2.webp, and/or 3.webp.
    ========================================================= */
 function createFeaturedGallery() {
     const container = document.getElementById("featuredGallery");
     if (!container) return;
 
     const artworkOutputs = [
-        {
-            title: "Artwork Output 01",
-            description: "A photographic study focused on framing, subject placement, and visual emphasis."
-        },
-        {
-            title: "Artwork Output 02",
-            description: "A composition study exploring how the arrangement of elements guides the viewer’s attention."
-        },
-        {
-            title: "Artwork Output 03",
-            description: "A visual exploration of space, balance, and the relationship between the subject and its surroundings."
-        },
-        {
-            title: "Artwork Output 04",
-            description: "A photographic exercise using perspective and framing to make the main subject stand out."
-        },
-        {
-            title: "Artwork Output 05",
-            description: "A study of visual hierarchy through subject placement and the use of surrounding space."
-        },
-        {
-            title: "Artwork Output 06",
-            description: "A composition that explores how foreground and background elements work together."
-        },
-        {
-            title: "Artwork Output 07",
-            description: "A lighting study observing the way light shapes the subject and creates visual emphasis."
-        },
-        {
-            title: "Artwork Output 08",
-            description: "A photographic exploration of highlights, shadows, and changes in tonal value."
-        },
-        {
-            title: "Artwork Output 09",
-            description: "A study of contrast that uses differences in brightness to strengthen the composition."
-        },
-        {
-            title: "Artwork Output 10",
-            description: "An exploration of how light direction affects form, depth, and mood in a photograph."
-        },
-        {
-            title: "Artwork Output 11",
-            description: "A visual study of shadow patterns and their role in directing attention."
-        },
-        {
-            title: "Artwork Output 12",
-            description: "A photographic exercise exploring the balance between illuminated and darker areas."
-        },
-        {
-            title: "Artwork Output 13",
-            description: "A storytelling study that connects visual details to communicate a clear idea."
-        },
-        {
-            title: "Artwork Output 14",
-            description: "A sequence of images arranged to create a sense of continuity and visual connection."
-        },
-        {
-            title: "Artwork Output 15",
-            description: "A visual narrative exploring how individual photographs can work together as a whole."
-        },
-        {
-            title: "Artwork Output 16",
-            description: "A study of unity through repeated visual elements and consistent composition."
-        },
-        {
-            title: "Artwork Output 17",
-            description: "A photographic sequence that encourages the viewer to follow a subject or moment."
-        },
-        {
-            title: "Artwork Output 18",
-            description: "An exploration of how image order and visual details can suggest a simple story."
-        },
-        {
-            title: "Artwork Output 19",
-            description: "A composition study bringing together framing, contrast, and a clear focal point."
-        },
-        {
-            title: "Artwork Output 20",
-            description: "A photographic exploration of visual organization and the connection between details."
-        },
-        {
-            title: "Artwork Output 21",
-            description: "A final visual study combining selected elements and principles of organization in photography."
-        }
+        "BUKANG LIWAYWAY",
+        "DETERMINATION",
+        "FIGURED STONE",
+        "ISANG ALAALANG BULAKLAK",
+        "LAST GLIMPSE",
+        "LIWANAG",
+        "MADALI",
+        "MARAHUYO",
+        "PAGKUHANG LARAWAN",
+        "PAGLAGALAG",
+        "PAGOD",
+        "PASANIN AT PANGARAP",
+        "STANDING OUT",
+        "TALINAN",
+        "THE FORGOTTEN PHONE",
+        "THE LONE FLOWER IN THE POND",
+        "UNTIL WE REACH",
+        "VIRTUOUS BIG COLLAGE"
     ];
 
-    artworkOutputs.forEach(function(output, index) {
-        const firstImageNumber = index * 3 + 1;
-
+    artworkOutputs.forEach(function(folderName, index) {
         const article = document.createElement("article");
         article.className = "artwork-output";
 
@@ -1448,10 +1381,10 @@ function createFeaturedGallery() {
         header.className = "artwork-output-header";
 
         const title = document.createElement("h3");
-        title.textContent = output.title;
+        title.textContent = folderName;
 
         const description = document.createElement("p");
-        description.textContent = output.description;
+        description.textContent = "Photographic artwork exploring visual organization and composition.";
 
         header.appendChild(title);
         header.appendChild(description);
@@ -1460,19 +1393,26 @@ function createFeaturedGallery() {
         const images = document.createElement("div");
         images.className = "artwork-output-images";
 
-        for (let imageIndex = 0; imageIndex < 3; imageIndex++) {
-            const imageNumber = firstImageNumber + imageIndex;
-
+        /* Each folder is expected to contain 1.webp, 2.webp, and 3.webp.
+           Images that do not exist are automatically hidden. */
+        for (let imageIndex = 1; imageIndex <= 3; imageIndex++) {
             const imageButton = document.createElement("div");
             imageButton.className = "artwork-output-image";
             imageButton.setAttribute("role", "button");
             imageButton.setAttribute("tabindex", "0");
-            imageButton.setAttribute("aria-label", "Open image " + imageNumber);
+            imageButton.setAttribute("aria-label", "Open " + folderName + " image " + imageIndex);
 
             const img = document.createElement("img");
-            img.src = getArtworkImage(imageNumber);
-            img.alt = output.title + " — image " + (imageIndex + 1);
+            img.src = getArtworkImage(folderName, imageIndex);
+            img.alt = folderName + " — image " + imageIndex;
             img.loading = "lazy";
+
+            img.addEventListener("error", function() {
+                imageButton.remove();
+                if (images.children.length === 0) {
+                    article.remove();
+                }
+            });
 
             imageButton.appendChild(img);
 
