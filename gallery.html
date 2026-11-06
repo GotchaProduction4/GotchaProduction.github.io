@@ -1,1570 +1,3130 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
 <title>Talakbay | Gallery</title>
 
+
+
 <link rel="icon" type="image/png" href="images/logoblack.png">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https\://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="style.css">
 
+
+
 <style>
-/* GALLERY PAGE */
+
+/\* GALLERY PAGE \*/
+
 .gallery-page {
-    background: var(--cream);
-    color: var(--black);
+
+    background: var(--cream);
+
+    color: var(--black);
+
 }
+
+
 
 .gallery-page .brand-yellow {
-    background: var(--red) !important;
+
+    background: var(--red) !important;
+
 }
 
-/* HEADER */
+
+
+/\* HEADER \*/
+
 .gallery-page .site-header {
-    height: 80px;
+
+    height: 80px;
+
 }
+
+
 
 .gallery-page .brand-area {
-    width: 300px;
-    height: 80px;
-    position: relative;
-    flex-shrink: 0;
+
+    width: 300px;
+
+    height: 80px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
 }
+
+
 
 .gallery-page .brand-yellow {
-    width: 145px;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
+
+    width: 145px;
+
+    height: 80px;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    z-index: 1;
+
 }
+
+
 
 .gallery-page .logo-link {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 5;
+
 }
+
+
 
 .gallery-page .logo {
-    display: block;
-    width: 62px;
-    height: auto;
+
+    display: block;
+
+    width: 62px;
+
+    height: auto;
+
 }
 
-/* TOP STRIPES */
+
+
+/\* TOP STRIPES \*/
+
 .gallery-page .top-stripes {
-    position: absolute;
-    left: 145px;
-    top: 0;
-    width: 156px;
-    height: 80px;
-    display: flex;
-    overflow: visible;
-    z-index: 2;
-    pointer-events: none;
+
+    position: absolute;
+
+    left: 145px;
+
+    top: 0;
+
+    width: 156px;
+
+    height: 80px;
+
+    display: flex;
+
+    overflow: visible;
+
+    z-index: 2;
+
+    pointer-events: none;
+
 }
+
+
 
 .gallery-page .top-stripes span {
-    display: block;
-    flex: 0 0 52px;
-    width: 52px;
-    height: 80px;
-    transform: skewX(-20deg);
-    transform-origin: top left;
+
+    display: block;
+
+    flex: 0 0 52px;
+
+    width: 52px;
+
+    height: 80px;
+
+    transform: skewX(-20deg);
+
+    transform-origin: top left;
+
 }
+
+
 
 .gallery-page .top-stripes .stripe-red {
-    display: none !important;
+
+    display: none !important;
+
 }
+
+
 
 .gallery-page .top-stripes .stripe-yellow {
-    background: var(--yellow) !important;
+
+    background: var(--yellow) !important;
+
 }
+
+
 
 .gallery-page .top-stripes .stripe-blue {
-    background: var(--blue) !important;
+
+    background: var(--blue) !important;
+
 }
+
+
 
 .gallery-page .top-stripes .stripe-black {
-    background: var(--black) !important;
+
+    background: var(--black) !important;
+
 }
 
-/* FOOTER */
+
+
+/\* FOOTER \*/
+
 .gallery-page .site-footer {
-    width: 100%;
-    padding: 18px 20px;
-    background: var(--black);
-    border-top: 1px solid var(--black);
-    text-align: center;
+
+    width: 100%;
+
+    padding: 18px 20px;
+
+    background: var(--black);
+
+    border-top: 1px solid var(--black);
+
+    text-align: center;
+
 }
+
+
 
 .gallery-page .site-footer p {
-    margin: 0;
-    color: white;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: .2px;
+
+    margin: 0;
+
+    color: white;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    letter-spacing: .2px;
+
 }
 
-/* HERO */
+
+
+/\* HERO \*/
+
 .gallery-hero {
-    position: relative;
-    width: 100%;
-    min-height: 400px;
-    overflow: hidden;
-    background: var(--cream);
-    border-bottom: 1px solid var(--black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 400px;
+
+    overflow: hidden;
+
+    background: var(--cream);
+
+    border-bottom: 1px solid var(--black);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
 }
+
+
 
 .gallery-hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, .88),
-            rgba(255, 244, 230, .88)
-        ),
-        url("images/photowalk.webp");
-    background-size: cover;
-    background-position: center;
-    opacity: .42;
-    z-index: 0;
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255, 244, 230, .88),
+
+            rgba(255, 244, 230, .88)
+
+        ),
+
+        url("images/photowalk.webp");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: .42;
+
+    z-index: 0;
+
 }
+
+
 
 .gallery-hero-inner {
-    position: relative;
-    width: 100%;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 8%;
-    z-index: 2;
-    text-align: center;
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px 8%;
+
+    z-index: 2;
+
+    text-align: center;
+
 }
+
+
 
 .gallery-title {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
 }
+
+
 
 .gallery-label {
-    margin: 0 0 14px;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: var(--red);
+
+    margin: 0 0 14px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: var(--red);
+
 }
+
+
 
 .gallery-title h1 {
-    margin: 0;
-    font-family: "Anton", sans-serif;
-    font-size: clamp(70px, 9vw, 120px);
-    font-weight: 400;
-    line-height: .86;
-    letter-spacing: .5px;
-    color: var(--black);
+
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(70px, 9vw, 120px);
+
+    font-weight: 400;
+
+    line-height: .86;
+
+    letter-spacing: .5px;
+
+    color: var(--black);
+
 }
+
+
 
 .gallery-intro {
-    width: 500px;
-    max-width: 100%;
-    margin: 22px auto 0;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--black);
+
+    width: 500px;
+
+    max-width: 100%;
+
+    margin: 22px auto 0;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    color: var(--black);
+
 }
 
-/* GALLERY CONTENT */
+
+
+/\* GALLERY CONTENT \*/
+
 .gallery-content {
-    position: relative;
-    width: 100%;
-    padding: 60px 8%;
-    background: var(--cream);
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 60px 8%;
+
+    background: var(--cream);
+
 }
+
+
 
 .gallery-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
 }
+
+
 
 .gallery-section {
-    margin-bottom: 85px;
-    text-align: center;
+
+    margin-bottom: 85px;
+
+    text-align: center;
+
 }
+
+
 
 .gallery-section:last-child {
-    margin-bottom: 20px;
+
+    margin-bottom: 20px;
+
 }
+
+
 
 .gallery-hidden {
-    display: none !important;
+
+    display: none !important;
+
 }
 
-/* SECTION HEADINGS */
+
+
+/\* SECTION HEADINGS \*/
+
 .gallery-section-heading {
-    width: 100%;
-    margin: 0 auto 30px;
-    text-align: center;
+
+    width: 100%;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+
 }
+
+
 
 .gallery-section-label {
-    display: block;
-    margin-bottom: 8px;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 9px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: var(--red);
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: var(--red);
+
 }
+
+
 
 .gallery-section-heading h2 {
-    margin: 0;
-    font-family: "Anton", sans-serif;
-    font-size: clamp(42px, 5vw, 65px);
-    font-weight: 400;
-    line-height: .9;
-    color: var(--black);
+
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    color: var(--black);
+
 }
+
+
 
 .gallery-section-heading p {
-    width: 650px;
-    max-width: 100%;
-    margin: 16px auto 0;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 1.65;
-    color: var(--black);
+
+    width: 650px;
+
+    max-width: 100%;
+
+    margin: 16px auto 0;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 300;
+
+    line-height: 1.65;
+
+    color: var(--black);
+
 }
 
-/* GALLERY GRIDS */
+
+
+/\* GALLERY GRIDS \*/
+
 .gallery-grid,
+
 .documentation-grid,
+
 .bts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    width: 100%;
+
 }
+
+
 
 .gallery-item,
+
 .documentation-item,
+
 .bts-item {
-    position: relative;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--black);
-    border: 2px solid var(--black);
-    box-shadow: 6px 6px 0 var(--black);
-    cursor: pointer;
+
+    position: relative;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: var(--black);
+
+    border: 2px solid var(--black);
+
+    box-shadow: 6px 6px 0 var(--black);
+
+    cursor: pointer;
+
 }
+
+
 
 .gallery-item img,
+
 .documentation-item img,
+
 .bts-item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform .35s ease, filter .35s ease;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .35s ease, filter .35s ease;
+
 }
+
+
 
 .gallery-item:hover img,
+
 .documentation-item:hover img,
+
 .bts-item:hover img {
-    transform: scale(1.05);
+
+    transform: scale(1.05);
+
 }
 
-/* PLUS BUTTON */
+
+
+/\* PLUS BUTTON \*/
+
 .gallery-item::after,
+
 .documentation-item::after,
+
 .bts-item::after {
-    content: "+";
-    position: absolute;
-    right: 12px;
-    bottom: 10px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--red);
-    color: white;
-    font-family: "Anton", sans-serif;
-    font-size: 18px;
-    line-height: 1;
-    opacity: 0;
-    transform: scale(.8);
-    transition: .2s ease;
+
+    content: "+";
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 10px;
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    color: white;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    transform: scale(.8);
+
+    transition: .2s ease;
+
 }
+
+
 
 .gallery-item:hover::after,
+
 .documentation-item:hover::after,
+
 .bts-item:hover::after {
-    opacity: 1;
-    transform: scale(1);
+
+    opacity: 1;
+
+    transform: scale(1);
+
 }
 
-/* CAPTIONS */
+
+
+/\* CAPTIONS \*/
+
 .documentation-caption,
+
 .bts-caption {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 10px 14px;
-    background: var(--black);
-    color: white;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 9px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    padding: 10px 14px;
+
+    background: var(--black);
+
+    color: white;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
 }
 
-/* DIVIDER */
+
+
+/\* DIVIDER \*/
+
 .gallery-divider {
-    position: relative;
-    width: 100%;
-    height: 55px;
-    background: var(--cream);
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
-    overflow: hidden;
+
+    position: relative;
+
+    width: 100%;
+
+    height: 55px;
+
+    background: var(--cream);
+
+    border-top: 2px solid var(--black);
+
+    border-bottom: 2px solid var(--black);
+
+    overflow: hidden;
+
 }
+
+
 
 .gallery-divider-stripes {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 330px;
-    height: 55px;
-    display: flex;
-    overflow: hidden;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 330px;
+
+    height: 55px;
+
+    display: flex;
+
+    overflow: hidden;
+
 }
+
+
 
 .gallery-divider-stripes span {
-    display: block;
-    height: 55px;
-    transform: skewX(-20deg);
-    transform-origin: top;
+
+    display: block;
+
+    height: 55px;
+
+    transform: skewX(-20deg);
+
+    transform-origin: top;
+
 }
+
+
 
 .gallery-divider-stripes .stripe-yellow {
-    width: 135px;
-    background: var(--yellow);
+
+    width: 135px;
+
+    background: var(--yellow);
+
 }
+
+
 
 .gallery-divider-stripes .stripe-blue,
+
 .gallery-divider-stripes .stripe-red,
+
 .gallery-divider-stripes .stripe-black {
-    width: 75px;
+
+    width: 75px;
+
 }
+
+
 
 .gallery-divider-stripes .stripe-blue {
-    background: var(--blue);
+
+    background: var(--blue);
+
 }
+
+
 
 .gallery-divider-stripes .stripe-red {
-    background: var(--red);
+
+    background: var(--red);
+
 }
+
+
 
 .gallery-divider-stripes .stripe-black {
-    background: var(--black);
+
+    background: var(--black);
+
 }
 
-/* GALLERY SWITCHER */
+
+
+/\* GALLERY SWITCHER \*/
+
 .gallery-switcher {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 auto 55px;
-    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0 auto 55px;
+
+    width: 100%;
+
 }
+
+
 
 .gallery-switch-btn {
-    padding: 12px 22px;
-    border: 2px solid var(--black);
-    background: var(--cream);
-    color: var(--black);
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+
+    padding: 12px 22px;
+
+    border: 2px solid var(--black);
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: *background* .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+
 }
+
+
 
 .gallery-switch-btn:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0 var(--black);
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 4px 4px 0 var(--black);
+
 }
+
+
 
 .gallery-switch-btn.active {
-    background: var(--black);
-    color: white;
-    box-shadow: 4px 4px 0 var(--black);
+
+    background: var(--black);
+
+    color: white;
+
+    box-shadow: 4px 4px 0 var(--black);
+
 }
+
+
 
 .gallery-switch-btn[data-gallery="featured"].active {
-    background: var(--yellow);
-    color: var(--black);
+
+    background: var(--yellow);
+
+    color: var(--black);
+
 }
+
+
 
 .gallery-switch-btn[data-gallery="documentation"].active {
-    background: var(--blue);
-    color: white;
+
+    background: var(--blue);
+
+    color: white;
+
 }
+
+
 
 .gallery-switch-btn[data-gallery="bts"].active {
-    background: var(--red);
-    color: white;
+
+    background: var(--red);
+
+    color: white;
+
 }
 
-/* ARTWORK OUTPUT CARDS */
-#featuredGallery.artwork-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
-    align-items: start;
+
+
+/\* ARTWORK OUTPUT CARDS \*/
+
+\#featuredGallery.artwork-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+
+    align-items: start;
+
 }
+
+
 
 .artwork-output {
-    min-width: 0;
-    padding: 18px;
-    text-align: left;
-    background: var(--cream);
-    border: 2px solid var(--black);
-    box-shadow: 6px 6px 0 var(--black);
+
+    min-width: 0;
+
+    padding: 18px;
+
+    text-align: left;
+
+    background: var(--cream);
+
+    border: 2px solid var(--black);
+
+    box-shadow: 6px 6px 0 var(--black);
+
 }
+
+
 
 .artwork-output-header {
-    margin-bottom: 14px;
+
+    margin-bottom: 14px;
+
 }
+
+
 
 .artwork-output h3 {
-    margin: 0 0 8px;
-    color: var(--black);
-    font-family: "Anton", sans-serif;
-    font-size: clamp(20px, 2.2vw, 28px);
-    font-weight: 400;
-    line-height: 1.05;
-    text-transform: uppercase;
+
+    margin: 0 0 8px;
+
+    color: var(--black);
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(20px, 2.2vw, 28px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    text-transform: uppercase;
+
 }
+
+
 
 .artwork-output p {
-    margin: 0;
-    color: var(--black);
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 1.6;
+
+    margin: 0;
+
+    color: var(--black);
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
 }
+
+
 
 .artwork-output-images {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+
 }
+
+
 
 .artwork-output-image {
-    position: relative;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--black);
-    border: 1px solid var(--black);
-    cursor: pointer;
+
+    position: relative;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: var(--black);
+
+    border: 1px solid var(--black);
+
+    cursor: pointer;
+
 }
+
+
 
 .artwork-output-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .3s ease;
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .3s ease;
+
 }
+
+
 
 .artwork-output-image:hover img {
-    transform: scale(1.06);
+
+    transform: scale(1.06);
+
 }
+
+
 
 .artwork-output-image::after {
-    content: "+";
-    position: absolute;
-    right: 6px;
-    bottom: 6px;
-    width: 23px;
-    height: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--red);
-    color: white;
-    font-family: "Anton", sans-serif;
-    font-size: 15px;
-    opacity: 0;
-    transition: opacity .2s ease;
+
+    content: "+";
+
+    position: absolute;
+
+    right: 6px;
+
+    bottom: 6px;
+
+    width: 23px;
+
+    height: 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    color: white;
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 15px;
+
+    opacity: 0;
+
+    transition: opacity .2s ease;
+
 }
+
+
 
 .artwork-output-image:hover::after {
-    opacity: 1;
+
+    opacity: 1;
+
 }
 
-/* LIGHTBOX */
+
+
+/\* LIGHTBOX \*/
+
 .gallery-lightbox {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background: rgba(34, 34, 34, .94);
-    z-index: 9999;
-    cursor: pointer;
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(34, 34, 34, .94);
+
+    z-index: 9999;
+
+    cursor: pointer;
+
 }
+
+
 
 .gallery-lightbox.active {
-    display: flex;
+
+    display: flex;
+
 }
+
+
 
 .gallery-lightbox img {
-    max-width: 92vw;
-    max-height: 88vh;
-    object-fit: contain;
-    border: 2px solid white;
-    box-shadow: 10px 10px 0 var(--red);
-    cursor: default;
+
+    max-width: 92vw;
+
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border: 2px solid white;
+
+    box-shadow: 10px 10px 0 var(--red);
+
+    cursor: default;
+
 }
+
+
 
 .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid white;
-    border-radius: 50%;
-    background: var(--red);
-    color: white;
-    font-size: 25px;
-    line-height: 1;
-    cursor: pointer;
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 2px solid white;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    color: white;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
 }
 
 
-/* BTS DOCUMENTATION SET SLIDER */
+
+
+
+/\* BTS DOCUMENTATION SET SLIDER \*/
+
 .bts-set-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 auto 28px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0 auto 28px;
+
 }
+
 .bts-set-btn {
-    padding: 10px 18px;
-    border: 2px solid var(--black);
-    background: var(--cream);
-    color: var(--black);
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: .2s ease;
+
+    padding: 10px 18px;
+
+    border: 2px solid var(--black);
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
 }
+
 .bts-set-btn:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0 var(--black);
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 4px 4px 0 var(--black);
+
 }
+
 .bts-set-btn.active {
-    background: var(--red);
-    color: white;
-    box-shadow: 4px 4px 0 var(--black);
+
+    background: var(--red);
+
+    color: white;
+
+    box-shadow: 4px 4px 0 var(--black);
+
 }
+
 .bts-set-status {
-    margin: 0 auto 22px;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 11px;
-    letter-spacing: .5px;
-    text-align: center;
+
+    margin: 0 auto 22px;
+
+    font-family: "Be Vietnam Pro", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: .5px;
+
+    text-align: center;
+
 }
+
 .bts-grid .bts-item.bts-set-hidden {
-    display: none;
+
+    display: none;
+
 }
 
-/* TABLET */
+
+
+/\* TABLET \*/
+
 @media (max-width: 900px) {
-    .gallery-page .site-header {
-        height: 70px;
-    }
 
-    .gallery-page .brand-area {
-        width: 230px;
-        height: 70px;
-    }
+    .gallery-page .site-header {
 
-    .gallery-page .brand-yellow {
-        width: 110px;
-        height: 70px;
-    }
+        height: 70px;
 
-    .gallery-page .logo-link {
-        left: 15px;
-    }
+    }
 
-    .gallery-page .logo {
-        width: 52px;
-    }
 
-    .gallery-page .top-stripes {
-        left: 110px;
-        width: 126px;
-        height: 70px;
-    }
 
-    .gallery-page .top-stripes span {
-        flex-basis: 42px;
-        width: 42px;
-        height: 70px;
-    }
+    .gallery-page .brand-area {
 
-    .gallery-hero,
-    .gallery-hero-inner {
-        min-height: 380px;
-    }
+        width: 230px;
 
-    .gallery-hero-inner {
-        padding: 55px 6%;
-    }
+        height: 70px;
 
-    .gallery-title h1 {
-        font-size: clamp(60px, 9vw, 100px);
-    }
+    }
 
-    .gallery-intro {
-        width: 480px;
-        font-size: 13px;
-    }
 
-    .gallery-content {
-        padding: 55px 6%;
-    }
 
-    .gallery-section {
-        margin-bottom: 70px;
-    }
+    .gallery-page .brand-yellow {
 
-    .gallery-grid,
-    .documentation-grid,
-    .bts-grid {
-        gap: 10px;
-    }
+        width: 110px;
 
-    .gallery-item,
-    .documentation-item,
-    .bts-item {
-        box-shadow: 5px 5px 0 var(--black);
-    }
+        height: 70px;
 
-    #featuredGallery.artwork-grid {
-        gap: 20px;
-    }
+    }
 
-    .artwork-output {
-        padding: 13px;
-        box-shadow: 5px 5px 0 var(--black);
-    }
 
-    .artwork-output-images {
-        gap: 6px;
-    }
+
+    .gallery-page .logo-link {
+
+        left: 15px;
+
+    }
+
+
+
+    .gallery-page .logo {
+
+        width: 52px;
+
+    }
+
+
+
+    .gallery-page .top-stripes {
+
+        left: 110px;
+
+        width: 126px;
+
+        height: 70px;
+
+    }
+
+
+
+    .gallery-page .top-stripes span {
+
+        flex-basis: 42px;
+
+        width: 42px;
+
+        height: 70px;
+
+    }
+
+
+
+    .gallery-hero,
+
+    .gallery-hero-inner {
+
+        min-height: 380px;
+
+    }
+
+
+
+    .gallery-hero-inner {
+
+        padding: 55px 6%;
+
+    }
+
+
+
+    .gallery-title h1 {
+
+        font-size: clamp(60px, 9vw, 100px);
+
+    }
+
+
+
+    .gallery-intro {
+
+        width: 480px;
+
+        font-size: 13px;
+
+    }
+
+
+
+    .gallery-content {
+
+        padding: 55px 6%;
+
+    }
+
+
+
+    .gallery-section {
+
+        margin-bottom: 70px;
+
+    }
+
+
+
+    .gallery-grid,
+
+    .documentation-grid,
+
+    .bts-grid {
+
+        gap: 10px;
+
+    }
+
+
+
+    .gallery-item,
+
+    .documentation-item,
+
+    .bts-item {
+
+        box-shadow: 5px 5px 0 var(--black);
+
+    }
+
+
+
+    #featuredGallery.artwork-grid {
+
+        gap: 20px;
+
+    }
+
+
+
+    .artwork-output {
+
+        padding: 13px;
+
+        box-shadow: 5px 5px 0 var(--black);
+
+    }
+
+
+
+    .artwork-output-images {
+
+        gap: 6px;
+
+    }
+
 }
 
-/* MOBILE */
+
+
+/\* MOBILE \*/
+
 @media (max-width: 600px) {
-    .gallery-page .site-header {
-        height: 62px;
-    }
 
-    .gallery-page .brand-area {
-        width: 210px;
-        height: 62px;
-    }
+    .gallery-page .site-header {
 
-    .gallery-page .brand-yellow {
-        width: 145px;
-        height: 62px;
-    }
+        height: 62px;
 
-    .gallery-page .logo-link {
-        left: 12px;
-    }
+    }
 
-    .gallery-page .logo {
-        width: 48px;
-    }
 
-    .gallery-page .top-stripes {
-        left: 145px;
-        width: 156px;
-        height: 100%;
-    }
 
-    .gallery-page .top-stripes span {
-        flex: 0 0 52px;
-        width: 52px;
-        height: 62px;
-    }
+    .gallery-page .brand-area {
 
-    .gallery-page .main-navigation {
-        position: absolute;
-        top: 62px;
-        right: 10px;
-        width: 190px;
-        display: none;
-        flex-direction: column;
-        background: var(--cream);
-        border: 1px solid var(--black);
-        box-shadow: 5px 5px 0 var(--black);
-        z-index: 140;
-    }
+        width: 210px;
 
-    .gallery-page .main-navigation.mobile-open {
-        display: flex !important;
-    }
+        height: 62px;
 
-    .gallery-page .main-navigation .nav-btn {
-        width: 100%;
-    }
+    }
 
-    .gallery-hero,
-    .gallery-hero-inner {
-        min-height: 350px;
-    }
 
-    .gallery-hero-inner {
-        padding: 55px 25px;
-    }
 
-    .gallery-label {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-    }
+    .gallery-page .brand-yellow {
 
-    .gallery-title h1 {
-        font-size: 54px;
-        line-height: .9;
-    }
+        width: 145px;
 
-    .gallery-intro {
-        width: 100%;
-        margin-top: 18px;
-        font-size: 10px;
-        line-height: 1.5;
-    }
+        height: 62px;
 
-    .gallery-content {
-        padding: 45px 25px;
-    }
+    }
 
-    .gallery-section {
-        margin-bottom: 65px;
-    }
 
-    .gallery-section-heading {
-        margin-bottom: 25px;
-    }
 
-    .gallery-section-label {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-    }
+    .gallery-page .logo-link {
 
-    .gallery-section-heading h2 {
-        font-size: 42px;
-        line-height: .92;
-    }
+        left: 12px;
 
-    .gallery-section-heading p {
-        width: 100%;
-        margin-top: 13px;
-        font-size: 10px;
-        line-height: 1.55;
-    }
+    }
 
-    .gallery-grid,
-    .documentation-grid,
-    .bts-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px;
-    }
 
-    .gallery-item,
-    .documentation-item,
-    .bts-item {
-        aspect-ratio: 4 / 3;
-        box-shadow: 4px 4px 0 var(--black);
-        border-width: 1px;
-    }
 
-    .gallery-item img,
-    .documentation-item img,
-    .bts-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    .gallery-page .logo {
 
-    .gallery-item::after,
-    .documentation-item::after,
-    .bts-item::after {
-        width: 24px;
-        height: 24px;
-        right: 7px;
-        bottom: 7px;
-        font-size: 15px;
-        opacity: 1;
-        transform: scale(.9);
-    }
+        width: 48px;
 
-    .documentation-caption,
-    .bts-caption {
-        padding: 7px 9px;
-        font-size: 7px;
-        letter-spacing: .7px;
-    }
+    }
 
-    .gallery-divider {
-        height: 50px;
-    }
 
-    .gallery-divider-stripes {
-        width: 230px;
-        height: 50px;
-    }
 
-    .gallery-divider-stripes span {
-        height: 50px;
-    }
+    .gallery-page .top-stripes {
 
-    .gallery-divider-stripes .stripe-yellow {
-        width: 95px;
-    }
+        left: 145px;
 
-    .gallery-divider-stripes .stripe-blue,
-    .gallery-divider-stripes .stripe-red,
-    .gallery-divider-stripes .stripe-black {
-        width: 55px;
-    }
+        width: 156px;
 
-    .gallery-lightbox {
-        padding: 18px;
-    }
+        height: 100%;
 
-    .gallery-lightbox img {
-        max-width: 94vw;
-        max-height: 80vh;
-        box-shadow: 6px 6px 0 var(--red);
-    }
+    }
 
-    .lightbox-close {
-        top: 12px;
-        right: 14px;
-        width: 36px;
-        height: 36px;
-        font-size: 21px;
-    }
 
-    #featuredGallery.artwork-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
 
-    .artwork-output {
-        padding: 14px;
-    }
+    .gallery-page .top-stripes span {
 
-    .artwork-output h3 {
-        font-size: 25px;
-    }
+        flex: 0 0 52px;
 
-    .artwork-output p {
-        font-size: 10px;
-    }
+        width: 52px;
 
-    .artwork-output-images {
-        gap: 7px;
-    }
+        height: 62px;
 
-    .artwork-output-image::after {
-        opacity: 1;
-    }
+    }
 
-    .gallery-switcher {
-        gap: 6px;
-        margin-bottom: 40px;
-    }
 
-    .gallery-switch-btn {
-        padding: 10px 13px;
-        font-size: 8px;
-        letter-spacing: .7px;
-    }
 
-    .gallery-page .site-footer {
-        padding: 15px 20px;
-    }
+    .gallery-page .main-navigation {
 
-    .gallery-page .site-footer p {
-        font-size: 9px;
-    }
+        position: absolute;
+
+        top: 62px;
+
+        right: 10px;
+
+        width: 190px;
+
+        display: none;
+
+        flex-direction: column;
+
+        background: var(--cream);
+
+        border: 1px solid var(--black);
+
+        box-shadow: 5px 5px 0 var(--black);
+
+        z-index: 140;
+
+    }
+
+
+
+    .gallery-page .main-navigation.mobile-open {
+
+        display: flex !important;
+
+    }
+
+
+
+    .gallery-page .main-navigation .nav-btn {
+
+        width: 100%;
+
+    }
+
+
+
+    .gallery-hero,
+
+    .gallery-hero-inner {
+
+        min-height: 350px;
+
+    }
+
+
+
+    .gallery-hero-inner {
+
+        padding: 55px 25px;
+
+    }
+
+
+
+    .gallery-label {
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+
+    .gallery-title h1 {
+
+        font-size: 54px;
+
+        line-height: .9;
+
+    }
+
+
+
+    .gallery-intro {
+
+        width: 100%;
+
+        margin-top: 18px;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+
+    }
+
+
+
+    .gallery-content {
+
+        padding: 45px 25px;
+
+    }
+
+
+
+    .gallery-section {
+
+        margin-bottom: 65px;
+
+    }
+
+
+
+    .gallery-section-heading {
+
+        margin-bottom: 25px;
+
+    }
+
+
+
+    .gallery-section-label {
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+
+    .gallery-section-heading h2 {
+
+        font-size: 42px;
+
+        line-height: .92;
+
+    }
+
+
+
+    .gallery-section-heading p {
+
+        width: 100%;
+
+        margin-top: 13px;
+
+        font-size: 10px;
+
+        line-height: 1.55;
+
+    }
+
+
+
+    .gallery-grid,
+
+    .documentation-grid,
+
+    .bts-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+
+    }
+
+
+
+    .gallery-item,
+
+    .documentation-item,
+
+    .bts-item {
+
+        aspect-ratio: 4 / 3;
+
+        box-shadow: 4px 4px 0 var(--black);
+
+        border-width: 1px;
+
+    }
+
+
+
+    .gallery-item img,
+
+    .documentation-item img,
+
+    .bts-item img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+    }
+
+
+
+    .gallery-item::after,
+
+    .documentation-item::after,
+
+    .bts-item::after {
+
+        width: 24px;
+
+        height: 24px;
+
+        right: 7px;
+
+        bottom: 7px;
+
+        font-size: 15px;
+
+        opacity: 1;
+
+        transform: scale(.9);
+
+    }
+
+
+
+    .documentation-caption,
+
+    .bts-caption {
+
+        padding: 7px 9px;
+
+        font-size: 7px;
+
+        letter-spacing: .7px;
+
+    }
+
+
+
+    .gallery-divider {
+
+        height: 50px;
+
+    }
+
+
+
+    .gallery-divider-stripes {
+
+        width: 230px;
+
+        height: 50px;
+
+    }
+
+
+
+    .gallery-divider-stripes span {
+
+        height: 50px;
+
+    }
+
+
+
+    .gallery-divider-stripes .stripe-yellow {
+
+        width: 95px;
+
+    }
+
+
+
+    .gallery-divider-stripes .stripe-blue,
+
+    .gallery-divider-stripes .stripe-red,
+
+    .gallery-divider-stripes .stripe-black {
+
+        width: 55px;
+
+    }
+
+
+
+    .gallery-lightbox {
+
+        padding: 18px;
+
+    }
+
+
+
+    .gallery-lightbox img {
+
+        max-width: 94vw;
+
+        max-height: 80vh;
+
+        box-shadow: 6px 6px 0 var(--red);
+
+    }
+
+
+
+    .lightbox-close {
+
+        top: 12px;
+
+        right: 14px;
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 21px;
+
+    }
+
+
+
+    #featuredGallery.artwork-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+    }
+
+
+
+    .artwork-output {
+
+        padding: 14px;
+
+    }
+
+
+
+    .artwork-output h3 {
+
+        font-size: 25px;
+
+    }
+
+
+
+    .artwork-output p {
+
+        font-size: 10px;
+
+    }
+
+
+
+    .artwork-output-images {
+
+        gap: 7px;
+
+    }
+
+
+
+    .artwork-output-image::after {
+
+        opacity: 1;
+
+    }
+
+
+
+    .gallery-switcher {
+
+        gap: 6px;
+
+        margin-bottom: 40px;
+
+    }
+
+
+
+    .gallery-switch-btn {
+
+        padding: 10px 13px;
+
+        font-size: 8px;
+
+        letter-spacing: .7px;
+
+    }
+
+
+
+    .gallery-page .site-footer {
+
+        padding: 15px 20px;
+
+    }
+
+
+
+    .gallery-page .site-footer p {
+
+        font-size: 9px;
+
+    }
+
 }
 
-/* SMALL MOBILE */
+
+
+/\* SMALL MOBILE \*/
+
 @media (max-width: 380px) {
-    .gallery-page .site-header {
-        height: 58px;
-    }
 
-    .gallery-page .brand-area {
-        width: 190px;
-        height: 58px;
-    }
+    .gallery-page .site-header {
 
-    .gallery-page .brand-yellow {
-        width: 145px;
-        height: 58px;
-    }
+        height: 58px;
 
-    .gallery-page .logo {
-        width: 43px;
-    }
+    }
 
-    .gallery-page .top-stripes {
-        left: 145px;
-        width: 144px;
-        height: 58px;
-    }
 
-    .gallery-page .top-stripes span {
-        flex-basis: 48px;
-        width: 48px;
-        height: 58px;
-    }
 
-    .gallery-page .main-navigation {
-        top: 58px;
-        right: 8px;
-        width: 175px;
-    }
+    .gallery-page .brand-area {
 
-    .gallery-hero,
-    .gallery-hero-inner {
-        min-height: 320px;
-    }
+        width: 190px;
 
-    .gallery-hero-inner {
-        padding: 45px 20px;
-    }
+        height: 58px;
 
-    .gallery-title h1 {
-        font-size: 46px;
-    }
+    }
 
-    .gallery-intro {
-        font-size: 9px;
-    }
 
-    .gallery-content {
-        padding: 35px 20px;
-    }
 
-    .gallery-section-heading h2 {
-        font-size: 36px;
-    }
+    .gallery-page .brand-yellow {
 
-    .gallery-section-heading p {
-        font-size: 9px;
-    }
+        width: 145px;
 
-    .gallery-grid,
-    .documentation-grid,
-    .bts-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 7px;
-    }
+        height: 58px;
 
-    .gallery-item,
-    .documentation-item,
-    .bts-item {
-        aspect-ratio: 4 / 3;
-        box-shadow: 3px 3px 0 var(--black);
-    }
+    }
 
-    .documentation-caption,
-    .bts-caption {
-        padding: 5px 6px;
-        font-size: 6px;
-        letter-spacing: .5px;
-    }
 
-    .gallery-switcher {
-        gap: 5px;
-        margin-bottom: 35px;
-    }
 
-    .gallery-switch-btn {
-        padding: 9px 10px;
-        font-size: 7px;
-        letter-spacing: .5px;
-    }
+    .gallery-page .logo {
 
-    .gallery-page .site-footer {
-        padding: 13px 15px;
-    }
+        width: 43px;
 
-    .gallery-page .site-footer p {
-        font-size: 8px;
-    }
+    }
+
+
+
+    .gallery-page .top-stripes {
+
+        left: 145px;
+
+        width: 144px;
+
+        height: 58px;
+
+    }
+
+
+
+    .gallery-page .top-stripes span {
+
+        flex-basis: 48px;
+
+        width: 48px;
+
+        height: 58px;
+
+    }
+
+
+
+    .gallery-page .main-navigation {
+
+        top: 58px;
+
+        right: 8px;
+
+        width: 175px;
+
+    }
+
+
+
+    .gallery-hero,
+
+    .gallery-hero-inner {
+
+        min-height: 320px;
+
+    }
+
+
+
+    .gallery-hero-inner {
+
+        padding: 45px 20px;
+
+    }
+
+
+
+    .gallery-title h1 {
+
+        font-size: 46px;
+
+    }
+
+
+
+    .gallery-intro {
+
+        font-size: 9px;
+
+    }
+
+
+
+    .gallery-content {
+
+        padding: 35px 20px;
+
+    }
+
+
+
+    .gallery-section-heading h2 {
+
+        font-size: 36px;
+
+    }
+
+
+
+    .gallery-section-heading p {
+
+        font-size: 9px;
+
+    }
+
+
+
+    .gallery-grid,
+
+    .documentation-grid,
+
+    .bts-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+
+    }
+
+
+
+    .gallery-item,
+
+    .documentation-item,
+
+    .bts-item {
+
+        aspect-ratio: 4 / 3;
+
+        box-shadow: 3px 3px 0 var(--black);
+
+    }
+
+
+
+    .documentation-caption,
+
+    .bts-caption {
+
+        padding: 5px 6px;
+
+        font-size: 6px;
+
+        letter-spacing: .5px;
+
+    }
+
+
+
+    .gallery-switcher {
+
+        gap: 5px;
+
+        margin-bottom: 35px;
+
+    }
+
+
+
+    .gallery-switch-btn {
+
+        padding: 9px 10px;
+
+        font-size: 7px;
+
+        letter-spacing: .5px;
+
+    }
+
+
+
+    .gallery-page .site-footer {
+
+        padding: 13px 15px;
+
+    }
+
+
+
+    .gallery-page .site-footer p {
+
+        font-size: 8px;
+
+    }
+
 }
+
 </style>
+
 </head>
+
+
 
 <body class="gallery-page">
 
+
+
 <!-- HEADER -->
+
 <header class="site-header">
-    <div class="brand-area">
-        <div class="brand-yellow"></div>
 
-        <a href="index.html" class="logo-link">
-            <img src="images/whitelogo.png" alt="Talakbay Logo" class="logo">
-        </a>
+    <div class="brand-area">
 
-        <div class="top-stripes">
-            <span class="stripe-red"></span>
-            <span class="stripe-yellow"></span>
-            <span class="stripe-blue"></span>
-            <span class="stripe-black"></span>
-        </div>
-    </div>
+        <div class="brand-yellow"></div>
 
-    <nav class="main-navigation" id="mainNavigation">
-        <a href="index.html" class="nav-btn nav-home">HOME</a>
-        <a href="resources.html" class="nav-btn nav-resources">LESSONS</a>
-        <a href="gallery.html" class="nav-btn nav-gallery active">GALLERY</a>
-        <a href="#" class="nav-btn nav-contact" data-toggle="modal" data-target="#contactModal">CONTACT</a>
-    </nav>
 
-    <button class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            onclick="toggleMobileMenu()">☰</button>
+
+        <a href="index.html" class="logo-link">
+
+            <img src="images/whitelogo.png" alt="Talakbay Logo" class="logo">
+
+        </a>
+
+
+
+        <div class="top-stripes">
+
+            <span class="stripe-red"></span>
+
+            <span class="stripe-yellow"></span>
+
+            <span class="stripe-blue"></span>
+
+            <span class="stripe-black"></span>
+
+        </div>
+
+    </div>
+
+
+
+    <nav class="main-navigation" id="mainNavigation">
+
+        <a href="index.html" class="nav-btn nav-home">HOME</a>
+
+        <a href="resources.html" class="nav-btn nav-resources">LESSONS</a>
+
+        <a href="gallery.html" class="nav-btn nav-gallery active">GALLERY</a>
+
+        <a href="#" class="nav-btn nav-contact" data-toggle="modal" data-target="#contactModal">CONTACT</a>
+
+    </nav>
+
+
+
+    <button class="menu-toggle"
+
+            id="menuToggle"
+
+            type="button"
+
+            aria-label="Open navigation menu"
+
+            aria-expanded="false"
+
+            onclick="toggleMobileMenu()">☰</button>
+
 </header>
 
-<!-- HERO -->
-<section class="gallery-hero">
-    <div class="gallery-hero-bg"></div>
 
-    <div class="gallery-hero-inner">
-        <div class="gallery-title">
-            <p class="gallery-label">TALAKBAY PROJECT ARCHIVE</p>
-            <h1>GALLERY</h1>
-            <p class="gallery-intro">
-                Explore selected works and photographic documentation
-                from the Talakbay Structured Photowalk Program.
-            </p>
-        </div>
-    </div>
+
+<!-- HERO -->
+
+<section class="gallery-hero">
+
+    <div class="gallery-hero-bg"></div>
+
+
+
+    <div class="gallery-hero-inner">
+
+        <div class="gallery-title">
+
+            <p class="gallery-label">TALAKBAY PROJECT ARCHIVE</p>
+
+            <h1>GALLERY</h1>
+
+            <p class="gallery-intro">
+
+                Explore selected works and photographic documentation
+
+                from the Talakbay Structured Photowalk Program.
+
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
+
+
 
 <!-- MAIN CONTENT -->
+
 <main class="gallery-content">
-    <div class="gallery-container">
 
-        <!-- GALLERY SWITCHER -->
-        <div class="gallery-switcher">
-            <button type="button"
-                    class="gallery-switch-btn active"
-                    data-gallery="featured"
-                    onclick="switchGallery('featured', this)">ARTWORKS</button>
+    <div class="gallery-container">
 
-            <button type="button"
-                    class="gallery-switch-btn"
-                    data-gallery="documentation"
-                    onclick="switchGallery('documentation', this)">PROGRAM DOCUMENTATION</button>
 
-            <button type="button"
-                    class="gallery-switch-btn"
-                    data-gallery="bts"
-                    onclick="switchGallery('bts', this)">BTS DOCUMENTATION</button>
-        </div>
 
-        <!-- ARTWORKS -->
-        <section class="gallery-section" id="gallerySectionFeatured">
-            <div class="gallery-section-heading">
-                <span class="gallery-section-label">FEATURED WORKS</span>
-                <h2>ARTWORKS</h2>
-                <p>
-                    Explore 18 photographic artworks, each presented with up to three
-                    images and a short description.
-                </p>
-            </div>
+        <!-- GALLERY SWITCHER -->
 
-            <div class="artwork-grid" id="featuredGallery"></div>
-        </section>
+        <div class="gallery-switcher">
 
-        <!-- PROGRAM DOCUMENTATION -->
-        <section class="gallery-section" id="gallerySectionDocumentation">
-            <div class="gallery-section-heading">
-                <span class="gallery-section-label">PROJECT RECORD</span>
-                <h2>PROGRAM DOCUMENTATION</h2>
-                <p>
-                    Photos documenting the activities, participants, and
-                    experiences during the Structured Photowalk Program.
-                </p>
-            </div>
+            <button type="button"
 
-            <div class="documentation-grid" id="documentationGallery"></div>
-        </section>
+                    class="gallery-switch-btn active"
 
-        <!-- BTS DOCUMENTATION -->
-        <section class="gallery-section" id="gallerySectionBTS">
-            <div class="gallery-section-heading">
-                <span class="gallery-section-label">BEHIND THE PROJECT</span>
-                <h2>BTS DOCUMENTATION</h2>
-                <p>
-                    Behind-the-scenes moments showing the preparation,
-                    production, and development of the Talakbay project.
-                </p>
-            </div>
+                    data-gallery="featured"
 
-            <!-- BTS IMAGE SET SLIDER -->
-            <div class="bts-set-slider" role="group" aria-label="BTS documentation image sets">
-                <button type="button" class="bts-set-btn active" data-bts-set="1" aria-pressed="true"
-                        onclick="showBTSSet(1, this)">Episode 1</button>
-                <button type="button" class="bts-set-btn" data-bts-set="2" aria-pressed="false"
-                        onclick="showBTSSet(2, this)">Episode 2</button>
-                <button type="button" class="bts-set-btn" data-bts-set="3" aria-pressed="false"
-                        onclick="showBTSSet(3, this)">Episode 3</button>
-            </div>
-            <p class="bts-set-status" id="btsSetStatus" aria-live="polite"></p>
-            <div class="bts-grid" id="btsGallery"></div>
-        </section>
+                    onclick="switchGallery('featured', this)">ARTWORKS</button>
 
-    </div>
+
+
+            <button type="button"
+
+                    class="gallery-switch-btn"
+
+                    data-gallery="documentation"
+
+                    onclick="switchGallery('documentation', this)">PROGRAM DOCUMENTATION</button>
+
+
+
+            <button type="button"
+
+                    class="gallery-switch-btn"
+
+                    data-gallery="bts"
+
+                    onclick="switchGallery('bts', this)">BTS DOCUMENTATION</button>
+
+        </div>
+
+
+
+        <!-- ARTWORKS -->
+
+        <section class="gallery-section" id="gallerySectionFeatured">
+
+            <div class="gallery-section-heading">
+
+                <span class="gallery-section-label">FEATURED WORKS</span>
+
+                <h2>ARTWORKS</h2>
+
+                <p>
+
+                    Explore 18 photographic artworks, each presented with up to three
+
+                    images and a short description.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="artwork-grid" id="featuredGallery"></div>
+
+        </section>
+
+
+
+        <!-- PROGRAM DOCUMENTATION -->
+
+        <section class="gallery-section" id="gallerySectionDocumentation">
+
+            <div class="gallery-section-heading">
+
+                <span class="gallery-section-label">PROJECT RECORD</span>
+
+                <h2>PROGRAM DOCUMENTATION</h2>
+
+                <p>
+
+                    Photos documenting the activities, participants, and
+
+                    experiences during the Structured Photowalk Program.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="documentation-grid" id="documentationGallery"></div>
+
+        </section>
+
+
+
+        <!-- BTS DOCUMENTATION -->
+
+        <section class="gallery-section" id="gallerySectionBTS">
+
+            <div class="gallery-section-heading">
+
+                <span class="gallery-section-label">BEHIND THE PROJECT</span>
+
+                <h2>BTS DOCUMENTATION</h2>
+
+                <p>
+
+                    Behind-the-scenes moments showing the preparation,
+
+                    production, and development of the Talakbay project.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- BTS IMAGE SET SLIDER -->
+
+            <div class="bts-set-slider" role="group" aria-label="BTS documentation image sets">
+
+                <button type="button" class="bts-set-btn active" data-bts-set="1" aria-pressed="true"
+
+                        onclick="showBTSSet(1, this)">Episode 1</button>
+
+                <button type="button" class="bts-set-btn" data-bts-set="2" aria-pressed="false"
+
+                        onclick="showBTSSet(2, this)">Episode 2</button>
+
+                <button type="button" class="bts-set-btn" data-bts-set="3" aria-pressed="false"
+
+                        onclick="showBTSSet(3, this)">Episode 3</button>
+
+            </div>
+
+            <p class="bts-set-status" id="btsSetStatus" aria-live="polite"></p>
+
+            <div class="bts-grid" id="btsGallery"></div>
+
+        </section>
+
+
+
+    </div>
+
 </main>
 
+
+
 <!-- DIVIDER -->
+
 <section class="gallery-divider">
-    <div class="gallery-divider-stripes">
-        <span class="stripe-yellow"></span>
-        <span class="stripe-blue"></span>
-        <span class="stripe-red"></span>
-        <span class="stripe-black"></span>
-    </div>
+
+    <div class="gallery-divider-stripes">
+
+        <span class="stripe-yellow"></span>
+
+        <span class="stripe-blue"></span>
+
+        <span class="stripe-red"></span>
+
+        <span class="stripe-black"></span>
+
+    </div>
+
 </section>
 
+
+
 <!-- FOOTER -->
+
 <footer class="site-footer">
-    <p>© 2026 Gotcha! Productions. All Rights Reserved.</p>
+
+    <p>© 2026 Gotcha! Productions. All Rights Reserved.</p>
+
 </footer>
 
+
+
 <!-- CONTACT MODAL -->
+
 <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Contact Us</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span>&times;</span>
-                </button>
-            </div>
 
-            <div class="modal-body">
-                <p><strong>Gotcha! Productions</strong></p>
-                <p>📧 gotchaproductions@gmail.com</p>
-                <p>📱 +63 916 426 0418</p>
-            </div>
+    <div class="modal-dialog modal-dialog-centered">
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">Contact Us</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span>&times;</span>
+
+                </button>
+
+            </div>
+
+
+
+            <div class="modal-body">
+
+                <p><strong>Gotcha! Productions</strong></p>
+
+                <p>📧 gotchaproductions@gmail.com</p>
+
+                <p>📱 +63 916 426 0418</p>
+
+            </div>
+
+
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
+
+
 
 <!-- LIGHTBOX -->
+
 <div class="gallery-lightbox" id="galleryLightbox" onclick="closeGalleryImage(event)">
-    <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
-    <img id="lightboxImage" src="" alt="Expanded gallery image">
+
+    <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+
+    <img id="lightboxImage" src="" alt="Expanded gallery image">
+
 </div>
 
+
+
 <!-- CLICK SOUND -->
+
 <audio id="clickSound" src="sounds/click1.mp3" preload="auto"></audio>
 
+
+
 <!-- BOOTSTRAP JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https\://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https\://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 <script>
-/* =========================================================
-   IMAGE PATHS
 
-   ARTWORKS:
-   images/Artwork/<Artwork Folder>/1.webp through 1-3.webp
+/\* =========================================================
 
-   PROGRAM DOCUMENTATION:
-   images/Program Documentation/1edit.webp through 141edit.webp
+   IMAGE PATHS
 
-   BTS DOCUMENTATION:
-   images/BTS Documentation/1edit.webp through 99edit.webp
-   ========================================================= */
+
+
+   ARTWORKS:
+
+   images/Artwork/<Artwork Folder>/1.webp through 1-3.webp
+
+
+
+   PROGRAM DOCUMENTATION:
+
+   images/Program Documentation/1edit.webp through 141edit.webp
+
+
+
+   BTS DOCUMENTATION:
+
+   images/BTS Documentation/1edit.webp through 99edit.webp
+
+   ========================================================= \*/
+
+
 
 const artworkFolder = "images/Artwork/";
+
 const documentationFolder = "images/Program Documentation/";
+
 const btsFolder = "images/BTS Documentation/";
 
-/* Encode folder names and filenames for browser compatibility. */
+
+
+/\* Encode folder names and filenames for browser compatibility. \*/
+
 function getArtworkImage(folderName, imageNumber) {
-    return artworkFolder + encodeURIComponent(folderName) + "/" + imageNumber + ".webp";
+
+    return artworkFolder + encodeURIComponent(folderName) + "/" + imageNumber + ".webp";
+
 }
+
+
 
 function getDocumentationImage(number) {
-    return documentationFolder + number + "edit.webp";
+
+    return documentationFolder + number + "edit.webp";
+
 }
+
+
 
 function getBTSImage(number) {
-    return btsFolder + number + "edit.webp";
+
+    return btsFolder + number + "edit.webp";
+
 }
 
-/* MOBILE MENU */
+
+
+/\* MOBILE MENU \*/
+
 function toggleMobileMenu() {
-    const menu = document.getElementById("mainNavigation");
-    const button = document.getElementById("menuToggle");
 
-    if (!menu || !button) return;
+    const menu = document.getElementById("mainNavigation");
 
-    const open = menu.classList.toggle("mobile-open");
-    button.setAttribute("aria-expanded", open ? "true" : "false");
+    const button = document.getElementById("menuToggle");
+
+
+
+    if (!menu || !button) return;
+
+
+
+    const open = menu.classList.toggle("mobile-open");
+
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+
 }
 
-/* OPEN LIGHTBOX */
+
+
+/\* OPEN LIGHTBOX \*/
+
 function openGalleryImage(item) {
-    const img = item && item.querySelector("img");
-    const box = document.getElementById("galleryLightbox");
-    const out = document.getElementById("lightboxImage");
-    const sound = document.getElementById("clickSound");
 
-    if (!img || !box || !out) return;
+    const img = item && item.querySelector("img");
 
-    out.src = img.src;
-    out.alt = img.alt || "Expanded gallery image";
-    box.classList.add("active");
-    document.body.style.overflow = "hidden";
+    const box = document.getElementById("galleryLightbox");
 
-    if (sound) {
-        sound.currentTime = 0;
-        sound.play().catch(() => {});
-    }
+    const out = document.getElementById("lightboxImage");
+
+    const sound = document.getElementById("clickSound");
+
+
+
+    if (!img || !box || !out) return;
+
+
+
+    out.src = img.src;
+
+    out.alt = img.alt || "Expanded gallery image";
+
+    box.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+
+
+    if (sound) {
+
+        sound.currentTime = 0;
+
+        sound.play().catch(() => {});
+
+    }
+
 }
 
-/* CLOSE LIGHTBOX */
+
+
+/\* CLOSE LIGHTBOX \*/
+
 function closeGalleryImage(event) {
-    const box = document.getElementById("galleryLightbox");
-    if (!box) return;
 
-    if (event && event.target && event.target.id === "lightboxImage") {
-        return;
-    }
+    const box = document.getElementById("galleryLightbox");
 
-    if (event && event.target !== box &&
-        !event.target.closest(".lightbox-close")) {
-        return;
-    }
+    if (!box) return;
 
-    box.classList.remove("active");
-    document.getElementById("lightboxImage").src = "";
-    document.body.style.overflow = "";
+
+
+    if (event && event.target && event.target.id === "lightboxImage") {
+
+        return;
+
+    }
+
+
+
+    if (event && event.target !== box &&
+
+        !event.target.closest(".lightbox-close")) {
+
+        return;
+
+    }
+
+
+
+    box.classList.remove("active");
+
+    document.getElementById("lightboxImage").src = "";
+
+    document.body.style.overflow = "";
+
 }
 
-/* CREATE ONE CLICKABLE IMAGE */
+
+
+/\* CREATE ONE CLICKABLE IMAGE \*/
+
 function createGalleryItem(imagePath, altText, className, captionText) {
-    const article = document.createElement("article");
-    article.className = className;
 
-    const img = document.createElement("img");
-    img.src = imagePath;
-    img.alt = altText;
-    img.loading = "lazy";
+    const article = document.createElement("article");
 
-    article.appendChild(img);
+    article.className = className;
 
-    if (captionText) {
-        const caption = document.createElement("div");
-        caption.className = className === "bts-item"
-            ? "bts-caption"
-            : "documentation-caption";
-        caption.textContent = captionText;
-        article.appendChild(caption);
-    }
 
-    article.addEventListener("click", function() {
-        openGalleryImage(article);
-    });
 
-    return article;
+    const img = document.createElement("img");
+
+    img.src = imagePath;
+
+    img.alt = altText;
+
+    img.loading = "lazy";
+
+
+
+    article.appendChild(img);
+
+
+
+    if (captionText) {
+
+        const caption = document.createElement("div");
+
+        caption.className = className === "bts-item"
+
+            ? "bts-caption"
+
+            : "documentation-caption";
+
+        caption.textContent = captionText;
+
+        article.appendChild(caption);
+
+    }
+
+
+
+    article.addEventListener("click", function() {
+
+        openGalleryImage(article);
+
+    });
+
+
+
+    return article;
+
 }
 
-/* =========================================================
-   ARTWORK GALLERY — FOLDER-BASED ARTWORKS
-   Each artwork folder contains 1.webp, 2.webp, and/or 3.webp.
-   ========================================================= */
+
+
+/\* =========================================================
+
+   ARTWORK GALLERY — FOLDER-BASED ARTWORKS
+
+   Each artwork folder contains 1.webp, 2.webp, and/or 3.webp.
+
+   ========================================================= \*/
+
 function createFeaturedGallery() {
-    const container = document.getElementById("featuredGallery");
-    if (!container) return;
 
-    const artworkOutputs = [
-        "BUKANG LIWAYWAY",
-        "DETERMINATION",
-        "FIGURED STONE",
-        "ISANG ALAALANG BULAKLAK",
-        "LAST GLIMPSE",
-        "LIWANAG",
-        "MADALI",
-        "MARAHUYO",
-        "PAGKUHANG LARAWAN",
-        "PAGLALAGALAG",
-        "PAGOD",
-        "PASANIN AT PANGARAP",
-        "STANDING OUT",
-        "TALINAN",
-        "THE FORGOTTEN PHONE",
-        "THE LONE FLOWER IN THE POND",
-        "UNTIL WE REACH",
-        "VIRTUOUS BIG COLLAGE"
-    ];
+    const container = document.getElementById("featuredGallery");
 
-    artworkOutputs.forEach(function(folderName, index) {
-        const article = document.createElement("article");
-        article.className = "artwork-output";
+    if (!container) return;
 
-        const header = document.createElement("div");
-        header.className = "artwork-output-header";
 
-        const title = document.createElement("h3");
-        title.textContent = folderName;
 
-        const description = document.createElement("p");
-        description.textContent = "Photographic artwork exploring visual organization and composition.";
+    const artworkOutputs = [
 
-        header.appendChild(title);
-        header.appendChild(description);
-        article.appendChild(header);
+        "BUKANG LIWAYWAY",
 
-        const images = document.createElement("div");
-        images.className = "artwork-output-images";
+        "DETERMINATION",
 
-        /* Each folder is expected to contain 1.webp, 2.webp, and 3.webp.
-           Images that do not exist are automatically hidden. */
-        for (let imageIndex = 1; imageIndex <= 3; imageIndex++) {
-            const imageButton = document.createElement("div");
-            imageButton.className = "artwork-output-image";
-            imageButton.setAttribute("role", "button");
-            imageButton.setAttribute("tabindex", "0");
-            imageButton.setAttribute("aria-label", "Open " + folderName + " image " + imageIndex);
+        "FIGURED STONE",
 
-            const img = document.createElement("img");
-            img.src = getArtworkImage(folderName, imageIndex);
-            img.alt = folderName + " — image " + imageIndex;
-            img.loading = "lazy";
+        "ISANG ALAALANG BULAKLAK",
 
-            img.addEventListener("error", function() {
-                imageButton.remove();
-                if (images.children.length === 0) {
-                    article.remove();
-                }
-            });
+        "LAST GLIMPSE",
 
-            imageButton.appendChild(img);
+        "LIWANAG",
 
-            imageButton.addEventListener("click", function() {
-                openGalleryImage(imageButton);
-            });
+        "MADALI",
 
-            imageButton.addEventListener("keydown", function(event) {
-                if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    openGalleryImage(imageButton);
-                }
-            });
+        "MARAHUYO",
 
-            images.appendChild(imageButton);
-        }
+        "PAGKUHANG LARAWAN",
 
-        article.appendChild(images);
-        container.appendChild(article);
-    });
+        "PAGLALAGALAG",
+
+        "PAGOD",
+
+        "PASANIN AT PANGARAP",
+
+        "STANDING OUT",
+
+        "TALINAN",
+
+        "THE FORGOTTEN PHONE",
+
+        "THE LONE FLOWER IN THE POND",
+
+        "UNTIL WE REACH",
+
+        "VIRTUOUS BIG COLLAGE"
+
+    ];
+
+
+
+    artworkOutputs.forEach(function(folderName, index) {
+
+        const article = document.createElement("article");
+
+        article.className = "artwork-output";
+
+
+
+        const header = document.createElement("div");
+
+        header.className = "artwork-output-header";
+
+
+
+        const title = document.createElement("h3");
+
+        title.textContent = folderName;
+header.appendChild(title);
+
+        
+
+        article.appendChild(header);
+
+
+
+        const images = document.createElement("div");
+
+        images.className = "artwork-output-images";
+
+
+
+        /\* Each folder is expected to contain 1.webp, 2.webp, and 3.webp.
+
+           Images that do not exist are automatically hidden. \*/
+
+        for (let imageIndex = 1; imageIndex <= 3; imageIndex++) {
+
+            const imageButton = document.createElement("div");
+
+            imageButton.className = "artwork-output-image";
+
+            imageButton.setAttribute("role", "button");
+
+            imageButton.setAttribute("tabindex", "0");
+
+            imageButton.setAttribute("aria-label", "Open " + folderName + " image " + imageIndex);
+
+
+
+            const img = document.createElement("img");
+
+            img.src = getArtworkImage(folderName, imageIndex);
+
+            img.alt = folderName + " — image " + imageIndex;
+
+            img.loading = "lazy";
+
+
+
+            img.addEventListener("error", function() {
+
+                imageButton.remove();
+
+                if (images.children.length === 0) {
+
+                    article.remove();
+
+                }
+
+            });
+
+
+
+            imageButton.appendChild(img);
+
+
+
+            imageButton.addEventListener("click", function() {
+
+                openGalleryImage(imageButton);
+
+            });
+
+
+
+            imageButton.addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter" || event.key === " ") {
+
+                    event.preventDefault();
+
+                    openGalleryImage(imageButton);
+
+                }
+
+            });
+
+
+
+            images.appendChild(imageButton);
+
+        }
+
+
+
+        article.appendChild(images);
+
+        container.appendChild(article);
+
+    });
+
 }
 
-/* =========================================================
-   PROGRAM DOCUMENTATION — 1edit.webp THROUGH 141edit.webp
-   Folder: images/Program Documentation/
-   ========================================================= */
+
+
+/\* =========================================================
+
+   PROGRAM DOCUMENTATION — 1edit.webp THROUGH 141edit.webp
+
+   Folder: images/Program Documentation/
+
+   ========================================================= \*/
+
 function createDocumentationGallery() {
-    const container = document.getElementById("documentationGallery");
-    if (!container) return;
 
-    for (let i = 1; i <= 141; i++) {
-        const item = createGalleryItem(
-            getDocumentationImage(i),
-            "Talakbay Program Documentation " + i,
-            "documentation-item",
-            "Program Documentation " + String(i).padStart(3, "0")
-        );
+    const container = document.getElementById("documentationGallery");
 
-        container.appendChild(item);
-    }
+    if (!container) return;
+
+
+
+    for (let i = 1; i <= 141; i++) {
+
+        const item = createGalleryItem(
+
+            getDocumentationImage(i),
+
+            "Talakbay Program Documentation " + i,
+
+            "documentation-item",
+
+            "Program Documentation " + String(i).padStart(3, "0")
+
+        );
+
+
+
+        container.appendChild(item);
+
+    }
+
 }
 
-/* =========================================================
-   BTS DOCUMENTATION — EDIT 86 THROUGH EDIT 110
-   Folder: images/BTS/
-   ========================================================= */
+
+
+/\* =========================================================
+
+   BTS DOCUMENTATION — EDIT 86 THROUGH EDIT 110
+
+   Folder: images/BTS/
+
+   ========================================================= \*/
+
 function createBTSGallery() {
-    const container = document.getElementById("btsGallery");
-    if (!container) return;
 
-    for (let i = 1; i <= 99; i++) {
-        const item = createGalleryItem(
-            getBTSImage(i),
-            "Talakbay Behind the Scenes " + i,
-            "bts-item",
-            "BTS Documentation " + String(i).padStart(2, "0")
-        );
+    const container = document.getElementById("btsGallery");
 
-        item.dataset.btsImageNumber = String(i);
-        if (i > 33) item.classList.add("bts-set-hidden");
-        container.appendChild(item);
-    }
+    if (!container) return;
+
+
+
+    for (let i = 1; i <= 99; i++) {
+
+        const item = createGalleryItem(
+
+            getBTSImage(i),
+
+            "Talakbay Behind the Scenes " + i,
+
+            "bts-item",
+
+            "BTS Documentation " + String(i).padStart(2, "0")
+
+        );
+
+
+
+        item.dataset.btsImageNumber = String(i);
+
+        if (i > 33) item.classList.add("bts-set-hidden");
+
+        container.appendChild(item);
+
+    }
+
 }
 
-/* BTS SET SLIDER — SHOW ONLY THE SELECTED IMAGE RANGE */
+
+
+/\* BTS SET SLIDER — SHOW ONLY THE SELECTED IMAGE RANGE \*/
+
 function showBTSSet(setNumber, button) {
-    const ranges = {
-        1: { start: 1, end: 33 },
-        2: { start: 34, end: 67 },
-        3: { start: 68, end: 99 }
-    };
 
-    const range = ranges[setNumber];
-    const gallery = document.getElementById("btsGallery");
-    const status = document.getElementById("btsSetStatus");
+    const ranges = {
 
-    if (!range || !gallery) return;
+        1: { start: 1, end: 33 },
 
-    gallery.querySelectorAll(".bts-item").forEach(function(item) {
-        const number = Number(item.dataset.btsImageNumber);
-        item.classList.toggle(
-            "bts-set-hidden",
-            number < range.start || number > range.end
-        );
-    });
+        2: { start: 34, end: 67 },
 
-    document.querySelectorAll(".bts-set-btn").forEach(function(btn) {
-        const isActive = btn === button;
-        btn.classList.toggle("active", isActive);
-        btn.setAttribute("aria-pressed", isActive ? "true" : "false");
-    });
+        3: { start: 68, end: 99 }
 
-    if (status) {
-        status.textContent = "Showing images " + range.start + "–" + range.end + " of 99";
-    }
+    };
+
+
+
+    const range = ranges[setNumber];
+
+    const gallery = document.getElementById("btsGallery");
+
+    const status = document.getElementById("btsSetStatus");
+
+
+
+    if (!range || !gallery) return;
+
+
+
+    gallery.querySelectorAll(".bts-item").forEach(function(item) {
+
+        const number = Number(item.dataset.btsImageNumber);
+
+        item.classList.toggle(
+
+            "bts-set-hidden",
+
+            number < range.start || number > range.end
+
+        );
+
+    });
+
+
+
+    document.querySelectorAll(".bts-set-btn").forEach(function(btn) {
+
+        const isActive = btn === button;
+
+        btn.classList.toggle("active", isActive);
+
+        btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+
+    });
+
+
+
+    if (status) {
+
+        status.textContent = "Showing images " + range.start + "–" + range.end + " of 99";
+
+    }
+
 }
 
-/* GALLERY SWITCHER */
+
+
+/\* GALLERY SWITCHER \*/
+
 function switchGallery(type, button) {
-    const sections = {
-        featured: document.getElementById("gallerySectionFeatured"),
-        documentation: document.getElementById("gallerySectionDocumentation"),
-        bts: document.getElementById("gallerySectionBTS")
-    };
 
-    Object.keys(sections).forEach(function(key) {
-        if (sections[key]) {
-            sections[key].classList.toggle("gallery-hidden", key !== type);
-        }
-    });
+    const sections = {
 
-    document.querySelectorAll(".gallery-switch-btn").forEach(function(btn) {
-        btn.classList.toggle("active", btn === button);
-    });
+        featured: document.getElementById("gallerySectionFeatured"),
+
+        documentation: document.getElementById("gallerySectionDocumentation"),
+
+        bts: document.getElementById("gallerySectionBTS")
+
+    };
+
+
+
+    Object.keys(sections).forEach(function(key) {
+
+        if (sections[key]) {
+
+            sections[key].classList.toggle("gallery-hidden", key !== type);
+
+        }
+
+    });
+
+
+
+    document.querySelectorAll(".gallery-switch-btn").forEach(function(btn) {
+
+        btn.classList.toggle("active", btn === button);
+
+    });
+
 }
 
-/* CLOSE MENU WHEN CLICKING OUTSIDE */
+
+
+/\* CLOSE MENU WHEN CLICKING OUTSIDE \*/
+
 document.addEventListener("click", function(event) {
-    const menu = document.getElementById("mainNavigation");
-    const button = document.getElementById("menuToggle");
 
-    if (menu && button &&
-        window.innerWidth <= 600 &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)) {
-        menu.classList.remove("mobile-open");
-        button.setAttribute("aria-expanded", "false");
-    }
+    const menu = document.getElementById("mainNavigation");
+
+    const button = document.getElementById("menuToggle");
+
+
+
+    if (menu && button &&
+
+        window\.innerWidth <= 600 &&
+
+        !menu.contains(event.target) &&
+
+        !button.contains(event.target)) {
+
+        menu.classList.remove("mobile-open");
+
+        button.setAttribute("aria-expanded", "false");
+
+    }
+
 });
 
-/* KEYBOARD SUPPORT */
+
+
+/\* KEYBOARD SUPPORT \*/
+
 document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        const box = document.getElementById("galleryLightbox");
 
-        if (box && box.classList.contains("active")) {
-            box.classList.remove("active");
-            document.getElementById("lightboxImage").src = "";
-            document.body.style.overflow = "";
-        }
-    }
+    if (event.key === "Escape") {
+
+        const box = document.getElementById("galleryLightbox");
+
+
+
+        if (box && box.classList.contains("active")) {
+
+            box.classList.remove("active");
+
+            document.getElementById("lightboxImage").src = "";
+
+            document.body.style.overflow = "";
+
+        }
+
+    }
+
 });
 
-/* CREATE ALL GALLERIES */
+
+
+/\* CREATE ALL GALLERIES \*/
+
 document.addEventListener("DOMContentLoaded", function() {
-    createFeaturedGallery();
-    createDocumentationGallery();
-    createBTSGallery();
-    switchGallery("featured", document.querySelector('[data-gallery="featured"]'));
+
+    createFeaturedGallery();
+
+    createDocumentationGallery();
+
+    createBTSGallery();
+
+    switchGallery("featured", document.querySelector('[data-gallery="featured"]'));
+
 });
+
 </script>
 
+
+
 </body>
+
 </html>
+
 
