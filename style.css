@@ -3473,7 +3473,7 @@ body::before {
     background-size: cover;
     background-attachment: fixed;
 
-    opacity: 0.20;
+    opacity: 0.10;
 
     z-index: -1;
     pointer-events: none;
