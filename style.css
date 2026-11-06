@@ -3450,23 +3450,36 @@ body::before {
     }
 }
 /* =========================================================
-   COLLABORATORS SECTION — ONE UNIFORM BACKGROUND COLOR
+   COLLABORATORS SECTION — OFF-WHITE WITH FADED BACKGROUND
 ========================================================= */
 
 .collaborators-section {
     position: relative;
+    isolation: isolate;
     background: #fffcf6 !important;
     background-color: #fffcf6 !important;
     overflow: hidden;
 }
 
-/* Remove the separate background image and color overlay */
+/* BG 1.png with low opacity */
 .collaborators-section::before {
-    display: none !important;
-    content: none !important;
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/BG 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    opacity: 0.20;
+
+    z-index: -1;
+    pointer-events: none;
 }
 
-/* Keep the collaborator cards consistent */
-.collaborators-section .collaborator-card {
-    background: #fffcf6;
+/* Keep collaborator cards above the background */
+.collaborators-section > * {
+    position: relative;
 }
