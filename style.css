@@ -3529,3 +3529,26 @@ body::before {
     background: #fff4e6 !important;
     background-color: #fff4e6 !important;
 }
+/* =========================================================
+   GOTCHA! PRODUCTIONS TEAM — INDIVIDUAL PHOTO BACKGROUNDS
+========================================================= */
+
+/* FIRST MEMBER — YELLOW */
+.production-team-card:nth-child(1) .production-team-photo-wrap {
+    background: #f4d35e !important;
+}
+
+/* SECOND MEMBER — CREAM */
+.production-team-card:nth-child(2) .production-team-photo-wrap {
+    background: #fff4e6 !important;
+}
+
+/* THIRD MEMBER — BLUE */
+.production-team-card:nth-child(3) .production-team-photo-wrap {
+    background: #2b4e8d !important;
+}
+
+/* FOURTH MEMBER — RED */
+.production-team-card:nth-child(4) .production-team-photo-wrap {
+    background: #891917 !important;
+}
