@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,40 +9,166 @@
 
     <title>Talakbay | Home</title>
 
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/logoblack.png">
 
-    <!-- =========================================================
-         FAVICON
-    ========================================================= -->
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-    <link
-        rel="icon"
-        type="image/png"
-        href="images/logoblack.png">
+    <!-- YOUR CSS -->
+    <link rel="stylesheet" href="style.css">
 
-
-    <!-- =========================================================
-         BOOTSTRAP
-    ========================================================= -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
-
-    <!-- =========================================================
-         YOUR CSS
-    ========================================================= -->
-
-    <link
-        rel="stylesheet"
-        href="style.css">
-
-
-    <!-- =========================================================
-         COLLABORATING ORGANIZATIONS SECTION
-    ========================================================= -->
-
+    <!-- GOTCHA PRODUCTION TEAM + COLLABORATORS -->
     <style>
+
+        /* =========================================================
+           GOTCHA! PRODUCTIONS TEAM
+        ========================================================= */
+
+        .production-team-section {
+            position: relative;
+            padding: 80px 6%;
+            background: #fff4e6;
+            color: #222222;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .production-team-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("images/BG 1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 0.2;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .production-team-inner {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .production-team-heading {
+            margin: 0 0 14px;
+            color: #891917;
+            font-family: "Anton", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .production-team-intro {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            color: #222222;
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* FOUR TEAM MEMBERS IN ONE ROW */
+
+        .production-team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .production-team-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 28px 22px;
+            background: #fffcf6;
+            border: 3px solid #222222;
+            border-radius: 14px;
+            box-shadow: 8px 8px 0 #f4d35e;
+            text-align: center;
+        }
+
+        .production-team-photo-wrap {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            margin-bottom: 22px;
+            overflow: hidden;
+            border: 2px solid #222222;
+            background: #f4d35e;
+        }
+
+        .production-team-photo {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .production-team-card h3 {
+            margin: 0;
+            color: #2b4e8d;
+            font-family: "Anton", sans-serif;
+            font-size: clamp(1.15rem, 2vw, 1.6rem);
+            font-weight: 400;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 991px) {
+
+            .production-team-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 24px;
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 767px) {
+
+            .production-team-section {
+                padding: 58px 6%;
+            }
+
+            .production-team-section::before {
+                background-attachment: scroll;
+            }
+
+            .production-team-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+
+            .production-team-card {
+                padding: 20px 15px;
+            }
+
+            .production-team-photo-wrap {
+                margin-bottom: 15px;
+            }
+
+            .production-team-card h3 {
+                font-size: 1.15rem;
+            }
+
+        }
+
+
+        /* =========================================================
+           COLLABORATING ORGANIZATIONS SECTION
+        ========================================================= */
 
         .collaborators-section {
             position: relative;
@@ -208,24 +333,11 @@
 
 <header class="site-header">
 
-
-    <!-- =====================================================
-         LEFT BRAND AREA
-    ===================================================== -->
-
     <div class="brand-area">
-
-
-        <!-- Yellow background -->
 
         <div class="brand-yellow"></div>
 
-
-        <!-- Logo -->
-
-        <a
-            href="index.html"
-            class="logo-link">
+        <a href="index.html" class="logo-link">
 
             <img
                 src="images/logoblack.png"
@@ -234,15 +346,10 @@
 
         </a>
 
-
-        <!-- Diagonal stripes -->
-
         <div class="top-stripes">
 
             <span class="stripe-blue"></span>
-
             <span class="stripe-red"></span>
-
             <span class="stripe-black"></span>
 
         </div>
@@ -250,68 +357,30 @@
     </div>
 
 
+    <!-- NAVIGATION -->
 
-    <!-- =====================================================
-         NAVIGATION
-    ===================================================== -->
+    <nav class="main-navigation" id="mainNavigation">
 
-    <nav
-        class="main-navigation"
-        id="mainNavigation">
-
-
-        <!-- HOME -->
-
-        <a
-            href="index.html"
-            class="nav-btn nav-home active">
-
+        <a href="index.html" class="nav-btn nav-home active">
             HOME
-
         </a>
 
-
-        <!-- LESSONS -->
-
-        <a
-            href="resources.html"
-            class="nav-btn nav-resources">
-
+        <a href="resources.html" class="nav-btn nav-resources">
             LESSONS
-
         </a>
 
-
-        <!-- GALLERY -->
-
-        <a
-            href="gallery.html"
-            class="nav-btn nav-gallery">
-
+        <a href="gallery.html" class="nav-btn nav-gallery">
             GALLERY
-
         </a>
 
-
-        <!-- CONTACT -->
-
-        <a
-            href="#"
-            class="nav-btn nav-contact"
-            data-toggle="modal"
-            data-target="#contactModal">
-
+        <a href="#" class="nav-btn nav-contact" data-toggle="modal" data-target="#contactModal">
             CONTACT
-
         </a>
 
     </nav>
 
 
-
-    <!-- =====================================================
-         MOBILE HAMBURGER MENU
-    ===================================================== -->
+    <!-- MOBILE HAMBURGER MENU -->
 
     <button
         type="button"
@@ -328,7 +397,6 @@
 </header>
 
 
-
 <!-- =========================================================
      MAIN CONTENT
 ========================================================= -->
@@ -342,11 +410,7 @@
 
 <section class="hero">
 
-
-    <!-- =====================================================
-         VIDEO BACKGROUND
-         CONTINUOUS LOOP
-    ===================================================== -->
+    <!-- VIDEO BACKGROUND -->
 
     <div class="hero-bg">
 
@@ -360,34 +424,22 @@
             preload="auto"
             aria-hidden="true">
 
-            <source
-                src="videos/herobg.mp4"
-                type="video/mp4">
+            <source src="videos/herobg.mp4" type="video/mp4">
 
         </video>
 
     </div>
 
 
-
-    <!-- =====================================================
-         MAIN HERO CONTENT
-    ===================================================== -->
+    <!-- MAIN HERO CONTENT -->
 
     <div class="hero-inner">
 
-
-        <!-- =================================================
-             LEFT: TEXT
-        ================================================= -->
-
         <div class="hero-copy">
-
 
             <h1>
                 TALAKBAY
             </h1>
-
 
             <p>
                 A Cinematic Instructional Video Series Applied on a
@@ -395,33 +447,16 @@
             </p>
 
 
-
-            <!-- =================================================
-                 HERO BUTTONS
-            ================================================= -->
+            <!-- HERO BUTTONS -->
 
             <div class="hero-buttons">
 
-
-                <!-- Learn More -->
-
-                <a
-                    href="resources.html"
-                    class="hero-button blue-button">
-
+                <a href="resources.html" class="hero-button blue-button">
                     LEARN MORE
-
                 </a>
 
-
-                <!-- View Gallery -->
-
-                <a
-                    href="gallery.html"
-                    class="hero-button red-button">
-
+                <a href="gallery.html" class="hero-button red-button">
                     VIEW GALLERY
-
                 </a>
 
             </div>
@@ -433,33 +468,22 @@
 </section>
 
 
-
 <!-- =========================================================
      DIVIDER
 ========================================================= -->
 
 <section class="divider">
 
-
-    <!-- =====================================================
-         LEFT DIVIDER STRIPES
-         YELLOW → BLUE → RED → BLACK
-    ===================================================== -->
-
     <div class="divider-left-stripes">
 
         <span class="stripe-yellow"></span>
-
         <span class="stripe-blue"></span>
-
         <span class="stripe-red"></span>
-
         <span class="stripe-black"></span>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -468,57 +492,27 @@
 
 <section class="about-section">
 
-
-    <!-- =====================================================
-         FADED BACKGROUND
-    ===================================================== -->
-
     <div class="about-bg"></div>
-
-
-
-    <!-- =====================================================
-         ABOUT CONTENT
-    ===================================================== -->
 
     <div class="about-inner">
 
-
-        <!-- =================================================
-             LEFT: TEXT
-        ================================================= -->
+        <!-- LEFT: TEXT -->
 
         <div class="about-copy">
 
-
-            <!-- =================================================
-                 PROJECT LABEL
-            ================================================= -->
-
             <div class="project-label">
-
                 A GOTCHA! PRODUCTIONS PROJECT
-
             </div>
 
 
-
-            <!-- =================================================
-                 TALAKBAY PROJECT LOGO
-            ================================================= -->
+            <!-- TALAKBAY PROJECT LOGO -->
 
             <div class="talakbay-project-logo">
-
-
-                <!-- TaLakbay Symbol -->
 
                 <img
                     src="images/logocolor1.png"
                     class="talakbay-icon"
                     alt="TaLakbay Logo">
-
-
-                <!-- TaLakbay Wordmark -->
 
                 <img
                     src="images/workmarkcolor.png"
@@ -528,9 +522,7 @@
             </div>
 
 
-            <!-- =================================================
-                 PROGRAM DESCRIPTION
-            ================================================= -->
+            <!-- PROGRAM DESCRIPTION -->
 
             <p>
 
@@ -547,10 +539,7 @@
         </div>
 
 
-
-        <!-- =================================================
-             RIGHT: PHOTO
-        ================================================= -->
+        <!-- RIGHT: PHOTO -->
 
         <div class="about-photo">
 
@@ -560,11 +549,119 @@
 
         </div>
 
-
     </div>
 
 </section>
 
+
+<!-- =========================================================
+     GOTCHA! PRODUCTIONS TEAM
+========================================================= -->
+
+<section class="production-team-section" id="production-team">
+
+    <div class="production-team-inner">
+
+        <h2 class="production-team-heading">
+            Gotcha! Productions Team
+        </h2>
+
+        <p class="production-team-intro">
+
+            Meet the team behind the development and production
+            of the TaLakbay project.
+
+        </p>
+
+
+        <div class="production-team-grid">
+
+
+            <!-- TEAM MEMBER 1 -->
+
+            <article class="production-team-card">
+
+                <div class="production-team-photo-wrap">
+
+                    <img
+                        src="images/team1.png"
+                        class="production-team-photo"
+                        alt="Gotcha Productions Team Member 1">
+
+                </div>
+
+                <h3>
+                    Team Member 1
+                </h3>
+
+            </article>
+
+
+            <!-- TEAM MEMBER 2 -->
+
+            <article class="production-team-card">
+
+                <div class="production-team-photo-wrap">
+
+                    <img
+                        src="images/team2.png"
+                        class="production-team-photo"
+                        alt="Gotcha Productions Team Member 2">
+
+                </div>
+
+                <h3>
+                    Team Member 2
+                </h3>
+
+            </article>
+
+
+            <!-- TEAM MEMBER 3 -->
+
+            <article class="production-team-card">
+
+                <div class="production-team-photo-wrap">
+
+                    <img
+                        src="images/team3.png"
+                        class="production-team-photo"
+                        alt="Gotcha Productions Team Member 3">
+
+                </div>
+
+                <h3>
+                    Team Member 3
+                </h3>
+
+            </article>
+
+
+            <!-- TEAM MEMBER 4 -->
+
+            <article class="production-team-card">
+
+                <div class="production-team-photo-wrap">
+
+                    <img
+                        src="images/team4.png"
+                        class="production-team-photo"
+                        alt="Gotcha Productions Team Member 4">
+
+                </div>
+
+                <h3>
+                    Team Member 4
+                </h3>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- =========================================================
@@ -575,7 +672,9 @@
 
     <div class="collaborators-inner">
 
-        <h2 class="collaborators-heading">Our Collaborators</h2>
+        <h2 class="collaborators-heading">
+            Our Collaborators
+        </h2>
 
         <p class="collaborators-intro">
 
@@ -589,9 +688,7 @@
         <div class="collaborators-grid">
 
 
-            <!-- =================================================
-                 MULTIMEDIA ARTS COUNCIL OF THE PHILIPPINES
-            ================================================= -->
+            <!-- MULTIMEDIA ARTS COUNCIL OF THE PHILIPPINES -->
 
             <article class="collaborator-card">
 
@@ -604,11 +701,9 @@
 
                 </div>
 
-
                 <h3>
                     Multimedia Arts Council of the Philippines (MMACP)
                 </h3>
-
 
                 <p>
 
@@ -623,10 +718,7 @@
             </article>
 
 
-
-            <!-- =================================================
-                 FRANCISCO E. BARZAGA INTEGRATED HIGH SCHOOL
-            ================================================= -->
+            <!-- FRANCISCO E. BARZAGA INTEGRATED HIGH SCHOOL -->
 
             <article class="collaborator-card">
 
@@ -639,11 +731,9 @@
 
                 </div>
 
-
                 <h3>
                     Francisco E. Barzaga Integrated High School (FEBIHS)
                 </h3>
-
 
                 <p>
 
@@ -659,10 +749,7 @@
             </article>
 
 
-
-            <!-- =================================================
-                 VIDEO SERIES ACTOR
-            ================================================= -->
+            <!-- VIDEO SERIES ACTOR -->
 
             <article class="collaborator-card">
 
@@ -675,11 +762,9 @@
 
                 </div>
 
-
                 <h3>
                     Kevin Icabales
                 </h3>
-
 
                 <p>
 
@@ -705,7 +790,6 @@
 </main>
 
 
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -713,45 +797,29 @@
 <footer class="site-footer">
 
     <p>
-
         © 2026 Gotcha! Productions. All Rights Reserved.
-
     </p>
 
 </footer>
-
 
 
 <!-- =========================================================
      CONTACT MODAL
 ========================================================= -->
 
-<div
-    class="modal fade"
-    id="contactModal"
-    tabindex="-1"
-    aria-hidden="true">
-
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered">
 
-
         <div class="modal-content">
 
-
-            <!-- =================================================
-                 MODAL HEADER
-            ================================================= -->
+            <!-- MODAL HEADER -->
 
             <div class="modal-header">
 
-
                 <h5 class="modal-title">
-
                     CONTACT US
-
                 </h5>
-
 
                 <button
                     type="button"
@@ -760,9 +828,7 @@
                     aria-label="Close">
 
                     <span aria-hidden="true">
-
                         &times;
-
                     </span>
 
                 </button>
@@ -770,47 +836,30 @@
             </div>
 
 
-
-            <!-- =================================================
-                 MODAL BODY
-            ================================================= -->
+            <!-- MODAL BODY -->
 
             <div class="modal-body">
 
-
                 <h4>
-
                     Gotcha! Productions
-
                 </h4>
-
 
                 <hr>
 
-
                 <p>
-
                     📧 4gotchaproductions@gmail.com
-
                 </p>
 
-
                 <p>
-
                     📱 +63 916 426 0418
-
                 </p>
 
             </div>
 
 
-
-            <!-- =================================================
-                 MODAL FOOTER
-            ================================================= -->
+            <!-- MODAL FOOTER -->
 
             <div class="modal-footer">
-
 
                 <button
                     type="button"
@@ -823,7 +872,6 @@
 
             </div>
 
-
         </div>
 
     </div>
@@ -831,30 +879,18 @@
 </div>
 
 
-
 <!-- =========================================================
      JAVASCRIPT
 ========================================================= -->
 
+<!-- jQuery -->
 
-<!-- =====================================================
-     jQuery
-===================================================== -->
-
-<script
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
-</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
 
+<!-- Bootstrap -->
 
-<!-- =====================================================
-     Bootstrap
-===================================================== -->
-
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 <!-- =========================================================
@@ -926,7 +962,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-
 <!-- =========================================================
      MOBILE MENU SCRIPT
 ========================================================= -->
@@ -989,7 +1024,5 @@ function toggleMobileMenu() {
 </script>
 
 
-
 </body>
-
 </html>
