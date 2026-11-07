@@ -3520,3 +3520,12 @@ body::before {
         background-attachment: scroll;
     }
 }
+
+/* =========================================================
+   TEAM PORTRAIT BACKGROUND — CREAM
+========================================================= */
+
+.production-team-photo-wrap {
+    background: #fff4e6 !important;
+    background-color: #fff4e6 !important;
+}
