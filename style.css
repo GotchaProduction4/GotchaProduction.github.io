@@ -3452,10 +3452,21 @@ body::before {
 
 /* =========================================================
    GOTCHA! PRODUCTIONS TEAM + COLLABORATORS
-   SAME BACKGROUND COLOR AND OPACITY
 ========================================================= */
 
-.production-team-section,
+/* GOTCHA! PRODUCTIONS TEAM — CREAM BACKGROUND */
+
+.production-team-section {
+    position: relative;
+    isolation: isolate;
+    background: #fff4e6 !important;
+    background-color: #fff4e6 !important;
+    color: #222222;
+    overflow: hidden;
+}
+
+/* COLLABORATORS — KEEP EXISTING OFF-WHITE BACKGROUND */
+
 .collaborators-section {
     position: relative;
     isolation: isolate;
@@ -3508,5 +3519,4 @@ body::before {
     .collaborators-section::before {
         background-attachment: scroll;
     }
-
 }
