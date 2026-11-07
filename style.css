@@ -3592,3 +3592,36 @@ body::before {
     color: #891917;
 }
 }
+/* =========================================================
+   COLLABORATORS — ACTOR IMAGE AS LARGE PORTRAIT
+========================================================= */
+
+.collaborator-card:nth-child(3) .collaborator-logo-wrap {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+    border: 3px solid var(--black);
+    background: var(--yellow);
+    box-shadow: 6px 6px 0 var(--blue);
+}
+
+.collaborator-card:nth-child(3) .collaborator-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* MOBILE ACTOR PORTRAIT */
+
+@media (max-width: 600px) {
+    .collaborator-card:nth-child(3) .collaborator-logo-wrap {
+        max-width: 240px;
+    }
+}
