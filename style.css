@@ -3570,3 +3570,7 @@ body::before {
     max-width: 100%;
     object-fit: contain;
 }
+
+.hero-logo {
+    transform: translateX(-15px);
+}
