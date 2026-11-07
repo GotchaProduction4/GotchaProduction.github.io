@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -577,7 +578,6 @@
     cursor: pointer;
 }
 
-
 /* BTS DOCUMENTATION SET SLIDER */
 .bts-set-slider {
     display: flex;
@@ -587,6 +587,7 @@
     gap: 8px;
     margin: 0 auto 28px;
 }
+
 .bts-set-btn {
     padding: 10px 18px;
     border: 2px solid var(--black);
@@ -599,15 +600,18 @@
     cursor: pointer;
     transition: .2s ease;
 }
+
 .bts-set-btn:hover {
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0 var(--black);
 }
+
 .bts-set-btn.active {
     background: var(--red);
     color: white;
     box-shadow: 4px 4px 0 var(--black);
 }
+
 .bts-set-status {
     margin: 0 auto 22px;
     font-family: "Be Vietnam Pro", sans-serif;
@@ -615,6 +619,7 @@
     letter-spacing: .5px;
     text-align: center;
 }
+
 .bts-grid .bts-item.bts-set-hidden {
     display: none;
 }
@@ -1113,10 +1118,11 @@
 
         <!-- GALLERY SWITCHER -->
         <div class="gallery-switcher">
+
             <button type="button"
                     class="gallery-switch-btn active"
-                    data-gallery="featured"
-                    onclick="switchGallery('featured', this)">ARTWORKS</button>
+                    data-gallery="bts"
+                    onclick="switchGallery('bts', this)">BTS DOCUMENTATION</button>
 
             <button type="button"
                     class="gallery-switch-btn"
@@ -1125,37 +1131,9 @@
 
             <button type="button"
                     class="gallery-switch-btn"
-                    data-gallery="bts"
-                    onclick="switchGallery('bts', this)">BTS DOCUMENTATION</button>
+                    data-gallery="featured"
+                    onclick="switchGallery('featured', this)">STUDENT OUTPUTS</button>
         </div>
-
-        <!-- ARTWORKS -->
-        <section class="gallery-section" id="gallerySectionFeatured">
-            <div class="gallery-section-heading">
-                <span class="gallery-section-label">FEATURED WORKS</span>
-                <h2>ARTWORKS</h2>
-                <p>
-                    Explore 18 photographic artworks, each presented with up to three
-                    images and a short description.
-                </p>
-            </div>
-
-            <div class="artwork-grid" id="featuredGallery"></div>
-        </section>
-
-        <!-- PROGRAM DOCUMENTATION -->
-        <section class="gallery-section" id="gallerySectionDocumentation">
-            <div class="gallery-section-heading">
-                <span class="gallery-section-label">PROJECT RECORD</span>
-                <h2>PROGRAM DOCUMENTATION</h2>
-                <p>
-                    Photos documenting the activities, participants, and
-                    experiences during the Structured Photowalk Program.
-                </p>
-            </div>
-
-            <div class="documentation-grid" id="documentationGallery"></div>
-        </section>
 
         <!-- BTS DOCUMENTATION -->
         <section class="gallery-section" id="gallerySectionBTS">
@@ -1177,8 +1155,37 @@
                 <button type="button" class="bts-set-btn" data-bts-set="3" aria-pressed="false"
                         onclick="showBTSSet(3, this)">Episode 3</button>
             </div>
+
             <p class="bts-set-status" id="btsSetStatus" aria-live="polite"></p>
             <div class="bts-grid" id="btsGallery"></div>
+        </section>
+
+        <!-- PROGRAM DOCUMENTATION -->
+        <section class="gallery-section" id="gallerySectionDocumentation">
+            <div class="gallery-section-heading">
+                <span class="gallery-section-label">PROJECT RECORD</span>
+                <h2>PROGRAM DOCUMENTATION</h2>
+                <p>
+                    Photos documenting the activities, participants, and
+                    experiences during the Structured Photowalk Program.
+                </p>
+            </div>
+
+            <div class="documentation-grid" id="documentationGallery"></div>
+        </section>
+
+        <!-- STUDENT OUTPUTS -->
+        <section class="gallery-section" id="gallerySectionFeatured">
+            <div class="gallery-section-heading">
+                <span class="gallery-section-label">STUDENT WORKS</span>
+                <h2>STUDENT OUTPUTS</h2>
+                <p>
+                    Explore 18 photographic artworks, each presented with up to three
+                    images and a short description.
+                </p>
+            </div>
+
+            <div class="artwork-grid" id="featuredGallery"></div>
         </section>
 
     </div>
@@ -1240,7 +1247,7 @@
 /* =========================================================
    IMAGE PATHS
 
-   ARTWORKS:
+   STUDENT OUTPUTS:
    images/Artwork/<Artwork Folder>/1.webp through 1-3.webp
 
    PROGRAM DOCUMENTATION:
@@ -1346,7 +1353,7 @@ function createGalleryItem(imagePath, altText, className, captionText) {
 }
 
 /* =========================================================
-   ARTWORK GALLERY — FOLDER-BASED ARTWORKS
+   STUDENT OUTPUTS — FOLDER-BASED ARTWORKS
    Each artwork folder contains 1.webp, 2.webp, and/or 3.webp.
    ========================================================= */
 function createFeaturedGallery() {
@@ -1558,10 +1565,11 @@ document.addEventListener("DOMContentLoaded", function() {
     createFeaturedGallery();
     createDocumentationGallery();
     createBTSGallery();
-    switchGallery("featured", document.querySelector('[data-gallery="featured"]'));
+
+    /* BTS DOCUMENTATION IS THE DEFAULT SECTION */
+    switchGallery("bts", document.querySelector('[data-gallery="bts"]'));
 });
 </script>
 
 </body>
 </html>
-
