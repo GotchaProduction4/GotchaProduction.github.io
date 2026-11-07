@@ -3574,3 +3574,27 @@ body::before {
 .hero-logo {
     transform: translateX(-15px);
 }
+/* =========================================================
+   GOTCHA! PRODUCTIONS TEAM — CARD TEXT COLORS
+   YELLOW → CREAM → BLUE → RED
+========================================================= */
+
+/* FIRST CARD — YELLOW */
+.production-team-card:nth-child(1) {
+    color: #f4d35e;
+}
+
+/* SECOND CARD — CREAM */
+.production-team-card:nth-child(2) {
+    color: #f7d9b2;
+}
+
+/* THIRD CARD — BLUE */
+.production-team-card:nth-child(3) {
+    color: #2b4e8d;
+}
+
+/* FOURTH CARD — RED */
+.production-team-card:nth-child(4) {
+    color: #891917;
+}
