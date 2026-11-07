@@ -3459,8 +3459,8 @@ body::before {
 .collaborators-section {
     position: relative;
     isolation: isolate;
-    background: #fff4e6 !important;
-    background-color: #fff4e6 !important;
+    background: #fffcf6 !important;
+    background-color: #fffcf6 !important;
     color: #222222;
     overflow: hidden;
 }
