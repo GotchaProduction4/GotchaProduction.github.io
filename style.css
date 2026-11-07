@@ -3449,19 +3449,25 @@ body::before {
         padding: 0 11px;
     }
 }
+
 /* =========================================================
-   COLLABORATORS SECTION — OFF-WHITE WITH FADED BACKGROUND
+   GOTCHA! PRODUCTIONS TEAM + COLLABORATORS
+   SAME BACKGROUND COLOR AND OPACITY
 ========================================================= */
 
+.production-team-section,
 .collaborators-section {
     position: relative;
     isolation: isolate;
-    background: #fffcf6 !important;
-    background-color: #fffcf6 !important;
+    background: #fff4e6 !important;
+    background-color: #fff4e6 !important;
+    color: #222222;
     overflow: hidden;
 }
 
-/* BG 1.png with low opacity */
+/* SAME BG 1.png OPACITY */
+
+.production-team-section::before,
 .collaborators-section::before {
     content: "";
     position: absolute;
@@ -3473,13 +3479,34 @@ body::before {
     background-size: cover;
     background-attachment: fixed;
 
-    opacity: 0.0;
+    opacity: 0.2;
 
     z-index: -1;
     pointer-events: none;
 }
 
-/* Keep collaborator cards above the background */
-.collaborators-section > * {
+/* KEEP CONTENT ABOVE BACKGROUND */
+
+.production-team-inner,
+.collaborators-inner {
     position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* MOBILE BACKGROUND FIX */
+
+@media (max-width: 767px) {
+
+    .production-team-section,
+    .collaborators-section {
+        padding: 58px 6%;
+    }
+
+    .production-team-section::before,
+    .collaborators-section::before {
+        background-attachment: scroll;
+    }
+
 }
