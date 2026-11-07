@@ -3530,25 +3530,25 @@ body::before {
     background-color: #fff4e6 !important;
 }
 /* =========================================================
-   GOTCHA! PRODUCTIONS TEAM — INDIVIDUAL PHOTO BACKGROUNDS
+   GOTCHA! PRODUCTIONS TEAM — INDIVIDUAL CARD SHADOW COLORS
 ========================================================= */
 
-/* FIRST MEMBER — YELLOW */
-.production-team-card:nth-child(1) .production-team-photo-wrap {
-    background: #f4d35e !important;
+/* FIRST CARD — YELLOW */
+.production-team-card:nth-child(1) {
+    box-shadow: 8px 8px 0 #f4d35e;
 }
 
-/* SECOND MEMBER — CREAM */
-.production-team-card:nth-child(2) .production-team-photo-wrap {
-    background: #fff4e6 !important;
+/* SECOND CARD — CREAM */
+.production-team-card:nth-child(2) {
+    box-shadow: 8px 8px 0 #fff4e6;
 }
 
-/* THIRD MEMBER — BLUE */
-.production-team-card:nth-child(3) .production-team-photo-wrap {
-    background: #2b4e8d !important;
+/* THIRD CARD — BLUE */
+.production-team-card:nth-child(3) {
+    box-shadow: 8px 8px 0 #2b4e8d;
 }
 
-/* FOURTH MEMBER — RED */
-.production-team-card:nth-child(4) .production-team-photo-wrap {
-    background: #891917 !important;
+/* FOURTH CARD — RED */
+.production-team-card:nth-child(4) {
+    box-shadow: 8px 8px 0 #891917;
 }
