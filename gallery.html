@@ -534,6 +534,63 @@
     opacity: 1;
 }
 
+/* STUDENT OUTPUTS ARROW SLIDER */
+.artwork-page-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 0 auto 12px;
+}
+
+.artwork-page-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--black);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.artwork-page-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 3px 4px 0 var(--black);
+}
+
+.artwork-page-btn:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+.artwork-page-number {
+    min-width: 48px;
+    font-family: "Anton", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.artwork-page-status {
+    margin: 0 auto 24px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
+.artwork-output.artwork-page-hidden {
+    display: none !important;
+}
+
 /* LIGHTBOX */
 .gallery-lightbox {
     position: fixed;
@@ -1180,11 +1237,22 @@
                 <span class="gallery-section-label">STUDENT WORKS</span>
                 <h2>STUDENT OUTPUTS</h2>
                 <p>
-                    Explore 18 photographic artworks, each presented with up to three
+                    Explore 21 photographic artworks, each presented with up to three
                     images and a short description.
                 </p>
             </div>
 
+            <!-- STUDENT OUTPUTS SLIDER: DIVIDED INTO TWO HALVES -->
+            <div class="artwork-page-slider" role="group" aria-label="Student output slider">
+                <button type="button" class="artwork-page-btn" id="artworkPrevBtn"
+                        aria-label="Previous student outputs" onclick="showArtworkPage(1)" disabled>&larr;</button>
+                <span class="artwork-page-number" id="artworkPageNumber" aria-live="polite">1 / 2</span>
+                <button type="button" class="artwork-page-btn" id="artworkNextBtn"
+                        aria-label="Next student outputs" onclick="showArtworkPage(2)">&rarr;</button>
+            </div>
+            <p class="artwork-page-status" id="artworkPageStatus" aria-live="polite">
+                Showing outputs 1–11 of 21
+            </p>
             <div class="artwork-grid" id="featuredGallery"></div>
         </section>
 
@@ -1378,7 +1446,10 @@ function createFeaturedGallery() {
         "THE FORGOTTEN PHONE",
         "THE LONE FLOWER IN THE POND",
         "UNTIL WE REACH",
-        "VIRTOUES BIG COLLAGE"
+        "VIRTOUES BIG COLLAGE",
+        "SIKAP",
+        "PIRASO",
+        "FEBINIANS SPIRIT"
     ];
 
     artworkOutputs.forEach(function(folderName, index) {
@@ -1437,6 +1508,41 @@ function createFeaturedGallery() {
         article.appendChild(images);
         container.appendChild(article);
     });
+}
+
+/* STUDENT OUTPUTS ARROW SLIDER — SHOW 11 OUTPUTS PER PAGE */
+function showArtworkPage(pageNumber) {
+    const gallery = document.getElementById("featuredGallery");
+    const status = document.getElementById("artworkPageStatus");
+    if (!gallery) return;
+
+    const items = Array.from(gallery.querySelectorAll(".artwork-output"));
+    const pageSize = 11;
+    const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+    const currentPage = Math.min(Math.max(Number(pageNumber) || 1, 1), totalPages);
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, items.length);
+
+    items.forEach(function(item, index) {
+        item.classList.toggle(
+            "artwork-page-hidden",
+            index < startIndex || index >= endIndex
+        );
+    });
+
+    const prevButton = document.getElementById("artworkPrevBtn");
+    const nextButton = document.getElementById("artworkNextBtn");
+    const pageNumberLabel = document.getElementById("artworkPageNumber");
+
+    if (prevButton) prevButton.disabled = currentPage === 1;
+    if (nextButton) nextButton.disabled = currentPage === totalPages;
+    if (pageNumberLabel) pageNumberLabel.textContent = currentPage + " / " + totalPages;
+
+    if (status) {
+        const visibleStart = items.length ? startIndex + 1 : 0;
+        status.textContent = "Showing outputs " + visibleStart + "–" +
+            endIndex + " of " + items.length;
+    }
 }
 
 /* =========================================================
@@ -1563,6 +1669,7 @@ document.addEventListener("keydown", function(event) {
 /* CREATE ALL GALLERIES */
 document.addEventListener("DOMContentLoaded", function() {
     createFeaturedGallery();
+    showArtworkPage(1);
     createDocumentationGallery();
     createBTSGallery();
 
