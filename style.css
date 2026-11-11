@@ -3625,3 +3625,71 @@ body::before {
         max-width: 240px;
     }
 }
+
+/* =========================================================
+   EPISODE 1, 2, AND 3 — MATCHED TYPOGRAPHY AND CARD SIZE
+   Keeps all episode cards consistent with Episode 1.
+========================================================= */
+
+.resources-page .episode-track .episode-card {
+    min-height: 430px;
+}
+
+.resources-page .episode-track .episode-info h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: .9;
+}
+
+.resources-page .episode-track .episode-info h3 {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.resources-page .episode-track .episode-info ul {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Tablet: match all episode cards */
+@media (max-width: 900px) {
+    .resources-page .episode-track .episode-card {
+        min-height: 380px;
+    }
+
+    .resources-page .episode-track .episode-info h2 {
+        font-size: 45px;
+    }
+
+    .resources-page .episode-track .episode-info ul {
+        font-size: 11px;
+    }
+}
+
+/* Mobile: match all episode cards */
+@media (max-width: 600px) {
+    .resources-page .episode-track .episode-card {
+        min-height: 0;
+    }
+
+    .resources-page .episode-track .episode-info h2 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: .98;
+    }
+
+    .resources-page .episode-track .episode-info h3,
+    .resources-page .episode-track .episode-info ul {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
+
+/* Very small phones: same sizing for every episode */
+@media (max-width: 380px) {
+    .resources-page .episode-track .episode-info h2 {
+        font-size: 32px;
+    }
+
+    .resources-page .episode-track .episode-info ul {
+        font-size: 11px;
+    }
+}
