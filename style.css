@@ -1352,7 +1352,7 @@ a:hover {
 
     font-family: "Anton", sans-serif;
 
-    font-size: clamp(45px, 5vw, 70px);
+    font-size: clamp(40px, 5vw, 65px);
 
     font-weight: 400;
 
