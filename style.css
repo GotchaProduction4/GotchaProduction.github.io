@@ -656,17 +656,21 @@ a:hover {
 
 .about-bg {
     position: absolute;
+
     inset: 0;
+
     background-image:
         linear-gradient(
             rgba(255, 244, 230, .86),
             rgba(255, 244, 230, .86)
         ),
-        url("images/photowalk.webp");
-    background-size: contain;
+        url("images/photowalk.jpg");
+
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+
     opacity: .35;
+
     z-index: 0;
 }
 
