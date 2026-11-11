@@ -23,12 +23,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Be Vietnam Pro";
-    src: url("font/BeVietnamPro-Light.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-}
 
 @font-face {
     font-family: "Be Vietnam Pro";
