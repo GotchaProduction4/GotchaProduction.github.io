@@ -3779,3 +3779,30 @@ img[src*="photowalk.webp"] {
         line-height: 1.4 !important;
     }
 }
+/* =========================================================
+   PHOTOWALK IMAGE — SLIGHTLY LARGER
+========================================================= */
+
+.about-photo img,
+img[src*="photowalk.webp"] {
+    object-fit: contain !important;
+    object-position: center center !important;
+}
+
+/* Keep the existing frame unchanged */
+.about-photo {
+    background: transparent;
+}
+
+/* Enlarge the image slightly within the frame */
+.about-photo img {
+    width: 108%;
+    height: 108%;
+    max-width: none;
+    max-height: none;
+
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
