@@ -3796,8 +3796,8 @@ img[src*="photowalk.webp"] {
 
 /* Enlarge the image slightly within the frame */
 .about-photo img {
-    width: 108%;
-    height: 108%;
+    width: 115%;
+    height: 115%;
     max-width: none;
     max-height: none;
 
