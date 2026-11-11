@@ -3688,3 +3688,94 @@ img[src*="photowalk.webp"] {
     max-width: 100%;
     max-height: 100%;
 }
+/* =========================================================
+   FINAL EPISODE 1, 2, AND 3 SIZE MATCH
+   Keep all episode cards and typography consistent.
+========================================================= */
+
+/* DESKTOP */
+.resources-page .episode-track .episode-card {
+    min-height: 430px !important;
+}
+
+.resources-page .episode-track .episode-info h2 {
+    font-size: clamp(40px, 5vw, 65px) !important;
+    line-height: .9 !important;
+    margin-bottom: 25px !important;
+}
+
+.resources-page .episode-track .episode-info h3 {
+    font-size: 12px !important;
+    margin-bottom: 5px !important;
+}
+
+.resources-page .episode-track .episode-info ul {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
+.resources-page .episode-track .episode-label {
+    font-size: 9px !important;
+    margin-bottom: 12px !important;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .resources-page .episode-track .episode-card {
+        min-height: 380px !important;
+    }
+
+    .resources-page .episode-track .episode-info h2 {
+        font-size: 45px !important;
+    }
+
+    .resources-page .episode-track .episode-info h3 {
+        font-size: 11px !important;
+    }
+
+    .resources-page .episode-track .episode-info ul {
+        font-size: 11px !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .resources-page .episode-track .episode-card {
+        min-height: 0 !important;
+    }
+
+    .resources-page .episode-track .episode-info h2 {
+        font-size: clamp(30px, 8vw, 38px) !important;
+        line-height: .98 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .resources-page .episode-track .episode-info h3 {
+        font-size: 11px !important;
+    }
+
+    .resources-page .episode-track .episode-info ul {
+        font-size: 11px !important;
+        line-height: 1.6 !important;
+    }
+
+    .resources-page .episode-track .episode-label {
+        font-size: 8px !important;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 380px) {
+    .resources-page .episode-track .episode-info h2 {
+        font-size: 32px !important;
+    }
+
+    .resources-page .episode-track .episode-info h3 {
+        font-size: 9px !important;
+    }
+
+    .resources-page .episode-track .episode-info ul {
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+    }
+}
