@@ -3846,3 +3846,45 @@ img[src*="photowalk.webp"] {
         border-radius: 0 0 0 60px;
     }
 }
+
+/* =========================================================
+   ACTIVITY MAP GALLERY
+========================================================= */
+
+.activity-map-card {
+    width: 100%;
+}
+
+.activity-map-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 0 30px 30px;
+}
+
+.activity-map-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.activity-map-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .activity-map-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 20px 25px;
+    }
+
+}
