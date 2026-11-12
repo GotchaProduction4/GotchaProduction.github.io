@@ -3774,93 +3774,19 @@ img[src*="photowalk.webp"] {
     }
 }
 /* =========================================================
-   PHOTOWALK IMAGE — SLIGHTLY LARGER
-========================================================= */
-
-.about-photo img,
-img[src*="photowalk.webp"] {
-    object-fit: contain !important;
-    object-position: center center !important;
-}
-
-/* Keep the existing frame unchanged */
-.about-photo {
-    background: transparent;
-}
-
-/* Enlarge the image slightly within the frame */
-.about-photo img {
-    width: 115%;
-    height: 115%;
-    max-width: none;
-    max-height: none;
-
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* =========================================================
-   FINAL EPISODE CARD SPACING — MATCH RED REFERENCE
-   Keeps the video position while giving the title more room.
-   Desktop-only adjustments; tablet and mobile layouts remain
-   controlled by the existing responsive rules below.
-========================================================= */
-
-@media (min-width: 901px) {
-    .resources-page .episode-track .episode-card {
-        min-height: 428px !important;
-        padding: 48px 50px !important;
-        grid-template-columns: 42% 58% !important;
-        align-items: center !important;
-    }
-
-    /* Keep the video aligned with the reference image. */
-    .resources-page .episode-track .episode-video {
-        width: 100% !important;
-        min-width: 0 !important;
-    }
-
-    /* More usable width prevents episode titles wrapping too early. */
-    .resources-page .episode-track .episode-info {
-        width: 100% !important;
-        min-width: 0 !important;
-        padding-right: 12px !important;
-    }
-
-    .resources-page .episode-track .episode-info h2 {
-        font-size: clamp(48px, 4.6vw, 60px) !important;
-        line-height: .9 !important;
-        margin: 0 0 25px !important;
-        overflow-wrap: normal !important;
-        word-break: normal !important;
-    }
-
-    .resources-page .episode-track .episode-label {
-        margin-bottom: 12px !important;
-    }
-
-    .resources-page .episode-track .episode-info h3 {
-        margin-bottom: 5px !important;
-    }
-}
-
-/* =========================================================
-   END — EPISODE CARD SPACING UPDATE
-========================================================= */
-
-/* =========================================================
-   PHOTOWALK IMAGE BORDER
-   Adds a clean black border while preserving the existing
-   rounded corner shape and image crop.
+   PHOTOWALK IMAGE — BORDER FITS THE ACTUAL POSTER
+   The frame remains the positioning area; the border is applied
+   to the image itself so it does not stretch across empty space.
 ========================================================= */
 
 .about-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
-    border: 3px solid var(--black);
-    border-radius: 0 0 0 105px;
-    overflow: hidden;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible;
     background: transparent;
 }
 
@@ -3868,13 +3794,34 @@ img[src*="photowalk.webp"] {
 img[src*="photowalk.webp"] {
     display: block;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0;
-    object-fit: contain;
-    object-position: center center;
-    transform: none;
-    position: static;
+    width: auto !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 auto;
+    object-fit: contain !important;
+    object-position: center center !important;
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    border: 3px solid var(--black);
+    border-radius: 0 0 0 105px;
+}
+
+@media (max-width: 900px) {
+    .about-photo img,
+    img[src*="photowalk.webp"] {
+        border-bottom-left-radius: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-photo img,
+    img[src*="photowalk.webp"] {
+        height: auto !important;
+        width: 100% !important;
+        max-height: 100% !important;
+        border-bottom-left-radius: 60px;
+    }
 }
