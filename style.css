@@ -3889,3 +3889,14 @@ img[src*="photowalk.webp"] {
     }
 
 }
+ .activity-map-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+
+    width: 75%;
+    max-width: 850px;
+
+    margin: 25px auto 0;
+    padding: 0 0 30px;
+}
