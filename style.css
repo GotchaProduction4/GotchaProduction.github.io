@@ -3817,11 +3817,32 @@ img[src*="photowalk.webp"] {
 }
 
 @media (max-width: 600px) {
+    /* Mobile frame follows the image's natural height instead of
+       forcing it into the desktop/tablet fixed-height container. */
+    .about-photo {
+        display: block;
+        width: calc(100% - 50px);
+        max-width: none;
+        height: auto;
+        min-height: 0;
+        margin: 35px 25px 40px;
+        padding: 0;
+        overflow: visible;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent;
+    }
+
     .about-photo img,
     img[src*="photowalk.webp"] {
-        height: auto !important;
+        display: block;
         width: 100% !important;
-        max-height: 100% !important;
-        border-bottom-left-radius: 60px;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: none !important;
+        margin: 0;
+        object-fit: contain !important;
+        border: 3px solid var(--black);
+        border-radius: 0 0 0 60px;
     }
 }
